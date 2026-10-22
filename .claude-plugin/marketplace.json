@@ -1,6 +1,9 @@
 {
   "name": "bodring",
-  "owner": { "name": "bodr.ing" },
+  "description": "Agent skills from bodr.ing.",
+  "owner": {
+    "name": "bodr.ing"
+  },
   "plugins": [
     {
       "name": "bodring",
