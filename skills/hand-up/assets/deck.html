@@ -1,0 +1,471 @@
+<title>Hand Up</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: one phone-width column; swipe stack fills the screen between header and tabs. Single dark look, by choice. */
+:root {
+  --bg: #0F1217; --card: #1B2029; --card-2: #141820; --line: #2A303B;
+  --ink: #F2F4F7; --soft: #C3CAD5; --muted: #8D97A6;
+  --accent: #7D8CFF; --accent-ink: #0F1217;
+  --blocked: #FF6B6F; --conflict: #F2A33A; --heads-up: #4CC497; --done: #A592FF;
+  --display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --body: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; background: var(--bg); color: var(--ink); font: 15px/1.5 var(--body); }
+button { font: inherit; color: inherit; }
+button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+[hidden] { display: none !important; }
+
+#app {
+  height: 100%; max-width: 520px; margin: 0 auto; display: grid; grid-template-rows: auto 1fr auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 0;
+}
+.note { font-size: 13px; color: var(--muted); text-align: center; }
+.top { display: flex; align-items: center; gap: 10px; padding: 14px 4px 10px; }
+.top h1 { margin: 0; font: 800 22px var(--display); letter-spacing: -.01em; }
+.count { font: 600 12px var(--mono); color: var(--muted); margin-left: auto; }
+.icon-btn { background: var(--card); border: 1px solid var(--line); border-radius: 10px; width: 36px; height: 36px; cursor: pointer; display: grid; place-items: center; color: var(--conflict); }
+.icon-btn svg { width: 18px; height: 18px; }
+
+main { min-height: 0; position: relative; }
+.view { height: 100%; display: flex; flex-direction: column; gap: 12px; }
+
+/* Swipe stack */
+.stack { position: relative; flex: 1; min-height: 0; }
+.card {
+  position: absolute; inset: 0; background: var(--card); border: 1px solid var(--line); border-radius: 22px;
+  padding: 18px; display: flex; flex-direction: column; gap: 12px; overflow: hidden;
+  touch-action: none; user-select: none; cursor: grab; transition: transform .25s ease, opacity .25s ease;
+}
+.card.dragging { transition: none; cursor: grabbing; }
+.kind { display: flex; align-items: center; gap: 8px; font: 600 11px var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--k); }
+.kind i { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.kind .waiting { margin-left: auto; color: var(--muted); letter-spacing: .04em; text-transform: none; }
+.who { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--muted); }
+.av { width: 28px; height: 28px; border-radius: 8px; display: grid; place-items: center; font: 600 11px var(--mono); color: #0F1217; flex: none; }
+.card h2, .post h2 { margin: 0; font: 700 22px/1.2 var(--display); text-wrap: balance; }
+.card p, .post p { margin: 0; color: var(--soft); white-space: pre-wrap; overflow-wrap: anywhere; }
+.body { overflow-y: auto; min-height: 0; display: grid; gap: 12px; align-content: start; }
+.opts { display: grid; gap: 6px; }
+.opt { text-align: left; background: var(--card-2); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; cursor: pointer; display: flex; gap: 8px; }
+.opt b { font: 600 12px var(--mono); color: var(--muted); }
+.opt.rec { border-color: var(--accent); }
+.opt.rec b { color: var(--accent); }
+.links { display: flex; flex-wrap: wrap; gap: 6px; }
+.links a { font: 500 12px var(--mono); color: var(--accent); background: var(--card-2); border: 1px solid var(--line); border-radius: 8px; padding: 4px 8px; text-decoration: none; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.age { margin-top: auto; font: 500 12px var(--mono); color: var(--muted); }
+.stamp { position: absolute; top: 18px; right: 18px; font: 800 15px var(--display); letter-spacing: .06em; padding: 4px 10px; border: 2px solid; border-radius: 8px; opacity: 0; transform: rotate(8deg); pointer-events: none; }
+.empty { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; gap: 6px; color: var(--muted); padding: 24px; }
+.empty strong { font: 700 22px var(--display); color: var(--ink); }
+
+.actions { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.actions button, .tabs button, .primary, .ghost {
+  background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 10px 4px; cursor: pointer;
+  display: grid; justify-items: center; gap: 2px; font-weight: 600; font-size: 13px;
+}
+.actions button span { font: 600 10px var(--mono); color: var(--muted); }
+.primary, .actions .primary, .post .row .primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.actions .primary span { color: var(--accent-ink); opacity: .7; }
+.ghost { background: transparent; }
+
+/* Feed: one post per screen, TikTok-style snap */
+.feed { flex: 1; min-height: 0; overflow-y: auto; scroll-snap-type: y mandatory; display: flex; flex-direction: column; gap: 12px; }
+.post { scroll-snap-align: start; flex: none; min-height: 100%; background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: 18px; display: flex; flex-direction: column; gap: 12px; }
+.post .status { font: 600 12px var(--mono); color: var(--muted); }
+.post .answer { background: var(--card-2); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; color: var(--soft); }
+.post .row { display: flex; gap: 8px; margin-top: auto; }
+.post .row button { flex: 1; }
+.feed .empty { position: static; min-height: 60vh; }
+
+.tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 12px 0 max(12px, env(safe-area-inset-bottom, 0px)); }
+.tabs button[aria-current="page"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+
+/* Sheet */
+.sheet { position: fixed; inset: 0; background: rgba(5, 7, 10, .6); display: grid; align-items: end; z-index: 20; }
+.sheet-card { background: var(--card); border-top: 1px solid var(--line); border-radius: 22px 22px 0 0; padding: 20px max(16px, env(safe-area-inset-right, 0px)) max(20px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); display: grid; gap: 12px; max-width: 520px; width: 100%; margin: 0 auto; }
+.sheet-card h3 { margin: 0; font: 700 18px var(--display); }
+#sheet-body { display: grid; gap: 8px; }
+#sheet-body button { padding: 12px; }
+textarea, input { width: 100%; background: var(--card-2); color: var(--ink); border: 1px solid var(--line); border-radius: 12px; padding: 12px; font: inherit; }
+textarea { min-height: 110px; resize: vertical; }
+
+.login { justify-content: center; gap: 10px; }
+.login h2 { margin: 0; font: 800 26px var(--display); }
+.login p { margin: 0; color: var(--soft); }
+.login form { display: grid; gap: 8px; }
+.login label { font: 600 12px var(--mono); color: var(--muted); }
+.login .primary { padding: 12px; }
+
+.toast { position: fixed; left: 50%; top: calc(64px + env(safe-area-inset-top, 0px)); transform: translate(-50%, -12px); background: var(--ink); color: var(--bg); padding: 10px 14px; border-radius: 12px; font-weight: 500; font-size: 14px; opacity: 0; transition: .2s; pointer-events: none; width: max-content; max-width: min(480px, calc(100% - 32px)); z-index: 30; }
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
+.toast.has-undo { pointer-events: auto; display: flex; align-items: center; gap: 14px; }
+.toast button { background: none; border: 0; color: var(--accent-ink); font-weight: 700; text-decoration: underline; cursor: pointer; padding: 0; }
+.pickup { font: 500 13px var(--mono); color: var(--conflict); }
+.pickup.done { color: var(--heads-up); }
+
+@media (prefers-reduced-motion: reduce) { .card, .toast { transition: none; } }
+</style>
+<div id="app">
+  <header class="top">
+    <h1>Hand Up</h1>
+    <span id="count" class="count"></span>
+  </header>
+
+  <main>
+    <section id="view-decide" class="view">
+      <div id="stack" class="stack"></div>
+      <div class="actions">
+        <button type="button" data-act="dismiss">Dismiss<span>←</span></button>
+        <button type="button" data-act="later">Later<span>↑</span></button>
+        <button type="button" data-act="reply">Reply<span>↓</span></button>
+        <button type="button" data-act="go" class="primary">Go<span>→</span></button>
+      </div>
+    </section>
+
+    <section id="view-feed" class="view" hidden>
+      <div id="feed" class="feed"></div>
+    </section>
+  </main>
+
+  <nav class="tabs" id="tabs">
+    <button type="button" data-view="decide" aria-current="page">Decide</button>
+    <button type="button" data-view="feed">Feed</button>
+  </nav>
+
+  <div id="sheet" class="sheet" hidden>
+    <div class="sheet-card" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+      <h3 id="sheet-title"></h3>
+      <div id="sheet-body"></div>
+      <button type="button" class="ghost" id="sheet-cancel">Cancel</button>
+    </div>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</div>
+<script>
+// Hand Up deck: agents write cards into the shared `cards` collection; you swipe; they read the answer back.
+const $ = (s) => document.querySelector(s);
+let cards = [];   // every card, newest first
+let open = [];    // open cards, blockers first
+let view = "decide";
+let db = null;
+let canWrite = true;
+
+const RANK = { blocked: 0, conflict: 1, "heads-up": 2, done: 3 };
+const AGENT_COLORS = ["#E8A27C", "#9FB4FF", "#8CE0BE", "#F2C46D", "#E39AD0", "#7FD0E8"];
+function agentColor(name) {
+  const known = { claude: 0, "claude-code": 0, codex: 1, pi: 2 };
+  const k = String(name || "").toLowerCase();
+  if (k in known) return AGENT_COLORS[known[k]];
+  let h = 0;
+  for (const ch of k) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
+  return AGENT_COLORS[h % AGENT_COLORS.length];
+}
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+function ago(t) {
+  if (!t) return "";
+  const m = Math.round((Date.now() - t) / 60000);
+  if (m < 1) return "just now";
+  if (m < 60) return `${m} min ago`;
+  const h = Math.round(m / 60);
+  return h < 24 ? `${h} h ago` : `${Math.round(h / 24)} d ago`;
+}
+function toast(msg, undo) {
+  const t = $("#toast");
+  t.textContent = msg;
+  if (undo) {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.textContent = "Undo";
+    b.onclick = () => { t.classList.remove("show"); undo(); };
+    t.appendChild(b);
+  }
+  t.classList.toggle("has-undo", !!undo);
+  t.classList.add("show");
+  clearTimeout(toast.t);
+  toast.t = setTimeout(() => t.classList.remove("show"), undo ? 5000 : 2400);
+}
+const buzz = () => { try { navigator.vibrate?.(12); } catch {} };
+
+function normalize(d) {
+  const c = d.data() || {};
+  return {
+    id: d.id,
+    kind: RANK[c.kind] != null ? c.kind : "heads-up",
+    agent: String(c.agent || "agent"),
+    relatedAgent: c.relatedAgent || null,
+    repo: c.repo || "",
+    title: String(c.title || "Untitled"),
+    body: c.body || "",
+    options: Array.isArray(c.options) && c.options.length ? c.options.map(String).slice(0, 4) : null,
+    recommended: Number.isInteger(c.recommended) ? c.recommended : 0,
+    links: Array.isArray(c.links) ? c.links : [],
+    waiting: !!c.waiting,
+    status: c.status || "open",
+    snoozeUntil: c.snoozeUntil || null,
+    answer: c.answer || null,
+    createdAt: c.createdAt || 0,
+    answeredAt: c.answeredAt || null,
+    ackAt: c.ackAt || null,
+    outcome: c.outcome ? String(c.outcome) : "",
+  };
+}
+function derive() {
+  const now = Date.now();
+  open = cards
+    .filter((c) => c.status === "open" || (c.status === "snoozed" && c.snoozeUntil && c.snoozeUntil <= now))
+    .sort((a, b) => RANK[a.kind] - RANK[b.kind] || b.createdAt - a.createdAt);
+}
+
+function cardHead(c) {
+  const live = c.status === "open" || c.status === "snoozed";
+  return `
+    <div class="kind" style="--k:var(--${c.kind})"><i></i>${esc(c.kind)}${c.waiting && live ? `<span class="waiting">waiting ${ago(c.createdAt).replace(" ago", "")}</span>` : ""}</div>
+    <div class="who"><span class="av" style="background:${agentColor(c.agent)}">${esc(c.agent.slice(0, 2))}</span>${esc(c.agent)}${c.relatedAgent ? ` + ${esc(c.relatedAgent)}` : ""}${c.repo ? ` · ${esc(c.repo)}` : ""}</div>
+    <h2>${esc(c.title)}</h2>`;
+}
+function cardLinks(c) {
+  const safe = c.links.filter((l) => /^https:\/\//.test(l));
+  return safe.length ? `<div class="links">${safe.map((l) => `<a href="${esc(l)}" target="_blank" rel="noopener">${esc(l.replace(/^https:\/\//, ""))}</a>`).join("")}</div>` : "";
+}
+
+function render() {
+  $("#count").textContent = db ? `${open.length} waiting` : "";
+  renderStack();
+  renderFeed();
+}
+
+function renderStack() {
+  const stack = $("#stack");
+  stack.innerHTML = db
+    ? `<div class="empty"><strong>All clear</strong>When an agent raises a hand, it shows up here.</div>`
+    : `<div class="empty"><strong>Connecting…</strong>Hand Up needs you signed in to claude.ai to read your agents' cards.</div>`;
+  open.slice(0, 3).reverse().forEach((c, i, arr) => {
+    const depth = arr.length - 1 - i;
+    const el = document.createElement("article");
+    el.className = "card";
+    el.style.transform = `translateY(${depth * 10}px) scale(${1 - depth * 0.04})`;
+    el.style.zIndex = 10 - depth;
+    el.innerHTML = `${cardHead(c)}
+      <div class="body">
+        ${c.body ? `<p>${esc(c.body)}</p>` : ""}
+        ${c.options ? `<div class="opts">${c.options.map((o, j) => `<button type="button" class="opt${j === c.recommended ? " rec" : ""}" data-opt="${j}"><b>${j === c.recommended ? "→" : j + 1}</b>${esc(o)}</button>`).join("")}</div>` : ""}
+        ${cardLinks(c)}
+      </div>
+      <div class="age">${ago(c.createdAt)}</div>
+      <div class="stamp"></div>`;
+    stack.appendChild(el);
+    if (depth === 0 && canWrite) makeDraggable(el, c);
+  });
+}
+
+function renderFeed() {
+  const feed = $("#feed");
+  if (!cards.length) {
+    feed.innerHTML = `<div class="empty"><strong>Nothing yet</strong>Everything your agents raise, and what you answered, collects here.</div>`;
+    return;
+  }
+  feed.innerHTML = cards.map((c) => {
+    const a = c.answer;
+    const status = c.status === "open" ? "open"
+      : c.status === "snoozed" ? `snoozed until ${new Date(c.snoozeUntil).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}`
+      : c.status === "withdrawn" ? `withdrawn by ${c.agent}${c.outcome ? `: ${c.outcome}` : ""}`
+      : `${c.status} ${ago(c.answeredAt)}`;
+    const pickup = c.status === "answered" || c.status === "dismissed"
+      ? (c.ackAt ? `<div class="pickup done">✓ ${esc(c.agent)} picked it up${c.outcome ? `: ${esc(c.outcome)}` : ""}</div>` : `<div class="pickup">Waiting for ${esc(c.agent)} to pick this up</div>`)
+      : "";
+    const answer = a && (a.choice || a.text) ? `<div class="answer">${a.choice ? `Chose: ${esc(a.choice)}` : ""}${a.choice && a.text ? "<br>" : ""}${a.text ? `“${esc(a.text)}”` : ""}</div>` : "";
+    const row = c.status === "open" && canWrite ? `<div class="row"><button type="button" class="ghost" data-id="${esc(c.id)}" data-act="dismiss">Dismiss</button><button type="button" class="primary" data-id="${esc(c.id)}" data-act="decide">Decide</button></div>` : "";
+    return `<article class="post">${cardHead(c)}${c.body ? `<p>${esc(c.body)}</p>` : ""}${cardLinks(c)}${answer}${pickup}<div class="status">${esc(status)} · raised ${ago(c.createdAt)}</div>${row}</article>`;
+  }).join("");
+}
+
+async function respond(card, patch, msg, undoable = true) {
+  try {
+    await db.collection("cards").doc(card.id).update(patch);
+    buzz();
+    toast(msg, undoable ? () => undo(card) : null);
+  } catch (e) {
+    if (e && e.code === "invalid_argument") { canWrite = false; toast("You can view this deck but not answer cards"); }
+    else toast("Couldn't save that. Try again in a moment.");
+    render();
+  }
+}
+// Put a card back in the stack, as long as the agent hasn't picked up the answer yet.
+async function undo(card) {
+  const ref = db.collection("cards").doc(card.id);
+  try {
+    const snap = await ref.get();
+    if (snap.data()?.ackAt) return toast(`${card.agent} already picked that up`);
+    await ref.update({ status: "open", answer: null, answeredAt: null, snoozeUntil: null });
+    toast("Back in your stack");
+  } catch {
+    toast("Couldn't undo. The answer stands.");
+  }
+}
+function answerPatch(status, answer) {
+  return { status, answer, answeredAt: Date.now(), snoozeUntil: null };
+}
+
+const FLY = { go: "translate(140%,0) rotate(18deg)", dismiss: "translate(-140%,0) rotate(-18deg)", later: "translate(0,-140%)", reply: "translate(0,140%)" };
+const STAMP = { go: ["GO", "var(--heads-up)"], dismiss: ["DISMISS", "var(--blocked)"], later: ["LATER", "var(--conflict)"], reply: ["REPLY", "var(--accent)"] };
+
+function act(action, card = open[0], option) {
+  if (!card || !db || !canWrite) return;
+  const top = $("#stack .card:last-of-type");
+  const fly = () => {
+    if (top && card === open[0]) { top.style.transform = FLY[action]; top.style.opacity = "0"; }
+    open = open.filter((c) => c.id !== card.id);
+    setTimeout(render, 220);
+  };
+  if (action === "go") {
+    const idx = option ?? (card.options ? card.recommended : null);
+    fly();
+    respond(card, answerPatch("answered", { action: "go", option: idx, choice: idx != null && card.options ? card.options[idx] : null, text: null }),
+      card.options ? `Sent “${card.options[idx]}” to ${card.agent}` : `Told ${card.agent} to go ahead`);
+  } else if (action === "dismiss") {
+    fly();
+    respond(card, answerPatch("dismissed", { action: "dismiss", option: null, choice: null, text: null }), `Dismissed. ${card.agent} won't raise it again.`);
+  } else if (action === "later") {
+    snoozeSheet(card, fly);
+  } else if (action === "reply") {
+    replySheet(card, fly);
+  }
+}
+
+function sheet(title, html, bind) {
+  $("#sheet-title").textContent = title;
+  $("#sheet-body").innerHTML = html;
+  $("#sheet").hidden = false;
+  bind($("#sheet-body"));
+  renderStack();
+}
+const closeSheet = () => { $("#sheet").hidden = true; renderStack(); };
+$("#sheet-cancel").onclick = closeSheet;
+$("#sheet").addEventListener("click", (e) => { if (e.target.id === "sheet") closeSheet(); });
+
+function snoozeSheet(card, onPick) {
+  const at = (h, dayOffset = 0) => { const d = new Date(); d.setDate(d.getDate() + dayOffset); d.setHours(h, 0, 0, 0); return d.getTime(); };
+  const tonight = at(20) > Date.now() ? at(20) : at(20, 1);
+  const choices = [["In 1 hour", Date.now() + 3600e3], ["Tonight at 20:00", tonight], ["Tomorrow at 09:00", at(9, 1)]];
+  sheet("Bring it back", choices.map(([l], i) => `<button type="button" data-i="${i}">${l}</button>`).join(""), (el) =>
+    el.querySelectorAll("button").forEach((b) => (b.onclick = () => {
+      const [label, until] = choices[b.dataset.i];
+      $("#sheet").hidden = true;
+      onPick();
+      respond(card, { status: "snoozed", snoozeUntil: until }, `Snoozed. Back ${label.toLowerCase()}.`);
+    })));
+}
+
+function replySheet(card, onSend) {
+  const opts = card.options ? `<div class="opts">${card.options.map((o, j) => `<button type="button" class="opt" data-opt="${j}"><b>${j + 1}</b>${esc(o)}</button>`).join("")}</div>` : "";
+  sheet(`Reply to ${card.agent}`, `${opts}<label for="reply-text" class="kind" style="--k:var(--muted)">Your message</label><textarea id="reply-text" placeholder="Tell ${esc(card.agent)} what to do"></textarea><button type="button" class="primary" id="reply-send">Send</button>`, (el) => {
+    let picked = null;
+    el.querySelectorAll(".opt").forEach((b) => (b.onclick = () => {
+      picked = Number(b.dataset.opt);
+      el.querySelectorAll(".opt").forEach((x) => x.classList.toggle("rec", x === b));
+    }));
+    el.querySelector("#reply-send").onclick = () => {
+      const text = el.querySelector("#reply-text").value.trim();
+      if (!text && picked == null) return toast("Write a message or pick an option");
+      $("#sheet").hidden = true;
+      onSend();
+      const choice = picked != null ? card.options[picked] : null;
+      respond(card, answerPatch("answered", { action: text ? "reply" : "go", option: picked, choice, text: text || null }),
+        text ? `Sent your reply to ${card.agent}` : `Sent “${choice}” to ${card.agent}`);
+    };
+    setTimeout(() => el.querySelector("#reply-text").focus(), 50);
+  });
+}
+
+function makeDraggable(el, card) {
+  let sx = 0, sy = 0, dx = 0, dy = 0, down = false, moved = false;
+  const stamp = el.querySelector(".stamp");
+  const dir = () => {
+    if (Math.abs(dx) < 20 && Math.abs(dy) < 20) return null;
+    return Math.abs(dx) > Math.abs(dy) ? (dx > 0 ? "go" : "dismiss") : dy < 0 ? "later" : "reply";
+  };
+  el.addEventListener("pointerdown", (e) => {
+    if (e.target.closest("a")) return;
+    down = true; moved = false; sx = e.clientX; sy = e.clientY;
+    el.setPointerCapture(e.pointerId);
+    el.classList.add("dragging");
+  });
+  el.addEventListener("pointermove", (e) => {
+    if (!down) return;
+    dx = e.clientX - sx; dy = e.clientY - sy;
+    if (Math.abs(dx) + Math.abs(dy) > 6) moved = true;
+    el.style.transform = `translate(${dx}px,${dy}px) rotate(${dx / 18}deg)`;
+    const d = dir();
+    if (d) {
+      stamp.textContent = STAMP[d][0];
+      stamp.style.color = stamp.style.borderColor = STAMP[d][1];
+      stamp.style.opacity = Math.min(1, Math.max(Math.abs(dx), Math.abs(dy)) / 90);
+    } else stamp.style.opacity = 0;
+  });
+  const end = (e) => {
+    if (!down) return;
+    down = false;
+    el.classList.remove("dragging");
+    const d = dir();
+    if (d && Math.max(Math.abs(dx), Math.abs(dy)) > 90) act(d, card);
+    else {
+      el.style.transform = "";
+      stamp.style.opacity = 0;
+      const opt = !moved && e.type === "pointerup" && document.elementFromPoint(e.clientX, e.clientY)?.closest(".opt");
+      if (opt) act("go", card, Number(opt.dataset.opt));
+    }
+    dx = dy = 0;
+  };
+  el.addEventListener("pointerup", end);
+  el.addEventListener("pointercancel", end);
+}
+
+$(".actions").addEventListener("click", (e) => {
+  const b = e.target.closest("button[data-act]");
+  if (b) act(b.dataset.act);
+});
+$("#feed").addEventListener("click", (e) => {
+  const b = e.target.closest("button[data-id]");
+  if (!b) return;
+  const card = cards.find((c) => c.id === b.dataset.id);
+  if (!card) return;
+  if (b.dataset.act === "dismiss") respond(card, answerPatch("dismissed", { action: "dismiss", option: null, choice: null, text: null }), `Dismissed. ${card.agent} won't raise it again.`);
+  else { open = [card, ...open.filter((c) => c.id !== card.id)]; setView("decide"); }
+});
+document.addEventListener("keydown", (e) => {
+  if (view !== "decide" || !$("#sheet").hidden || e.target.matches("input, textarea")) return;
+  const k = { ArrowRight: "go", ArrowLeft: "dismiss", ArrowUp: "later", ArrowDown: "reply" }[e.key];
+  if (k) { e.preventDefault(); act(k); }
+});
+
+function setView(v) {
+  view = v;
+  for (const name of ["decide", "feed"]) $(`#view-${name}`).hidden = name !== v;
+  document.querySelectorAll("#tabs button").forEach((b) => (b.dataset.view === v ? b.setAttribute("aria-current", "page") : b.removeAttribute("aria-current")));
+  render();
+}
+$("#tabs").addEventListener("click", (e) => { const b = e.target.closest("button[data-view]"); if (b) setView(b.dataset.view); });
+
+// Snoozed cards come back on their own; re-derive once a minute.
+setInterval(() => { derive(); render(); }, 60000);
+
+render();
+(async () => {
+  db = window.claude ? await window.claude.use("db") : null;
+  if (!db) { render(); return; }
+  const user = await window.claude.use("user");
+  const w = user ? await user.can("data.write") : null;
+  if (w === false) canWrite = false;
+  db.collection("cards").orderBy("createdAt", "desc").limit(300).onSnapshot((snap) => {
+    const before = new Set(cards.map((c) => c.id));
+    cards = snap.docs.map(normalize);
+    derive();
+    const fresh = cards.filter((c) => !before.has(c.id) && c.status === "open");
+    if (before.size && fresh.length) toast(`${fresh[0].agent}: ${fresh[0].title}`);
+    render();
+  }, () => { toast("Lost the connection to your cards. Reload to reconnect."); });
+})();
+</script>
