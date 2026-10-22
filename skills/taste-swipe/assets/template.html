@@ -48,6 +48,17 @@ h1 { font-family: var(--display); font-weight: 800; font-size: 22px; margin: 0; 
 .card.snap { transition: transform 0.22s cubic-bezier(0.3, 1.4, 0.5, 1); }
 .art { height: 46%; min-height: 170px; position: relative; }
 .art canvas { width: 100%; height: 100%; display: block; }
+.sketch {
+  position: absolute; inset: 0; display: grid; place-items: center; color: #2b2721;
+  background-color: var(--paper);
+  background-image: radial-gradient(rgba(43, 39, 33, 0.13) 1px, transparent 1.2px);
+  background-size: 14px 14px;
+}
+.sketch svg { width: 82%; height: 84%; overflow: visible; }
+.sketch svg * { vector-effect: non-scaling-stroke; }
+.sketch svg [fill]:not([fill="none"]):not(.a) { fill: currentColor; }
+.sketch svg .a { fill: var(--accent); stroke: var(--accent); }
+.sketch svg .af { fill: var(--accent); }
 .cat {
   position: absolute; left: 14px; top: 14px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em;
   text-transform: uppercase; background: rgba(255, 253, 248, 0.92); color: #1c1a17; padding: 4px 8px; border-radius: 999px;
@@ -128,7 +139,34 @@ h1 { font-family: var(--display); font-weight: 800; font-size: 22px; margin: 0; 
 // The deck is injected by scripts/build.mjs from a deck JSON file (see SKILL.md for its shape).
 const CONFIG = /*DECK*/null/*END*/;
 const CATS = CONFIG.categories;
-const DECK = CONFIG.atoms.map(([cat, title, line]) => ({ cat, title, line }));
+const DECK = CONFIG.atoms.map(([cat, title, line, art]) => ({ cat, title, line, art }));
+
+// Card sketches come from the deck as small SVG line drawings. Keep only drawing elements and
+// geometry attributes, so a deck can never put script or links on the page.
+const SVG_TAGS = new Set(['svg', 'g', 'path', 'circle', 'ellipse', 'rect', 'line', 'polyline', 'polygon']);
+const SVG_ATTRS = new Set(['viewBox', 'd', 'cx', 'cy', 'r', 'rx', 'ry', 'x', 'y', 'width', 'height', 'x1', 'y1', 'x2', 'y2',
+  'points', 'fill', 'stroke', 'stroke-width', 'stroke-linecap', 'stroke-linejoin', 'stroke-dasharray', 'opacity',
+  'fill-opacity', 'stroke-opacity', 'transform', 'class']);
+function cleanSvg(markup) {
+  if (!markup) return null;
+  const doc = new DOMParser().parseFromString(markup, 'image/svg+xml');
+  const root = doc.documentElement;
+  if (!root || root.nodeName !== 'svg' || doc.querySelector('parsererror')) return null;
+  const walk = el => {
+    for (const child of [...el.children]) {
+      if (!SVG_TAGS.has(child.nodeName)) { child.remove(); continue; }
+      for (const a of [...child.attributes]) if (!SVG_ATTRS.has(a.name)) child.removeAttribute(a.name);
+      walk(child);
+    }
+  };
+  for (const a of [...root.attributes]) if (!SVG_ATTRS.has(a.name) && a.name !== 'xmlns') root.removeAttribute(a.name);
+  walk(root);
+  root.setAttribute('fill', 'none'); root.setAttribute('stroke', 'currentColor');
+  if (!root.getAttribute('stroke-width')) root.setAttribute('stroke-width', '2.4');
+  root.setAttribute('stroke-linecap', 'round'); root.setAttribute('stroke-linejoin', 'round');
+  root.setAttribute('aria-hidden', 'true');
+  return document.importNode(root, true);
+}
 const ROUNDS = Math.min(CONFIG.rounds || 100, DECK.length);
 const RUN_KEY = 'tasteSwipe.' + CONFIG.id + '.v1';
 const VERDICTS = { no: -1, skip: 0, yes: 1, love: 2 };
@@ -169,6 +207,7 @@ function nextAtom(state) {
 }
 
 // ------------------------------------------------------------ art
+function paintIf(card, atom) { const c = card.querySelector('canvas'); if (c) paint(c, atom); }
 function paint(canvas, atom) {
   const ctx = canvas.getContext('2d');
   const r = canvas.getBoundingClientRect(), pr = Math.min(window.devicePixelRatio || 1, 2);
@@ -254,10 +293,18 @@ function updateCount() {
 function makeCard(atom) {
   const el = document.createElement('article');
   el.className = 'card';
-  el.innerHTML = `<div class="art"><canvas></canvas><span class="cat"></span></div>
+  el.innerHTML = `<div class="art">${atom.art ? '<div class="sketch"></div>' : '<canvas></canvas>'}<span class="cat"></span></div>
     <div class="copy"><h2></h2><p></p></div>
     <span class="stamp no">No</span><span class="stamp yes">Yes</span><span class="stamp love">Love</span><span class="stamp skip">Meh</span>`;
   el.querySelector('.cat').textContent = CATS[atom.cat].name;
+  const sketch = el.querySelector('.sketch');
+  if (sketch) {
+    const hue = CATS[atom.cat].hue;
+    sketch.style.setProperty('--paper', `hsl(${hue} 45% 91%)`);
+    sketch.style.setProperty('--accent', `hsl(${hue} 72% 48%)`);
+    const svg = cleanSvg(atom.art);
+    if (svg) sketch.appendChild(svg);
+  }
   el.querySelector('h2').textContent = atom.title;
   el.querySelector('p').textContent = atom.line;
   return el;
@@ -269,10 +316,10 @@ function show() {
   if (!current) { finish(); return; }
   play.innerHTML = '';
   const peek = nextAtomPeek();
-  if (peek) { const u = makeCard(peek); u.classList.add('under'); play.appendChild(u); requestAnimationFrame(() => paint(u.querySelector('canvas'), peek)); }
+  if (peek) { const u = makeCard(peek); u.classList.add('under'); play.appendChild(u); requestAnimationFrame(() => paintIf(u, peek)); }
   cardEl = makeCard(current);
   play.appendChild(cardEl);
-  requestAnimationFrame(() => paint(cardEl.querySelector('canvas'), current));
+  requestAnimationFrame(() => paintIf(cardEl, current));
   bindDrag(cardEl);
 }
 function nextAtomPeek() {
@@ -391,7 +438,7 @@ function finish() {
     show();
   });
 }
-window.addEventListener('resize', () => { if (cardEl && current) paint(cardEl.querySelector('canvas'), current); });
+window.addEventListener('resize', () => { if (cardEl && current) paintIf(cardEl, current); });
 show();
 })();
 </script>

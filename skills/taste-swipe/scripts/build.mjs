@@ -28,8 +28,14 @@ need(Array.isArray(deck.atoms) && deck.atoms.length >= 20, 'atoms: at least 20 e
 const titles = new Set();
 const perCat = {};
 (deck.atoms || []).forEach((a, i) => {
-  if (!Array.isArray(a) || a.length !== 3) { problems.push(`atoms[${i}]: must be [category, title, line]`); return; }
-  const [cat, title, line] = a;
+  if (!Array.isArray(a) || a.length < 3 || a.length > 4) { problems.push(`atoms[${i}]: must be [category, title, line] or [category, title, line, svg]`); return; }
+  const [cat, title, line, art] = a;
+  if (art !== undefined) {
+    need(typeof art === 'string' && /^<svg[\s>]/.test(art.trim()) && art.trim().endsWith('</svg>'), `atoms[${i}] "${title}": art must be one <svg>…</svg> element`);
+    need(typeof art === 'string' && art.length <= 3000, `atoms[${i}] "${title}": art over 3000 characters; simplify the sketch`);
+    need(typeof art === 'string' && !/<script|\son\w+\s*=|href|<text|<image|<foreignObject/i.test(art), `atoms[${i}] "${title}": art may only use shapes (no script, links, text or images)`);
+    need(typeof art === 'string' && /viewBox="0 0 160 100"/.test(art), `atoms[${i}] "${title}": art needs viewBox="0 0 160 100"`);
+  }
   need(cats[cat], `atoms[${i}] "${title}": unknown category "${cat}"`);
   need(typeof title === 'string' && title.length > 0 && title.length <= 48, `atoms[${i}]: title must be 1-48 characters`);
   need(typeof line === 'string' && line.length > 0 && line.length <= 110, `atoms[${i}] "${title}": line must be 1-110 characters`);

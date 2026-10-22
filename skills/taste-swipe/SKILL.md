@@ -49,10 +49,27 @@ for anything game-related.
   "subject": "a game",                 // used in "Not enough answers yet to sketch a game"
   "rounds": 100,                       // cards per session (at most the number of atoms)
   "categories": { "premise": { "name": "Premise", "hue": 28 } },   // hue 0-360 tints the card art
-  "atoms": [ ["premise", "Last fire in a dark world", "The sun is gone. Your light is the only safe ground."] ],
+  "atoms": [ ["premise", "Last fire in a dark world", "The sun is gone. Your light is the only safe ground.",
+               "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\">…</svg>"] ],
   "pitch": [ ["premise", "a game about"], ["tone", "that feels"] ]  // builds the one-line sketch at the end
 }
 ```
+
+### Sketches
+
+Give every atom a sketch as its optional fourth element: a lo-fi line drawing that makes the idea
+readable at a glance, like a notebook doodle or a manual pictogram. Cards without one fall back to an
+abstract pattern, which says nothing, so draw them all. Rules (the builder checks the first four):
+- One `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 100">`, at most 3000 characters.
+- Only `g`, `path`, `circle`, `ellipse`, `rect`, `line`, `polyline`, `polygon`. No text, images,
+  links, styles or scripts; the page strips anything else.
+- No stroke colours: the page draws ink lines (width 2.4) on paper tinted by the category's hue.
+  `fill="currentColor"` makes a solid ink shape; `class="a"` (fill and stroke) or `class="af"`
+  (fill only) paints the one accent shape that matters most.
+- Draw the idea literally with plain symbols (figures for units, coins for money, a clock for time),
+  5 to 25 shapes, and make cards in one category look clearly different from each other.
+
+For a big deck, split the categories between parallel helpers, one batch each, then merge.
 
 `pitch` picks the first loved (else liked) atom of each listed category and strings them into one
 sentence, so list the categories that define the subject, in reading order.

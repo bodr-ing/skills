@@ -107,1122 +107,1346 @@
   [
    "premise",
    "Last fire in a dark world",
-   "The sun is gone. Your light is the only safe ground."
+   "The sun is gone. Your light is the only safe ground.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><ellipse cx=\"80\" cy=\"70\" rx=\"48\" ry=\"16\" stroke-dasharray=\"4 5\"/><path d=\"M64 78L96 68M64 68L96 78\"/><path class=\"a\" d=\"M80 70C70 62 72 52 78 42C80 50 86 50 84 40C94 50 92 62 80 70Z\"/><circle cx=\"110\" cy=\"64.5\" r=\"2.7\"/><path d=\"M110 67.2V73.5M105.5 69H114.5M106.4 78L110 73.5L113.6 78\"/><path fill=\"currentColor\" d=\"M18 34a2 2 0 1 0 4 0a2 2 0 1 0 -4 0M25 34a2 2 0 1 0 4 0a2 2 0 1 0 -4 0M131 24a2 2 0 1 0 4 0a2 2 0 1 0 -4 0M138 24a2 2 0 1 0 4 0a2 2 0 1 0 -4 0\"/><polygon fill=\"currentColor\" points=\"10,90 18,62 26,90\"/><polygon fill=\"currentColor\" points=\"134,90 143,58 152,90\"/></svg>"
   ],
   [
    "premise",
    "Gangs of a 1930s city",
-   "Rackets, speakeasies and turf wars, block by block."
+   "Rackets, speakeasies and turf wars, block by block.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M8 48H20V30H30V48H68V22H78V14H88V48H128V32H140V48H152\"/><path d=\"M8 90H152\"/><circle cx=\"46\" cy=\"62\" r=\"8\"/><path fill=\"currentColor\" d=\"M32 54H60M37 54V45Q46 40 55 45V54Z\"/><path d=\"M32 90Q32 72 46 72Q60 72 60 90\"/><circle cx=\"114\" cy=\"62\" r=\"8\"/><path fill=\"currentColor\" d=\"M100 54H128M105 54V45Q114 40 123 45V54Z\"/><path class=\"af\" d=\"M105 50H123V53H105Z\"/><path d=\"M100 90Q100 72 114 72Q128 72 128 90\"/><path d=\"M66 82L94 82M70 76H78M84 76H92\" stroke-width=\"1.5\"/></svg>"
   ],
   [
    "premise",
    "Occult war hidden in a modern city",
-   "Vampires, witches and a secret bureau fight where nobody may notice."
+   "Vampires, witches and a secret bureau fight where nobody may notice.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><rect x=\"14\" y=\"44\" width=\"24\" height=\"46\"/><rect x=\"44\" y=\"30\" width=\"22\" height=\"60\"/><rect x=\"104\" y=\"38\" width=\"24\" height=\"52\"/><rect x=\"132\" y=\"54\" width=\"18\" height=\"36\"/><path stroke-width=\"1.5\" d=\"M20 52h4M28 52h4M20 62h4M50 40h4M58 40h4M50 52h4M110 48h4M120 48h4M110 60h4\"/><path fill=\"currentColor\" d=\"M88 12A12 12 0 1 0 100 30A9 9 0 1 1 88 12Z\"/><path class=\"a\" d=\"M66 50Q70 44 74 48Q77 42 80 46Q83 42 86 48Q90 44 94 50Q88 48 86 54Q80 50 74 54Q72 48 66 50Z\"/><path d=\"M8 90H152\"/><ellipse cx=\"85\" cy=\"81\" rx=\"12\" ry=\"8\" stroke-width=\"1.5\"/><polygon stroke-width=\"1.5\" points=\"85,73 90,88 77,79 93,79 80,88\"/></svg>"
   ],
   [
    "premise",
    "Space fleets over planets",
-   "Carriers, fighters and orbital bombardment."
+   "Carriers, fighters and orbital bombardment.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M8 92Q80 50 152 92\"/><path stroke-width=\"1.5\" d=\"M30 84q6 -3 12 0M110 80q6 -3 12 0\"/><polygon points=\"34,30 96,22 116,28 96,34 34,36\"/><rect x=\"58\" y=\"16\" width=\"14\" height=\"7\"/><polygon fill=\"currentColor\" points=\"124,16 134,20 124,24\"/><polygon fill=\"currentColor\" points=\"130,32 140,36 130,40\"/><polygon fill=\"currentColor\" points=\"18,46 28,50 18,54\"/><path class=\"a\" stroke-width=\"3\" d=\"M96 34L84 72\"/><path fill=\"currentColor\" d=\"M19 16a1 1 0 1 0 2 0a1 1 0 1 0 -2 0M145 54a1 1 0 1 0 2 0a1 1 0 1 0 -2 0M49 54a1 1 0 1 0 2 0a1 1 0 1 0 -2 0M139 10a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\"/></svg>"
   ],
   [
    "premise",
    "Medieval kingdoms",
-   "Castles, knights, sieges and succession."
+   "Castles, knights, sieges and succession.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M38 86V24h4v4h4v-4h4v4h4v-4V86\"/><path d=\"M106 86V24h4v4h4v-4h4v4h4v-4V86\"/><rect x=\"54\" y=\"44\" width=\"52\" height=\"42\"/><path d=\"M58 44v-5h6v5M70 44v-5h6v5M84 44v-5h6v5M96 44v-5h6v5\"/><path d=\"M72 86V72Q80 62 88 72V86\"/><path d=\"M46 24V10\"/><polygon class=\"a\" points=\"46,10 60,14 46,18\"/><path d=\"M8 88Q40 82 80 88Q120 82 152 88\"/><path stroke-width=\"1.5\" d=\"M44 40v6M112 40v6\"/></svg>"
   ],
   [
    "premise",
    "Ant colony underground",
-   "Tunnels, queens, pheromone trails and beetle raids."
+   "Tunnels, queens, pheromone trails and beetle raids.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M8 28H62M86 28H152\"/><path d=\"M60 28Q74 14 88 28\"/><path stroke-width=\"1.5\" d=\"M20 28l-2 -5M24 28l2 -6M124 28l-2 -5M128 28l2 -6\"/><path stroke-width=\"3.5\" d=\"M74 26C74 40 50 42 46 54M74 26C80 42 104 44 112 56M44 66C44 74 66 74 76 80\"/><ellipse cx=\"40\" cy=\"60\" rx=\"14\" ry=\"7\"/><ellipse cx=\"116\" cy=\"62\" rx=\"16\" ry=\"8\"/><ellipse cx=\"88\" cy=\"82\" rx=\"18\" ry=\"8\"/><ellipse class=\"af\" cx=\"86\" cy=\"82\" rx=\"8\" ry=\"4\"/><circle cx=\"97\" cy=\"81\" r=\"2.5\"/><path fill=\"currentColor\" d=\"M57 44a2.5 1.6 0 1 0 5 0a2.5 1.6 0 1 0 -5 0M62 44a1.4 1.4 0 1 0 2.8 0a1.4 1.4 0 1 0 -2.8 0\"/><path stroke-width=\"1.5\" d=\"M59 41l1 6M62 41l-1 6\"/><path fill=\"currentColor\" d=\"M95 48a2.5 1.6 0 1 0 5 0a2.5 1.6 0 1 0 -5 0M100 48a1.4 1.4 0 1 0 2.8 0a1.4 1.4 0 1 0 -2.8 0\"/><path stroke-width=\"1.5\" d=\"M97 45l1 6M100 45l-1 6\"/><path fill=\"currentColor\" d=\"M35 60a2.5 1.6 0 1 0 5 0a2.5 1.6 0 1 0 -5 0M40 60a1.4 1.4 0 1 0 2.8 0a1.4 1.4 0 1 0 -2.8 0\"/><path stroke-width=\"1.5\" d=\"M37 57l1 6M40 57l-1 6\"/><path fill=\"currentColor\" d=\"M113 62a2.5 1.6 0 1 0 5 0a2.5 1.6 0 1 0 -5 0M118 62a1.4 1.4 0 1 0 2.8 0a1.4 1.4 0 1 0 -2.8 0\"/><path stroke-width=\"1.5\" d=\"M115 59l1 6M118 59l-1 6\"/></svg>"
   ],
   [
    "premise",
    "Cold War proxy conflict",
-   "Spies, coups and tanks that never quite cross the border."
+   "Spies, coups and tanks that never quite cross the border.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path class=\"a\" stroke-dasharray=\"5 4\" d=\"M80 40V90\"/><path d=\"M8 80H152\"/><rect x=\"24\" y=\"68\" width=\"36\" height=\"10\" rx=\"5\"/><rect x=\"34\" y=\"60\" width=\"16\" height=\"8\" rx=\"2\"/><path d=\"M50 63H68\"/><rect x=\"100\" y=\"68\" width=\"36\" height=\"10\" rx=\"5\"/><rect x=\"110\" y=\"60\" width=\"16\" height=\"8\" rx=\"2\"/><path d=\"M110 63H92\"/><path d=\"M64 24Q80 10 96 24Q80 38 64 24Z\"/><circle cx=\"80\" cy=\"24\" r=\"4\" fill=\"currentColor\"/></svg>"
   ],
   [
    "premise",
    "Post-apocalyptic scavengers",
-   "Rusted vehicles, raiders and the last clean water."
+   "Rusted vehicles, raiders and the last clean water.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M8 82Q50 76 90 82T152 80\"/><g transform=\"rotate(-8 60 70)\"><path d=\"M28 74V66L38 58H64L74 66H86V74Z\"/><circle cx=\"40\" cy=\"76\" r=\"5\"/><ellipse cx=\"74\" cy=\"78\" rx=\"6\" ry=\"3\"/><path stroke-width=\"1.5\" d=\"M44 60L50 66M56 62l4 -4\"/></g><path d=\"M128 82V40M128 56L116 46M128 50L140 40M140 40l4 -4\"/><path stroke-width=\"1.5\" d=\"M10 40H16V30L20 34V26H26V40\"/><path class=\"a\" d=\"M100 34C94 44 92 48 92 52A8 8 0 0 0 108 52C108 48 106 44 100 34Z\"/></svg>"
   ],
   [
    "premise",
    "Mythic gods at war",
-   "Each faction worships a god who walks the battlefield."
+   "Each faction worships a god who walks the battlefield.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"74\" cy=\"18\" r=\"7\"/><path d=\"M60 40Q60 28 74 28Q88 28 88 40M86 32L104 20\"/><path d=\"M36 46Q32 36 44 36Q48 26 60 32Q68 24 80 30Q92 24 98 34Q112 32 110 46Z\"/><polygon class=\"a\" points=\"108,14 100,36 108,36 96,66 100,46 92,46 100,14\"/><path d=\"M8 86H152\"/><path fill=\"currentColor\" d=\"M16 74a2 2 0 1 0 4 0a2 2 0 1 0 -4 0M24 74a2 2 0 1 0 4 0a2 2 0 1 0 -4 0M32 74a2 2 0 1 0 4 0a2 2 0 1 0 -4 0M40 74a2 2 0 1 0 4 0a2 2 0 1 0 -4 0M20 80a2 2 0 1 0 4 0a2 2 0 1 0 -4 0M28 80a2 2 0 1 0 4 0a2 2 0 1 0 -4 0M36 80a2 2 0 1 0 4 0a2 2 0 1 0 -4 0M114 74a2 2 0 1 0 4 0a2 2 0 1 0 -4 0M122 74a2 2 0 1 0 4 0a2 2 0 1 0 -4 0M130 74a2 2 0 1 0 4 0a2 2 0 1 0 -4 0M138 74a2 2 0 1 0 4 0a2 2 0 1 0 -4 0M118 80a2 2 0 1 0 4 0a2 2 0 1 0 -4 0M126 80a2 2 0 1 0 4 0a2 2 0 1 0 -4 0M134 80a2 2 0 1 0 4 0a2 2 0 1 0 -4 0\"/></svg>"
   ],
   [
    "premise",
    "Tiny toy soldiers in a house",
-   "Plastic armies fight across a kitchen floor."
+   "Plastic armies fight across a kitchen floor.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M8 60H152M8 74H152M30 92L50 60M74 92L80 60M118 92L110 60\"/><path d=\"M122 8V60M144 8V54M116 14H150\"/><rect x=\"16\" y=\"26\" width=\"26\" height=\"30\" rx=\"3\"/><path d=\"M42 32Q52 34 52 41Q52 48 42 50\"/><circle cx=\"66\" cy=\"70.5\" r=\"2.7\"/><path d=\"M66 73.2V79.5M61.5 75H70.5M62.4 84L66 79.5L69.6 84\"/><path d=\"M70 75.9L72 64.2\" stroke-width=\"1.5\"/><ellipse cx=\"66\" cy=\"85\" rx=\"7\" ry=\"2\" fill=\"currentColor\"/><circle cx=\"82\" cy=\"66.5\" r=\"2.7\"/><path d=\"M82 69.2V75.5M77.5 71H86.5M78.4 80L82 75.5L85.6 80\"/><path d=\"M86 71.9L88 60.2\" stroke-width=\"1.5\"/><ellipse cx=\"82\" cy=\"81\" rx=\"7\" ry=\"2\" fill=\"currentColor\"/><circle cx=\"98\" cy=\"70.5\" r=\"2.7\"/><path d=\"M98 73.2V79.5M93.5 75H102.5M94.4 84L98 79.5L101.6 84\"/><path d=\"M102 75.9L104 64.2\" stroke-width=\"1.5\"/><ellipse cx=\"98\" cy=\"85\" rx=\"7\" ry=\"2\" fill=\"currentColor\"/><circle class=\"af\" cx=\"136\" cy=\"80\" r=\"6\"/></svg>"
   ],
   [
    "premise",
    "Viking raids and new lands",
-   "Longships, frozen fjords and sagas."
+   "Longships, frozen fjords and sagas.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M8 48L22 28L34 44L46 32L58 48\"/><path d=\"M110 46L126 24L140 40L152 30\"/><rect class=\"af\" x=\"62\" y=\"24\" width=\"36\" height=\"32\"/><path d=\"M71 24V56M80 24V56M89 24V56\"/><path d=\"M80 70V20\"/><path d=\"M28 68Q80 84 130 68\"/><path d=\"M130 68Q142 56 136 46Q144 44 144 52\"/><path d=\"M28 68Q20 60 24 52\"/><path fill=\"currentColor\" d=\"M47.5 74a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0 -5 0M61.5 76a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0 -5 0M75.5 77a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0 -5 0M89.5 77a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0 -5 0M103.5 75a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0 -5 0\"/><path d=\"M8 86q6 -4 12 0t12 0t12 0t12 0t12 0t12 0t12 0t12 0t12 0t12 0t12 0t12 0\"/></svg>"
   ],
   [
    "premise",
    "Alien invasion of Earth",
-   "Defend cities against something that does not negotiate."
+   "Defend cities against something that does not negotiate.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M8 90V72H18V60H30V76H42V56H52V90M108 90V62H120V74H132V54H142V70H152V90\"/><polygon stroke-dasharray=\"3 4\" points=\"70,32 90,32 106,86 54,86\"/><path d=\"M66 24Q80 8 94 24\"/><ellipse class=\"af\" cx=\"80\" cy=\"27\" rx=\"28\" ry=\"7\"/><path fill=\"currentColor\" d=\"M64.4 27a1.6 1.6 0 1 0 3.2 0a1.6 1.6 0 1 0 -3.2 0M78.4 28a1.6 1.6 0 1 0 3.2 0a1.6 1.6 0 1 0 -3.2 0M92.4 27a1.6 1.6 0 1 0 3.2 0a1.6 1.6 0 1 0 -3.2 0\"/><circle cx=\"80\" cy=\"58\" r=\"2.4\"/><path d=\"M80 60.4V66M76 62H84M76.8 70L80 66L83.2 70\"/></svg>"
   ],
   [
    "premise",
    "Corporate cyberpunk",
-   "Megacorps, drones, hackers and neon streets."
+   "Megacorps, drones, hackers and neon streets.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><rect x=\"12\" y=\"24\" width=\"22\" height=\"66\"/><rect x=\"40\" y=\"10\" width=\"24\" height=\"80\"/><rect x=\"114\" y=\"16\" width=\"24\" height=\"74\"/><rect x=\"142\" y=\"44\" width=\"10\" height=\"46\"/><rect class=\"a\" x=\"68\" y=\"26\" width=\"8\" height=\"26\"/><path stroke-width=\"1.5\" d=\"M18 32h4M26 32h4M18 44h4M46 20h4M54 20h4M46 34h4M120 26h4M128 26h4M120 40h4\"/><path d=\"M92 42H108M92 42L86 36M108 42L114 36\"/><ellipse cx=\"86\" cy=\"35\" rx=\"6\" ry=\"1.6\"/><ellipse cx=\"114\" cy=\"35\" rx=\"6\" ry=\"1.6\"/><rect x=\"96\" y=\"42\" width=\"8\" height=\"5\"/><path stroke-width=\"1.5\" d=\"M84 62l-3 8M96 68l-3 8M108 60l-3 8M90 80l-3 8M104 80l-3 8\"/><path d=\"M8 90H152\"/></svg>"
   ],
   [
    "premise",
    "Islands at sea",
-   "Archipelagos, ships, storms and trade winds."
+   "Archipelagos, ships, storms and trade winds.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M12 72Q36 56 62 72\"/><path d=\"M36 64Q34 50 40 40M40 40Q30 36 26 42M40 40Q48 34 54 40M40 40Q36 30 30 30M40 40Q46 30 52 32\"/><path d=\"M110 72Q128 60 146 72\"/><path d=\"M128 64V54M128 54Q122 50 118 54M128 54Q134 50 138 54\"/><path d=\"M74 66H100L95 72H79Z\"/><path d=\"M86 66V42\"/><polygon class=\"af\" points=\"87,44 100,62 87,62\"/><path stroke-width=\"1.5\" d=\"M96 20Q108 16 120 20M104 28Q116 24 128 28\"/><path d=\"M8 80q6 -4 12 0t12 0t12 0t12 0t12 0t12 0t12 0t12 0t12 0t12 0t12 0t12 0\"/><path stroke-width=\"1.5\" d=\"M20 88q6 -3 12 0t12 0t12 0t12 0t12 0t12 0t12 0t12 0t12 0t12 0\"/></svg>"
   ],
   [
    "premise",
    "Dinosaurs and primal tribes",
-   "Tame beasts, hold the valley, survive extinction."
+   "Tame beasts, hold the valley, survive extinction.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M112 82L128 46H136L152 82\"/><path class=\"a\" d=\"M128 46Q132 34 136 46Z\"/><path stroke-width=\"1.5\" d=\"M132 34q-4 -6 0 -12q4 -6 0 -12\"/><ellipse cx=\"46\" cy=\"62\" rx=\"20\" ry=\"10\"/><path d=\"M62 56Q72 40 70 24\"/><ellipse cx=\"74\" cy=\"22\" rx=\"6\" ry=\"3.5\"/><path d=\"M26 64Q16 70 10 64M34 70V82M42 71V82M52 71V82M58 69V82\"/><circle cx=\"98\" cy=\"67\" r=\"3\"/><path d=\"M98 70V77M93 72H103M94 82L98 77L102 82\"/><path d=\"M104 88L110 58\"/><polygon fill=\"currentColor\" points=\"110,52 113,60 108,59\"/><path d=\"M8 82H152\"/></svg>"
   ],
   [
    "premise",
    "Microbes inside a body",
-   "Immune cells against an infection, in real time."
+   "Immune cells against an infection, in real time.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M8 12Q80 4 152 12M8 90Q80 84 152 90\"/><ellipse cx=\"30\" cy=\"30\" rx=\"11\" ry=\"6\"/><ellipse cx=\"30\" cy=\"30\" rx=\"4\" ry=\"2\"/><ellipse cx=\"132\" cy=\"74\" rx=\"11\" ry=\"6\"/><ellipse cx=\"132\" cy=\"74\" rx=\"4\" ry=\"2\"/><ellipse cx=\"34\" cy=\"72\" rx=\"11\" ry=\"6\"/><ellipse cx=\"34\" cy=\"72\" rx=\"4\" ry=\"2\"/><circle class=\"af\" cx=\"100\" cy=\"38\" r=\"9\"/><path d=\"M100 26v-4M100 50v4M88 38h-4M112 38h4M92 30l-3 -3M108 30l3 -3M92 46l-3 3M108 46l3 3\"/><path d=\"M58 60Q52 46 64 44Q70 36 78 46L86 42Q90 52 80 58Q82 70 70 68Q60 72 58 60Z\"/><circle cx=\"70\" cy=\"56\" r=\"4\" fill=\"currentColor\"/><path stroke-width=\"1.5\" d=\"M128 34v8M128 34l-4 -6M128 34l4 -6M140 46v8M140 46l-4 -6M140 46l4 -6\"/></svg>"
   ],
   [
    "tone",
    "Grim and serious",
-   "War is costly, losses hurt, nothing is played for laughs."
+   "War is costly, losses hurt, nothing is played for laughs.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M8 84Q80 66 152 84\"/><path d=\"M40 78V56M34 62H46M70 74V52M64 58H76M120 78V58M114 64H126\"/><path d=\"M95 74V50\"/><path fill=\"currentColor\" d=\"M87 52Q95 40 103 52Z\"/><path stroke-width=\"1.5\" d=\"M14 22H60M26 30H74M94 18H146M104 26H136\"/><path d=\"M130 40l5 4l5 -4\"/><circle class=\"a\" cx=\"54\" cy=\"80\" r=\"3\"/></svg>"
   ],
   [
    "tone",
    "Cozy and warm",
-   "Low stakes, soft edges, a world you like visiting."
+   "Low stakes, soft edges, a world you like visiting.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M88 42V30H96V46\"/><rect x=\"52\" y=\"50\" width=\"46\" height=\"36\"/><polygon points=\"46,52 75,28 104,52\"/><rect x=\"68\" y=\"66\" width=\"11\" height=\"20\" rx=\"1\"/><rect x=\"84\" y=\"58\" width=\"9\" height=\"9\"/><circle cx=\"97\" cy=\"22\" r=\"3\"/><circle cx=\"104\" cy=\"15\" r=\"4\"/><circle cx=\"113\" cy=\"12\" r=\"3\"/><path class=\"a\" d=\"M128 32C124 26 116 30 122 38L128 44L134 38C140 30 132 26 128 32Z\"/><circle cx=\"28\" cy=\"58\" r=\"12\"/><path d=\"M28 70V86M12 86H148\"/><path stroke-width=\"1.5\" d=\"M114 86v-6M118 86v-8M122 86v-5\"/></svg>"
   ],
   [
    "tone",
    "Funny and absurd",
-   "Silly units, jokes in the barks, chaos on purpose."
+   "Silly units, jokes in the barks, chaos on purpose.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M18 80H56\"/><circle cx=\"24\" cy=\"84\" r=\"4\"/><circle cx=\"50\" cy=\"84\" r=\"4\"/><path d=\"M36 80L58 48M30 80L36 66L42 80\"/><path d=\"M54 46Q58 42 62 48\"/><path stroke-dasharray=\"2 4\" d=\"M62 44Q80 12 100 26\"/><ellipse class=\"af\" cx=\"110\" cy=\"32\" rx=\"10\" ry=\"7\"/><circle cx=\"121\" cy=\"23\" r=\"3.5\"/><path d=\"M124 22l5 1.5l-5 2M106 39l-2 7M113 39l1 7M100 30l-6 -4M102 36l-6 2\"/><circle cx=\"136\" cy=\"64\" r=\"4\"/><path d=\"M136 68V80M136 72L128 62M136 72L144 62M132 90L136 80L140 90\"/><path stroke-width=\"1.5\" d=\"M127 16l-3 -4M132 14v-5\"/></svg>"
   ],
   [
    "tone",
    "Eerie and dreadful",
-   "Something is wrong out in the dark and you feel it."
+   "Something is wrong out in the dark and you feel it.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M20 90V38M20 56L10 46M20 50L32 38M32 38l2 -6\"/><path d=\"M140 90V34M140 52L150 42M140 60L128 50M128 50l-2 -6\"/><circle cx=\"68\" cy=\"69.5\" r=\"3.3\"/><path d=\"M68 72.8V80.5M62.5 75H73.5M63.6 86L68 80.5L72.4 86\"/><path d=\"M74 75v6\"/><rect x=\"71\" y=\"81\" width=\"6\" height=\"7\" rx=\"1\"/><ellipse class=\"af\" cx=\"104\" cy=\"42\" rx=\"3.5\" ry=\"1.8\"/><ellipse class=\"af\" cx=\"114\" cy=\"42\" rx=\"3.5\" ry=\"1.8\"/><path stroke-width=\"1.5\" d=\"M8 80Q30 74 52 80T96 80T140 80M30 68q14 -4 28 0M96 64q14 -4 28 0\"/></svg>"
   ],
   [
    "tone",
    "Heroic and epic",
-   "Big music, big moments, you save the day."
+   "Big music, big moments, you save the day.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M38 90L54 66H102L118 90\"/><circle cx=\"78\" cy=\"38\" r=\"4\"/><path d=\"M78 42V56M78 46L70 54M78 46L86 38M72 66L78 56L84 66\"/><path d=\"M78 44Q62 50 60 64\"/><path class=\"a\" stroke-width=\"3\" d=\"M86 38L94 12\"/><path d=\"M83 36l6 2\"/><path stroke-width=\"1.5\" d=\"M46 30L24 22M44 44L18 44M50 18L38 8M112 30L134 22M114 44L140 44M106 18L118 8\"/></svg>"
   ],
   [
    "tone",
    "Noir and cynical",
-   "Everyone has a price and nobody is clean."
+   "Everyone has a price and nobody is clean.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path stroke-width=\"1.5\" d=\"M80 12L72 30M94 12L86 30M108 12L100 30M122 12L114 30\"/><path fill=\"currentColor\" d=\"M26 30H54M31 30V22Q40 17 49 22V30Z\"/><circle cx=\"40\" cy=\"37\" r=\"6\" fill=\"currentColor\"/><polygon fill=\"currentColor\" points=\"30,45 50,45 58,88 22,88\"/><path stroke-width=\"1.5\" d=\"M46 40h6M55 37q4 -4 0 -8q-4 -4 2 -8\"/><rect x=\"128\" y=\"46\" width=\"22\" height=\"12\" rx=\"2\"/><path d=\"M128 50H118M128 54H118\"/><rect class=\"af\" x=\"96\" y=\"46\" width=\"22\" height=\"12\"/><circle cx=\"107\" cy=\"52\" r=\"3\"/><path d=\"M8 88H152\"/></svg>"
   ],
   [
    "tone",
    "Melancholic and beautiful",
-   "A sad, quiet world that is still lovely to look at."
+   "A sad, quiet world that is still lovely to look at.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path class=\"a\" d=\"M58 68A22 22 0 0 1 102 68Z\"/><path d=\"M8 68H152\"/><path stroke-width=\"1.5\" d=\"M62 76H98M68 82H92M74 88H86\"/><path d=\"M12 68Q30 58 48 68\"/><path d=\"M30 62V38M30 48L20 40M30 44L40 34\"/><path stroke-width=\"1.5\" d=\"M46 40q3 -3 6 0q-3 3 -6 0M52 52q3 -3 6 0q-3 3 -6 0M42 30q3 -3 6 0q-3 3 -6 0\"/><path d=\"M116 30q4 -4 8 0q4 -4 8 0M128 18q3 -3 6 0q3 -3 6 0\"/></svg>"
   ],
   [
    "tone",
    "Over-the-top action",
-   "Explosions, swagger and a cheesy one-liner per unit."
+   "Explosions, swagger and a cheesy one-liner per unit.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><polygon class=\"a\" points=\"112,10 116.5,26.6 129.3,15.1 124.1,31.5 141.1,28.7 127.8,39.7 143.7,46.6 126.6,48.6 136.2,63 120.7,55.5 121,72.7 112,58 103,72.7 103.3,55.5 87.8,63 97.4,48.6 80.3,46.6 96.2,39.7 82.9,28.7 99.9,31.5 94.7,15.1 107.5,26.6\"/><circle cx=\"40\" cy=\"44\" r=\"8\"/><path stroke-width=\"3.5\" d=\"M33 43H47\"/><path d=\"M40 52V72M40 58L28 68M40 58L50 66M32 90L40 72L48 90\"/><path fill=\"currentColor\" d=\"M66 20h5v5h-5zM148 70h4v4h-4zM74 72h5v5h-5z\"/><path stroke-width=\"1.5\" d=\"M60 40H68M62 52H72M60 64H68\"/></svg>"
   ],
   [
    "tone",
    "Mysterious and strange",
-   "Weird rules and a world you slowly figure out."
+   "Weird rules and a world you slowly figure out.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><rect class=\"af\" x=\"68\" y=\"32\" width=\"22\" height=\"46\"/><rect x=\"66\" y=\"30\" width=\"26\" height=\"50\"/><polygon points=\"66,30 54,36 54,86 66,80\"/><path d=\"M8 80H54M92 80H152\"/><circle cx=\"36\" cy=\"71\" r=\"3\"/><path d=\"M36 74V81M31 76H41M32 86L36 81L40 86\"/><path d=\"M118 30H134L126 44ZM22 22H34L28 32Z\"/><path d=\"M108 66h8v-6h8v-6h8v-6h8\"/><path fill=\"currentColor\" d=\"M138.8 16a1.2 1.2 0 1 0 2.4 0a1.2 1.2 0 1 0 -2.4 0M110.8 18a1.2 1.2 0 1 0 2.4 0a1.2 1.2 0 1 0 -2.4 0M46.8 12a1.2 1.2 0 1 0 2.4 0a1.2 1.2 0 1 0 -2.4 0\"/></svg>"
   ],
   [
    "art",
    "Low-poly diorama",
-   "Clean faceted shapes, like a model on a table."
+   "Clean faceted shapes, like a model on a table.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M18 70L80 56L142 70L80 84ZM18 70V78L80 92L142 78V70M80 84V92\"/><polygon points=\"38,68 64,26 90,62\"/><path d=\"M64 26L68 62M64 26L50 66\"/><polygon class=\"af\" points=\"64,26 58,36 65,34 70,38\"/><polygon points=\"84,62 104,38 124,68\"/><path d=\"M104 38L100 64\"/><polygon points=\"118,62 126,42 134,62\"/><path d=\"M126 62v6\"/></svg>"
   ],
   [
    "art",
    "Painterly and hand-drawn",
-   "Brush strokes, like a living illustration."
+   "Brush strokes, like a living illustration.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><g stroke-width=\"4\" stroke-linecap=\"round\"><path d=\"M10 76C40 62 60 70 80 72C100 74 124 60 150 70\"/><path d=\"M30 42q6 -8 14 0M26 50q9 -7 18 0M32 56q7 -4 14 0\"/><path d=\"M38 58V74\"/><path stroke-width=\"3\" d=\"M70 24q10 -6 20 0t20 0\"/></g><circle cx=\"118\" cy=\"30\" r=\"8\" stroke-width=\"3.5\" stroke-dasharray=\"10 3\"/><path stroke-width=\"3\" d=\"M150 62L126 82\"/><path class=\"a\" d=\"M126 82Q116 86 112 90Q120 91 129 85Z\"/></svg>"
   ],
   [
    "art",
    "Pixel art",
-   "Crisp sprites and a deliberate retro palette."
+   "Crisp sprites and a deliberate retro palette.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path stroke-width=\"1.5\" fill=\"currentColor\" d=\"M36 24h7v7h-7zM78 24h7v7h-7zM43 31h7v7h-7zM71 31h7v7h-7zM36 38h49v7h-49zM29 45h14v7h-14zM50 45h21v7h-21zM78 45h14v7h-14zM22 52h77v7h-77zM22 59h7v7h-7zM36 59h49v7h-49zM92 59h7v7h-7zM22 66h7v7h-7zM36 66h7v7h-7zM78 66h7v7h-7zM92 66h7v7h-7zM43 73h14v7h-14zM64 73h14v7h-14z\"/><path class=\"af\" stroke-width=\"1.5\" fill=\"currentColor\" d=\"M116.5 30h9v4.5h-9zM130 30h9v4.5h-9zM112 34.5h31.5v4.5h-31.5zM112 39h31.5v4.5h-31.5zM116.5 43.5h22.5v4.5h-22.5zM121 48h13.5v4.5h-13.5zM125.5 52.5h4.5v4.5h-4.5z\"/><path stroke-dasharray=\"6 3\" d=\"M12 88H148\"/></svg>"
   ],
   [
    "art",
    "Gritty realism",
-   "Mud, smoke, wear and realistic lighting."
+   "Mud, smoke, wear and realistic lighting.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M8 76Q40 70 80 76T152 74\"/><path stroke-width=\"1.5\" stroke-dasharray=\"2 3\" d=\"M20 90L70 80M34 92L84 82\"/><path d=\"M90 74L96 66H120L126 74ZM110 66L118 60L132 62\"/><path class=\"a\" d=\"M104 66C100 60 104 56 106 52C108 56 112 58 108 66Z\"/><path d=\"M106 50Q98 42 106 36Q102 26 112 24Q114 14 126 16\"/><path d=\"M18 76V56M42 74V54\"/><path stroke-width=\"1.5\" d=\"M18 60L42 58M18 66L42 64M26 57l3 4M34 63l3 4\"/><circle cx=\"70\" cy=\"67\" r=\"3\"/><path d=\"M70 70V77M65 72H75M66 82L70 77L74 82\"/><path fill=\"currentColor\" d=\"M65 66Q70 59 75 66Z\"/><path stroke-width=\"1.5\" d=\"M140 14l-3 8M148 30l-3 8M134 40l-3 8\"/></svg>"
   ],
   [
    "art",
    "High-contrast noir",
-   "Mostly black, a few hard lights, strong silhouettes."
+   "Mostly black, a few hard lights, strong silhouettes.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path fill=\"currentColor\" d=\"M8 92V50H24V36H42V58H56V24H82V46H96V30H114V54H132V42H152V92Z\"/><rect class=\"af\" x=\"66\" y=\"32\" width=\"8\" height=\"8\"/><circle cx=\"128\" cy=\"18\" r=\"7\"/><path fill=\"currentColor\" d=\"M18.8 18a1.2 1.2 0 1 0 2.4 0a1.2 1.2 0 1 0 -2.4 0M42.8 12a1.2 1.2 0 1 0 2.4 0a1.2 1.2 0 1 0 -2.4 0M98.8 14a1.2 1.2 0 1 0 2.4 0a1.2 1.2 0 1 0 -2.4 0\"/></svg>"
   ],
   [
    "art",
    "Toy-like miniatures",
-   "Tilt-shift blur and units that look like painted figurines."
+   "Tilt-shift blur and units that look like painted figurines.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path stroke-width=\"1.5\" stroke-dasharray=\"2 4\" d=\"M12 12H148M12 18H148M12 86H148M12 92H148\"/><circle cx=\"44\" cy=\"50.5\" r=\"3.9\"/><path d=\"M44 54.4V63.5M37.5 57H50.5M38.8 70L44 63.5L49.2 70\"/><ellipse cx=\"44\" cy=\"72\" rx=\"9\" ry=\"3\"/><path d=\"M35 72v3a9 3 0 0 0 18 0v-3\"/><circle cx=\"80\" cy=\"46.5\" r=\"3.9\"/><path d=\"M80 50.4V59.5M73.5 53H86.5M74.8 66L80 59.5L85.2 66\"/><ellipse cx=\"80\" cy=\"68\" rx=\"9\" ry=\"3\"/><path d=\"M71 68v3a9 3 0 0 0 18 0v-3\"/><path class=\"af\" d=\"M84 50h6v6q-3 3 -6 0Z\"/><polygon points=\"110,68 118,42 126,68\"/><path d=\"M118 68v4\"/><ellipse cx=\"118\" cy=\"72\" rx=\"9\" ry=\"3\"/><path d=\"M109 72v3a9 3 0 0 0 18 0v-3\"/></svg>"
   ],
   [
    "art",
    "Bright cartoon",
-   "Saturated colours, chunky outlines, big readable shapes."
+   "Saturated colours, chunky outlines, big readable shapes.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><g stroke-width=\"4\"><path class=\"af\" d=\"M50 84Q36 84 38 60Q40 32 70 32Q100 32 102 60Q104 84 90 84Z\"/><circle cx=\"60\" cy=\"52\" r=\"7\"/><circle cx=\"82\" cy=\"52\" r=\"7\"/><path d=\"M60 66Q71 76 82 66M14 88H146\"/></g><path fill=\"currentColor\" d=\"M59 53a3 3 0 1 0 6 0a3 3 0 1 0 -6 0M81 53a3 3 0 1 0 6 0a3 3 0 1 0 -6 0\"/><path stroke-width=\"3\" d=\"M124 22l3 8l8 3l-8 3l-3 8l-3 -8l-8 -3l8 -3Z\"/><path stroke-width=\"3\" d=\"M24 30l2 5l5 2l-5 2l-2 5l-2 -5l-5 -2l5 -2Z\"/></svg>"
   ],
   [
    "art",
    "Ink and paper",
-   "Inked lines on a parchment-coloured world."
+   "Inked lines on a parchment-coloured world.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M30 18H126M30 82H126M30 18V82M126 18V82\"/><circle cx=\"28\" cy=\"18\" r=\"4\"/><circle cx=\"128\" cy=\"18\" r=\"4\"/><circle cx=\"28\" cy=\"82\" r=\"4\"/><circle cx=\"128\" cy=\"82\" r=\"4\"/><path d=\"M40 68L56 42L66 56L80 36L102 68\"/><path stroke-width=\"1.5\" d=\"M56 42l-4 10M58 46l-3 9M80 36l-4 10M82 40l-3 10\"/><circle cx=\"104\" cy=\"34\" r=\"5\"/><path d=\"M152 28Q134 40 122 74Q142 56 152 28ZM152 28L118 82\"/><circle class=\"af\" cx=\"114\" cy=\"86\" r=\"3\"/></svg>"
   ],
   [
    "art",
    "Neon on black",
-   "Glowing lines and colour against deep darkness."
+   "Glowing lines and colour against deep darkness.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><rect x=\"8\" y=\"10\" width=\"144\" height=\"80\" rx=\"4\" fill=\"currentColor\"/><path class=\"a\" d=\"M58 60A22 22 0 0 1 102 60Z\"/><path d=\"M60 54H100M62 48H98M66 42H94\"/><path class=\"a\" stroke-width=\"1.8\" d=\"M12 62H148M12 70H148M12 80H148M80 62V90M64 62L48 90M96 62L112 90M48 62L16 88M112 62L144 88\"/></svg>"
   ],
   [
    "art",
    "Soft pastel",
-   "Gentle colours and soft light, almost dreamlike."
+   "Gentle colours and soft light, almost dreamlike.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><g stroke-width=\"1.5\"><path d=\"M8 80Q40 60 76 78Q110 62 152 78\"/><path d=\"M22 36q0 -8 8 -8q4 -8 14 -4q8 -2 10 6q6 2 4 8Z\"/><ellipse class=\"af\" cx=\"112\" cy=\"34\" rx=\"13\" ry=\"15\"/><path d=\"M102 44L107 56M122 44L117 56\"/><rect x=\"106\" y=\"56\" width=\"12\" height=\"7\" rx=\"2\"/><path d=\"M70 20v6M67 23h6M140 60v6M137 63h6M50 54v6M47 57h6\"/><path d=\"M30 88Q60 82 90 88\"/></g></svg>"
   ],
   [
    "art",
    "Voxel world",
-   "Everything built from little cubes that can break."
+   "Everything built from little cubes that can break.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M52 44L66 51L52 58L38 51ZM38 51V65L52 72L66 65V51M52 58V72\"/><path d=\"M80 44L94 51L80 58L66 51ZM66 51V65L80 72L94 65V51M80 58V72\"/><path d=\"M52 16L66 23L52 30L38 23ZM38 23V37L52 44L66 37V23M52 30V44\"/><path stroke-dasharray=\"3 3\" d=\"M108 52L122 59L108 66L94 59Z\"/><path d=\"M118 34l6 3l-6 3l-6 -3Z\"/><path d=\"M136 46l5 2.5l-5 2.5l-5 -2.5Z\"/><path class=\"af\" d=\"M128 22l5 2.5l-5 2.5l-5 -2.5Z\"/><path stroke-width=\"1.5\" d=\"M112 44l4 -4M124 50l5 -2\"/><path d=\"M14 82H146\"/></svg>"
   ],
   [
    "art",
    "Lighting is the art",
-   "A dark world where light sources do all the work."
+   "A dark world where light sources do all the work.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><rect x=\"8\" y=\"8\" width=\"144\" height=\"84\" rx=\"4\" fill=\"currentColor\"/><circle class=\"af\" cx=\"76\" cy=\"52\" r=\"28\"/><path d=\"M76 18V30M70 42h12l-2 -6h-8zM72 42v14h8v-14M70 56h12\"/><circle cx=\"94\" cy=\"61\" r=\"3\"/><path d=\"M94 64V71M89 66H99M90 76L94 71L98 76\"/><circle class=\"af\" cx=\"132\" cy=\"24\" r=\"2.5\"/></svg>"
   ],
   [
    "art",
    "Detailed and dense",
-   "Lots of little props and life in every corner."
+   "Lots of little props and life in every corner.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M12 72V60.8L20 54.4L28 60.8V72Z\"/><path d=\"M34 66V56.2L41 50.6L48 56.2V66Z\"/><path d=\"M108 70V58.8L116 52.4L124 58.8V70Z\"/><path d=\"M130 74V64.2L137 58.6L144 64.2V74Z\"/><polygon points=\"56,70 62,52 68,70\"/><polygon points=\"88,72 94,54 100,72\"/><polygon points=\"67,56 72,42 77,56\"/><path stroke-width=\"1.5\" d=\"M18 64h4M114 62h4M40 60h3M136 66h3M50 86H92M54 82v8M62 82v8M70 82v8M78 82v8M86 82v8\"/><circle cx=\"102\" cy=\"84\" r=\"3\"/><circle cx=\"96\" cy=\"86\" r=\"3\"/><rect x=\"18\" y=\"78\" width=\"16\" height=\"7\"/><circle cx=\"21\" cy=\"87\" r=\"2.5\"/><circle cx=\"31\" cy=\"87\" r=\"2.5\"/><path stroke-width=\"1.5\" d=\"M60 20q3 -3 6 0q3 -3 6 0M86 28q3 -3 6 0q3 -3 6 0M118 40q-3 -6 0 -10\"/><rect class=\"af\" x=\"114\" y=\"58\" width=\"4\" height=\"4\"/><path d=\"M8 78H152\"/></svg>"
   ],
   [
    "art",
    "Minimal and abstract",
-   "Simple shapes and symbols, almost a board game."
+   "Simple shapes and symbols, almost a board game.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path fill=\"currentColor\" d=\"M18.4 20a1.6 1.6 0 1 0 3.2 0a1.6 1.6 0 1 0 -3.2 0M48.4 20a1.6 1.6 0 1 0 3.2 0a1.6 1.6 0 1 0 -3.2 0M78.4 20a1.6 1.6 0 1 0 3.2 0a1.6 1.6 0 1 0 -3.2 0M108.4 20a1.6 1.6 0 1 0 3.2 0a1.6 1.6 0 1 0 -3.2 0M138.4 20a1.6 1.6 0 1 0 3.2 0a1.6 1.6 0 1 0 -3.2 0M18.4 50a1.6 1.6 0 1 0 3.2 0a1.6 1.6 0 1 0 -3.2 0M78.4 50a1.6 1.6 0 1 0 3.2 0a1.6 1.6 0 1 0 -3.2 0M138.4 50a1.6 1.6 0 1 0 3.2 0a1.6 1.6 0 1 0 -3.2 0M18.4 80a1.6 1.6 0 1 0 3.2 0a1.6 1.6 0 1 0 -3.2 0M48.4 80a1.6 1.6 0 1 0 3.2 0a1.6 1.6 0 1 0 -3.2 0M78.4 80a1.6 1.6 0 1 0 3.2 0a1.6 1.6 0 1 0 -3.2 0M138.4 80a1.6 1.6 0 1 0 3.2 0a1.6 1.6 0 1 0 -3.2 0\"/><circle cx=\"50\" cy=\"50\" r=\"9\"/><rect x=\"100\" y=\"64\" width=\"18\" height=\"18\"/><polygon class=\"af\" points=\"110,38 122,58 98,58\"/><path stroke-dasharray=\"3 4\" d=\"M59 50H98M110 58V64\"/></svg>"
   ],
   [
    "camera",
    "Classic top-down RTS camera",
-   "High and angled, the whole battle at a glance."
+   "High and angled, the whole battle at a glance.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><polygon points=\"44,88 150,88 130,52 64,52\"/><g transform=\"translate(26 22) rotate(35)\"><rect x=\"-12\" y=\"-5\" width=\"18\" height=\"11\" rx=\"2\"/><circle cx=\"-7\" cy=\"-9\" r=\"3.5\"/><circle cx=\"1\" cy=\"-9\" r=\"3.5\"/><path d=\"M6 -2L13 -6V10L6 6\"/></g><path stroke-width=\"1.5\" stroke-dasharray=\"3 3\" d=\"M38 34L64 52M38 34L44 88\"/><path fill=\"currentColor\" d=\"M81.5 70a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0 -5 0M87.5 66a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0 -5 0M93.5 72a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0 -5 0M109.5 62a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0 -5 0M115.5 66a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0 -5 0\"/><rect x=\"120\" y=\"74\" width=\"12\" height=\"8\"/><path d=\"M118 74l8 -5l8 5\"/><rect x=\"79\" y=\"61\" width=\"22\" height=\"16\" stroke-width=\"1.5\" stroke-dasharray=\"2 2\"/></svg>"
   ],
   [
    "camera",
    "Close to the ground",
-   "Low camera, you see faces and the horizon."
+   "Low camera, you see faces and the horizon.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M8 56H152M120 56L132 46L144 56\"/><g transform=\"translate(22 78)\"><rect x=\"-12\" y=\"-5\" width=\"18\" height=\"11\" rx=\"2\"/><circle cx=\"-7\" cy=\"-9\" r=\"3.5\"/><circle cx=\"1\" cy=\"-9\" r=\"3.5\"/><path d=\"M6 -2L13 -6V10L6 6\"/></g><path stroke-width=\"1.5\" stroke-dasharray=\"3 3\" d=\"M36 76L152 64M36 80L150 90\"/><circle cx=\"104\" cy=\"40\" r=\"11\"/><path fill=\"currentColor\" d=\"M98.5 38a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M107.5 38a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0\"/><path d=\"M100 45q4 3 8 0\"/><path d=\"M82 74Q82 54 104 54Q126 54 126 74\"/></svg>"
   ],
   [
    "camera",
    "Strategic map zoom",
-   "Zoom out until armies become icons on a map."
+   "Zoom out until armies become icons on a map.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><rect x=\"26\" y=\"20\" width=\"108\" height=\"60\"/><path stroke-width=\"1.5\" d=\"M26 50Q50 40 70 52T134 44M80 20Q76 40 92 50Q86 66 96 80\"/><rect x=\"40\" y=\"30\" width=\"14\" height=\"9\"/><path d=\"M40 30l14 9M54 30l-14 9\"/><rect x=\"100\" y=\"62\" width=\"14\" height=\"9\"/><path d=\"M100 62l14 9M114 62l-14 9\"/><rect class=\"af\" x=\"104\" y=\"28\" width=\"14\" height=\"9\"/><path d=\"M104 28l14 9M118 28l-14 9\"/><path d=\"M28 22L12 10M12 10h6M12 10v6M132 22L148 10M148 10h-6M148 10v6M28 78L12 90M12 90h6M12 90v-6M132 78L148 90M148 90h-6M148 90v-6\"/></svg>"
   ],
   [
    "camera",
    "Fixed isometric",
-   "One clean angle, everything readable."
+   "One clean angle, everything readable.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M80 36L136 64L80 92L24 64ZM52 50L108 78M108 50L52 78\"/><path d=\"M80 42L92 48L80 54L68 48ZM68 48V60L80 66L92 60V48M80 54V66\"/><g transform=\"translate(126 20) rotate(-35) scale(-1 1)\"><rect x=\"-12\" y=\"-5\" width=\"18\" height=\"11\" rx=\"2\"/><circle cx=\"-7\" cy=\"-9\" r=\"3.5\"/><circle cx=\"1\" cy=\"-9\" r=\"3.5\"/><path d=\"M6 -2L13 -6V10L6 6\"/></g><path stroke-width=\"1.5\" stroke-dasharray=\"3 3\" d=\"M114 30L94 44\"/><rect x=\"138\" y=\"34\" width=\"10\" height=\"8\"/><path d=\"M140 34v-3a3 3 0 0 1 6 0v3\"/></svg>"
   ],
   [
    "camera",
    "Side view",
-   "A battle line seen from the side, like a 2D war."
+   "A battle line seen from the side, like a 2D war.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M8 80H152\"/><g transform=\"translate(24 22)\"><rect x=\"-12\" y=\"-5\" width=\"18\" height=\"11\" rx=\"2\"/><circle cx=\"-7\" cy=\"-9\" r=\"3.5\"/><circle cx=\"1\" cy=\"-9\" r=\"3.5\"/><path d=\"M6 -2L13 -6V10L6 6\"/></g><circle cx=\"30\" cy=\"65\" r=\"3\"/><path d=\"M30 68V75M25 70H35M26 80L30 75L34 80\"/><circle cx=\"44\" cy=\"65\" r=\"3\"/><path d=\"M44 68V75M39 70H49M40 80L44 75L48 80\"/><circle cx=\"58\" cy=\"65\" r=\"3\"/><path d=\"M58 68V75M53 70H63M54 80L58 75L62 80\"/><path stroke-width=\"1.5\" d=\"M35 70l14 -4\"/><path stroke-width=\"1.5\" d=\"M49 70l14 -4\"/><path stroke-width=\"1.5\" d=\"M63 70l14 -4\"/><circle cx=\"102\" cy=\"65\" r=\"3\"/><path d=\"M102 68V75M97 70H107M98 80L102 75L106 80\"/><circle cx=\"116\" cy=\"65\" r=\"3\"/><path d=\"M116 68V75M111 70H121M112 80L116 75L120 80\"/><circle cx=\"130\" cy=\"65\" r=\"3\"/><path d=\"M130 68V75M125 70H135M126 80L130 75L134 80\"/><path stroke-width=\"1.5\" d=\"M97 70l-14 -4\"/><path stroke-width=\"1.5\" d=\"M111 70l-14 -4\"/><path stroke-width=\"1.5\" d=\"M125 70l-14 -4\"/><polygon class=\"a\" points=\"80,57 81.5,61.4 86.1,60.5 83,64 86.1,67.5 81.5,66.6 80,71 78.5,66.6 73.9,67.5 77,64 73.9,60.5 78.5,61.4\"/></svg>"
   ],
   [
    "camera",
    "Free rotating camera",
-   "Spin and tilt around the battle as you like."
+   "Spin and tilt around the battle as you like.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><ellipse cx=\"80\" cy=\"74\" rx=\"54\" ry=\"14\"/><rect x=\"72\" y=\"54\" width=\"16\" height=\"20\"/><path d=\"M72 54v-4h4v4h4v-4h4v4h4v-4\"/><path stroke-dasharray=\"4 4\" d=\"M24 46A58 16 0 0 0 136 46\"/><path d=\"M26 40A58 16 0 0 1 134 40\"/><path d=\"M134 40l-8 -1M134 40l-3 -7\"/><g transform=\"translate(28 30) rotate(25)\"><rect x=\"-12\" y=\"-5\" width=\"18\" height=\"11\" rx=\"2\"/><circle cx=\"-7\" cy=\"-9\" r=\"3.5\"/><circle cx=\"1\" cy=\"-9\" r=\"3.5\"/><path d=\"M6 -2L13 -6V10L6 6\"/></g><circle class=\"af\" cx=\"80\" cy=\"50\" r=\"2\"/></svg>"
   ],
   [
    "camera",
    "Cinematic replays",
-   "Watch your best moments from dramatic angles."
+   "Watch your best moments from dramatic angles.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><rect x=\"16\" y=\"22\" width=\"128\" height=\"56\"/><path d=\"M16 32H144M16 68H144M58 32V68M102 32V68\"/><path fill=\"currentColor\" d=\"M22 25h5v4h-5zM22 71h5v4h-5zM36 25h5v4h-5zM36 71h5v4h-5zM50 25h5v4h-5zM50 71h5v4h-5zM64 25h5v4h-5zM64 71h5v4h-5zM78 25h5v4h-5zM78 71h5v4h-5zM92 25h5v4h-5zM92 71h5v4h-5zM106 25h5v4h-5zM106 71h5v4h-5zM120 25h5v4h-5zM120 71h5v4h-5zM134 25h5v4h-5zM134 71h5v4h-5z\"/><circle cx=\"37\" cy=\"43\" r=\"4.2\"/><path d=\"M37 47.2V57M30 50H44M31.4 64L37 57L42.6 64\"/><polygon class=\"a\" points=\"72,38 72,62 92,50\"/><polygon points=\"123,37 125.6,44.6 133.2,41.9 128.8,48.7 135.7,52.9 127.7,53.7 128.6,61.7 123,56 117.4,61.7 118.3,53.7 110.3,52.9 117.2,48.7 112.8,41.9 120.4,44.6\"/><path stroke-width=\"1.5\" d=\"M48 86A32 6 0 0 0 112 86M48 86l4 -4M48 86l6 1\"/></svg>"
   ],
   [
    "scale",
    "A squad of three to five",
-   "Each unit is a character you keep alive."
+   "Each unit is a character you keep alive.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><ellipse class=\"af\" cx=\"36\" cy=\"88\" rx=\"11\" ry=\"3\"/><circle cx=\"36\" cy=\"64\" r=\"4.8\"/><path d=\"M36 68.8V80M28 72H44M29.6 88L36 80L42.4 88\"/><rect x=\"27\" y=\"48\" width=\"18\" height=\"4\"/><rect x=\"27\" y=\"48\" width=\"18\" height=\"4\" fill=\"currentColor\"/><circle cx=\"64\" cy=\"64\" r=\"4.8\"/><path d=\"M64 68.8V80M56 72H72M57.6 88L64 80L70.4 88\"/><rect x=\"55\" y=\"48\" width=\"18\" height=\"4\"/><rect x=\"55\" y=\"48\" width=\"12\" height=\"4\" fill=\"currentColor\"/><circle cx=\"92\" cy=\"64\" r=\"4.8\"/><path d=\"M92 68.8V80M84 72H100M85.6 88L92 80L98.4 88\"/><rect x=\"83\" y=\"48\" width=\"18\" height=\"4\"/><rect x=\"83\" y=\"48\" width=\"16\" height=\"4\" fill=\"currentColor\"/><circle cx=\"120\" cy=\"64\" r=\"4.8\"/><path d=\"M120 68.8V80M112 72H128M113.6 88L120 80L126.4 88\"/><rect x=\"111\" y=\"48\" width=\"18\" height=\"4\"/><rect x=\"111\" y=\"48\" width=\"8\" height=\"4\" fill=\"currentColor\"/></svg>"
   ],
   [
    "scale",
    "A company of thirty",
-   "Enough for tactics, few enough to care."
+   "Enough for tactics, few enough to care.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path fill=\"currentColor\" d=\"M26.8 34a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0 -6.4 0M44.8 34a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0 -6.4 0M62.8 34a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0 -6.4 0M80.8 34a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0 -6.4 0M98.8 34a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0 -6.4 0M116.8 34a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0 -6.4 0M35.8 46a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0 -6.4 0M53.8 46a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0 -6.4 0M71.8 46a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0 -6.4 0M89.8 46a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0 -6.4 0M107.8 46a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0 -6.4 0M125.8 46a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0 -6.4 0M26.8 58a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0 -6.4 0M44.8 58a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0 -6.4 0M62.8 58a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0 -6.4 0M80.8 58a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0 -6.4 0M98.8 58a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0 -6.4 0M116.8 58a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0 -6.4 0M35.8 70a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0 -6.4 0M53.8 70a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0 -6.4 0M71.8 70a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0 -6.4 0M89.8 70a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0 -6.4 0M107.8 70a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0 -6.4 0M125.8 70a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0 -6.4 0M26.8 82a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0 -6.4 0M44.8 82a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0 -6.4 0M62.8 82a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0 -6.4 0M80.8 82a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0 -6.4 0M98.8 82a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0 -6.4 0M116.8 82a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0 -6.4 0\"/><path d=\"M18 92V18\"/><polygon class=\"a\" points=\"18,18 34,23 18,28\"/></svg>"
   ],
   [
    "scale",
    "Armies of hundreds",
-   "Blocks of soldiers clash across a field."
+   "Blocks of soldiers clash across a field.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path stroke-width=\"3\" stroke-linecap=\"round\" stroke-dasharray=\"0.1 4\" d=\"M16 44H64M16 50H64M16 56H64M16 62H64M16 68H64M16 74H64M96 44H144M96 50H144M96 56H144M96 62H144M96 68H144M96 74H144\"/><rect x=\"12\" y=\"40\" width=\"56\" height=\"38\"/><rect x=\"92\" y=\"40\" width=\"56\" height=\"38\"/><path d=\"M40 40V22M120 40V22\"/><polygon class=\"a\" points=\"40,22 52,26 40,30\"/><polygon points=\"120,22 108,26 120,30\"/><path d=\"M72 52L88 68M88 52L72 68M8 86H152\"/></svg>"
   ],
   [
    "scale",
    "Thousands on screen",
-   "Swarms and waves that fill the map."
+   "Swarms and waves that fill the map.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-dasharray=\"0.1 4.2\" d=\"M10 14q9 -4 18 0t18 0t18 0t18 0t18 0t18 0M10 22q9 -4 18 0t18 0t18 0t18 0t18 0t18 0M10 30q9 -4 18 0t18 0t18 0t18 0t18 0t18 0M10 38q9 -4 18 0t18 0t18 0t18 0t18 0t18 0M10 46q9 -4 18 0t18 0t18 0t18 0t18 0t18 0M10 54q9 -4 18 0t18 0t18 0t18 0t18 0t18 0M10 62q9 -4 18 0t18 0t18 0t18 0t18 0t18 0M10 70q9 -4 18 0t18 0t18 0t18 0t18 0t18 0M10 78q9 -4 18 0t18 0t18 0t18 0t18 0t18 0M10 86q9 -4 18 0t18 0t18 0t18 0t18 0t18 0\"/><path fill=\"currentColor\" d=\"M126 86V44h5v5h5v-5h5v5h5v-5h5V86Z\"/></svg>"
   ],
   [
    "scale",
    "One hero plus an army",
-   "A powerful commander fights at the front."
+   "A powerful commander fights at the front.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path fill=\"currentColor\" d=\"M93.6 50a2.4 2.4 0 1 0 4.8 0a2.4 2.4 0 1 0 -4.8 0M106.6 50a2.4 2.4 0 1 0 4.8 0a2.4 2.4 0 1 0 -4.8 0M119.6 50a2.4 2.4 0 1 0 4.8 0a2.4 2.4 0 1 0 -4.8 0M132.6 50a2.4 2.4 0 1 0 4.8 0a2.4 2.4 0 1 0 -4.8 0M100.1 60a2.4 2.4 0 1 0 4.8 0a2.4 2.4 0 1 0 -4.8 0M113.1 60a2.4 2.4 0 1 0 4.8 0a2.4 2.4 0 1 0 -4.8 0M126.1 60a2.4 2.4 0 1 0 4.8 0a2.4 2.4 0 1 0 -4.8 0M139.1 60a2.4 2.4 0 1 0 4.8 0a2.4 2.4 0 1 0 -4.8 0M93.6 70a2.4 2.4 0 1 0 4.8 0a2.4 2.4 0 1 0 -4.8 0M106.6 70a2.4 2.4 0 1 0 4.8 0a2.4 2.4 0 1 0 -4.8 0M119.6 70a2.4 2.4 0 1 0 4.8 0a2.4 2.4 0 1 0 -4.8 0M132.6 70a2.4 2.4 0 1 0 4.8 0a2.4 2.4 0 1 0 -4.8 0M100.1 80a2.4 2.4 0 1 0 4.8 0a2.4 2.4 0 1 0 -4.8 0M113.1 80a2.4 2.4 0 1 0 4.8 0a2.4 2.4 0 1 0 -4.8 0M126.1 80a2.4 2.4 0 1 0 4.8 0a2.4 2.4 0 1 0 -4.8 0M139.1 80a2.4 2.4 0 1 0 4.8 0a2.4 2.4 0 1 0 -4.8 0\"/><path stroke-width=\"1.5\" d=\"M96 53v4M109 53v4M122 53v4M135 53v4M102.5 63v4M115.5 63v4M128.5 63v4M141.5 63v4M96 73v4M109 73v4M122 73v4M135 73v4M102.5 83v4M115.5 83v4M128.5 83v4M141.5 83v4\"/><path d=\"M44 52Q30 62 28 84\"/><circle cx=\"50\" cy=\"55\" r=\"6.6\"/><path d=\"M50 61.6V77M39 66H61M41.2 88L50 77L58.8 88\"/><path class=\"a\" stroke-width=\"3.5\" d=\"M61 66L80 36\"/><path d=\"M58 60l8 4\"/></svg>"
   ],
   [
    "scale",
    "A whole city to run",
-   "Thousands of citizens, you steer the whole."
+   "Thousands of citizens, you steer the whole.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M12 40H124M12 66H124M48 12V90M86 12V90\"/><path stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-dasharray=\"0.1 4\" d=\"M12 44H124M12 70H124M52 12V90M90 12V90\"/><path d=\"M20 34V25.6L26 20.8L32 25.6V34Z\"/><path d=\"M62 34V25.6L68 20.8L74 25.6V34Z\"/><path d=\"M100 34V25.6L106 20.8L112 25.6V34Z\"/><path d=\"M22 60V53L27 49L32 53V60Z\"/><path d=\"M60 62V52.2L67 46.6L74 52.2V62Z\"/><path d=\"M100 60V51.6L106 46.8L112 51.6V60Z\"/><path d=\"M20 88V79.6L26 74.8L32 79.6V88Z\"/><path d=\"M64 88V81L69 77L74 81V88Z\"/><path d=\"M100 88V78.2L107 72.6L114 78.2V88Z\"/><circle class=\"af\" cx=\"140\" cy=\"26\" r=\"7\"/><circle cx=\"140\" cy=\"26\" r=\"2.5\"/><path d=\"M140 14v4M140 34v4M128 26h4M148 26h4M132 18l3 3M145 31l3 3M148 18l-3 3M135 31l-3 3\"/></svg>"
   ],
   [
    "scale",
    "A small map, a short fight",
-   "One clearing, one bridge, one decision."
+   "One clearing, one bridge, one decision.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M72 8Q66 30 76 50T74 92M90 8Q84 30 94 50T92 92\"/><rect class=\"af\" x=\"66\" y=\"44\" width=\"34\" height=\"11\"/><path stroke-width=\"1.5\" d=\"M74 44v11M83 44v11M92 44v11\"/><polygon points=\"16,34 22,16 28,34\"/><polygon points=\"24,80 30,62 36,80\"/><polygon points=\"132,30 138,12 144,30\"/><polygon points=\"134,82 140,64 146,82\"/><polygon points=\"43,22 48,8 53,22\"/><polygon points=\"111,88 116,74 121,88\"/><circle cx=\"50\" cy=\"47\" r=\"3\"/><path d=\"M50 50V57M45 52H55M46 62L50 57L54 62\"/><circle cx=\"118\" cy=\"47\" r=\"3\"/><path d=\"M118 50V57M113 52H123M114 62L118 57L122 62\"/></svg>"
   ],
   [
    "scale",
    "A continent-sized war",
-   "Many fronts at once across a huge map."
+   "Many fronts at once across a huge map.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M24 30Q30 14 56 18Q74 10 96 18Q124 14 136 30Q150 44 138 60Q132 80 108 82Q90 92 70 84Q44 88 30 72Q12 56 24 30Z\"/><path stroke-width=\"1.5\" d=\"M60 22l5 8l-5 8l5 8l-5 8l5 8M90 20l-5 9l6 8l-5 9l6 8l-5 9l5 8M104 54l9 -4l8 6l9 -4\"/><path d=\"M36 40H50M36 62H50M98 30H112M116 70V56\"/><path class=\"a\" d=\"M50 36l6 4l-6 4ZM50 58l6 4l-6 4ZM96 26l-6 4l6 4ZM112 58l4 -6l4 6Z\"/></svg>"
   ],
   [
    "role",
    "General giving orders",
-   "You command, the troops carry it out."
+   "You command, the troops carry it out.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M12 90Q32 80 52 90\"/><circle cx=\"32\" cy=\"58\" r=\"5\"/><path fill=\"currentColor\" d=\"M25 54h14l-2 -5h-10z\"/><path d=\"M32 63V76M32 67L48 60M32 67L26 74M26 88L32 76L38 88\"/><path stroke-dasharray=\"4 4\" d=\"M56 52Q86 30 112 50\"/><polygon class=\"a\" points=\"116,54 106,52 112,44\"/><circle cx=\"108\" cy=\"70.5\" r=\"2.7\"/><path d=\"M108 73.2V79.5M103.5 75H112.5M104.4 84L108 79.5L111.6 84\"/><circle cx=\"122\" cy=\"70.5\" r=\"2.7\"/><path d=\"M122 73.2V79.5M117.5 75H126.5M118.4 84L122 79.5L125.6 84\"/><circle cx=\"136\" cy=\"70.5\" r=\"2.7\"/><path d=\"M136 73.2V79.5M131.5 75H140.5M132.4 84L136 79.5L139.6 84\"/><circle cx=\"115\" cy=\"60\" r=\"2.4\"/><path d=\"M115 62.4V68M111 64H119M111.8 72L115 68L118.2 72\"/><circle cx=\"129\" cy=\"60\" r=\"2.4\"/><path d=\"M129 62.4V68M125 64H133M125.8 72L129 68L132.2 72\"/></svg>"
   ],
   [
    "role",
    "Commander on the battlefield",
-   "You are a unit too, and you can die."
+   "You are a unit too, and you can die.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path class=\"a\" d=\"M80 34C76 28 68 32 74 40L80 46L86 40C92 32 84 28 80 34Z\"/><circle cx=\"80\" cy=\"64\" r=\"4.8\"/><path d=\"M80 68.8V80M72 72H88M73.6 88L80 80L86.4 88\"/><path stroke-width=\"3\" d=\"M88 72L98 52\"/><circle cx=\"30\" cy=\"73\" r=\"3\"/><path d=\"M30 76V83M25 78H35M26 88L30 83L34 88\"/><circle cx=\"46\" cy=\"69\" r=\"3\"/><path d=\"M46 72V79M41 74H51M42 84L46 79L50 84\"/><circle cx=\"114\" cy=\"69\" r=\"3\"/><path d=\"M114 72V79M109 74H119M110 84L114 79L118 84\"/><circle cx=\"130\" cy=\"73\" r=\"3\"/><path d=\"M130 76V83M125 78H135M126 88L130 83L134 88\"/><path stroke-width=\"1.5\" d=\"M35 78l18 -4M51 74l16 -3M109 74l-16 -3M125 78l-18 -4\"/><path d=\"M8 90H152\"/></svg>"
   ],
   [
    "role",
    "God or spirit above it all",
-   "You nudge followers and the world indirectly."
+   "You nudge followers and the world indirectly.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M30 30Q26 20 38 20Q42 10 54 16Q62 8 72 16Q84 12 86 24Q96 26 90 34Z\"/><path d=\"M62 32L82 52M74 30L90 46\"/><ellipse cx=\"88\" cy=\"52\" rx=\"7\" ry=\"5\" transform=\"rotate(40 88 52)\"/><path d=\"M92 56L102 68\"/><circle class=\"af\" cx=\"104\" cy=\"70\" r=\"3\"/><path d=\"M8 90H152\"/><path d=\"M28 90V80.2L35 74.6L42 80.2V90Z\"/><circle cx=\"112\" cy=\"76.5\" r=\"2.7\"/><path d=\"M112 79.2V85.5M107.5 81H116.5M108.4 90L112 85.5L115.6 90\"/><circle cx=\"126\" cy=\"76.5\" r=\"2.7\"/><path d=\"M126 79.2V85.5M121.5 81H130.5M122.4 90L126 85.5L129.6 90\"/><circle cx=\"140\" cy=\"76.5\" r=\"2.7\"/><path d=\"M140 79.2V85.5M135.5 81H144.5M136.4 90L140 85.5L143.6 90\"/></svg>"
   ],
   [
    "role",
    "Mayor or overseer",
-   "You plan and build more than you fight."
+   "You plan and build more than you fight.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M124 88V14M104 14H150M124 22L144 14M140 14V38\"/><rect x=\"134\" y=\"38\" width=\"12\" height=\"8\"/><rect x=\"12\" y=\"40\" width=\"44\" height=\"30\"/><path stroke-width=\"1.5\" d=\"M12 50H56M12 60H56M26 40V70M40 40V70\"/><path d=\"M22 66V54L34 46L46 54V66\"/><circle cx=\"72\" cy=\"67\" r=\"4.2\"/><path d=\"M72 71.2V81M65 74H79M66.4 88L72 81L77.6 88\"/><path class=\"a\" d=\"M66 66Q72 58 78 66Z\"/><path d=\"M88 88V66L102 56L116 66V88M88 76H116M102 56V88\"/></svg>"
   ],
   [
    "role",
    "Crime boss",
-   "You run people, money and favours."
+   "You run people, money and favours.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M74 70V30Q96 22 118 30V70\"/><circle cx=\"96\" cy=\"46\" r=\"7\"/><path fill=\"currentColor\" d=\"M84 40H108M89 40V33Q96 29 103 33V40Z\"/><path fill=\"currentColor\" d=\"M82 70Q82 56 96 56Q110 56 110 70Z\"/><path d=\"M52 70H144M60 70V90M136 70V90\"/><ellipse cx=\"128\" cy=\"66\" rx=\"6\" ry=\"2\"/><ellipse cx=\"128\" cy=\"62\" rx=\"6\" ry=\"2\"/><ellipse class=\"af\" cx=\"128\" cy=\"58\" rx=\"6\" ry=\"2\"/><circle cx=\"28\" cy=\"69\" r=\"4.2\"/><path d=\"M28 73.2V83M21 76H35M22.4 90L28 83L33.6 90\"/><path d=\"M38 74Q34 64 42 62Q50 64 46 74Z\"/><path d=\"M40 62l2 -4l2 4\"/></svg>"
   ],
   [
    "role",
    "Guardian of one place",
-   "You defend a single home against everything."
+   "You defend a single home against everything.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"80\" cy=\"50\" r=\"30\" stroke-dasharray=\"4 4\"/><path d=\"M66 64V46L80 34L94 46V64Z\"/><rect x=\"76\" y=\"54\" width=\"8\" height=\"10\"/><circle cx=\"100\" cy=\"61\" r=\"3\"/><path d=\"M100 64V71M95 66H105M96 76L100 71L104 76\"/><path class=\"a\" d=\"M104 64h8v6q0 6 -4 8q-4 -2 -4 -8Z\"/><path d=\"M12 18L42 30M42 30l-8 0M42 30l-5 -6M148 18L118 30M118 30l8 0M118 30l5 -6M12 86L46 72M46 72l-8 -1M46 72l-4 7M148 86L120 76M120 76l8 -1M120 76l4 7\"/></svg>"
   ],
   [
    "role",
    "Explorer leading a band",
-   "You venture into the unknown with a few followers."
+   "You venture into the unknown with a few followers.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M8 52L28 30L44 46L60 28L82 52\"/><path stroke-dasharray=\"3 4\" d=\"M14 90Q60 76 100 80T148 50\"/><polygon points=\"146,34 147.5,38 151.7,38.1 148.4,40.8 149.5,44.9 146,42.5 142.5,44.9 143.6,40.8 140.3,38.1 144.5,38\"/><circle cx=\"104\" cy=\"65.5\" r=\"3.3\"/><path d=\"M104 68.8V76.5M98.5 71H109.5M99.6 82L104 76.5L108.4 82\"/><path d=\"M110 84V48\"/><polygon class=\"a\" points=\"110,48 126,53 110,58\"/><circle cx=\"86\" cy=\"72\" r=\"2.4\"/><path d=\"M86 74.4V80M82 76H90M82.8 84L86 80L89.2 84\"/><circle cx=\"72\" cy=\"74\" r=\"2.4\"/><path d=\"M72 76.4V82M68 78H76M68.8 86L72 82L75.2 86\"/><circle cx=\"58\" cy=\"76\" r=\"2.4\"/><path d=\"M58 78.4V84M54 80H62M54.8 88L58 84L61.2 88\"/></svg>"
   ],
   [
    "role",
    "Puppet master",
-   "You win through others: bribes, spies, alliances."
+   "You win through others: bribes, spies, alliances.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M66 20V10M74 20V8M82 20V8M90 20V10M64 20Q62 14 66 10M92 20Q96 16 94 12\"/><rect class=\"af\" x=\"44\" y=\"20\" width=\"72\" height=\"5\"/><path stroke-width=\"1.5\" d=\"M46 25L46 74M54 25L54 58M62 25L62 74M100 25L100 74M108 25L108 58M116 25L116 74\"/><circle cx=\"54\" cy=\"66\" r=\"4.8\"/><path d=\"M54 70.8V82M46 74H62M47.6 90L54 82L60.4 90\"/><circle cx=\"108\" cy=\"66\" r=\"4.8\"/><path d=\"M108 70.8V82M100 74H116M101.6 90L108 82L114.4 90\"/></svg>"
   ],
   [
    "economy",
    "Workers gather resources",
-   "Peasants chop, mine and haul back to base."
+   "Peasants chop, mine and haul back to base.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><line x1=\"12\" y1=\"86\" x2=\"148\" y2=\"86\" stroke-width=\"1.5\"/><polygon points=\"20 61.8 11.2 81.6 28.8 81.6\" fill=\"none\"/><line x1=\"20\" y1=\"81.6\" x2=\"20\" y2=\"86\"/><polygon points=\"36 68.4 29.6 82.8 42.4 82.8\" fill=\"none\"/><line x1=\"36\" y1=\"82.8\" x2=\"36\" y2=\"86\"/><circle cx=\"54\" cy=\"77.9\" r=\"2.9\" fill=\"none\"/><path d=\"M49.5 86L54 81.5L58.5 86Z\" fill=\"none\"/><path d=\"M58 76l8-6m-4-2 6 6\" fill=\"none\" class=\"a\"/><rect x=\"64\" y=\"74\" width=\"10\" height=\"10\" rx=\"1\" fill=\"none\"/><line x1=\"64\" y1=\"74\" x2=\"74\" y2=\"84\" stroke-width=\"1.5\"/><line x1=\"80\" y1=\"64\" x2=\"104\" y2=\"64\"/><polyline points=\"98.7 61.1 104 64 98.7 66.9\" fill=\"none\"/><path d=\"M114 86V70L128 57.4L142 70V86Z\" fill=\"none\"/></svg>"
   ],
   [
    "economy",
    "Income from holding ground",
-   "Control points or districts pay you over time."
+   "Control points or districts pay you over time.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><line x1=\"44\" y1=\"80\" x2=\"44\" y2=\"34\"/><path d=\"M44 34h22l-6 7 6 7H44\" fill=\"none\" class=\"af\"/><ellipse cx=\"44\" cy=\"80\" rx=\"26\" ry=\"7\" fill=\"none\" stroke-dasharray=\"4 4\"/><path d=\"M76 72q22-8 34-26\" fill=\"none\"/><polyline points=\"104.7 48.9 110 46 109.6 52\" fill=\"none\"/><circle cx=\"124\" cy=\"30\" r=\"7\" fill=\"none\"/><line x1=\"124\" y1=\"26.5\" x2=\"124\" y2=\"33.5\"/><circle cx=\"140\" cy=\"44\" r=\"6\" fill=\"none\"/><line x1=\"140\" y1=\"41\" x2=\"140\" y2=\"47\"/><circle cx=\"126\" cy=\"60\" r=\"6\" fill=\"none\"/><line x1=\"126\" y1=\"57\" x2=\"126\" y2=\"63\"/></svg>"
   ],
   [
    "economy",
    "No economy, fixed army",
-   "You get your forces up front and spend them well."
+   "You get your forces up front and spend them well.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"24\" cy=\"41\" r=\"3.2\" fill=\"currentColor\"/><path d=\"M19 50L24 45L29 50Z\" fill=\"currentColor\"/><circle cx=\"40\" cy=\"41\" r=\"3.2\" fill=\"currentColor\"/><path d=\"M35 50L40 45L45 50Z\" fill=\"currentColor\"/><circle cx=\"56\" cy=\"41\" r=\"3.2\" fill=\"currentColor\"/><path d=\"M51 50L56 45L61 50Z\" fill=\"currentColor\"/><circle cx=\"72\" cy=\"41\" r=\"3.2\" fill=\"currentColor\"/><path d=\"M67 50L72 45L77 50Z\" fill=\"currentColor\"/><circle cx=\"32\" cy=\"71\" r=\"3.2\" fill=\"currentColor\"/><path d=\"M27 80L32 75L37 80Z\" fill=\"currentColor\"/><circle cx=\"48\" cy=\"71\" r=\"3.2\" fill=\"currentColor\"/><path d=\"M43 80L48 75L53 80Z\" fill=\"currentColor\"/><circle cx=\"64\" cy=\"71\" r=\"3.2\" fill=\"currentColor\"/><path d=\"M59 80L64 75L69 80Z\" fill=\"currentColor\"/><circle cx=\"120\" cy=\"56\" r=\"16\" fill=\"none\"/><line x1=\"120\" y1=\"48\" x2=\"120\" y2=\"64\"/><line x1=\"104\" y1=\"72\" x2=\"136\" y2=\"40\" stroke-width=\"3\" class=\"a\"/></svg>"
   ],
   [
    "economy",
    "Trade routes",
-   "Caravans and ships move goods, and raiders hunt them."
+   "Caravans and ships move goods, and raiders hunt them.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M12 44V32L22 23L32 32V44Z\" fill=\"none\"/><path d=\"M128 86V74L138 65L148 74V86Z\" fill=\"none\"/><path d=\"M34 38q40 0 50 25t40 18\" fill=\"none\" stroke-dasharray=\"5 4\"/><rect x=\"56\" y=\"24\" width=\"18\" height=\"10\" rx=\"2\" fill=\"none\"/><circle cx=\"60\" cy=\"37\" r=\"2.5\" fill=\"none\"/><circle cx=\"70\" cy=\"37\" r=\"2.5\" fill=\"none\"/><g class=\"af\"><circle cx=\"112\" cy=\"36.1\" r=\"3.5\" fill=\"currentColor\"/><path d=\"M106.5 46L112 40.5L117.5 46Z\" fill=\"currentColor\"/></g><line x1=\"118\" y1=\"38\" x2=\"128\" y2=\"26\" class=\"a\"/></svg>"
   ],
   [
    "economy",
    "Scavenging the battlefield",
-   "Loot wrecks and the fallen to fund the next push."
+   "Loot wrecks and the fallen to fund the next push.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><line x1=\"12\" y1=\"86\" x2=\"148\" y2=\"86\" stroke-width=\"1.5\"/><path d=\"M16 86l6-14h20l8 14\" fill=\"none\"/><circle cx=\"30\" cy=\"66\" r=\"5\" fill=\"none\"/><line x1=\"34\" y1=\"62\" x2=\"50\" y2=\"52\"/><path d=\"M60 86l4-8 6 3 4-6 6 11\" fill=\"none\"/><circle cx=\"106\" cy=\"77\" r=\"3.2\" fill=\"none\"/><path d=\"M101 86L106 81L111 86Z\" fill=\"none\"/><path d=\"M111 80l8-6\" fill=\"none\"/><circle cx=\"128\" cy=\"66\" r=\"6\" fill=\"none\" class=\"a\"/><line x1=\"128\" y1=\"63\" x2=\"128\" y2=\"69\"/><line x1=\"124\" y1=\"56\" x2=\"108\" y2=\"46\"/><polyline points=\"110.9 51.2 108 46 114 46.4\" fill=\"none\"/></svg>"
   ],
   [
    "economy",
    "One single currency",
-   "Everything costs one simple resource."
+   "Everything costs one simple resource.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"80\" cy=\"50\" r=\"24\" fill=\"none\"/><line x1=\"80\" y1=\"38\" x2=\"80\" y2=\"62\"/><circle cx=\"80\" cy=\"50\" r=\"16\" fill=\"none\" class=\"a\"/><circle cx=\"30\" cy=\"74\" r=\"6\" fill=\"none\"/><circle cx=\"130\" cy=\"74\" r=\"6\" fill=\"none\"/><circle cx=\"30\" cy=\"26\" r=\"6\" fill=\"none\"/><circle cx=\"130\" cy=\"26\" r=\"6\" fill=\"none\"/></svg>"
   ],
   [
    "economy",
    "Many resources and chains",
-   "Wood to planks to ships; deep production chains."
+   "Wood to planks to ships; deep production chains.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><polygon points=\"22 39.8 13.2 59.6 30.8 59.6\" fill=\"none\"/><line x1=\"22\" y1=\"59.6\" x2=\"22\" y2=\"64\"/><line x1=\"34\" y1=\"52\" x2=\"50\" y2=\"52\"/><polyline points=\"44.7 49.1 50 52 44.7 54.9\" fill=\"none\"/><rect x=\"54\" y=\"40\" width=\"22\" height=\"5\" fill=\"none\"/><rect x=\"54\" y=\"48\" width=\"22\" height=\"5\" fill=\"none\"/><rect x=\"54\" y=\"56\" width=\"22\" height=\"5\" fill=\"none\"/><line x1=\"82\" y1=\"52\" x2=\"98\" y2=\"52\"/><polyline points=\"92.7 49.1 98 52 92.7 54.9\" fill=\"none\"/><path d=\"M104 62h40l-6 9h-28Z\" fill=\"none\" class=\"a\"/><line x1=\"124\" y1=\"62\" x2=\"124\" y2=\"32\"/><path d=\"M124 34l14 22h-14Z\" fill=\"none\"/></svg>"
   ],
   [
    "economy",
    "Population that grows",
-   "People are the resource: feed them and they multiply."
+   "People are the resource: feed them and they multiply.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"22\" cy=\"52.1\" r=\"3.5\" fill=\"none\"/><path d=\"M16.5 62L22 56.5L27.5 62Z\" fill=\"none\"/><line x1=\"34\" y1=\"54\" x2=\"48\" y2=\"54\"/><polyline points=\"42.7 51.1 48 54 42.7 56.9\" fill=\"none\"/><circle cx=\"58\" cy=\"53\" r=\"3.2\" fill=\"none\"/><path d=\"M53 62L58 57L63 62Z\" fill=\"none\"/><circle cx=\"72\" cy=\"53\" r=\"3.2\" fill=\"none\"/><path d=\"M67 62L72 57L77 62Z\" fill=\"none\"/><line x1=\"84\" y1=\"54\" x2=\"98\" y2=\"54\"/><polyline points=\"92.7 51.1 98 54 92.7 56.9\" fill=\"none\"/><circle cx=\"110\" cy=\"38.8\" r=\"2.6\" fill=\"none\"/><path d=\"M106 46L110 42L114 46Z\" fill=\"none\"/><circle cx=\"124\" cy=\"38.8\" r=\"2.6\" fill=\"none\"/><path d=\"M120 46L124 42L128 46Z\" fill=\"none\"/><circle cx=\"138\" cy=\"38.8\" r=\"2.6\" fill=\"none\"/><path d=\"M134 46L138 42L142 46Z\" fill=\"none\"/><circle cx=\"110\" cy=\"68.8\" r=\"2.6\" fill=\"none\"/><path d=\"M106 76L110 72L114 76Z\" fill=\"none\"/><circle cx=\"124\" cy=\"68.8\" r=\"2.6\" fill=\"none\" class=\"a\"/><path d=\"M120 76L124 72L128 76Z\" fill=\"none\" class=\"a\"/><circle cx=\"138\" cy=\"68.8\" r=\"2.6\" fill=\"none\"/><path d=\"M134 76L138 72L142 76Z\" fill=\"none\"/></svg>"
   ],
   [
    "economy",
    "Resources that run out",
-   "Every deposit depletes, so you must expand."
+   "Every deposit depletes, so you must expand.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><line x1=\"12\" y1=\"86\" x2=\"148\" y2=\"86\" stroke-width=\"1.5\"/><path d=\"M14 86l10-26 10 10 8-16 12 32\" fill=\"none\"/><line x1=\"62\" y1=\"66\" x2=\"82\" y2=\"66\"/><polyline points=\"76.7 63.1 82 66 76.7 68.9\" fill=\"none\"/><path d=\"M90 86l8-8 6 4 8-4 6 8\" fill=\"none\" stroke-dasharray=\"3 3\"/><rect x=\"130\" y=\"30\" width=\"12\" height=\"40\" rx=\"2\" fill=\"none\"/><rect x=\"132\" y=\"62\" width=\"8\" height=\"6\" class=\"af\"/><line x1=\"136\" y1=\"22\" x2=\"136\" y2=\"28\"/></svg>"
   ],
   [
    "economy",
    "Upkeep and supply lines",
-   "Armies far from home cost more and starve if cut off."
+   "Armies far from home cost more and starve if cut off.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M12 80V66L23 56.1L34 66V80Z\" fill=\"none\"/><path d=\"M38 72h76\" fill=\"none\" stroke-dasharray=\"6 4\"/><path d=\"M72 64l10 16M82 64l-10 16\" fill=\"none\" class=\"a\" stroke-width=\"3\"/><circle cx=\"126\" cy=\"71\" r=\"3.2\" fill=\"none\"/><path d=\"M121 80L126 75L131 80Z\" fill=\"none\"/><circle cx=\"140\" cy=\"71\" r=\"3.2\" fill=\"none\"/><path d=\"M135 80L140 75L145 80Z\" fill=\"none\"/><circle cx=\"133\" cy=\"55\" r=\"3.2\" fill=\"none\"/><path d=\"M128 64L133 59L138 64Z\" fill=\"none\"/><rect x=\"46\" y=\"48\" width=\"16\" height=\"10\" rx=\"2\" fill=\"none\"/><circle cx=\"50\" cy=\"60\" r=\"2\" fill=\"none\"/><circle cx=\"58\" cy=\"60\" r=\"2\" fill=\"none\"/></svg>"
   ],
   [
    "building",
    "A full base to build",
-   "Lay out barracks, walls and towers your way."
+   "Lay out barracks, walls and towers your way.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><line x1=\"12\" y1=\"86\" x2=\"148\" y2=\"86\" stroke-width=\"1.5\"/><path d=\"M14 86V56h5.2v5h5.2v-5h5.2v5h5.2v-5h5.2V86Z\" fill=\"none\"/><rect x=\"48\" y=\"62\" width=\"28\" height=\"24\" rx=\"1\" fill=\"none\"/><path d=\"M58 86v-10h8v10\" fill=\"none\"/><path d=\"M84 86V74L95 64.1L106 74V86Z\" fill=\"none\"/><path d=\"M116 86V42h3v5h3v-5h3v5h3v-5h3V86Z\" fill=\"none\"/><rect x=\"116\" y=\"38\" width=\"15\" height=\"6\" class=\"af\"/><rect x=\"134\" y=\"74\" width=\"12\" height=\"12\" rx=\"0\" fill=\"none\"/></svg>"
   ],
   [
    "building",
    "No base at all",
-   "Pure armies; you never place a building."
+   "Pure armies; you never place a building.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><line x1=\"12\" y1=\"86\" x2=\"148\" y2=\"86\" stroke-width=\"1.5\"/><path d=\"M98 86V64l12-12 12 12v22Z\" fill=\"none\" stroke-dasharray=\"4 4\"/><line x1=\"92\" y1=\"48\" x2=\"128\" y2=\"84\" class=\"a\" stroke-width=\"3\"/><circle cx=\"22\" cy=\"77\" r=\"3.2\" fill=\"none\"/><path d=\"M17 86L22 81L27 86Z\" fill=\"none\"/><circle cx=\"36\" cy=\"77\" r=\"3.2\" fill=\"none\"/><path d=\"M31 86L36 81L41 86Z\" fill=\"none\"/><circle cx=\"50\" cy=\"77\" r=\"3.2\" fill=\"none\"/><path d=\"M45 86L50 81L55 86Z\" fill=\"none\"/><circle cx=\"29\" cy=\"61\" r=\"3.2\" fill=\"none\"/><path d=\"M24 70L29 65L34 70Z\" fill=\"none\"/><circle cx=\"43\" cy=\"61\" r=\"3.2\" fill=\"none\"/><path d=\"M38 70L43 65L48 70Z\" fill=\"none\"/><circle cx=\"64\" cy=\"77\" r=\"3.2\" fill=\"none\"/><path d=\"M59 86L64 81L69 86Z\" fill=\"none\"/></svg>"
   ],
   [
    "building",
    "A mobile base",
-   "Your base walks, flies or rolls with you."
+   "Your base walks, flies or rolls with you.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><line x1=\"12\" y1=\"88\" x2=\"148\" y2=\"88\" stroke-width=\"1.5\"/><rect x=\"40\" y=\"40\" width=\"70\" height=\"28\" rx=\"3\" fill=\"none\"/><path d=\"M54 40V26h6v5h6v-5h6v5h6v-5h6V40Z\" fill=\"none\"/><circle cx=\"52\" cy=\"76\" r=\"8\" fill=\"none\"/><circle cx=\"75\" cy=\"76\" r=\"8\" fill=\"none\"/><circle cx=\"98\" cy=\"76\" r=\"8\" fill=\"none\"/><line x1=\"118\" y1=\"56\" x2=\"146\" y2=\"56\" class=\"a\"/><polyline points=\"140.7 53.1 146 56 140.7 58.9\" fill=\"none\" class=\"a\"/><line x1=\"14\" y1=\"56\" x2=\"32\" y2=\"56\" stroke-dasharray=\"3 3\"/></svg>"
   ],
   [
    "building",
    "Walls and fortifications",
-   "Wall off chokepoints and watch waves break."
+   "Wall off chokepoints and watch waves break.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><line x1=\"12\" y1=\"86\" x2=\"148\" y2=\"86\" stroke-width=\"1.5\"/><path d=\"M70 86V30h4v5h4v-5h4v5h4v-5h4V86Z\" fill=\"none\"/><path d=\"M40 86V62h30M90 62h30v24\" fill=\"none\"/><path d=\"M16 72l12-6M14 58l12-6M20 82l10-4\" fill=\"none\" class=\"a\"/><circle cx=\"140\" cy=\"78.8\" r=\"2.6\" fill=\"none\"/><path d=\"M136 86L140 82L144 86Z\" fill=\"none\"/></svg>"
   ],
   [
    "building",
    "Grid-free organic building",
-   "Place things anywhere on natural terrain."
+   "Place things anywhere on natural terrain.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M10 80q30-14 60-4t80-6\" fill=\"none\" stroke-width=\"1.5\"/><path d=\"M24 76l3-14 10 1 3 12\" fill=\"none\"/><path d=\"M22 63l10-8 10 9\" fill=\"none\"/><path d=\"M62 74l-2-16 14-2 2 16\" fill=\"none\"/><path d=\"M58 59l9-10 10 7\" fill=\"none\"/><path d=\"M106 72l2-12 12 2-2 12\" fill=\"none\"/><path d=\"M106 61l9-8 8 10\" fill=\"none\"/><path d=\"M84 32V22L92 14.8L100 22V32Z\" fill=\"none\" class=\"a\"/><path d=\"M92 36v14\" fill=\"none\" stroke-dasharray=\"3 3\"/></svg>"
   ],
   [
    "building",
    "Capture instead of build",
-   "Take over existing buildings in the world."
+   "Take over existing buildings in the world.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><line x1=\"12\" y1=\"86\" x2=\"148\" y2=\"86\" stroke-width=\"1.5\"/><path d=\"M70 86V52h8v5h8v-5h8v5h8v-5h8V86Z\" fill=\"none\"/><line x1=\"90\" y1=\"52\" x2=\"90\" y2=\"18\"/><path d=\"M90 18h20l-5 6 5 6H90\" fill=\"none\" class=\"af\"/><circle cx=\"26\" cy=\"77\" r=\"3.2\" fill=\"none\"/><path d=\"M21 86L26 81L31 86Z\" fill=\"none\"/><circle cx=\"40\" cy=\"77\" r=\"3.2\" fill=\"none\"/><path d=\"M35 86L40 81L45 86Z\" fill=\"none\"/><line x1=\"48\" y1=\"72\" x2=\"64\" y2=\"66\"/><polyline points=\"58.1 65.2 64 66 60.1 70.5\" fill=\"none\"/></svg>"
   ],
   [
    "building",
    "A city that grows itself",
-   "You zone and guide; houses appear on their own."
+   "You zone and guide; houses appear on their own.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><line x1=\"12\" y1=\"86\" x2=\"148\" y2=\"86\" stroke-width=\"1.5\"/><rect x=\"14\" y=\"52\" width=\"110\" height=\"34\" fill=\"none\" stroke-dasharray=\"4 4\" stroke-width=\"1.5\"/><path d=\"M20 86V74L28 66.8L36 74V86Z\" fill=\"none\"/><path d=\"M40 86V66L49 57.9L58 66V86Z\" fill=\"none\"/><path d=\"M64 86V76L71 69.7L78 76V86Z\" fill=\"none\"/><path d=\"M84 86V70L92 62.8L100 70V86Z\" fill=\"none\"/><path d=\"M104 86V78L112 70.8L120 78V86Z\" fill=\"none\" class=\"a\"/><path d=\"M112 62v-8m-4 4 4-4 4 4\" fill=\"none\" stroke-width=\"1.5\"/><path d=\"M132 30l0 16l4.5-4l3.5 7l3-1.5l-3.5-6.5l6 0Z\" fill=\"currentColor\"/></svg>"
   ],
   [
    "building",
    "Few big buildings",
-   "Three or four structures, each one matters."
+   "Three or four structures, each one matters.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><line x1=\"12\" y1=\"86\" x2=\"148\" y2=\"86\" stroke-width=\"1.5\"/><path d=\"M16 86V34h7.2v5h7.2v-5h7.2v5h7.2v-5h7.2V86Z\" fill=\"none\"/><rect x=\"62\" y=\"40\" width=\"36\" height=\"46\" rx=\"2\" fill=\"none\"/><path d=\"M74 86V70h12v16\" fill=\"none\"/><path d=\"M108 86V54l17-14 17 14v32Z\" fill=\"none\" class=\"a\"/></svg>"
   ],
   [
    "building",
    "Building as a puzzle",
-   "Placement and adjacency bonuses really matter."
+   "Placement and adjacency bonuses really matter.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M30 18h100v64H30Z M30 50h100 M63 18v64 M96 18v64\" fill=\"none\" stroke-width=\"1.5\"/><path d=\"M37 44V34L47 25L57 34V44Z\" fill=\"none\"/><polygon points=\"80 26.2 72.8 42.4 87.2 42.4\" fill=\"none\"/><line x1=\"80\" y1=\"42.4\" x2=\"80\" y2=\"46\"/><path d=\"M37 78V68L47 59L57 68V78Z\" fill=\"none\" class=\"a\"/><path d=\"M103 76V58h20v18Z\" fill=\"none\"/><path d=\"M66 66h22m-5-5 5 5-5 5\" fill=\"none\" class=\"a\"/></svg>"
   ],
   [
    "units",
    "Rock, paper, scissors roster",
-   "Clear counters: spears beat horses beat archers."
+   "Clear counters: spears beat horses beat archers.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><line x1=\"80\" y1=\"12\" x2=\"80\" y2=\"36\"/><path d=\"M76 17l4-6 4 6\" fill=\"none\"/><circle cx=\"80\" cy=\"36.8\" r=\"2.6\" fill=\"none\"/><path d=\"M76 44L80 40L84 44Z\" fill=\"none\"/><path d=\"M24 82q0-14 10-16l10 4-4 12Z\" fill=\"none\"/><circle cx=\"32\" cy=\"65.7\" r=\"2.2\" fill=\"none\"/><path d=\"M28.5 72L32 68.5L35.5 72Z\" fill=\"none\"/><path d=\"M116 64q12 7 0 18M116 73h18\" fill=\"none\"/><circle cx=\"132\" cy=\"75.7\" r=\"2.2\" fill=\"none\"/><path d=\"M128.5 82L132 78.5L135.5 82Z\" fill=\"none\"/><path d=\"M68 42q-28 6-34 18\" fill=\"none\"/><polyline points=\"38 55.5 34 60 32.4 54.2\" fill=\"none\"/><path d=\"M50 82q28 6 54 0\" fill=\"none\"/><polyline points=\"98.3 80.2 104 82 99.4 85.9\" fill=\"none\"/><path d=\"M124 58q-6-14-32-16\" fill=\"none\" class=\"a\"/><polyline points=\"96.7 45.7 92 42 97.7 40\" fill=\"none\" class=\"a\"/></svg>"
   ],
   [
    "units",
    "Named veterans",
-   "Units gain names, ranks and scars you remember."
+   "Units gain names, ranks and scars you remember.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"80\" cy=\"64.6\" r=\"8.3\" fill=\"currentColor\"/><path d=\"M67 88L80 75L93 88Z\" fill=\"currentColor\"/><path d=\"M62 22l8 6 10-10 10 10 8-6v12H62Z\" fill=\"none\" class=\"a\"/><path d=\"M114 44l6 4 6-4M114 52l6 4 6-4M114 60l6 4 6-4\" fill=\"none\"/><path d=\"M36 40l3 6h6l-5 4 2 6-6-4-6 4 2-6-5-4h6Z\" fill=\"none\"/><line x1=\"30\" y1=\"70\" x2=\"46\" y2=\"70\" stroke-width=\"1.5\"/></svg>"
   ],
   [
    "units",
    "Disposable swarms",
-   "Spend lives like ammo; quantity has a quality."
+   "Spend lives like ammo; quantity has a quality.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"20\" cy=\"40\" r=\"3\" fill=\"currentColor\"/><circle cx=\"34\" cy=\"34\" r=\"3\" fill=\"currentColor\"/><circle cx=\"48\" cy=\"42\" r=\"3\" fill=\"currentColor\"/><circle cx=\"28\" cy=\"54\" r=\"3\" fill=\"currentColor\"/><circle cx=\"42\" cy=\"58\" r=\"3\" fill=\"currentColor\"/><circle cx=\"56\" cy=\"52\" r=\"3\" fill=\"currentColor\"/><circle cx=\"18\" cy=\"70\" r=\"3\" fill=\"currentColor\"/><circle cx=\"32\" cy=\"74\" r=\"3\" fill=\"currentColor\"/><circle cx=\"46\" cy=\"72\" r=\"3\" fill=\"currentColor\"/><circle cx=\"60\" cy=\"66\" r=\"3\" fill=\"currentColor\"/><circle cx=\"70\" cy=\"40\" r=\"3\" fill=\"currentColor\"/><circle cx=\"72\" cy=\"80\" r=\"3\" fill=\"currentColor\"/><circle cx=\"84\" cy=\"56\" r=\"3\" fill=\"currentColor\"/><circle cx=\"86\" cy=\"30\" r=\"3\" fill=\"currentColor\"/><circle cx=\"98\" cy=\"70\" r=\"3\" fill=\"currentColor\"/><circle cx=\"86\" cy=\"84\" r=\"3\" fill=\"currentColor\"/><line x1=\"104\" y1=\"54\" x2=\"144\" y2=\"54\" class=\"a\"/><polyline points=\"138.7 51.1 144 54 138.7 56.9\" fill=\"none\" class=\"a\"/></svg>"
   ],
   [
    "units",
    "Customizable units",
-   "Design your own loadouts and gear."
+   "Design your own loadouts and gear.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"44\" cy=\"64.2\" r=\"7\" fill=\"none\"/><path d=\"M33 84L44 73L55 84Z\" fill=\"none\"/><rect x=\"88\" y=\"16\" width=\"20\" height=\"20\" rx=\"3\" fill=\"none\"/><rect x=\"114\" y=\"16\" width=\"20\" height=\"20\" rx=\"3\" fill=\"none\"/><rect x=\"88\" y=\"42\" width=\"20\" height=\"20\" rx=\"3\" fill=\"none\"/><rect x=\"114\" y=\"42\" width=\"20\" height=\"20\" rx=\"3\" fill=\"none\" class=\"a\"/><path d=\"M92 32l12-12M118 26h12M124 20v12M98 46v12M93 52h10\" fill=\"none\"/><line x1=\"108\" y1=\"72\" x2=\"72\" y2=\"72\"/><polyline points=\"77.3 74.9 72 72 77.3 69.1\" fill=\"none\"/></svg>"
   ],
   [
    "units",
    "Very different factions",
-   "Each side plays like a different game."
+   "Each side plays like a different game.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"30\" cy=\"47.6\" r=\"5.1\" fill=\"currentColor\"/><path d=\"M22 62L30 54L38 62Z\" fill=\"currentColor\"/><line x1=\"38\" y1=\"34\" x2=\"38\" y2=\"62\"/><line x1=\"80\" y1=\"14\" x2=\"80\" y2=\"86\" stroke-width=\"1.5\" stroke-dasharray=\"4 4\"/><path d=\"M112 60l6-20 8 12 8-12 6 20q-14 10-28 0Z\" fill=\"none\" class=\"a\"/><circle cx=\"121\" cy=\"54\" r=\"2\" fill=\"currentColor\"/><circle cx=\"131\" cy=\"54\" r=\"2\" fill=\"currentColor\"/><path d=\"M110 68l-6 12M142 68l6 12M126 68v14\" fill=\"none\"/></svg>"
   ],
   [
    "units",
    "Mirror factions",
-   "Everyone has the same tools, so only skill differs."
+   "Everyone has the same tools, so only skill differs.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"28\" cy=\"53\" r=\"3.2\" fill=\"currentColor\"/><path d=\"M23 62L28 57L33 62Z\" fill=\"currentColor\"/><circle cx=\"44\" cy=\"53\" r=\"3.2\" fill=\"currentColor\"/><path d=\"M39 62L44 57L49 62Z\" fill=\"currentColor\"/><circle cx=\"36\" cy=\"73\" r=\"3.2\" fill=\"currentColor\"/><path d=\"M31 82L36 77L41 82Z\" fill=\"currentColor\"/><line x1=\"80\" y1=\"14\" x2=\"80\" y2=\"88\" stroke-dasharray=\"4 4\"/><g class=\"af\"><circle cx=\"116\" cy=\"53\" r=\"3.2\" fill=\"currentColor\"/><path d=\"M111 62L116 57L121 62Z\" fill=\"currentColor\"/><circle cx=\"132\" cy=\"53\" r=\"3.2\" fill=\"currentColor\"/><path d=\"M127 62L132 57L137 62Z\" fill=\"currentColor\"/><circle cx=\"124\" cy=\"73\" r=\"3.2\" fill=\"currentColor\"/><path d=\"M119 82L124 77L129 82Z\" fill=\"currentColor\"/></g><path d=\"M58 34h44m-38-5-6 5 6 5m32-10 6 5-6 5\" fill=\"none\"/></svg>"
   ],
   [
    "units",
    "Big monsters and machines",
-   "Giant units that change a fight on their own."
+   "Giant units that change a fight on their own.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><line x1=\"12\" y1=\"86\" x2=\"148\" y2=\"86\" stroke-width=\"1.5\"/><path d=\"M60 86V66l-6-4V40q0-16 18-18h14q18 2 18 18v22l-6 4v20\" fill=\"none\" class=\"a\"/><circle cx=\"72\" cy=\"38\" r=\"3\" fill=\"currentColor\"/><circle cx=\"90\" cy=\"38\" r=\"3\" fill=\"currentColor\"/><path d=\"M70 50h22\" fill=\"none\"/><circle cx=\"22\" cy=\"79.7\" r=\"2.2\" fill=\"none\"/><path d=\"M18.5 86L22 82.5L25.5 86Z\" fill=\"none\"/><circle cx=\"34\" cy=\"79.7\" r=\"2.2\" fill=\"none\"/><path d=\"M30.5 86L34 82.5L37.5 86Z\" fill=\"none\"/><circle cx=\"134\" cy=\"79.7\" r=\"2.2\" fill=\"none\"/><path d=\"M130.5 86L134 82.5L137.5 86Z\" fill=\"none\"/></svg>"
   ],
   [
    "units",
    "Heroes with abilities",
-   "Special units with spells and cooldowns."
+   "Special units with spells and cooldowns.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"48\" cy=\"66.2\" r=\"7\" fill=\"currentColor\"/><path d=\"M37 86L48 75L59 86Z\" fill=\"currentColor\"/><line x1=\"72\" y1=\"76\" x2=\"72\" y2=\"26\"/><circle cx=\"72\" cy=\"21\" r=\"5\" fill=\"none\" class=\"a\"/><path d=\"M82 14l4-4M84 22h6M82 29l4 4\" fill=\"none\" class=\"a\"/><circle cx=\"124\" cy=\"52\" r=\"16\" fill=\"none\"/><path d=\"M124 52V36A16 16 0 0 1 140 52Z\" fill=\"currentColor\"/></svg>"
   ],
   [
    "units",
    "Units with morale",
-   "Troops panic, rout and rally."
+   "Troops panic, rout and rally.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"28\" cy=\"63\" r=\"3.2\" fill=\"none\"/><path d=\"M23 72L28 67L33 72Z\" fill=\"none\"/><circle cx=\"44\" cy=\"63\" r=\"3.2\" fill=\"none\"/><path d=\"M39 72L44 67L49 72Z\" fill=\"none\"/><path d=\"M36 52v-8m-4 4 4-4 4 4\" fill=\"none\" stroke-width=\"1.5\"/><line x1=\"80\" y1=\"18\" x2=\"80\" y2=\"86\" stroke-width=\"1.5\" stroke-dasharray=\"3 4\"/><circle cx=\"108\" cy=\"71\" r=\"3.2\" fill=\"none\" class=\"a\"/><path d=\"M103 80L108 75L113 80Z\" fill=\"none\" class=\"a\"/><circle cx=\"126\" cy=\"53\" r=\"3.2\" fill=\"none\" class=\"a\"/><path d=\"M121 62L126 57L131 62Z\" fill=\"none\" class=\"a\"/><line x1=\"112\" y1=\"64\" x2=\"96\" y2=\"56\"/><polyline points=\"99.4 60.9 96 56 102 55.8\" fill=\"none\"/><line x1=\"132\" y1=\"46\" x2=\"148\" y2=\"38\"/><polyline points=\"142 37.8 148 38 144.6 42.9\" fill=\"none\"/></svg>"
   ],
   [
    "units",
    "Tiny roster, deep units",
-   "Five unit types, each with many uses."
+   "Five unit types, each with many uses.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"80\" cy=\"27.4\" r=\"4.5\" fill=\"none\" class=\"a\"/><path d=\"M73 40L80 33L87 40Z\" fill=\"none\" class=\"a\"/><path d=\"M80 44v14\" fill=\"none\"/><line x1=\"80\" y1=\"58\" x2=\"40\" y2=\"80\"/><polyline points=\"46 80 40 80 43.2 74.9\" fill=\"none\"/><line x1=\"80\" y1=\"58\" x2=\"64\" y2=\"86\"/><polyline points=\"69.1 82.9 64 86 64.1 80\" fill=\"none\"/><line x1=\"80\" y1=\"58\" x2=\"96\" y2=\"86\"/><polyline points=\"95.9 80 96 86 90.9 82.9\" fill=\"none\"/><line x1=\"80\" y1=\"58\" x2=\"120\" y2=\"80\"/><polyline points=\"116.8 74.9 120 80 114 80\" fill=\"none\"/></svg>"
   ],
   [
    "combat",
    "Fast micro battles",
-   "Split, kite and focus fire with quick clicks."
+   "Split, kite and focus fire with quick clicks.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"36\" cy=\"49\" r=\"3.2\" fill=\"none\"/><path d=\"M31 58L36 53L41 58Z\" fill=\"none\"/><circle cx=\"52\" cy=\"67\" r=\"3.2\" fill=\"none\"/><path d=\"M47 76L52 71L57 76Z\" fill=\"none\"/><path d=\"M26 68q-10-12 0-24\" fill=\"none\"/><polyline points=\"21.8 48.3 26 44 27.4 49.8\" fill=\"none\"/><path d=\"M60 86q14 2 22-6\" fill=\"none\"/><polyline points=\"76 80.6 82 80 79.3 85.3\" fill=\"none\"/><circle cx=\"122\" cy=\"52.1\" r=\"3.5\" fill=\"none\" class=\"a\"/><path d=\"M116.5 62L122 56.5L127.5 62Z\" fill=\"none\" class=\"a\"/><path d=\"M44 50l64 4M60 70l50-8\" fill=\"none\" stroke-dasharray=\"3 3\"/><circle cx=\"122\" cy=\"56\" r=\"15\" fill=\"none\" stroke-width=\"1.5\"/></svg>"
   ],
   [
    "combat",
    "Positioning and formations",
-   "Flanks, high ground and lines decide fights."
+   "Flanks, high ground and lines decide fights.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M10 88q40-40 70-40t70 40\" fill=\"none\" stroke-width=\"1.5\"/><circle cx=\"64\" cy=\"40.8\" r=\"2.6\" fill=\"none\"/><path d=\"M60 48L64 44L68 48Z\" fill=\"none\"/><circle cx=\"80\" cy=\"38.8\" r=\"2.6\" fill=\"none\"/><path d=\"M76 46L80 42L84 46Z\" fill=\"none\"/><circle cx=\"96\" cy=\"40.8\" r=\"2.6\" fill=\"none\"/><path d=\"M92 48L96 44L100 48Z\" fill=\"none\"/><g class=\"af\"><circle cx=\"20\" cy=\"75.7\" r=\"2.2\" fill=\"currentColor\"/><path d=\"M16.5 82L20 78.5L23.5 82Z\" fill=\"currentColor\"/><circle cx=\"32\" cy=\"71.7\" r=\"2.2\" fill=\"currentColor\"/><path d=\"M28.5 78L32 74.5L35.5 78Z\" fill=\"currentColor\"/><circle cx=\"44\" cy=\"67.7\" r=\"2.2\" fill=\"currentColor\"/><path d=\"M40.5 74L44 70.5L47.5 74Z\" fill=\"currentColor\"/></g><line x1=\"110\" y1=\"84\" x2=\"124\" y2=\"68\"/><polyline points=\"118.4 70.1 124 68 122.7 73.9\" fill=\"none\"/><line x1=\"126\" y1=\"88\" x2=\"140\" y2=\"72\"/><polyline points=\"134.4 74.1 140 72 138.7 77.9\" fill=\"none\"/></svg>"
   ],
   [
    "combat",
    "Big slow clashes",
-   "Armies grind into each other; you steer the tide."
+   "Armies grind into each other; you steer the tide.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"22\" cy=\"48.8\" r=\"2.6\" fill=\"none\"/><path d=\"M18 56L22 52L26 56Z\" fill=\"none\"/><circle cx=\"34\" cy=\"48.8\" r=\"2.6\" fill=\"none\"/><path d=\"M30 56L34 52L38 56Z\" fill=\"none\"/><circle cx=\"46\" cy=\"48.8\" r=\"2.6\" fill=\"none\"/><path d=\"M42 56L46 52L50 56Z\" fill=\"none\"/><circle cx=\"58\" cy=\"48.8\" r=\"2.6\" fill=\"none\"/><path d=\"M54 56L58 52L62 56Z\" fill=\"none\"/><g class=\"af\"><circle cx=\"102\" cy=\"48.8\" r=\"2.6\" fill=\"currentColor\"/><path d=\"M98 56L102 52L106 56Z\" fill=\"currentColor\"/><circle cx=\"114\" cy=\"48.8\" r=\"2.6\" fill=\"currentColor\"/><path d=\"M110 56L114 52L118 56Z\" fill=\"currentColor\"/><circle cx=\"126\" cy=\"48.8\" r=\"2.6\" fill=\"currentColor\"/><path d=\"M122 56L126 52L130 56Z\" fill=\"currentColor\"/><circle cx=\"138\" cy=\"48.8\" r=\"2.6\" fill=\"currentColor\"/><path d=\"M134 56L138 52L142 56Z\" fill=\"currentColor\"/></g><path d=\"M76 30l4 8 4-8M76 74l4-8 4 8\" fill=\"none\"/><line x1=\"30\" y1=\"76\" x2=\"52\" y2=\"76\"/><polyline points=\"46.7 73.1 52 76 46.7 78.9\" fill=\"none\"/><line x1=\"130\" y1=\"76\" x2=\"108\" y2=\"76\"/><polyline points=\"113.3 78.9 108 76 113.3 73.1\" fill=\"none\"/></svg>"
   ],
   [
    "combat",
    "Physics destruction",
-   "Buildings crumble, debris flies, terrain scars."
+   "Buildings crumble, debris flies, terrain scars.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><line x1=\"12\" y1=\"86\" x2=\"148\" y2=\"86\" stroke-width=\"1.5\"/><path d=\"M24 86V40h20l4 10-6 6 6 8v22\" fill=\"none\"/><path d=\"M64 40l12-6 4 10-12 4Z\" fill=\"none\" class=\"a\"/><rect x=\"92\" y=\"26\" width=\"10\" height=\"8\" fill=\"none\" transform=\"rotate(25 97 30)\"/><rect x=\"104\" y=\"50\" width=\"8\" height=\"8\" fill=\"none\" transform=\"rotate(-15 108 54)\"/><path d=\"M54 52l8-4M86 40l6-6M88 58h8\" fill=\"none\" stroke-width=\"1.5\"/><path d=\"M112 86q10-8 20-6t14 6\" fill=\"none\"/></svg>"
   ],
   [
    "combat",
    "Cover and suppression",
-   "Units hide behind walls and pin each other down."
+   "Units hide behind walls and pin each other down.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><line x1=\"12\" y1=\"86\" x2=\"148\" y2=\"86\" stroke-width=\"1.5\"/><path d=\"M40 86V64h20v22M40 72h20M50 64v8M44 80h12\" fill=\"none\"/><circle cx=\"30\" cy=\"78.8\" r=\"2.6\" fill=\"currentColor\"/><path d=\"M26 86L30 82L34 86Z\" fill=\"currentColor\"/><circle cx=\"130\" cy=\"77\" r=\"3.2\" fill=\"none\" class=\"a\"/><path d=\"M125 86L130 81L135 86Z\" fill=\"none\" class=\"a\"/><path d=\"M120 66H66M120 72L66 66M120 60L66 62\" fill=\"none\" stroke-dasharray=\"4 4\" class=\"a\"/></svg>"
   ],
   [
    "combat",
    "Spells that reshape the field",
-   "Fire, ice, floods, walls of stone."
+   "Fire, ice, floods, walls of stone.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><line x1=\"12\" y1=\"86\" x2=\"148\" y2=\"86\" stroke-width=\"1.5\"/><circle cx=\"24\" cy=\"76.1\" r=\"3.5\" fill=\"currentColor\"/><path d=\"M18.5 86L24 80.5L29.5 86Z\" fill=\"currentColor\"/><line x1=\"32\" y1=\"80\" x2=\"44\" y2=\"56\"/><circle cx=\"45\" cy=\"52\" r=\"3\" fill=\"none\" class=\"a\"/><path d=\"M50 48q30-30 50 6\" fill=\"none\"/><polyline points=\"100.8 48.1 100 54 95.4 50.1\" fill=\"none\"/><path d=\"M84 86l6-20 8 10 8-18 8 14 8-8 4 22\" fill=\"none\" class=\"a\"/></svg>"
   ],
   [
    "combat",
    "Ranged artillery duels",
-   "Long-range guns and spotting decide everything."
+   "Long-range guns and spotting decide everything.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><line x1=\"12\" y1=\"86\" x2=\"148\" y2=\"86\" stroke-width=\"1.5\"/><circle cx=\"26\" cy=\"80\" r=\"6\" fill=\"none\"/><rect x=\"16\" y=\"70\" width=\"22\" height=\"7\" fill=\"none\" transform=\"rotate(-30 27 74)\"/><path d=\"M38 62q42-60 90 16\" fill=\"none\" stroke-dasharray=\"4 4\"/><circle cx=\"128\" cy=\"80\" r=\"6\" fill=\"none\" class=\"a\"/><path d=\"M118 80l-6-8M138 80l6-8M128 70v-6\" fill=\"none\" class=\"a\"/><circle cx=\"138\" cy=\"24\" r=\"6\" fill=\"none\"/><line x1=\"142\" y1=\"28\" x2=\"148\" y2=\"34\"/></svg>"
   ],
   [
    "combat",
    "Ambushes and traps",
-   "Lure the enemy into a killing ground."
+   "Lure the enemy into a killing ground.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><line x1=\"12\" y1=\"86\" x2=\"148\" y2=\"86\" stroke-width=\"1.5\"/><polygon points=\"20 64 12 82 28 82\" fill=\"none\"/><line x1=\"20\" y1=\"82\" x2=\"20\" y2=\"86\"/><polygon points=\"140 64 132 82 148 82\" fill=\"none\"/><line x1=\"140\" y1=\"82\" x2=\"140\" y2=\"86\"/><path d=\"M58 86l6-10 6 10 6-10 6 10 6-10 6 10 6-10 6 10\" fill=\"none\" class=\"a\"/><circle cx=\"80\" cy=\"56.8\" r=\"2.6\" fill=\"none\"/><path d=\"M76 64L80 60L84 64Z\" fill=\"none\"/><line x1=\"50\" y1=\"58\" x2=\"68\" y2=\"58\"/><polyline points=\"62.7 55.1 68 58 62.7 60.9\" fill=\"none\"/><circle cx=\"34\" cy=\"52\" r=\"2\" fill=\"currentColor\"/><circle cx=\"126\" cy=\"52\" r=\"2\" fill=\"currentColor\"/></svg>"
   ],
   [
    "combat",
    "Sieges",
-   "Break walls, starve garrisons, storm gates."
+   "Break walls, starve garrisons, storm gates.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><line x1=\"12\" y1=\"86\" x2=\"148\" y2=\"86\" stroke-width=\"1.5\"/><path d=\"M96 86V40h10v5h10v-5h10v5h10v-5h10V86Z\" fill=\"none\"/><path d=\"M114 86V72a7 7 0 0 1 14 0v14\" fill=\"none\" class=\"a\"/><path d=\"M16 86l14-24 14 24M30 70l-8-18\" fill=\"none\"/><circle cx=\"20\" cy=\"48\" r=\"4\" fill=\"currentColor\"/><path d=\"M26 42q34-30 68 6\" fill=\"none\" stroke-dasharray=\"4 4\"/><circle cx=\"66\" cy=\"78.8\" r=\"2.6\" fill=\"none\"/><path d=\"M62 86L66 82L70 86Z\" fill=\"none\"/><circle cx=\"80\" cy=\"78.8\" r=\"2.6\" fill=\"none\"/><path d=\"M76 86L80 82L84 86Z\" fill=\"none\"/></svg>"
   ],
   [
    "combat",
    "Naval battles",
-   "Fleets maneuver with wind and broadsides."
+   "Fleets maneuver with wind and broadsides.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M10 84q5 -3 10 0t10 0q5 -3 10 0t10 0q5 -3 10 0t10 0q5 -3 10 0t10 0q5 -3 10 0t10 0q5 -3 10 0t10 0q5 -3 10 0t10 0\" fill=\"none\"/><path d=\"M18 72h30l-5 7h-20Z\" fill=\"none\"/><line x1=\"33\" y1=\"72\" x2=\"33\" y2=\"52\"/><path d=\"M33 53l10 14h-10Z\" fill=\"none\"/><path d=\"M110 72h30l-5 7h-20Z\" fill=\"none\" class=\"a\"/><line x1=\"125\" y1=\"72\" x2=\"125\" y2=\"52\"/><path d=\"M125 53l10 14h-10Z\" fill=\"none\" class=\"a\"/><path d=\"M52 66h50M52 60l50 2\" fill=\"none\" stroke-dasharray=\"3 4\"/><path d=\"M60 24q10-4 18 2t18-2\" fill=\"none\" stroke-width=\"1.5\"/></svg>"
   ],
   [
    "combat",
    "Air power",
-   "Planes, dragons or drones rule the skies."
+   "Planes, dragons or drones rule the skies.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><line x1=\"12\" y1=\"86\" x2=\"148\" y2=\"86\" stroke-width=\"1.5\"/><path d=\"M60 30h40l8-6v14l-8-4H60Z M74 30l-6-12h6l10 12M74 34l-6 12h6l10-12\" fill=\"none\" class=\"a\"/><line x1=\"78\" y1=\"50\" x2=\"84\" y2=\"72\"/><polyline points=\"85.4 66.2 84 72 79.8 67.7\" fill=\"none\"/><line x1=\"96\" y1=\"50\" x2=\"102\" y2=\"72\"/><polyline points=\"103.4 66.2 102 72 97.8 67.7\" fill=\"none\"/><path d=\"M28 86V74L38 65L48 74V86Z\" fill=\"none\"/><path d=\"M114 86V76L123 67.9L132 76V86Z\" fill=\"none\"/></svg>"
   ],
   [
    "combat",
    "One-shot lethality",
-   "Units die fast, so every mistake is costly."
+   "Units die fast, so every mistake is costly.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"30\" cy=\"61.2\" r=\"3.8\" fill=\"none\"/><path d=\"M24 72L30 66L36 72Z\" fill=\"none\"/><line x1=\"44\" y1=\"58\" x2=\"102\" y2=\"58\" stroke-dasharray=\"3 3\"/><path d=\"M112 56a8 8 0 1 1 16 0v5h-16Z\" fill=\"none\" class=\"a\"/><circle cx=\"117\" cy=\"56\" r=\"1.8\" fill=\"currentColor\"/><circle cx=\"123\" cy=\"56\" r=\"1.8\" fill=\"currentColor\"/><path d=\"M110 80h20\" fill=\"none\"/><circle cx=\"104\" cy=\"58\" r=\"3\" fill=\"currentColor\"/></svg>"
   ],
   [
    "control",
    "Classic mouse control",
-   "Box-select, right-click, hotkeys, as fast as you can."
+   "Box-select, right-click, hotkeys, as fast as you can.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><rect x=\"20\" y=\"22\" width=\"76\" height=\"44\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"40\" cy=\"47\" r=\"3.2\" fill=\"none\"/><path d=\"M35 56L40 51L45 56Z\" fill=\"none\"/><circle cx=\"58\" cy=\"47\" r=\"3.2\" fill=\"none\"/><path d=\"M53 56L58 51L63 56Z\" fill=\"none\"/><circle cx=\"76\" cy=\"47\" r=\"3.2\" fill=\"none\"/><path d=\"M71 56L76 51L81 56Z\" fill=\"none\"/><path d=\"M96 66l0 16l4.5-4l3.5 7l3-1.5l-3.5-6.5l6 0Z\" fill=\"currentColor\"/><path d=\"M130 74l8-8M130 66l8 8\" fill=\"none\" class=\"a\" stroke-width=\"3\"/></svg>"
   ],
   [
    "control",
    "Pause and plan",
-   "Stop time, give orders, watch them play out."
+   "Stop time, give orders, watch them play out.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><rect x=\"66\" y=\"12\" width=\"8\" height=\"24\" rx=\"2\" class=\"af\"/><rect x=\"82\" y=\"12\" width=\"8\" height=\"24\" rx=\"2\" class=\"af\"/><circle cx=\"26\" cy=\"75\" r=\"3.2\" fill=\"none\"/><path d=\"M21 84L26 79L31 84Z\" fill=\"none\"/><circle cx=\"40\" cy=\"75\" r=\"3.2\" fill=\"none\"/><path d=\"M35 84L40 79L45 84Z\" fill=\"none\"/><path d=\"M48 72q30-10 40 4t36-4\" fill=\"none\" stroke-dasharray=\"4 4\"/><circle cx=\"130\" cy=\"72\" r=\"5\" fill=\"none\"/><path d=\"M126 68l8 8M134 68l-8 8\" fill=\"none\" stroke-width=\"1.5\"/></svg>"
   ],
   [
    "control",
    "Turn-based moves",
-   "Take your time, one move each."
+   "Take your time, one move each.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M20 20h120v64H20Z M20 52h120 M52 20v64 M84 20v64 M116 20v64\" fill=\"none\" stroke-width=\"1.5\"/><circle cx=\"36\" cy=\"39.9\" r=\"2.9\" fill=\"currentColor\"/><path d=\"M31.5 48L36 43.5L40.5 48Z\" fill=\"currentColor\"/><g class=\"af\"><circle cx=\"128\" cy=\"71.9\" r=\"2.9\" fill=\"currentColor\"/><path d=\"M123.5 80L128 75.5L132.5 80Z\" fill=\"currentColor\"/></g><line x1=\"46\" y1=\"36\" x2=\"74\" y2=\"36\"/><polyline points=\"68.7 33.1 74 36 68.7 38.9\" fill=\"none\"/><path d=\"M92 56h16l-16 24h16Z\" fill=\"none\"/></svg>"
   ],
   [
    "control",
    "Simultaneous turns",
-   "Everyone plans, then all moves happen together."
+   "Everyone plans, then all moves happen together.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"28\" cy=\"45\" r=\"3.2\" fill=\"none\"/><path d=\"M23 54L28 49L33 54Z\" fill=\"none\"/><g class=\"af\"><circle cx=\"132\" cy=\"45\" r=\"3.2\" fill=\"currentColor\"/><path d=\"M127 54L132 49L137 54Z\" fill=\"currentColor\"/></g><path d=\"M38 44h28M38 50h22M122 44H94M122 50h-22\" fill=\"none\" stroke-dasharray=\"3 3\"/><line x1=\"38\" y1=\"76\" x2=\"70\" y2=\"76\"/><polyline points=\"64.7 73.1 70 76 64.7 78.9\" fill=\"none\"/><line x1=\"122\" y1=\"76\" x2=\"90\" y2=\"76\"/><polyline points=\"95.3 78.9 90 76 95.3 73.1\" fill=\"none\"/><path d=\"M80 60l3 6h6l-5 4 2 6-6-4-6 4 2-6-5-4h6Z\" fill=\"none\"/></svg>"
   ],
   [
    "control",
    "Indirect orders",
-   "Set goals and priorities; units decide how."
+   "Set goals and priorities; units decide how.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><line x1=\"122\" y1=\"82\" x2=\"122\" y2=\"30\"/><path d=\"M122 30h22l-6 7 6 7h-22\" fill=\"none\" class=\"af\"/><circle cx=\"28\" cy=\"34.8\" r=\"2.6\" fill=\"none\"/><path d=\"M24 42L28 38L32 42Z\" fill=\"none\"/><circle cx=\"24\" cy=\"64.8\" r=\"2.6\" fill=\"none\"/><path d=\"M20 72L24 68L28 72Z\" fill=\"none\"/><circle cx=\"50\" cy=\"78.8\" r=\"2.6\" fill=\"none\"/><path d=\"M46 86L50 82L54 86Z\" fill=\"none\"/><path d=\"M36 36q30-10 72 22\" fill=\"none\"/><polyline points=\"105.3 52.7 108 58 102 57.4\" fill=\"none\"/><path d=\"M32 66q40 14 76 6\" fill=\"none\"/><polyline points=\"102.3 70.2 108 72 103.4 75.9\" fill=\"none\"/><path d=\"M58 82q30 2 50-4\" fill=\"none\"/><polyline points=\"102.1 76.8 108 78 103.8 82.3\" fill=\"none\"/></svg>"
   ],
   [
    "control",
    "Cards as commands",
-   "Play cards from a hand to deploy and act."
+   "Play cards from a hand to deploy and act.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><g transform=\"rotate(-14 50 70)\"><rect x=\"38\" y=\"52\" width=\"24\" height=\"34\" rx=\"4\" fill=\"none\"/></g><rect x=\"68\" y=\"48\" width=\"24\" height=\"34\" rx=\"4\" fill=\"none\"/><g transform=\"rotate(14 110 70)\"><rect x=\"98\" y=\"52\" width=\"24\" height=\"34\" rx=\"4\" fill=\"none\" class=\"a\"/></g><circle cx=\"80\" cy=\"66.8\" r=\"2.6\" fill=\"none\"/><path d=\"M76 74L80 70L84 74Z\" fill=\"none\"/><line x1=\"112\" y1=\"46\" x2=\"126\" y2=\"22\"/><polyline points=\"120.9 25.1 126 22 125.8 28\" fill=\"none\"/></svg>"
   ],
   [
    "control",
    "Drawn paths",
-   "Draw a route and units follow it."
+   "Draw a route and units follow it.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"24\" cy=\"73\" r=\"3.2\" fill=\"none\"/><path d=\"M19 82L24 77L29 82Z\" fill=\"none\"/><path d=\"M30 74q20-40 50-20t40-30\" fill=\"none\" class=\"a\"/><circle cx=\"120\" cy=\"24\" r=\"4\" fill=\"none\" class=\"a\"/><path d=\"M124 30v14l4-3 3 6 3-1-3-6h5Z\" fill=\"currentColor\"/><path d=\"M18 30h20M18 38h12\" fill=\"none\" stroke-width=\"1.5\" stroke-dasharray=\"2 3\"/></svg>"
   ],
   [
    "control",
    "Automation and scripts",
-   "Build rules and let your army run itself."
+   "Build rules and let your army run itself.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"36\" cy=\"50\" r=\"14\" fill=\"none\"/><circle cx=\"36\" cy=\"50\" r=\"5\" fill=\"none\"/><path d=\"M36 30v6M36 64v6M16 50h6M50 50h6M22 36l4 4M46 60l4 4M22 64l4-4M46 40l4-4\" fill=\"none\"/><path d=\"M70 28h20v12H70ZM100 46h20v12h-20ZM70 66h20v12H70Z\" fill=\"none\"/><path d=\"M90 34h20v12M110 58v14H90\" fill=\"none\" stroke-width=\"1.5\"/><circle cx=\"138\" cy=\"54.8\" r=\"2.6\" fill=\"none\"/><path d=\"M134 62L138 58L142 62Z\" fill=\"none\"/><circle cx=\"138\" cy=\"78.8\" r=\"2.6\" fill=\"none\" class=\"a\"/><path d=\"M134 86L138 82L142 86Z\" fill=\"none\" class=\"a\"/></svg>"
   ],
   [
    "enemy",
    "Rival factions like you",
-   "Opponents that build and expand just as you do."
+   "Opponents that build and expand just as you do.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><line x1=\"12\" y1=\"86\" x2=\"148\" y2=\"86\" stroke-width=\"1.5\"/><path d=\"M14 86V56h6v5h6v-5h6v5h6v-5h6V86Z\" fill=\"none\"/><circle cx=\"56\" cy=\"78.8\" r=\"2.6\" fill=\"none\"/><path d=\"M52 86L56 82L60 86Z\" fill=\"none\"/><path d=\"M116 86V56h6v5h6v-5h6v5h6v-5h6V86Z\" fill=\"none\" class=\"a\"/><circle cx=\"104\" cy=\"78.8\" r=\"2.6\" fill=\"none\" class=\"a\"/><path d=\"M100 86L104 82L108 86Z\" fill=\"none\" class=\"a\"/><path d=\"M68 66h24m-18-5-6 5 6 5m12-10 6 5-6 5\" fill=\"none\"/></svg>"
   ],
   [
    "enemy",
    "Endless monster waves",
-   "Hold out against ever larger hordes."
+   "Hold out against ever larger hordes.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M14 86V46h4.4v5h4.4v-5h4.4v5h4.4v-5h4.4V86Z\" fill=\"none\"/><line x1=\"10\" y1=\"86\" x2=\"150\" y2=\"86\" stroke-width=\"1.5\"/><path d=\"M54 68a8 8 0 1 1 16 0v5h-16Z\" fill=\"none\" class=\"a\"/><circle cx=\"59\" cy=\"68\" r=\"1.8\" fill=\"currentColor\"/><circle cx=\"65\" cy=\"68\" r=\"1.8\" fill=\"currentColor\"/><path d=\"M84 58a8 8 0 1 1 16 0v5h-16Z\" fill=\"none\"/><circle cx=\"89\" cy=\"58\" r=\"1.8\" fill=\"currentColor\"/><circle cx=\"95\" cy=\"58\" r=\"1.8\" fill=\"currentColor\"/><path d=\"M84 80a8 8 0 1 1 16 0v5h-16Z\" fill=\"none\"/><circle cx=\"89\" cy=\"80\" r=\"1.8\" fill=\"currentColor\"/><circle cx=\"95\" cy=\"80\" r=\"1.8\" fill=\"currentColor\"/><path d=\"M114 48a8 8 0 1 1 16 0v5h-16Z\" fill=\"none\"/><circle cx=\"119\" cy=\"48\" r=\"1.8\" fill=\"currentColor\"/><circle cx=\"125\" cy=\"48\" r=\"1.8\" fill=\"currentColor\"/><path d=\"M114 70a8 8 0 1 1 16 0v5h-16Z\" fill=\"none\"/><circle cx=\"119\" cy=\"70\" r=\"1.8\" fill=\"currentColor\"/><circle cx=\"125\" cy=\"70\" r=\"1.8\" fill=\"currentColor\"/><path d=\"M134 82a8 8 0 1 1 16 0v5h-16Z\" fill=\"none\"/><circle cx=\"139\" cy=\"82\" r=\"1.8\" fill=\"currentColor\"/><circle cx=\"145\" cy=\"82\" r=\"1.8\" fill=\"currentColor\"/></svg>"
   ],
   [
    "enemy",
    "Nature itself",
-   "Storms, fire, cold and floods are the enemy."
+   "Storms, fire, cold and floods are the enemy.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M40 30q0-12 14-12 6-10 18-4 14-2 14 10 10 2 8 10H40Z\" fill=\"none\"/><path d=\"M62 38l-6 14h8l-6 14\" fill=\"none\" class=\"a\"/><path d=\"M46 42l-4 10M82 42l-4 10M94 42l-4 10\" fill=\"none\" stroke-width=\"1.5\"/><path d=\"M110 80V66L122 55.2L134 66V80Z\" fill=\"none\"/><path d=\"M12 88q5.7 -3 11.4 0t11.4 0q5.7 -3 11.4 0t11.4 0q5.7 -3 11.4 0t11.4 0q5.7 -3 11.4 0t11.4 0q5.7 -3 11.4 0t11.4 0q5.7 -3 11.4 0t11.4 0\" fill=\"none\"/></svg>"
   ],
   [
    "enemy",
    "A cunning AI commander",
-   "An opponent that adapts to how you play."
+   "An opponent that adapts to how you play.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M60 70V36q0-18 20-18t20 18v34Z\" fill=\"none\"/><circle cx=\"72\" cy=\"40\" r=\"3\" class=\"af\"/><circle cx=\"88\" cy=\"40\" r=\"3\" class=\"af\"/><path d=\"M70 54h20M56 70h48M80 18v-6\" fill=\"none\"/><circle cx=\"80\" cy=\"10\" r=\"2\" fill=\"currentColor\"/><path d=\"M22 58h22M30 48l-8 10 8 10M138 58h-22M130 48l8 10-8 10\" fill=\"none\"/><path d=\"M66 82h28\" fill=\"none\"/></svg>"
   ],
   [
    "enemy",
    "Bosses",
-   "Huge enemies with patterns to learn."
+   "Huge enemies with patterns to learn.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><line x1=\"12\" y1=\"86\" x2=\"148\" y2=\"86\" stroke-width=\"1.5\"/><path d=\"M58 86V58q-10-4-12-20l10 6q4-22 24-22t24 22l10-6q-2 16-12 20v28\" fill=\"none\" class=\"a\"/><path d=\"M70 48l6 4M96 48l-6 4M72 68l4-4 4 4 4-4 4 4 4-4\" fill=\"none\"/><circle cx=\"24\" cy=\"79.7\" r=\"2.2\" fill=\"none\"/><path d=\"M20.5 86L24 82.5L27.5 86Z\" fill=\"none\"/><line x1=\"30\" y1=\"12\" x2=\"130\" y2=\"12\" stroke-width=\"4\"/></svg>"
   ],
   [
    "enemy",
    "Other players only",
-   "Every opponent is a real person."
+   "Every opponent is a real person.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><rect x=\"12\" y=\"30\" width=\"44\" height=\"30\" rx=\"2\" fill=\"none\"/><path d=\"M24 70h20M34 60v10\" fill=\"none\"/><circle cx=\"34\" cy=\"48.8\" r=\"2.6\" fill=\"currentColor\"/><path d=\"M30 56L34 52L38 56Z\" fill=\"currentColor\"/><rect x=\"104\" y=\"30\" width=\"44\" height=\"30\" rx=\"2\" fill=\"none\"/><path d=\"M116 70h20M126 60v10\" fill=\"none\"/><g class=\"af\"><circle cx=\"126\" cy=\"48.8\" r=\"2.6\" fill=\"currentColor\"/><path d=\"M122 56L126 52L130 56Z\" fill=\"currentColor\"/></g><path d=\"M62 45h36m-30-5-6 5 6 5m24-10 6 5-6 5\" fill=\"none\" stroke-dasharray=\"4 3\"/></svg>"
   ],
   [
    "enemy",
    "Shifting alliances",
-   "Today’s ally is tomorrow’s target."
+   "Today’s ally is tomorrow’s target.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"28\" cy=\"71.2\" r=\"3.8\" fill=\"none\"/><path d=\"M22 82L28 76L34 82Z\" fill=\"none\"/><circle cx=\"80\" cy=\"71.2\" r=\"3.8\" fill=\"none\"/><path d=\"M74 82L80 76L86 82Z\" fill=\"none\"/><g class=\"af\"><circle cx=\"132\" cy=\"71.2\" r=\"3.8\" fill=\"currentColor\"/><path d=\"M126 82L132 76L138 82Z\" fill=\"currentColor\"/></g><path d=\"M42 70q24-12 24 0\" fill=\"none\"/><path d=\"M92 52q20-28 38 0\" fill=\"none\"/><polyline points=\"130.8 46.1 130 52 125.4 48.1\" fill=\"none\"/><line x1=\"102\" y1=\"66\" x2=\"116\" y2=\"80\" stroke-width=\"3\" class=\"a\"/><path d=\"M70 34q-20-14-40 6\" fill=\"none\"/><polyline points=\"35.8 38.6 30 40 31.9 34.3\" fill=\"none\"/></svg>"
   ],
   [
    "enemy",
    "A spreading corruption",
-   "Something creeps across the map and you push it back."
+   "Something creeps across the map and you push it back.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M10 20h140v72H10Z\" fill=\"none\" stroke-width=\"1.5\"/><path d=\"M10 58q22-8 28 8t22 6 12 20H10Z\" class=\"af\"/><path d=\"M60 58q8-12 12 0M82 76q6-8 10 0\" fill=\"none\" class=\"a\"/><line x1=\"104\" y1=\"58\" x2=\"80\" y2=\"70\"/><polyline points=\"86 70.2 80 70 83.4 65.1\" fill=\"none\"/><polygon points=\"120 34.4 113.6 48.8 126.4 48.8\" fill=\"none\"/><line x1=\"120\" y1=\"48.8\" x2=\"120\" y2=\"52\"/><path d=\"M126 82V72L134 64.8L142 72V82Z\" fill=\"none\"/></svg>"
   ],
   [
    "enemy",
    "Neutral creatures in the wild",
-   "Camps of beasts guard treasure and terrain."
+   "Camps of beasts guard treasure and terrain.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><line x1=\"12\" y1=\"86\" x2=\"148\" y2=\"86\" stroke-width=\"1.5\"/><polygon points=\"18 61.8 9.2 81.6 26.8 81.6\" fill=\"none\"/><line x1=\"18\" y1=\"81.6\" x2=\"18\" y2=\"86\"/><polygon points=\"142 61.8 133.2 81.6 150.8 81.6\" fill=\"none\"/><line x1=\"142\" y1=\"81.6\" x2=\"142\" y2=\"86\"/><path d=\"M44 86q0-14 14-14l6-6 4 6q12 2 12 14\" fill=\"none\" class=\"a\"/><circle cx=\"64\" cy=\"76\" r=\"1.8\" fill=\"currentColor\"/><rect x=\"94\" y=\"72\" width=\"22\" height=\"14\" rx=\"2\" fill=\"none\"/><path d=\"M94 78h22M105 76v4\" fill=\"none\"/><circle cx=\"105\" cy=\"60\" r=\"5\" fill=\"none\"/><line x1=\"105\" y1=\"57.5\" x2=\"105\" y2=\"62.5\"/></svg>"
   ],
   [
    "info",
    "Fog of war",
-   "You only see what your units see."
+   "You only see what your units see.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M14 50q22-22 44 0q-22 22-44 0z\" fill=\"none\"/><circle cx=\"36\" cy=\"50\" r=\"6\" fill=\"currentColor\"/><path d=\"M62 50h10\" stroke-dasharray=\"3 4\"/><path d=\"M84 68h61.599999999999994a14 14 0 0 0 -4 -19a18.2 18.2 0 0 0 -24 -4a14 14 0 0 0 -16 23z\" fill=\"none\"/><path d=\"M92 76h44M100 84h30\" stroke-width=\"1.5\"/></svg>"
   ],
   [
    "info",
    "Perfect information",
-   "Everything is visible; it is pure strategy."
+   "Everything is visible; it is pure strategy.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M52 26q28-22 56 0q-28 22-56 0z\" fill=\"none\"/><circle cx=\"80\" cy=\"26\" r=\"6\" class=\"af\"/><path d=\"M80 12v-4M60 14l-4-5M100 14l4-5\" /><rect x=\"40\" y=\"56\" width=\"80\" height=\"32\" fill=\"none\"/><path d=\"M60 56v32M80 56v32M100 56v32M40 72h80\" stroke-width=\"1.5\"/><circle cx=\"50\" cy=\"64\" r=\"3\" fill=\"currentColor\"/><circle cx=\"110\" cy=\"80\" r=\"3\" fill=\"currentColor\"/><circle cx=\"90\" cy=\"64\" r=\"3\" fill=\"none\"/></svg>"
   ],
   [
    "info",
    "Scouting really matters",
-   "Knowing beats having; spies and scouts win wars."
+   "Knowing beats having; spies and scouts win wars.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"30\" cy=\"52\" r=\"12\" fill=\"none\"/><circle cx=\"58\" cy=\"52\" r=\"12\" fill=\"none\"/><path d=\"M42 50h4M24 40l4-10h8l2 10M64 40l-4-10h-8l-2 10\"/><path d=\"M76 52l10-4 10 4\" stroke-dasharray=\"3 4\" fill=\"none\"/><path d=\"M100 86l22-30 22 30z\" fill=\"none\"/><path d=\"M122 56v-24\" /><path d=\"M122 32l14 5-14 5z\" class=\"a\"/></svg>"
   ],
   [
    "info",
    "Deception and decoys",
-   "Fake armies, feints and bluffs."
+   "Fake armies, feints and bluffs.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><g><circle cx=\"44\" cy=\"34\" r=\"4\"/><path d=\"M44 38v12M38 43h12M44 50l-5 9M44 50l5 9\" fill=\"none\"/></g><g stroke-dasharray=\"4 4\"><circle cx=\"104\" cy=\"38\" r=\"4\"/><path d=\"M104 42v12M98 47h12M104 54l-5 9M104 54l5 9\" fill=\"none\"/></g><path d=\"M104 63v18M94 84h20\"/><path d=\"M116 30l14-10M118 40h16M116 50l14 8\" class=\"a\" stroke-width=\"1.8\"/><path d=\"M20 84h48\" stroke-width=\"1.5\"/></svg>"
   ],
   [
    "info",
    "Stealth units",
-   "Invisible agents slip past defences."
+   "Invisible agents slip past defences.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><rect x=\"18\" y=\"20\" width=\"14\" height=\"66\" fill=\"none\"/><path d=\"M14 20h22l-11-10z\" fill=\"none\"/><path d=\"M32 28l100 40l-6 18h-58z\" class=\"af\" opacity=\".35\"/><g stroke-dasharray=\"3 3\"><circle cx=\"70\" cy=\"30\" r=\"4\"/><path d=\"M70 34l-4 12M62 40l12 2M66 46l-8 8M66 46l6 8\" fill=\"none\"/></g><path d=\"M86 22q6 4 0 8M92 18q10 8 0 16\" fill=\"none\" stroke-width=\"1.5\"/></svg>"
   ],
   [
    "info",
    "Hidden objectives",
-   "Each side has a secret goal to uncover."
+   "Each side has a secret goal to uncover.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><rect x=\"22\" y=\"30\" width=\"62\" height=\"44\" fill=\"none\"/><path d=\"M22 30l31 24 31-24\" fill=\"none\"/><circle cx=\"118\" cy=\"52\" r=\"24\" fill=\"none\"/><circle cx=\"118\" cy=\"52\" r=\"14\" fill=\"none\"/><circle cx=\"118\" cy=\"52\" r=\"5\" class=\"af\"/><rect x=\"44\" y=\"62\" width=\"18\" height=\"14\" fill=\"currentColor\"/><path d=\"M48 62v-5a5 5 0 0 1 10 0v5\" fill=\"none\"/></svg>"
   ],
   [
    "info",
    "Readable at a glance",
-   "Every unit and state is clear without squinting."
+   "Every unit and state is clear without squinting.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"36\" cy=\"62\" r=\"12\" fill=\"none\"/><path d=\"M80 48l14 26h-28z\" fill=\"none\"/><rect x=\"112\" y=\"50\" width=\"24\" height=\"24\" fill=\"none\"/><path d=\"M24 36h24M68 36h24M112 36h24\" stroke-width=\"4\"/><path d=\"M24 36h18M112 36h10\" class=\"a\" stroke-width=\"4\"/><path d=\"M20 88h120\" stroke-width=\"1.5\"/></svg>"
   ],
   [
    "systems",
    "Day and night cycle",
-   "The battle changes when the sun goes down."
+   "The battle changes when the sun goes down.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M12 70h136\"/><path d=\"M28 70a20 20 0 0 1 40 0z\" class=\"a\"/><path d=\"M48 40v-10M26 48l-7-7M70 48l7-7M18 66h-6M84 66h-6\" stroke-width=\"2\"/><path d=\"M118 22a20 20 0 1 0 16 32a16 16 0 1 1 -16 -32z\" fill=\"currentColor\"/><circle cx=\"100\" cy=\"24\" r=\"1.8\" fill=\"currentColor\"/><circle cx=\"142\" cy=\"30\" r=\"1.8\" fill=\"currentColor\"/><path d=\"M30 82h100\" stroke-width=\"1.5\" stroke-dasharray=\"4 6\"/></svg>"
   ],
   [
    "systems",
    "Weather that matters",
-   "Rain, snow and fog change movement and sight."
+   "Rain, snow and fog change movement and sight.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M30 44h70.4a16 16 0 0 0 -4 -19a20.8 20.8 0 0 0 -24 -4a16 16 0 0 0 -16 23z\" fill=\"none\"/><path d=\"M40 54l-4 10M54 54l-4 10M68 54l-4 10M48 70l-4 10M62 70l-4 10\" class=\"a\"/><path d=\"M118 40v24M108 46l20 12M108 58l20-12\" stroke-width=\"2\"/><path d=\"M110 78h30M114 86h22\" stroke-width=\"1.5\"/></svg>"
   ],
   [
    "systems",
    "Seasons",
-   "Harvest in autumn, starve in winter."
+   "Harvest in autumn, starve in winter.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"80\" cy=\"50\" r=\"40\" fill=\"none\"/><path d=\"M80 10v80M40 50h80\" stroke-width=\"1.5\"/><circle cx=\"62\" cy=\"32\" r=\"7\" class=\"a\"/><path d=\"M98 24q14 2 6 16q-12-2-6-16z\" fill=\"none\"/><path d=\"M62 58v16M55 62l14 8M55 70l14-8\" stroke-width=\"2\"/><path d=\"M98 76v-10M98 66q-6-6 0-10q6 4 0 10\" fill=\"none\"/></svg>"
   ],
   [
    "systems",
    "Fire that spreads",
-   "Forests and towns burn; wind carries it."
+   "Forests and towns burn; wind carries it.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M30 48l-9 16h18z\" fill=\"none\"/><path d=\"M30 64v7\"/><path d=\"M60 48l-9 16h18z\" fill=\"none\"/><path d=\"M60 64v7\"/><path d=\"M90 48l-9 16h18z\" fill=\"none\"/><path d=\"M90 64v7\"/><path d=\"M120 48l-9 16h18z\" fill=\"none\"/><path d=\"M120 64v7\"/><path d=\"M60 44q-8-10 0-24q2 8 6 6q4 10-6 18z\" class=\"a\"/><path d=\"M90 44q-6-8 0-18q2 6 5 5q3 8-5 13z\" class=\"a\"/><path d=\"M14 22h22M20 30h18M14 38h14\" stroke-width=\"1.8\"/><path d=\"M30 22l4-3\" stroke-width=\"1.8\"/><path d=\"M12 88h136\" stroke-width=\"1.5\"/></svg>"
   ],
   [
    "systems",
    "Light and darkness as territory",
-   "You can only act where your light reaches."
+   "You can only act where your light reaches.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"80\" cy=\"54\" r=\"30\" class=\"a\" fill=\"none\" stroke-dasharray=\"5 4\"/><rect x=\"73\" y=\"48\" width=\"14\" height=\"18\" fill=\"none\"/><path d=\"M73 48l7-8 7 8M80 40v-4\" fill=\"none\"/><circle cx=\"80\" cy=\"57\" r=\"3\" class=\"af\"/><path d=\"M12 20l14 14M12 38l10 10M12 56l8 8M148 20l-14 14M148 38l-10 10M148 56l-8 8M12 80l12 10M148 80l-12 10\" stroke-width=\"1.5\"/></svg>"
   ],
   [
    "systems",
    "Deformable terrain",
-   "Dig trenches, blow craters, raise hills."
+   "Dig trenches, blow craters, raise hills.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M10 70h26q14 0 18 10q6 10 16 0q4-10 18-10h6q14-26 30-26t20 26h6\" fill=\"none\"/><path d=\"M48 66l-6-8M76 66l6-8M62 64v-10\" stroke-width=\"1.8\"/><path d=\"M116 34v-12M108 38l-6-6M124 38l6-6\" class=\"a\" stroke-width=\"2\"/><path d=\"M20 50l10 14M16 50h10\" stroke-width=\"3\"/><path d=\"M10 86h140\" stroke-width=\"1.5\" stroke-dasharray=\"4 6\"/></svg>"
   ],
   [
    "systems",
    "Water and flooding",
-   "Break a dam and the valley changes."
+   "Break a dam and the valley changes.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M10 30h40v50\" fill=\"none\"/><path d=\"M10 40q8-4 16 0t16 0\" fill=\"none\" stroke-width=\"1.8\"/><path d=\"M50 44l6 6-4 6 6 6\" fill=\"none\"/><path d=\"M58 52q16 0 30 18t58 14\" class=\"a\" fill=\"none\"/><path d=\"M62 64q14 6 24 16t60 8\" fill=\"none\" stroke-width=\"1.8\"/><path d=\"M110 50l12-16 12 16z\" fill=\"none\"/></svg>"
   ],
   [
    "systems",
    "Living ecosystem",
-   "Animals breed, forests regrow, overhunting has a cost."
+   "Animals breed, forests regrow, overhunting has a cost.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M80 34l-9 16h18z\" fill=\"none\"/><path d=\"M80 50v7\"/><path d=\"M44 28a40 30 0 0 1 72 0\" fill=\"none\"/><path d=\"M116 28l2-9M116 28l-9-2\"/><path d=\"M116 72a40 30 0 0 1 -72 0\" fill=\"none\"/><path d=\"M44 72l-2 9M44 72l9 2\"/><ellipse cx=\"30\" cy=\"54\" rx=\"9\" ry=\"6\" fill=\"none\"/><circle cx=\"22\" cy=\"46\" r=\"3\" fill=\"none\"/><path d=\"M20 42l-2-8M24 42l2-8\" stroke-width=\"1.8\"/><ellipse cx=\"132\" cy=\"54\" rx=\"6\" ry=\"4\" class=\"af\"/><circle cx=\"138\" cy=\"48\" r=\"2.5\" fill=\"none\"/></svg>"
   ],
   [
    "systems",
    "Disease and plague",
-   "Sickness spreads through crowded armies and towns."
+   "Sickness spreads through crowded armies and towns.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"30\" cy=\"56\" r=\"7\" fill=\"none\"/><circle cx=\"52\" cy=\"44\" r=\"7\" fill=\"none\"/><circle cx=\"52\" cy=\"68\" r=\"7\" fill=\"none\"/><circle cx=\"80\" cy=\"56\" r=\"7\" class=\"af\"/><circle cx=\"108\" cy=\"44\" r=\"7\" fill=\"none\"/><circle cx=\"108\" cy=\"68\" r=\"7\" fill=\"none\"/><circle cx=\"130\" cy=\"56\" r=\"7\" fill=\"none\"/><path d=\"M90 50l8-4M90 62l8 4M70 50l-8-4M70 62l-8 4\" stroke-dasharray=\"2 3\"/><circle cx=\"80\" cy=\"22\" r=\"7\" fill=\"none\"/><path d=\"M80 11v4M80 29v4M69 22h4M87 22h4M72 14l3 3M88 14l-3 3M72 30l3-3M88 30l-3-3\" stroke-width=\"2\"/></svg>"
   ],
   [
    "systems",
    "Heat or noise exposure",
-   "Loud actions draw attention you cannot afford."
+   "Loud actions draw attention you cannot afford.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><g><circle cx=\"30\" cy=\"40\" r=\"4\"/><path d=\"M30 44v12M24 49h12M30 56l-5 9M30 56l5 9\" fill=\"none\"/></g><path d=\"M44 46q6 8 0 16M52 40q10 14 0 28M60 34q14 20 0 40\" class=\"a\" fill=\"none\"/><path d=\"M96 54q20-20 40 0q-20 20-40 0z\" fill=\"none\"/><circle cx=\"116\" cy=\"54\" r=\"6\" fill=\"currentColor\"/><path d=\"M116 34v-8M102 38l-5-6M130 38l5-6\" stroke-width=\"2\"/></svg>"
   ],
   [
    "systems",
    "Time manipulation",
-   "Rewind, slow or skip time as a weapon."
+   "Rewind, slow or skip time as a weapon.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M50 14h36M50 86h36M54 14q0 24 14 36q-14 12-14 36M82 14q0 24-14 36q14 12 14 36\" fill=\"none\"/><path d=\"M60 78q8-10 16 0z\" class=\"af\"/><path d=\"M68 54v18\" stroke-width=\"1.5\" stroke-dasharray=\"2 3\"/><path d=\"M136 36l-14 14 14 14zM120 36l-14 14 14 14z\" fill=\"none\"/><path d=\"M20 36v28M28 36l12 14-12 14z\" fill=\"none\"/></svg>"
   ],
   [
    "systems",
    "Gravity and physics",
-   "Momentum, falls and collisions matter."
+   "Momentum, falls and collisions matter.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"38\" cy=\"22\" r=\"8\" class=\"af\"/><path d=\"M48 24q30 4 46 56\" fill=\"none\" stroke-dasharray=\"3 5\"/><circle cx=\"96\" cy=\"74\" r=\"8\" fill=\"none\"/><path d=\"M96 82q10-26 22-6\" fill=\"none\" stroke-dasharray=\"3 5\" stroke-width=\"1.8\"/><rect x=\"126\" y=\"62\" width=\"20\" height=\"20\" fill=\"none\"/><path d=\"M14 82h136\"/><path d=\"M38 34v10M34 40l4 4 4-4\" stroke-width=\"1.8\" fill=\"none\"/></svg>"
   ],
   [
    "map",
    "Hand-crafted maps",
-   "Each map designed with care and secrets."
+   "Each map designed with care and secrets.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M20 20l30 8 30-8 30 8v56l-30-8-30 8-30-8z\" fill=\"none\"/><path d=\"M50 28v56M80 20v56\" stroke-width=\"1.5\"/><path d=\"M30 70q10-20 28-12t24-16\" fill=\"none\" stroke-dasharray=\"3 4\"/><path d=\"M90 30l2.5 5 5.5.8-4 3.9 1 5.5-5-2.6-5 2.6 1-5.5-4-3.9 5.5-.8z\" class=\"a\"/><path d=\"M146 20l-26 48l-4 8 8-5 26-48z\" fill=\"none\"/></svg>"
   ],
   [
    "map",
    "Procedural maps",
-   "A new world every game."
+   "A new world every game.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><rect x=\"16\" y=\"20\" width=\"60\" height=\"60\" fill=\"none\"/><path d=\"M36 20v60M56 20v60M16 40h60M16 60h60\" stroke-width=\"1.5\"/><rect x=\"16\" y=\"20\" width=\"20\" height=\"20\" fill=\"currentColor\"/><rect x=\"56\" y=\"40\" width=\"20\" height=\"20\" fill=\"currentColor\"/><rect x=\"36\" y=\"60\" width=\"20\" height=\"20\" fill=\"currentColor\"/><path d=\"M84 50h12M92 46l4 4-4 4\" fill=\"none\"/><rect x=\"104\" y=\"30\" width=\"40\" height=\"40\" rx=\"6\" class=\"a\" fill=\"none\"/><circle cx=\"114\" cy=\"40\" r=\"3\" fill=\"currentColor\"/><circle cx=\"124\" cy=\"50\" r=\"3\" fill=\"currentColor\"/><circle cx=\"134\" cy=\"60\" r=\"3\" fill=\"currentColor\"/></svg>"
   ],
   [
    "map",
    "Cities and streets",
-   "Fight through alleys, rooftops and plazas."
+   "Fight through alleys, rooftops and plazas.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M12 86V40h22v46M34 86V24h24v62M102 86V30h24v56M126 86V46h22v40\" fill=\"none\"/><path d=\"M58 86l14-34h16l14 34\" fill=\"none\"/><path d=\"M80 56v4M80 66v6M80 78v6\" stroke-width=\"2\"/><path d=\"M18 48h4M26 48h4M40 32h4M48 32h4M40 42h4M48 42h4M108 38h4M116 38h4M108 48h4M116 48h4M132 54h4M140 54h4\" stroke-width=\"2\"/><circle cx=\"130\" cy=\"18\" r=\"5\" class=\"af\"/></svg>"
   ],
   [
    "map",
    "Wild nature",
-   "Forests, rivers, mountains and open fields."
+   "Forests, rivers, mountains and open fields.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M10 66l28-40 20 26 18-20 30 34\" fill=\"none\"/><path d=\"M32 34l6-8 6 8\" fill=\"none\" stroke-width=\"1.8\"/><path d=\"M52 90q14-12 4-24t14-24\" class=\"a\" fill=\"none\"/><path d=\"M118 48l-9 16h18z\" fill=\"none\"/><path d=\"M118 64v7\"/><path d=\"M138 56l-9 16h18z\" fill=\"none\"/><path d=\"M138 72v7\"/><path d=\"M10 90h40M76 90h72\" stroke-width=\"1.5\"/></svg>"
   ],
   [
    "map",
    "Verticality",
-   "Cliffs, towers and high ground everywhere."
+   "Cliffs, towers and high ground everywhere.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M14 88V70h20V56h20V40h28v48\" fill=\"none\"/><path d=\"M82 88h64\" stroke-width=\"1.5\"/><g><circle cx=\"68\" cy=\"12\" r=\"4\"/><path d=\"M68 16v12M62 21h12M68 28l-5 9M68 28l5 9\" fill=\"none\"/></g><path d=\"M74 22l8-6\" class=\"a\" stroke-width=\"1.8\"/><path d=\"M120 82V26M112 34l8-8 8 8\" class=\"a\" fill=\"none\"/></svg>"
   ],
   [
    "map",
    "Underground layers",
-   "Fight above and below the surface."
+   "Fight above and below the surface.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M10 36h140\"/><path d=\"M36 12l-9 16h18z\" fill=\"none\"/><path d=\"M36 28v7\"/><path d=\"M10 54q35 6 70 0t70 0M10 72q35 6 70 0t70 0\" fill=\"none\" stroke-width=\"1.5\"/><path d=\"M110 36v8q0 18 -24 26h-40\" fill=\"none\" stroke-dasharray=\"4 4\"/><ellipse cx=\"46\" cy=\"70\" rx=\"10\" ry=\"7\" class=\"a\" fill=\"none\"/><circle cx=\"46\" cy=\"70\" r=\"3\" fill=\"currentColor\"/><circle cx=\"110\" cy=\"28\" r=\"4\" fill=\"currentColor\"/><path d=\"M110 32v4\" /></svg>"
   ],
   [
    "map",
    "Tiny arena",
-   "Small maps, immediate fights."
+   "Small maps, immediate fights.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><ellipse cx=\"80\" cy=\"60\" rx=\"44\" ry=\"22\" fill=\"none\"/><ellipse cx=\"80\" cy=\"60\" rx=\"54\" ry=\"30\" fill=\"none\" stroke-width=\"1.5\"/><circle cx=\"66\" cy=\"52\" r=\"5\" fill=\"currentColor\"/><circle cx=\"94\" cy=\"52\" r=\"5\" fill=\"currentColor\"/><path d=\"M70 22l20 20M90 22l-20 20\" class=\"a\"/><path d=\"M66 60v8M94 60v8\"/></svg>"
   ],
   [
    "map",
    "Huge open world",
-   "A sprawling map to explore and conquer."
+   "A sprawling map to explore and conquer.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M8 78l18-20 12 10 20-26 22 24 14-14 20 18 18-22 20 30\" fill=\"none\"/><path d=\"M8 88h144\" stroke-width=\"1.5\"/><path d=\"M14 30h-6l6-6M14 30l-6 6M146 30h6l-6-6M146 30l6 6\" fill=\"none\"/><path d=\"M30 30h100\" stroke-dasharray=\"4 5\" stroke-width=\"1.5\"/><circle cx=\"80\" cy=\"22\" r=\"7\" class=\"a\" fill=\"none\"/></svg>"
   ],
   [
    "meta",
    "Roguelite runs",
-   "Short runs, random upgrades, start over stronger."
+   "Short runs, random upgrades, start over stronger.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M120 50a40 30 0 1 1 -12 -21\" fill=\"none\"/><path d=\"M110 18l-2 12 12 0\" fill=\"none\"/><circle cx=\"56\" cy=\"50\" r=\"12\" fill=\"none\"/><circle cx=\"51\" cy=\"48\" r=\"2.5\" fill=\"currentColor\"/><circle cx=\"61\" cy=\"48\" r=\"2.5\" fill=\"currentColor\"/><path d=\"M52 58h8M52 62v-4M56 62v-4M60 62v-4\" stroke-width=\"1.5\"/><path d=\"M96 66V36M88 44l8-8 8 8\" class=\"a\" fill=\"none\"/></svg>"
   ],
   [
    "meta",
    "Long story campaign",
-   "Mission after mission through a written war."
+   "Mission after mission through a written war.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M12 74q20-30 40-10t40-8t40-20\" fill=\"none\" stroke-dasharray=\"4 4\"/><circle cx=\"12\" cy=\"74\" r=\"5\" fill=\"currentColor\"/><circle cx=\"40\" cy=\"60\" r=\"5\" fill=\"currentColor\"/><circle cx=\"70\" cy=\"66\" r=\"5\" fill=\"currentColor\"/><circle cx=\"100\" cy=\"52\" r=\"5\" fill=\"none\"/><path d=\"M134 36V12\" /><path d=\"M134 12l14 5-14 5z\" class=\"a\"/><path d=\"M24 22h40v20h-40zM44 22v20\" fill=\"none\" stroke-width=\"1.8\"/></svg>"
   ],
   [
    "meta",
    "Persistent empire",
-   "A map that remembers every battle you fought."
+   "A map that remembers every battle you fought.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M14 18h132v70H14z\" fill=\"none\"/><path d=\"M14 50q30-8 50 6t50-4 32 8M70 18q-6 30 10 70\" fill=\"none\" stroke-width=\"1.5\"/><path d=\"M36 40v-14l10 4-10 4M100 74v-14l10 4-10 4\" fill=\"none\"/><path d=\"M110 26l12 12M122 26l-12 12\" class=\"a\"/><path d=\"M40 70l8 8M48 70l-8 8\" stroke-width=\"2\"/><path d=\"M76 52h12v-8h-12zM76 44v-4h4v4M84 44v-4h4v4\" fill=\"none\" stroke-width=\"1.8\"/></svg>"
   ],
   [
    "meta",
    "No progression",
-   "Every match starts fresh and fair."
+   "Every match starts fresh and fair.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M80 18v62M56 86h48M30 34h100\" fill=\"none\"/><path d=\"M30 34l-14 28h28zM130 34l-14 28h28z\" fill=\"none\"/><path d=\"M16 62a14 6 0 0 0 28 0M116 62a14 6 0 0 0 28 0\" fill=\"none\"/><circle cx=\"80\" cy=\"18\" r=\"5\" class=\"af\"/><circle cx=\"30\" cy=\"54\" r=\"4\" fill=\"currentColor\"/><circle cx=\"130\" cy=\"54\" r=\"4\" fill=\"currentColor\"/></svg>"
   ],
   [
    "meta",
    "Unlock new factions",
-   "Earn new sides and units over time."
+   "Earn new sides and units over time.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><rect x=\"18\" y=\"46\" width=\"40\" height=\"34\" rx=\"3\" fill=\"none\"/><path d=\"M28 46V32a12 12 0 0 1 24 0\" fill=\"none\"/><circle cx=\"38\" cy=\"60\" r=\"4\" fill=\"currentColor\"/><path d=\"M38 64v8\"/><path d=\"M66 60h14M74 54l6 6-6 6\" fill=\"none\"/><path d=\"M96 20h44v30q0 22-22 32q-22-10-22-32z\" class=\"a\" fill=\"none\"/><path d=\"M118 32v34M104 46h28\" stroke-width=\"2\"/></svg>"
   ],
   [
    "meta",
    "Tech tree",
-   "Research your way through a branching tree."
+   "Research your way through a branching tree.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"22\" cy=\"50\" r=\"7\" class=\"af\"/><path d=\"M29 50h12M41 50l14-22M41 50l14 22M55 28h22M55 72h22M83 28l14-12M83 28l14 12M83 72h26M115 16h12M115 40h12\" fill=\"none\"/><circle cx=\"80\" cy=\"28\" r=\"5\" fill=\"currentColor\"/><circle cx=\"80\" cy=\"72\" r=\"5\" fill=\"currentColor\"/><circle cx=\"102\" cy=\"16\" r=\"5\" fill=\"none\"/><circle cx=\"102\" cy=\"40\" r=\"5\" fill=\"none\"/><circle cx=\"114\" cy=\"72\" r=\"5\" fill=\"none\"/><circle cx=\"132\" cy=\"16\" r=\"5\" fill=\"none\"/><circle cx=\"132\" cy=\"40\" r=\"5\" fill=\"none\"/></svg>"
   ],
   [
    "meta",
    "Rule-breaking pacts",
-   "Take deals that bend the rules at a price."
+   "Take deals that bend the rules at a price.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M30 16h64v62h-64z\" fill=\"none\"/><path d=\"M24 16a6 6 0 0 0 12 0M88 78a6 6 0 0 0 12 0\" fill=\"none\"/><path d=\"M40 30h44M40 40h44M40 50h30\" stroke-width=\"1.5\"/><path d=\"M76 64q0-10 6-16q6 6 6 16a6 6 0 0 1 -12 0z\" class=\"a\"/><path d=\"M144 16l-30 44-3 8 7-5 30-44\" fill=\"none\"/><path d=\"M108 82l8-6 6 6 8-6\" fill=\"none\" stroke-width=\"1.8\"/></svg>"
   ],
   [
    "meta",
    "Deckbuilding between battles",
-   "Build a deck of units and powers."
+   "Build a deck of units and powers.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><g transform=\"rotate(-18 80 84)\"><rect x=\"62\" y=\"24\" width=\"36\" height=\"52\" rx=\"4\" fill=\"none\"/></g><g transform=\"rotate(18 80 84)\"><rect x=\"62\" y=\"24\" width=\"36\" height=\"52\" rx=\"4\" fill=\"none\"/></g><rect x=\"62\" y=\"22\" width=\"36\" height=\"52\" rx=\"4\" fill=\"none\"/><path d=\"M80 34l8 14-8 14-8-14z\" class=\"a\"/><path d=\"M118 36v14M111 43h14M36 54v10M31 59h10\" stroke-width=\"2\"/></svg>"
   ],
   [
    "meta",
    "Veterans carry over",
-   "Survivors return in the next battle, stronger."
+   "Survivors return in the next battle, stronger.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><g><circle cx=\"40\" cy=\"30\" r=\"4\"/><path d=\"M40 34v12M34 39h12M40 46l-5 9M40 46l5 9\" fill=\"none\"/></g><path d=\"M28 76l12-7 12 7M28 84l12-7 12 7\" class=\"a\" fill=\"none\"/><path d=\"M62 50h28M84 44l6 6-6 6\" fill=\"none\"/><g><circle cx=\"116\" cy=\"30\" r=\"4\"/><path d=\"M116 34v12M110 39h12M116 46l-5 9M116 46l5 9\" fill=\"none\"/></g><path d=\"M108 20l8-10 8 10\" fill=\"none\" stroke-width=\"1.8\"/><path d=\"M104 76l12-7 12 7M104 84l12-7 12 7\" fill=\"none\" stroke-width=\"1.8\"/></svg>"
   ],
   [
    "meta",
    "Base that grows between missions",
-   "A home base you upgrade between fights."
+   "A home base you upgrade between fights.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M16 82V60l14-12 14 12v22z\" fill=\"none\"/><path d=\"M26 82v-10h8v10\"/><path d=\"M54 66h18M66 60l6 6-6 6\" fill=\"none\"/><path d=\"M84 82V44h10v6h8v-6h10v6h8v-6h10v6h8v-6h10v38z\" fill=\"none\"/><path d=\"M110 82V68a6 6 0 0 1 12 0v14\" fill=\"none\"/><path d=\"M116 44V20\"/><path d=\"M116 20l14 5-14 5z\" class=\"a\"/></svg>"
   ],
   [
    "story",
    "Strong written story",
-   "Characters, cutscenes and a plot with turns."
+   "Characters, cutscenes and a plot with turns.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M80 34q-26-10-56 0v52q30-10 56 0q26-10 56 0V34q-30-10-56 0zM80 34v52\" fill=\"none\"/><path d=\"M32 48h38M32 58h38M32 68h28M90 48h38M90 58h20\" stroke-width=\"1.5\"/><path d=\"M92 76q10-18 18-6t18-14\" class=\"a\" fill=\"none\"/><circle cx=\"80\" cy=\"16\" r=\"5\" fill=\"none\"/><path d=\"M72 30q8-10 16 0\" fill=\"none\"/></svg>"
   ],
   [
    "story",
    "Emergent stories",
-   "The best stories are what happened in your game."
+   "The best stories are what happened in your game.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><rect x=\"14\" y=\"16\" width=\"132\" height=\"70\" rx=\"4\" fill=\"none\"/><path d=\"M28 74q20-40 50-30t50-22M28 30q40 10 50 30t50 16\" fill=\"none\" stroke-dasharray=\"3 4\" stroke-width=\"1.8\"/><circle cx=\"76\" cy=\"52\" r=\"5\" class=\"af\"/><path d=\"M76 38v-6M88 46l5-3M64 46l-5-3M88 58l5 3M64 58l-5 3\" class=\"a\"/><circle cx=\"28\" cy=\"74\" r=\"4\" fill=\"currentColor\"/><circle cx=\"28\" cy=\"30\" r=\"4\" fill=\"currentColor\"/></svg>"
   ],
   [
    "story",
    "Lore to dig up",
-   "The world tells its story through ruins and notes."
+   "The world tells its story through ruins and notes.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M24 84V40h18v44M20 40h26M22 34h22\" fill=\"none\"/><path d=\"M42 54l10 6-10 6\" fill=\"none\" stroke-width=\"1.8\"/><path d=\"M10 84h140\"/><path d=\"M80 84q10-12 24-12t24 12\" fill=\"none\" stroke-width=\"1.5\"/><path d=\"M94 76l12-8 10 4-10 8z\" class=\"a\"/><path d=\"M126 20l-20 44M110 60l-8 8 4-12\" fill=\"none\"/></svg>"
   ],
   [
    "story",
    "No story at all",
-   "Pure game, no words needed."
+   "Pure game, no words needed.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M24 22h56v34h-34l-12 10v-10h-10z\" fill=\"none\"/><path d=\"M18 70l68-52\" class=\"a\"/><path d=\"M106 84h36M110 84q0-14 6-20q-8-4-4-14q4-6 10-6t10 6q4 10-4 14q6 6 6 20\" fill=\"none\"/><circle cx=\"124\" cy=\"34\" r=\"5\" fill=\"currentColor\"/></svg>"
   ],
   [
    "story",
    "Choices that change the world",
-   "Your decisions branch the campaign."
+   "Your decisions branch the campaign.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M20 88V58l30-26M50 32l30 26M50 32V16\" fill=\"none\"/><circle cx=\"50\" cy=\"58\" r=\"5\" fill=\"currentColor\"/><path d=\"M84 30h20v-10l14 14-14 14v-10h-20zM84 70h20v-10l14 14-14 14v-10h-20z\" fill=\"none\" stroke-width=\"1.8\"/><path d=\"M126 30v-12h4v4h4v-4h4v4h4v-4h4v12z\" class=\"a\"/><path d=\"M126 86l4-14 4 6 4-10 4 8 4-4v14z\" fill=\"none\"/></svg>"
   ],
   [
    "story",
    "Characters who talk back",
-   "Advisors and rivals react to what you do."
+   "Advisors and rivals react to what you do.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"34\" cy=\"56\" r=\"10\" fill=\"none\"/><path d=\"M18 88q16-22 32 0\" fill=\"none\"/><circle cx=\"126\" cy=\"56\" r=\"10\" fill=\"none\"/><path d=\"M110 88q16-22 32 0\" fill=\"none\"/><path d=\"M44 14h40v22h-24l-10 8v-8h-6z\" fill=\"none\"/><path d=\"M116 22h-28v20h18l8 7v-7h2z\" class=\"a\" fill=\"none\"/><path d=\"M52 22h24M52 28h16\" stroke-width=\"1.5\"/></svg>"
   ],
   [
    "story",
    "A mystery to solve",
-   "Figure out what really happened."
+   "Figure out what really happened.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"104\" cy=\"40\" r=\"22\" fill=\"none\"/><path d=\"M120 56l20 20\" stroke-width=\"4\"/><ellipse cx=\"24\" cy=\"78\" rx=\"4\" ry=\"6\" fill=\"currentColor\"/><ellipse cx=\"44\" cy=\"68\" rx=\"4\" ry=\"6\" fill=\"currentColor\"/><ellipse cx=\"64\" cy=\"76\" rx=\"4\" ry=\"6\" fill=\"currentColor\"/><ellipse cx=\"96\" cy=\"36\" rx=\"4\" ry=\"6\" class=\"af\"/><ellipse cx=\"112\" cy=\"46\" rx=\"4\" ry=\"6\" class=\"af\"/></svg>"
   ],
   [
    "story",
    "Myth and legend tone",
-   "Told like a saga, an epic poem."
+   "Told like a saga, an epic poem.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M44 86l10-22h52l10 22z\" fill=\"none\"/><path d=\"M80 64V20M70 28h20M80 20l-3-6h6z\" class=\"a\" fill=\"none\"/><path d=\"M60 22l-8-4M100 22l8-4M60 40h-10M100 40h10\" stroke-width=\"2\"/><path d=\"M28 18l2 4 4 1-4 2-1 4-2-4-4-1 4-2z\" fill=\"currentColor\"/><path d=\"M130 30l2 4 4 1-4 2-1 4-2-4-4-1 4-2z\" fill=\"currentColor\"/></svg>"
   ],
   [
    "pace",
    "Five-minute matches",
-   "A full game in one coffee break."
+   "A full game in one coffee break.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"56\" cy=\"54\" r=\"30\" fill=\"none\"/><path d=\"M56 24v-8M50 14h12M80 30l5-5\"/><path d=\"M56 54V30a24 24 0 0 1 12.2 3.3z\" class=\"a\"/><path d=\"M104 50h30v24a10 10 0 0 1 -10 10h-10a10 10 0 0 1 -10-10z\" fill=\"none\"/><path d=\"M134 56h4a6 6 0 0 1 0 12h-4\" fill=\"none\"/><path d=\"M114 40q-4-6 0-10M124 40q-4-6 0-10\" fill=\"none\" stroke-width=\"1.8\"/></svg>"
   ],
   [
    "pace",
    "Twenty-minute matches",
-   "Room to build up and still finish in one sitting."
+   "Room to build up and still finish in one sitting.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"80\" cy=\"50\" r=\"38\" fill=\"none\"/><path d=\"M80 50V18a32 32 0 0 1 27.7 48z\" class=\"a\"/><path d=\"M80 14v6M116 50h-6M80 86v-6M44 50h6\" stroke-width=\"2\"/><circle cx=\"80\" cy=\"50\" r=\"3\" fill=\"currentColor\"/></svg>"
   ],
   [
    "pace",
    "Hour-long epics",
-   "Slow builds and huge late-game wars."
+   "Slow builds and huge late-game wars.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"46\" cy=\"50\" r=\"34\" class=\"a\" fill=\"none\" stroke-width=\"4\"/><circle cx=\"46\" cy=\"50\" r=\"26\" fill=\"none\" stroke-width=\"1.5\"/><path d=\"M46 50V30M46 50l12 8\"/><path d=\"M96 86V60h8v-6h6v6h8v-6h6v6h8v26z\" fill=\"none\"/><path d=\"M100 46v-14l10 4-10 4M128 46v-14l10 4-10 4\" fill=\"none\" stroke-width=\"1.8\"/><path d=\"M90 86h60\" stroke-width=\"1.5\"/></svg>"
   ],
   [
    "pace",
    "Slow and thoughtful",
-   "Time to think; speed does not win."
+   "Time to think; speed does not win.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M30 78h80q10 0 10-10V58\" fill=\"none\"/><circle cx=\"68\" cy=\"56\" r=\"20\" fill=\"none\"/><path d=\"M68 56a8 8 0 1 1 8 -8\" fill=\"none\" stroke-width=\"1.8\"/><path d=\"M114 58l-4-12M120 58l4-12\" stroke-width=\"1.8\"/><circle cx=\"110\" cy=\"44\" r=\"2\" fill=\"currentColor\"/><circle cx=\"124\" cy=\"44\" r=\"2\" fill=\"currentColor\"/><circle cx=\"104\" cy=\"22\" r=\"3\" fill=\"none\" stroke-width=\"1.5\"/><circle cx=\"118\" cy=\"16\" r=\"5\" class=\"af\"/><path d=\"M14 88h132\" stroke-width=\"1.5\" stroke-dasharray=\"2 6\"/></svg>"
   ],
   [
    "pace",
    "Frantic and fast",
-   "Everything at once; reflexes matter."
+   "Everything at once; reflexes matter.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M92 10L64 54h20l-12 36 34-48H86z\" class=\"a\"/><path d=\"M14 30h34M22 44h30M14 58h34M22 72h26\" stroke-width=\"2\"/><path d=\"M124 26l14 6-12 8M128 60l14 8-14 6\" fill=\"none\"/></svg>"
   ],
   [
    "pace",
    "Calm build, sudden storm",
-   "Quiet phases broken by intense attacks."
+   "Quiet phases broken by intense attacks.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M10 74h70q6 0 10-20l10-40 6 60 6-30 6 30h32\" fill=\"none\"/><path d=\"M14 66h14v8h-14zM34 62h14v12h-14zM54 58h14v16h-14z\" fill=\"none\" stroke-width=\"1.5\"/><path d=\"M118 14l-8 14h10l-6 14\" class=\"a\" fill=\"none\"/><path d=\"M10 88h140\" stroke-width=\"1.5\"/></svg>"
   ],
   [
    "pace",
    "Play in short bursts",
-   "Pick up and put down any time."
+   "Pick up and put down any time.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><rect x=\"52\" y=\"12\" width=\"56\" height=\"76\" rx=\"8\" fill=\"none\"/><path d=\"M72 36v24l18-12z\" class=\"a\"/><path d=\"M74 80h12\"/><path d=\"M16 50h14M130 50h14M18 30h10M132 30h10M18 70h10M132 70h10\" stroke-width=\"2\"/></svg>"
   ],
   [
    "pace",
    "Sessions across weeks",
-   "A long game you return to over days."
+   "A long game you return to over days.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><rect x=\"22\" y=\"20\" width=\"116\" height=\"68\" rx=\"4\" fill=\"none\"/><path d=\"M22 34h116M44 14v12M116 14v12\" /><path d=\"M22 52h116M22 70h116M51 34v54M80 34v54M109 34v54\" stroke-width=\"1.5\"/><path d=\"M30 44l5 4 9-8M88 62l5 4 9-8M58 62l5 4 9-8\" fill=\"none\"/><path d=\"M116 80l5 4 9-8\" class=\"a\" fill=\"none\"/></svg>"
   ],
   [
    "social",
    "Solo against the AI",
-   "Just you and the game."
+   "Just you and the game.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"45\" cy=\"36\" r=\"9.1\" fill=\"none\" class=\"a\"/><path d=\"M29.4 64.6Q29.4 49 45 49Q60.6 49 60.6 64.6\" fill=\"none\"/><rect x=\"96\" y=\"28\" width=\"40\" height=\"32\" rx=\"6\" fill=\"none\"/><line x1=\"116\" y1=\"28\" x2=\"116\" y2=\"18\"/><circle cx=\"116\" cy=\"15\" r=\"3\" fill=\"none\"/><rect x=\"104\" y=\"37\" width=\"7\" height=\"7\" fill=\"currentColor\"/><rect x=\"121\" y=\"37\" width=\"7\" height=\"7\" fill=\"currentColor\"/><polyline points=\"106,52 111,49 116,52 121,49 126,52\" fill=\"none\"/><line x1=\"92\" y1=\"44\" x2=\"72\" y2=\"44\" stroke-width=\"1.5\" stroke-dasharray=\"3 4\"/><path d=\"M100 60v8h32v-8M108 68l-6 14M124 68l6 14\" fill=\"none\"/></svg>"
   ],
   [
    "social",
    "Co-op with a friend",
-   "Two players, one side, shared fate."
+   "Two players, one side, shared fate.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"58\" cy=\"44\" r=\"8.4\" fill=\"none\"/><path d=\"M43.6 70.4Q43.6 56 58 56Q72.4 56 72.4 70.4\" fill=\"none\"/><circle cx=\"102\" cy=\"44\" r=\"8.4\" fill=\"none\"/><path d=\"M87.6 70.4Q87.6 56 102 56Q116.4 56 116.4 70.4\" fill=\"none\"/><path d=\"M66 80Q80 66 94 80\" fill=\"none\"/><path d=\"M80 30C72 20 62 26 69 34L80 44L91 34C98 26 88 20 80 30Z\" class=\"a\"/></svg>"
   ],
   [
    "social",
    "Competitive 1v1",
-   "Ranked duels; you against one rival."
+   "Ranked duels; you against one rival.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"34\" cy=\"38\" r=\"9.1\" fill=\"none\"/><path d=\"M18.4 66.6Q18.4 51 34 51Q49.6 51 49.6 66.6\" fill=\"none\"/><circle cx=\"126\" cy=\"38\" r=\"9.1\" fill=\"none\"/><path d=\"M110.4 66.6Q110.4 51 126 51Q141.6 51 141.6 66.6\" fill=\"none\"/><path d=\"M52 32l12 4M108 32l-12 4\" fill=\"none\"/><polygon points=\"84,18 70,52 80,52 74,82 92,44 82,44 88,18\" class=\"a\"/></svg>"
   ],
   [
    "social",
    "Free-for-all with betrayal",
-   "Many players, alliances and backstabs."
+   "Many players, alliances and backstabs.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"30\" cy=\"22\" r=\"5.3\" fill=\"none\"/><path d=\"M21 38.5Q21 29.5 30 29.5Q39 29.5 39 38.5\" fill=\"none\"/><circle cx=\"80\" cy=\"14\" r=\"5.3\" fill=\"none\"/><path d=\"M71 30.5Q71 21.5 80 21.5Q89 21.5 89 30.5\" fill=\"none\"/><circle cx=\"130\" cy=\"22\" r=\"5.3\" fill=\"none\"/><path d=\"M121 38.5Q121 29.5 130 29.5Q139 29.5 139 38.5\" fill=\"none\"/><circle cx=\"52\" cy=\"58\" r=\"5.3\" fill=\"none\"/><path d=\"M43 74.5Q43 65.5 52 65.5Q61 65.5 61 74.5\" fill=\"none\"/><circle cx=\"108\" cy=\"58\" r=\"5.3\" fill=\"none\"/><path d=\"M99 74.5Q99 65.5 108 65.5Q117 65.5 117 74.5\" fill=\"none\"/><g transform=\"rotate(-35 80 68)\"><polygon points=\"66,66 92,68 66,71\" class=\"a\"/><rect x=\"58\" y=\"64\" width=\"8\" height=\"9\" rx=\"1\" fill=\"currentColor\"/><line x1=\"66\" y1=\"61\" x2=\"66\" y2=\"76\"/></g><path d=\"M40 40l10 8M120 40l-10 8\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\" fill=\"none\"/></svg>"
   ],
   [
    "social",
    "Big team battles",
-   "Four against four or more."
+   "Four against four or more.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"18\" cy=\"26\" r=\"4.2\" fill=\"none\"/><path d=\"M10.8 39.2Q10.8 32 18 32Q25.2 32 25.2 39.2\" fill=\"none\"/><circle cx=\"36\" cy=\"26\" r=\"4.2\" fill=\"none\"/><path d=\"M28.8 39.2Q28.8 32 36 32Q43.2 32 43.2 39.2\" fill=\"none\"/><circle cx=\"18\" cy=\"56\" r=\"4.2\" fill=\"none\"/><path d=\"M10.8 69.2Q10.8 62 18 62Q25.2 62 25.2 69.2\" fill=\"none\"/><circle cx=\"36\" cy=\"56\" r=\"4.2\" fill=\"none\"/><path d=\"M28.8 69.2Q28.8 62 36 62Q43.2 62 43.2 69.2\" fill=\"none\"/><circle cx=\"124\" cy=\"26\" r=\"4.2\" fill=\"none\"/><path d=\"M116.8 39.2Q116.8 32 124 32Q131.2 32 131.2 39.2\" fill=\"none\"/><circle cx=\"142\" cy=\"26\" r=\"4.2\" fill=\"none\"/><path d=\"M134.8 39.2Q134.8 32 142 32Q149.2 32 149.2 39.2\" fill=\"none\"/><circle cx=\"124\" cy=\"56\" r=\"4.2\" fill=\"none\"/><path d=\"M116.8 69.2Q116.8 62 124 62Q131.2 62 131.2 69.2\" fill=\"none\"/><circle cx=\"142\" cy=\"56\" r=\"4.2\" fill=\"none\"/><path d=\"M134.8 69.2Q134.8 62 142 62Q149.2 62 149.2 69.2\" fill=\"none\"/><line x1=\"80\" y1=\"14\" x2=\"80\" y2=\"88\" stroke-width=\"1.5\" stroke-dasharray=\"4 4\"/><path d=\"M52 36h16M62 30l6 6-6 6M108 66H92M98 60l-6 6 6 6\" fill=\"none\"/><line x1=\"80\" y1=\"30\" x2=\"80\" y2=\"10\"/><polygon points=\"80,10 96,15 80,20\" class=\"a\"/></svg>"
   ],
   [
    "social",
    "Async play",
-   "Take your turn whenever, like correspondence chess."
+   "Take your turn whenever, like correspondence chess.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><rect x=\"14\" y=\"36\" width=\"44\" height=\"30\" rx=\"3\" fill=\"none\"/><polyline points=\"14,36 36,54 58,36\" fill=\"none\"/><path d=\"M66 40Q80 26 94 40\" fill=\"none\"/><path d=\"M88 34l6 6 2-8\" fill=\"none\"/><path d=\"M94 62Q80 76 66 62\" fill=\"none\"/><path d=\"M72 68l-6-6-2 8\" fill=\"none\"/><circle cx=\"124\" cy=\"50\" r=\"22\" fill=\"none\"/><line x1=\"124\" y1=\"50\" x2=\"124\" y2=\"36\" class=\"a\" stroke-width=\"3\"/><line x1=\"124\" y1=\"50\" x2=\"134\" y2=\"56\" class=\"a\" stroke-width=\"3\"/><circle cx=\"124\" cy=\"50\" r=\"2\" fill=\"currentColor\"/></svg>"
   ],
   [
    "social",
    "Spectating and casting",
-   "Matches fun to watch and stream."
+   "Matches fun to watch and stream.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><rect x=\"12\" y=\"12\" width=\"96\" height=\"60\" rx=\"4\" fill=\"none\"/><line x1=\"52\" y1=\"72\" x2=\"44\" y2=\"86\"/><line x1=\"68\" y1=\"72\" x2=\"76\" y2=\"86\"/><line x1=\"38\" y1=\"86\" x2=\"82\" y2=\"86\"/><circle cx=\"40\" cy=\"46\" r=\"6\" fill=\"currentColor\"/><circle cx=\"80\" cy=\"38\" r=\"6\" fill=\"none\"/><path d=\"M48 44l24-5\" stroke-dasharray=\"3 3\" fill=\"none\"/><rect x=\"124\" y=\"30\" width=\"14\" height=\"26\" rx=\"7\" class=\"a\"/><path d=\"M118 48q0 14 13 14t13-14M131 62v14M122 78h18\" fill=\"none\"/><path d=\"M116 22q-6 8 0 16M146 22q6 8 0 16\" fill=\"none\" stroke-width=\"1.8\"/></svg>"
   ],
   [
    "social",
    "Couch play on one screen",
-   "Friends in the same room."
+   "Friends in the same room.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><rect x=\"52\" y=\"10\" width=\"56\" height=\"32\" rx=\"3\" class=\"af\" fill-opacity=\"0.25\"/><rect x=\"52\" y=\"10\" width=\"56\" height=\"32\" rx=\"3\" fill=\"none\"/><line x1=\"80\" y1=\"42\" x2=\"80\" y2=\"48\"/><circle cx=\"64\" cy=\"56\" r=\"4.2\" fill=\"none\"/><path d=\"M56.8 69.2Q56.8 62 64 62Q71.2 62 71.2 69.2\" fill=\"none\"/><circle cx=\"96\" cy=\"56\" r=\"4.2\" fill=\"none\"/><path d=\"M88.8 69.2Q88.8 62 96 62Q103.2 62 103.2 69.2\" fill=\"none\"/><path d=\"M30 92V66q0-6 6-6h6v10h76V60h6q6 0 6 6v26\" fill=\"none\"/><path d=\"M42 70v12h76V70M30 86h100\" fill=\"none\"/></svg>"
   ],
   [
    "social",
    "Community maps and mods",
-   "Players make new content for each other."
+   "Players make new content for each other.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><polygon points=\"14,24 44,16 74,24 104,16 104,80 74,88 44,80 14,88\" fill=\"none\"/><line x1=\"44\" y1=\"16\" x2=\"44\" y2=\"80\"/><line x1=\"74\" y1=\"24\" x2=\"74\" y2=\"88\"/><path d=\"M24 66q14-20 30-8t30-14\" stroke-dasharray=\"3 4\" fill=\"none\" stroke-width=\"1.8\"/><path d=\"M82 34l8 8M90 34l-8 8\" fill=\"none\"/><path d=\"M150 22a10 10 0 0 1-14 12l-20 24a5 5 0 0 1-7-7l24-20a10 10 0 0 1 12-14l-6 7 4 4z\" class=\"a\"/><path d=\"M128 70h16M136 62v16\" fill=\"none\" stroke-width=\"3\"/></svg>"
   ],
   [
    "challenge",
    "Hard and punishing",
-   "Losing is common and teaches you."
+   "Losing is common and teaches you.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><polyline points=\"8,92 36,46 50,62 78,14 106,62 120,46 152,92\" fill=\"none\"/><path d=\"M66 40q14-16 28 0v8l-4 4v6H70v-6l-4-4z\" fill=\"none\" transform=\"translate(-2 6)\"/><circle cx=\"72\" cy=\"51\" r=\"3.6\" class=\"a\"/><circle cx=\"84\" cy=\"51\" r=\"3.6\" class=\"a\"/><path d=\"M74 64v-4M78 64v-4M82 64v-4\" fill=\"none\" stroke-width=\"1.5\"/></svg>"
   ],
   [
    "challenge",
    "Relaxed, hard to lose",
-   "Enjoy the ride, few fail states."
+   "Enjoy the ride, few fail states.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><line x1=\"24\" y1=\"30\" x2=\"24\" y2=\"90\"/><line x1=\"136\" y1=\"30\" x2=\"136\" y2=\"90\"/><line x1=\"12\" y1=\"90\" x2=\"148\" y2=\"90\"/><path d=\"M24 40Q80 82 136 40\" fill=\"none\"/><path d=\"M24 40Q80 72 136 40\" fill=\"none\" stroke-width=\"1.5\"/><circle cx=\"52\" cy=\"50\" r=\"6\" fill=\"none\"/><path d=\"M60 56q20 8 46 2\" fill=\"none\"/><circle cx=\"118\" cy=\"20\" r=\"9\" class=\"a\"/><path d=\"M128 12l5-4M130 22h6M126 30l4 4\" fill=\"none\" stroke-width=\"1.8\"/></svg>"
   ],
   [
    "challenge",
    "Easy to learn, deep to master",
-   "Simple rules, endless depth."
+   "Simple rules, endless depth.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M10 34q10-5 20 0t20 0 20 0 20 0 20 0 20 0 20 0\" fill=\"none\"/><polygon points=\"68,34 78,20 86,24 92,34\" class=\"a\"/><polygon points=\"60,38 100,38 120,56 108,80 80,90 50,76 42,54\" fill=\"none\" stroke-dasharray=\"5 4\"/><path d=\"M70 48l10 10-6 14M96 50l4 16\" fill=\"none\" stroke-width=\"1.5\"/></svg>"
   ],
   [
    "challenge",
    "Complex simulation",
-   "Many interlocking systems to learn."
+   "Many interlocking systems to learn.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M58 34L57.7 37.5L52.5 39.2L51.2 41.5L52.7 46.7L50 49L45.2 46.5L42.6 47.2L40 52L36.5 51.7L34.8 46.5L32.5 45.2L27.3 46.7L25 44L27.5 39.2L26.8 36.6L22 34L22.3 30.5L27.5 28.8L28.8 26.5L27.3 21.3L30 19L34.8 21.5L37.4 20.8L40 16L43.5 16.3L45.2 21.5L47.5 22.8L52.7 21.3L55 24L52.5 28.8L53.2 31.4Z\" fill=\"none\"/><circle cx=\"40\" cy=\"34\" r=\"5.4\" fill=\"none\"/><path d=\"M83 60L82.6 63.4L78.4 64.9L76.9 66.9L76.5 71.3L73.4 72.6L70 69.8L67.5 69.4L63.5 71.3L60.8 69.2L61.6 64.9L60.6 62.5L57 60L57.4 56.6L61.6 55.1L63.1 53.1L63.5 48.7L66.6 47.4L70 50.3L72.5 50.6L76.5 48.7L79.2 50.8L78.4 55.1L79.4 57.5Z\" fill=\"none\" class=\"a\"/><circle cx=\"70\" cy=\"60\" r=\"3.9\" fill=\"none\"/><circle cx=\"112\" cy=\"22\" r=\"6\" fill=\"none\"/><circle cx=\"138\" cy=\"44\" r=\"6\" fill=\"none\"/><circle cx=\"110\" cy=\"70\" r=\"6\" fill=\"none\"/><circle cx=\"138\" cy=\"82\" r=\"5\" fill=\"none\"/><path d=\"M117 26l16 14M134 49l-20 17M116 72l17 8M110 28v36M58 28h48M83 62h21\" fill=\"none\" stroke-width=\"1.8\"/></svg>"
   ],
   [
    "challenge",
    "Puzzle-like missions",
-   "Each scenario has a clever solution."
+   "Each scenario has a clever solution.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M16 20h26a7 7 0 1 1 12 0h26v24a7 7 0 1 0 0 12v24H54a7 7 0 1 0-12 0H16z\" fill=\"none\"/><path d=\"M100 20h20a7 7 0 1 1 12 0h14v60h-14a7 7 0 1 0-12 0h-20V56a7 7 0 1 1 0-12z\" class=\"a\" fill-opacity=\"0.9\" transform=\"translate(4 0)\"/><path d=\"M86 50h10M92 44l6 6-6 6\" fill=\"none\"/></svg>"
   ],
   [
    "challenge",
    "Adjustable everything",
-   "Tune speed, difficulty and rules yourself."
+   "Tune speed, difficulty and rules yourself.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><rect x=\"14\" y=\"12\" width=\"132\" height=\"76\" rx=\"6\" fill=\"none\"/><line x1=\"44\" y1=\"24\" x2=\"44\" y2=\"76\"/><line x1=\"80\" y1=\"24\" x2=\"80\" y2=\"76\"/><line x1=\"116\" y1=\"24\" x2=\"116\" y2=\"76\"/><rect x=\"35\" y=\"56\" width=\"18\" height=\"10\" rx=\"2\" fill=\"currentColor\"/><rect x=\"71\" y=\"30\" width=\"18\" height=\"10\" rx=\"2\" class=\"a\"/><rect x=\"107\" y=\"46\" width=\"18\" height=\"10\" rx=\"2\" fill=\"currentColor\"/></svg>"
   ],
   [
    "challenge",
    "Comebacks always possible",
-   "No game is lost until it is lost."
+   "No game is lost until it is lost.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><polyline points=\"16,12 16,86 148,86\" fill=\"none\"/><polyline points=\"22,30 44,44 60,58 76,76 92,70 108,48 126,28 140,16\" fill=\"none\" class=\"a\" stroke-width=\"3\"/><polyline points=\"128,14 140,16 138,28\" fill=\"none\" class=\"a\" stroke-width=\"3\"/><circle cx=\"76\" cy=\"76\" r=\"4\" fill=\"currentColor\"/></svg>"
   ],
   [
    "sound",
    "Orchestral score",
-   "Strings, brass and choirs swell with the battle."
+   "Strings, brass and choirs swell with the battle.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"46\" cy=\"40\" r=\"9.1\" fill=\"none\"/><path d=\"M30.4 68.6Q30.4 53 46 53Q61.6 53 61.6 68.6\" fill=\"none\"/><path d=\"M60 52l12-14\" fill=\"none\"/><line x1=\"72\" y1=\"38\" x2=\"92\" y2=\"16\" class=\"a\" stroke-width=\"3\"/><ellipse cx=\"104\" cy=\"56\" rx=\"5\" ry=\"3.6\" transform=\"rotate(-20 104 56)\" fill=\"currentColor\"/><line x1=\"108.5\" y1=\"55\" x2=\"108.5\" y2=\"36\"/><path d=\"M108.5 36q8 4 7 12\" fill=\"none\"/><ellipse cx=\"128\" cy=\"40\" rx=\"5\" ry=\"3.6\" transform=\"rotate(-20 128 40)\" fill=\"currentColor\"/><line x1=\"132.5\" y1=\"39\" x2=\"132.5\" y2=\"20\"/><path d=\"M132.5 20q8 4 7 12\" fill=\"none\"/><ellipse cx=\"116\" cy=\"80\" rx=\"5\" ry=\"3.6\" transform=\"rotate(-20 116 80)\" fill=\"currentColor\"/><line x1=\"120.5\" y1=\"79\" x2=\"120.5\" y2=\"60\"/><path d=\"M96 30l4-4M140 64l6-2\" fill=\"none\" stroke-width=\"1.5\"/></svg>"
   ],
   [
    "sound",
    "Synth and electronic",
-   "Pulsing synths and moody textures."
+   "Pulsing synths and moody textures.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><rect x=\"14\" y=\"52\" width=\"132\" height=\"36\" rx=\"3\" fill=\"none\"/><line x1=\"26\" y1=\"52\" x2=\"26\" y2=\"88\" stroke-width=\"1.5\"/><line x1=\"38\" y1=\"52\" x2=\"38\" y2=\"88\" stroke-width=\"1.5\"/><line x1=\"50\" y1=\"52\" x2=\"50\" y2=\"88\" stroke-width=\"1.5\"/><line x1=\"62\" y1=\"52\" x2=\"62\" y2=\"88\" stroke-width=\"1.5\"/><line x1=\"74\" y1=\"52\" x2=\"74\" y2=\"88\" stroke-width=\"1.5\"/><line x1=\"86\" y1=\"52\" x2=\"86\" y2=\"88\" stroke-width=\"1.5\"/><line x1=\"98\" y1=\"52\" x2=\"98\" y2=\"88\" stroke-width=\"1.5\"/><line x1=\"110\" y1=\"52\" x2=\"110\" y2=\"88\" stroke-width=\"1.5\"/><line x1=\"122\" y1=\"52\" x2=\"122\" y2=\"88\" stroke-width=\"1.5\"/><line x1=\"134\" y1=\"52\" x2=\"134\" y2=\"88\" stroke-width=\"1.5\"/><rect x=\"22\" y=\"52\" width=\"7\" height=\"20\" fill=\"currentColor\"/><rect x=\"34\" y=\"52\" width=\"7\" height=\"20\" fill=\"currentColor\"/><rect x=\"58\" y=\"52\" width=\"7\" height=\"20\" fill=\"currentColor\"/><rect x=\"70\" y=\"52\" width=\"7\" height=\"20\" fill=\"currentColor\"/><rect x=\"82\" y=\"52\" width=\"7\" height=\"20\" fill=\"currentColor\"/><rect x=\"106\" y=\"52\" width=\"7\" height=\"20\" fill=\"currentColor\"/><rect x=\"118\" y=\"52\" width=\"7\" height=\"20\" fill=\"currentColor\"/><polyline points=\"14,30 26,30 26,14 42,14 42,40 58,40 58,14 74,14 74,40 90,40 90,14 106,14 106,40 122,40 122,30 146,30\" fill=\"none\" class=\"a\"/></svg>"
   ],
   [
    "sound",
    "Sparse ambience",
-   "Wind, distant sounds, long silences."
+   "Wind, distant sounds, long silences.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><polyline points=\"8,82 40,62 58,72 86,54 118,74 152,64\" fill=\"none\" stroke-width=\"1.5\"/><line x1=\"126\" y1=\"70\" x2=\"126\" y2=\"50\"/><path d=\"M118 56l8-10 8 10M120 50l6-8 6 8\" fill=\"none\"/><path d=\"M18 26q14-6 28 0t26 0M30 38q12-5 24 0\" fill=\"none\" stroke-width=\"1.8\"/><path d=\"M100 22q4-4 8 0q4-4 8 0\" fill=\"none\" class=\"a\"/></svg>"
   ],
   [
    "sound",
    "Units talk back",
-   "Every click gets a voice line."
+   "Every click gets a voice line.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"50\" cy=\"50\" r=\"7.7\" fill=\"none\"/><path d=\"M36.8 74.2Q36.8 61 50 61Q63.2 61 63.2 74.2\" fill=\"none\"/><path d=\"M74 16h66q6 0 6 6v20q0 6-6 6H96l-12 10 2-10H74q-6 0-6-6V22q0-6 6-6z\" fill=\"none\"/><line x1=\"80\" y1=\"26\" x2=\"132\" y2=\"26\" stroke-width=\"3\"/><line x1=\"80\" y1=\"36\" x2=\"116\" y2=\"36\" stroke-width=\"3\"/><polygon points=\"60,64 60,90 67,83 72,92 76,90 71,81 80,80\" class=\"a\"/></svg>"
   ],
   [
    "sound",
    "Silent, wordless units",
-   "Units answer with sounds, never words."
+   "Units answer with sounds, never words.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><rect x=\"30\" y=\"44\" width=\"30\" height=\"24\" rx=\"5\" fill=\"none\"/><circle cx=\"45\" cy=\"34\" r=\"8\" fill=\"none\"/><circle cx=\"45\" cy=\"34\" r=\"2.5\" fill=\"currentColor\"/><circle cx=\"36\" cy=\"72\" r=\"5\" fill=\"none\"/><circle cx=\"54\" cy=\"72\" r=\"5\" fill=\"none\"/><path d=\"M68 30q6 6 0 12M76 24q10 12 0 24M84 18q14 18 0 36\" fill=\"none\" class=\"a\"/><path d=\"M104 20h36q6 0 6 6v16q0 6-6 6h-22l-10 8 2-8h-6q-6 0-6-6V26q0-6 6-6z\" fill=\"none\" stroke-width=\"1.8\"/><line x1=\"100\" y1=\"58\" x2=\"148\" y2=\"14\" stroke-width=\"3\"/></svg>"
   ],
   [
    "sound",
    "Music that reacts",
-   "The score follows the tension of the fight."
+   "The score follows the tension of the fight.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><ellipse cx=\"22\" cy=\"70\" rx=\"5\" ry=\"3.6\" transform=\"rotate(-20 22 70)\" fill=\"currentColor\"/><line x1=\"26.5\" y1=\"69\" x2=\"26.5\" y2=\"50\"/><path d=\"M26.5 50q8 4 7 12\" fill=\"none\"/><polyline points=\"40,56 50,54 58,58 66,50 74,62 82,44 92,68 102,34 114,78 126,22 138,86 146,52\" fill=\"none\" class=\"a\"/><path d=\"M10 90h142\" fill=\"none\" stroke-width=\"1.5\"/><path d=\"M118 12l14 14M132 12l-14 14\" fill=\"none\"/></svg>"
   ],
   [
    "sound",
    "Crunchy, heavy sound",
-   "Every impact thumps; guns and steel feel weighty."
+   "Every impact thumps; guns and steel feel weighty.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><rect x=\"14\" y=\"38\" width=\"16\" height=\"24\" fill=\"currentColor\"/><polygon points=\"30,38 54,18 54,82 30,62\" fill=\"none\"/><path d=\"M66 32q10 18 0 36M80 22q18 28 0 56\" fill=\"none\" stroke-width=\"4\"/><polygon points=\"120,24 126,40 142,34 132,48 148,56 130,58 134,76 120,64 108,78 110,60 94,58 108,48 100,34 114,40\" class=\"a\"/></svg>"
   ],
   [
    "feel",
    "Juicy feedback",
-   "Screen shake, sparks and punchy hits."
+   "Screen shake, sparks and punchy hits.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><rect x=\"58\" y=\"32\" width=\"44\" height=\"36\" rx=\"4\" fill=\"none\"/><path d=\"M48 36l-6 2M48 50h-8M48 64l-6-2M112 36l6 2M112 50h8M112 64l6-2\" fill=\"none\"/><polygon points=\"80,38 84,46 94,44 88,52 94,60 84,58 80,66 76,58 66,60 72,52 66,44 76,46\" class=\"a\"/><path d=\"M70 22l-6-8M90 22l6-8M80 20V10M70 78l-6 8M90 78l6 8M80 80v10\" fill=\"none\" stroke-width=\"1.8\"/><circle cx=\"22\" cy=\"24\" r=\"2\" fill=\"currentColor\"/><circle cx=\"138\" cy=\"78\" r=\"2\" fill=\"currentColor\"/><circle cx=\"136\" cy=\"20\" r=\"2\" fill=\"currentColor\"/></svg>"
   ],
   [
    "feel",
    "Calm and precise",
-   "Clean, quiet feedback, like a tool."
+   "Clean, quiet feedback, like a tool.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><circle cx=\"80\" cy=\"44\" r=\"26\" fill=\"none\"/><circle cx=\"80\" cy=\"44\" r=\"12\" fill=\"none\" stroke-width=\"1.5\"/><path d=\"M80 12v12M80 64v12M48 44h12M100 44h12\" fill=\"none\"/><circle cx=\"80\" cy=\"44\" r=\"3\" class=\"a\"/><rect x=\"20\" y=\"80\" width=\"120\" height=\"10\" fill=\"none\" stroke-width=\"1.8\"/><path d=\"M32 80v4M44 80v6M56 80v4M68 80v6M80 80v4M92 80v6M104 80v4M116 80v6M128 80v4\" fill=\"none\" stroke-width=\"1.5\"/></svg>"
   ],
   [
    "feel",
    "Weighty units",
-   "Units have mass; turning and stopping take time."
+   "Units have mass; turning and stopping take time.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><rect x=\"76\" y=\"52\" width=\"60\" height=\"18\" rx=\"9\" fill=\"none\"/><circle cx=\"86\" cy=\"61\" r=\"3\" fill=\"currentColor\"/><circle cx=\"106\" cy=\"61\" r=\"3\" fill=\"currentColor\"/><circle cx=\"126\" cy=\"61\" r=\"3\" fill=\"currentColor\"/><path d=\"M82 52l6-12h40l6 12z\" fill=\"currentColor\"/><rect x=\"96\" y=\"28\" width=\"22\" height=\"12\" rx=\"3\" fill=\"none\"/><line x1=\"96\" y1=\"34\" x2=\"66\" y2=\"30\" stroke-width=\"4\"/><path d=\"M70 74Q30 82 16 50\" fill=\"none\" class=\"a\" stroke-width=\"3\" stroke-dasharray=\"6 5\"/><path d=\"M60 84l-4 4M40 80l-4 6M26 70l-6 4\" fill=\"none\" stroke-width=\"1.5\"/><line x1=\"12\" y1=\"90\" x2=\"148\" y2=\"90\" stroke-width=\"1.5\"/></svg>"
   ],
   [
    "feel",
    "Snappy and responsive",
-   "Orders execute instantly, no lag."
+   "Orders execute instantly, no lag.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><polygon points=\"22,20 22,58 32,48 40,64 46,61 38,46 52,46\" fill=\"none\"/><path d=\"M14 14l-4-4M26 12V6M34 16l4-4\" fill=\"none\" stroke-width=\"1.8\"/><polygon points=\"82,24 66,52 78,52 70,78 98,44 84,44 92,24\" class=\"a\"/><line x1=\"104\" y1=\"50\" x2=\"116\" y2=\"50\"/><circle cx=\"132\" cy=\"42\" r=\"5.6\" fill=\"none\"/><path d=\"M122.4 59.6Q122.4 50 132 50Q141.6 50 141.6 59.6\" fill=\"none\"/></svg>"
   ],
   [
    "feel",
    "Beautiful idle moments",
-   "The game is lovely even when nothing happens."
+   "The game is lovely even when nothing happens.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M8 78q30-22 60-10t84-8\" fill=\"none\"/><circle cx=\"118\" cy=\"44\" r=\"14\" class=\"a\"/><line x1=\"96\" y1=\"60\" x2=\"144\" y2=\"60\" stroke-width=\"1.5\"/><rect x=\"34\" y=\"52\" width=\"24\" height=\"18\" fill=\"none\"/><polyline points=\"30,54 46,40 62,54\" fill=\"none\"/><rect x=\"43\" y=\"60\" width=\"6\" height=\"10\" fill=\"currentColor\"/><line x1=\"54\" y1=\"44\" x2=\"54\" y2=\"36\"/><path d=\"M54 32q-4-4 0-8t0-8\" fill=\"none\" stroke-width=\"1.5\"/><path d=\"M80 22q3-3 6 0q3-3 6 0\" fill=\"none\" stroke-width=\"1.8\"/></svg>"
   ],
   [
    "feel",
    "Satisfying chain reactions",
-   "One move sets off a cascade."
+   "One move sets off a cascade.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><line x1=\"8\" y1=\"82\" x2=\"152\" y2=\"82\"/><polygon points=\"14,82 20,82 52,60 48,55\" class=\"a\"/><polygon points=\"44,82 50,82 70,52 64,49\" fill=\"none\"/><polygon points=\"68,82 74,82 84,46 78,45\" fill=\"none\"/><rect x=\"92\" y=\"44\" width=\"7\" height=\"38\" fill=\"none\"/><rect x=\"112\" y=\"44\" width=\"7\" height=\"38\" fill=\"none\"/><rect x=\"132\" y=\"44\" width=\"7\" height=\"38\" fill=\"none\"/><path d=\"M90 36q6-6 12 0M110 30q6-6 12 0\" fill=\"none\" stroke-width=\"1.5\" stroke-dasharray=\"2 3\"/></svg>"
   ],
   [
    "feel",
    "Tactile miniature feel",
-   "Picking up and placing things feels physical."
+   "Picking up and placing things feels physical.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><polygon points=\"10,80 50,64 150,64 110,80\" fill=\"none\" stroke-width=\"1.8\"/><path d=\"M30 72h100M60 64l-20 16M90 64l-10 16M120 64l0 16\" fill=\"none\" stroke-width=\"1.5\"/><ellipse cx=\"80\" cy=\"74\" rx=\"10\" ry=\"3\" fill=\"currentColor\" opacity=\"0.35\"/><path d=\"M74 54h12l-3-10a5 5 0 1 0-6 0z\" class=\"a\"/><path d=\"M60 14q8 10 14 22M100 14q-8 10-14 22M64 12q16-6 32 0\" fill=\"none\"/></svg>"
   ],
   [
    "feel",
    "Big screen-filling moments",
-   "Rare huge events that stop the room."
+   "Rare huge events that stop the room.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><line x1=\"8\" y1=\"86\" x2=\"152\" y2=\"86\"/><path d=\"M14 86A66 66 0 0 1 146 86\" class=\"af\" fill-opacity=\"0.3\"/><path d=\"M14 86A66 66 0 0 1 146 86\" fill=\"none\"/><path d=\"M36 86A44 44 0 0 1 124 86\" fill=\"none\" stroke-width=\"1.8\"/><path d=\"M80 14V6M34 32l-6-6M126 32l6-6M14 58H8M146 58h6\" fill=\"none\"/><circle cx=\"80\" cy=\"74\" r=\"2.6\" fill=\"currentColor\"/><line x1=\"80\" y1=\"76\" x2=\"80\" y2=\"84\" stroke-width=\"2\"/></svg>"
   ],
   [
    "platform",
    "PC with mouse and keyboard",
-   "Precision clicks and hotkeys."
+   "Precision clicks and hotkeys.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><rect x=\"10\" y=\"36\" width=\"104\" height=\"44\" rx=\"4\" fill=\"none\"/><rect x=\"16\" y=\"42\" width=\"8\" height=\"7\" rx=\"1\" fill=\"none\" stroke-width=\"1.5\"/><rect x=\"28\" y=\"42\" width=\"8\" height=\"7\" rx=\"1\" fill=\"none\" stroke-width=\"1.5\"/><rect x=\"40\" y=\"42\" width=\"8\" height=\"7\" rx=\"1\" fill=\"none\" stroke-width=\"1.5\"/><rect x=\"52\" y=\"42\" width=\"8\" height=\"7\" rx=\"1\" fill=\"none\" stroke-width=\"1.5\"/><rect x=\"64\" y=\"42\" width=\"8\" height=\"7\" rx=\"1\" fill=\"none\" stroke-width=\"1.5\"/><rect x=\"76\" y=\"42\" width=\"8\" height=\"7\" rx=\"1\" fill=\"none\" stroke-width=\"1.5\"/><rect x=\"88\" y=\"42\" width=\"8\" height=\"7\" rx=\"1\" fill=\"none\" stroke-width=\"1.5\"/><rect x=\"100\" y=\"42\" width=\"8\" height=\"7\" rx=\"1\" fill=\"none\" stroke-width=\"1.5\"/><rect x=\"20\" y=\"53\" width=\"8\" height=\"7\" rx=\"1\" fill=\"none\" stroke-width=\"1.5\"/><rect x=\"32\" y=\"53\" width=\"8\" height=\"7\" rx=\"1\" fill=\"none\" stroke-width=\"1.5\"/><rect x=\"44\" y=\"53\" width=\"8\" height=\"7\" rx=\"1\" fill=\"none\" stroke-width=\"1.5\" class=\"a\"/><rect x=\"56\" y=\"53\" width=\"8\" height=\"7\" rx=\"1\" fill=\"none\" stroke-width=\"1.5\"/><rect x=\"68\" y=\"53\" width=\"8\" height=\"7\" rx=\"1\" fill=\"none\" stroke-width=\"1.5\"/><rect x=\"80\" y=\"53\" width=\"8\" height=\"7\" rx=\"1\" fill=\"none\" stroke-width=\"1.5\"/><rect x=\"92\" y=\"53\" width=\"8\" height=\"7\" rx=\"1\" fill=\"none\" stroke-width=\"1.5\"/><rect x=\"16\" y=\"64\" width=\"8\" height=\"7\" rx=\"1\" fill=\"none\" stroke-width=\"1.5\"/><rect x=\"28\" y=\"64\" width=\"8\" height=\"7\" rx=\"1\" fill=\"none\" stroke-width=\"1.5\"/><rect x=\"40\" y=\"64\" width=\"8\" height=\"7\" rx=\"1\" fill=\"none\" stroke-width=\"1.5\"/><rect x=\"52\" y=\"64\" width=\"8\" height=\"7\" rx=\"1\" fill=\"none\" stroke-width=\"1.5\"/><rect x=\"64\" y=\"64\" width=\"8\" height=\"7\" rx=\"1\" fill=\"none\" stroke-width=\"1.5\"/><rect x=\"76\" y=\"64\" width=\"8\" height=\"7\" rx=\"1\" fill=\"none\" stroke-width=\"1.5\"/><rect x=\"88\" y=\"64\" width=\"8\" height=\"7\" rx=\"1\" fill=\"none\" stroke-width=\"1.5\"/><rect x=\"100\" y=\"64\" width=\"8\" height=\"7\" rx=\"1\" fill=\"none\" stroke-width=\"1.5\"/><rect x=\"36\" y=\"72\" width=\"52\" height=\"4\" rx=\"1\" fill=\"none\" stroke-width=\"1.5\"/><rect x=\"124\" y=\"44\" width=\"24\" height=\"38\" rx=\"12\" fill=\"none\"/><line x1=\"136\" y1=\"44\" x2=\"136\" y2=\"58\"/><path d=\"M136 44q0-14-16-22\" fill=\"none\"/></svg>"
   ],
   [
    "platform",
    "Controller-friendly",
-   "Plays well from the couch."
+   "Plays well from the couch.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M44 26h72q20 0 26 30t-6 32q-10 4-24-14H48q-14 18-24 14t-6-32 26-30z\" fill=\"none\"/><path d=\"M42 44v16M34 52h16\" fill=\"none\" stroke-width=\"4\"/><circle cx=\"116\" cy=\"44\" r=\"4\" class=\"a\"/><circle cx=\"126\" cy=\"54\" r=\"4\" fill=\"none\"/><circle cx=\"106\" cy=\"54\" r=\"4\" fill=\"none\"/><circle cx=\"116\" cy=\"64\" r=\"4\" fill=\"none\"/><circle cx=\"64\" cy=\"64\" r=\"6\" fill=\"none\"/><circle cx=\"96\" cy=\"64\" r=\"6\" fill=\"none\"/></svg>"
   ],
   [
    "platform",
    "Phone or tablet",
-   "Touch controls, play anywhere."
+   "Touch controls, play anywhere.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><rect x=\"20\" y=\"14\" width=\"88\" height=\"66\" rx=\"6\" fill=\"none\"/><rect x=\"28\" y=\"20\" width=\"72\" height=\"54\" fill=\"none\" stroke-width=\"1.5\"/><rect x=\"118\" y=\"30\" width=\"28\" height=\"52\" rx=\"5\" fill=\"none\"/><line x1=\"128\" y1=\"76\" x2=\"136\" y2=\"76\"/><circle cx=\"64\" cy=\"48\" r=\"5\" class=\"a\"/><circle cx=\"64\" cy=\"48\" r=\"11\" fill=\"none\" stroke-width=\"1.5\"/><path d=\"M70 92l-4-28q0-4 4-4t4 4l1 10 10 2q4 1 3 6l-4 10\" fill=\"none\"/></svg>"
   ],
   [
    "platform",
    "Runs in a browser",
-   "Click a link and play."
+   "Click a link and play.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><rect x=\"14\" y=\"14\" width=\"132\" height=\"72\" rx=\"5\" fill=\"none\"/><line x1=\"14\" y1=\"30\" x2=\"146\" y2=\"30\"/><circle cx=\"24\" cy=\"22\" r=\"2.4\" fill=\"currentColor\"/><circle cx=\"32\" cy=\"22\" r=\"2.4\" fill=\"currentColor\"/><circle cx=\"40\" cy=\"22\" r=\"2.4\" fill=\"currentColor\"/><rect x=\"52\" y=\"18\" width=\"84\" height=\"8\" rx=\"4\" fill=\"none\" stroke-width=\"1.5\"/><polygon points=\"70,42 70,76 98,59\" class=\"a\"/></svg>"
   ],
   [
    "platform",
    "Steam Deck friendly",
-   "Handheld PC play."
+   "Handheld PC play.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><rect x=\"8\" y=\"26\" width=\"144\" height=\"52\" rx=\"22\" fill=\"none\"/><rect x=\"44\" y=\"32\" width=\"72\" height=\"40\" rx=\"2\" class=\"af\" fill-opacity=\"0.25\"/><rect x=\"44\" y=\"32\" width=\"72\" height=\"40\" rx=\"2\" fill=\"none\"/><path d=\"M24 40v12M18 46h12\" fill=\"none\" stroke-width=\"3\"/><circle cx=\"26\" cy=\"64\" r=\"5\" fill=\"none\"/><circle cx=\"134\" cy=\"40\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"140\" cy=\"46\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"128\" cy=\"46\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"134\" cy=\"52\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"134\" cy=\"64\" r=\"5\" fill=\"none\"/></svg>"
   ],
   [
    "platform",
    "VR tabletop",
-   "Lean over the battlefield like a table."
+   "Lean over the battlefield like a table.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M52 14h56q8 0 8 8v10q0 8-8 8H92l-6-6h-12l-6 6H52q-8 0-8-8V22q0-8 8-8z\" fill=\"none\"/><line x1=\"44\" y1=\"24\" x2=\"32\" y2=\"24\"/><line x1=\"116\" y1=\"24\" x2=\"128\" y2=\"24\"/><path d=\"M66 42l-20 28M94 42l20 28\" fill=\"none\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/><polygon points=\"20,70 140,70 152,80 8,80\" fill=\"none\"/><line x1=\"24\" y1=\"80\" x2=\"24\" y2=\"92\"/><line x1=\"136\" y1=\"80\" x2=\"136\" y2=\"92\"/><rect x=\"54\" y=\"62\" width=\"8\" height=\"8\" fill=\"currentColor\"/><rect x=\"96\" y=\"62\" width=\"8\" height=\"8\" fill=\"currentColor\"/><polygon points=\"78,58 84,70 72,70\" class=\"a\"/></svg>"
   ],
   [
    "reference",
    "Command & Conquer: Generals",
-   "Factions, superweapons, fast base-building war."
+   "Factions, superweapons, fast base-building war.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><line x1=\"8\" y1=\"88\" x2=\"152\" y2=\"88\"/><rect x=\"14\" y=\"70\" width=\"58\" height=\"14\" rx=\"7\" fill=\"none\"/><path d=\"M22 70l6-10h30l6 10z\" fill=\"currentColor\"/><rect x=\"34\" y=\"50\" width=\"18\" height=\"10\" rx=\"2\" fill=\"none\"/><line x1=\"52\" y1=\"54\" x2=\"76\" y2=\"48\" stroke-width=\"4\"/><path d=\"M108 88q4-18 4-34M124 88q-4-18-4-34\" fill=\"none\"/><path d=\"M90 40q-6-24 26-26 32 2 26 26-8 12-26 12t-26-12z\" class=\"a\"/><path d=\"M92 66q24-8 48 0\" fill=\"none\" stroke-width=\"1.8\"/></svg>"
   ],
   [
    "reference",
    "StarCraft II",
-   "Precise, fast, competitive, three wildly different races."
+   "Precise, fast, competitive, three wildly different races.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M14 66q14-20 40-16 10-14 20-6\" fill=\"none\"/><circle cx=\"76\" cy=\"46\" r=\"4\" class=\"a\"/><path d=\"M58 50q10 4 14 16M30 60q-4 14-10 24M44 54q2 16 8 30M24 62q-10-2-12 10\" fill=\"none\"/><path d=\"M62 36q8-14 20-8M50 46q2-14 12-14\" fill=\"none\" stroke-width=\"1.8\"/><path d=\"M100 64q-4-40 24-42t24 42z\" fill=\"none\"/><path d=\"M108 44h32v10q-16 6-32 0z\" fill=\"currentColor\"/><path d=\"M100 64l-4 16h56l-4-16\" fill=\"none\"/></svg>"
   ],
   [
    "reference",
    "Age of Empires II",
-   "History, villagers, castles and long matches."
+   "History, villagers, castles and long matches.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><line x1=\"8\" y1=\"88\" x2=\"152\" y2=\"88\"/><path d=\"M16 88V30h8v-6h8v6h8v-6h8v6h8v58\" fill=\"none\"/><path d=\"M28 88V70q8-10 16 0v18\" fill=\"currentColor\"/><path d=\"M56 46h8v-6h8v6h8v42\" fill=\"none\"/><rect x=\"66\" y=\"56\" width=\"6\" height=\"8\" fill=\"currentColor\"/><circle cx=\"104\" cy=\"52\" r=\"5\" fill=\"none\"/><path d=\"M104 58v14l-6 14M104 72l6 14M104 62l14 4\" fill=\"none\"/><rect x=\"118\" y=\"58\" width=\"26\" height=\"14\" class=\"a\"/><circle cx=\"124\" cy=\"80\" r=\"6\" fill=\"none\"/><circle cx=\"140\" cy=\"80\" r=\"6\" fill=\"none\"/></svg>"
   ],
   [
    "reference",
    "Company of Heroes",
-   "Squads, cover and territory in a gritty war."
+   "Squads, cover and territory in a gritty war.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><line x1=\"8\" y1=\"88\" x2=\"152\" y2=\"88\"/><path d=\"M19 56q11-14 22 0z\" fill=\"currentColor\"/><circle cx=\"30\" cy=\"61\" r=\"5\" fill=\"none\"/><path d=\"M59 52q11-14 22 0z\" fill=\"currentColor\"/><circle cx=\"70\" cy=\"57\" r=\"5\" fill=\"none\"/><path d=\"M99 58q11-14 22 0z\" fill=\"currentColor\"/><circle cx=\"110\" cy=\"63\" r=\"5\" fill=\"none\"/><line x1=\"76\" y1=\"52\" x2=\"100\" y2=\"34\" stroke-width=\"3\"/><ellipse cx=\"22\" cy=\"80\" rx=\"12\" ry=\"7\" fill=\"none\"/><ellipse cx=\"45\" cy=\"80\" rx=\"12\" ry=\"7\" fill=\"none\"/><ellipse cx=\"68\" cy=\"80\" rx=\"12\" ry=\"7\" fill=\"none\"/><ellipse cx=\"91\" cy=\"80\" rx=\"12\" ry=\"7\" fill=\"none\"/><ellipse cx=\"114\" cy=\"80\" rx=\"12\" ry=\"7\" fill=\"none\"/><ellipse cx=\"137\" cy=\"80\" rx=\"12\" ry=\"7\" fill=\"none\"/><ellipse cx=\"33\" cy=\"68\" rx=\"12\" ry=\"7\" fill=\"none\"/><ellipse cx=\"56\" cy=\"68\" rx=\"12\" ry=\"7\" fill=\"none\"/><ellipse cx=\"79\" cy=\"68\" rx=\"12\" ry=\"7\" fill=\"none\" class=\"a\"/><ellipse cx=\"102\" cy=\"68\" rx=\"12\" ry=\"7\" fill=\"none\"/><ellipse cx=\"125\" cy=\"68\" rx=\"12\" ry=\"7\" fill=\"none\"/></svg>"
   ],
   [
    "reference",
    "They Are Billions",
-   "Walls against a zombie tide; one breach ends it."
+   "Walls against a zombie tide; one breach ends it.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><rect x=\"34\" y=\"14\" width=\"10\" height=\"76\" fill=\"none\"/><line x1=\"34\" y1=\"24\" x2=\"44\" y2=\"24\" stroke-width=\"1.5\"/><line x1=\"34\" y1=\"34\" x2=\"44\" y2=\"34\" stroke-width=\"1.5\"/><line x1=\"34\" y1=\"44\" x2=\"44\" y2=\"44\" stroke-width=\"1.5\"/><line x1=\"34\" y1=\"54\" x2=\"44\" y2=\"54\" stroke-width=\"1.5\"/><line x1=\"34\" y1=\"64\" x2=\"44\" y2=\"64\" stroke-width=\"1.5\"/><line x1=\"34\" y1=\"74\" x2=\"44\" y2=\"74\" stroke-width=\"1.5\"/><line x1=\"34\" y1=\"84\" x2=\"44\" y2=\"84\" stroke-width=\"1.5\"/><polygon points=\"16,40 26,40 28,52 14,52\" fill=\"none\"/><circle cx=\"21\" cy=\"34\" r=\"4\" fill=\"none\"/><path d=\"M102.1 55.5h.1M68.4 32.1h.1M97.9 51.5h.1M65.1 79h.1M111 44.4h.1M83.6 71.8h.1M117.2 19.7h.1M102.9 31.4h.1M118.5 25.7h.1M108.4 50.1h.1M73.9 17.7h.1M142.5 85.8h.1M68.9 46.9h.1M144 28h.1M95.7 54.7h.1M118.5 34.8h.1M73.3 86.9h.1M98.1 31.2h.1M107.2 38.4h.1M71.8 71.2h.1M89.7 39.9h.1M65.2 82.5h.1M79.5 79.4h.1M100.4 31.5h.1M112.3 43.7h.1M126.3 62.3h.1M70.2 30.6h.1M98.5 20.7h.1M62.3 44.5h.1M119.3 61.9h.1M144 38h.1M97.4 50.7h.1M97.5 76h.1M98.6 46.5h.1M81.8 31.5h.1M124.9 23.8h.1M82.3 70.7h.1M135.3 85.7h.1M141.4 77.7h.1M125.3 61.4h.1M107.9 15.8h.1M87.1 40.5h.1M77.4 43.1h.1M119.7 68.6h.1M82 84.8h.1M110.7 46.6h.1M66 87.3h.1M99.1 78.6h.1M110.9 48.7h.1M69.3 72.7h.1M138.7 33.6h.1M121.6 65.6h.1M117.4 78.3h.1M78.7 75.5h.1M73.2 16.8h.1M65.4 15.6h.1M106.3 75.5h.1M133.9 24.8h.1\" stroke-width=\"4\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M48 48l4 4M48 58l5-2\" fill=\"none\" class=\"a\"/></svg>"
   ],
   [
    "reference",
    "Northgard",
-   "Vikings, seasons and cozy expansion."
+   "Vikings, seasons and cozy expansion.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><line x1=\"8\" y1=\"86\" x2=\"152\" y2=\"86\"/><polygon points=\"20,86 52,40 84,86\" fill=\"none\"/><path d=\"M44 30l16 20M60 30L44 50\" fill=\"none\"/><path d=\"M28 76h48\" fill=\"none\" stroke-width=\"1.5\"/><rect x=\"46\" y=\"70\" width=\"12\" height=\"16\" fill=\"currentColor\"/><g class=\"a\"><path d=\"M118 20v44M99 31l38 22M99 53l38-22M112 20l6 6 6-6M112 64l6-6 6 6\" fill=\"none\"/></g></svg>"
   ],
   [
    "reference",
    "Bad North",
-   "Tiny islands, minimalist art, short tactical raids."
+   "Tiny islands, minimalist art, short tactical raids.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M8 80q10-4 20 0t20 0 20 0 20 0 20 0 20 0 20 0\" fill=\"none\" stroke-width=\"1.5\"/><path d=\"M26 78l8-30h44l10 30\" fill=\"none\"/><path d=\"M34 48q20-10 44 0\" fill=\"none\"/><path d=\"M48 44l4-14 4 14\" fill=\"none\" stroke-width=\"1.8\"/><circle cx=\"44\" cy=\"42\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"58\" cy=\"41\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"66\" cy=\"43\" r=\"2.6\" fill=\"currentColor\"/><path d=\"M102 70h44l-6 10h-32z\" fill=\"none\"/><line x1=\"124\" y1=\"70\" x2=\"124\" y2=\"34\"/><polygon points=\"112,38 136,38 138,62 110,62\" class=\"a\"/></svg>"
   ],
   [
    "reference",
    "Warcraft III",
-   "Heroes, creeps and a story campaign."
+   "Heroes, creeps and a story campaign.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><line x1=\"8\" y1=\"88\" x2=\"152\" y2=\"88\"/><circle cx=\"66\" cy=\"40\" r=\"8\" fill=\"none\"/><path d=\"M50 88l4-26q12-8 24 0l4 26M54 62l-10-14\" fill=\"none\"/><line x1=\"44\" y1=\"50\" x2=\"30\" y2=\"10\" stroke-width=\"3\"/><line x1=\"36\" y1=\"46\" x2=\"50\" y2=\"40\"/><path d=\"M78 62l16-8\" fill=\"none\"/><circle cx=\"104\" cy=\"48\" r=\"11\" class=\"a\"/><circle cx=\"104\" cy=\"48\" r=\"18\" fill=\"none\" stroke-width=\"1.5\"/><path d=\"M104 22v-8M126 48h8M120 32l6-6\" fill=\"none\" stroke-width=\"1.5\"/></svg>"
   ],
   [
    "reference",
    "Total War",
-   "Huge field battles plus an empire map."
+   "Huge field battles plus an empire map.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M14 24h6v7h-6zM24 24h6v7h-6zM34 24h6v7h-6zM44 24h6v7h-6zM54 24h6v7h-6zM14 35h6v7h-6zM24 35h6v7h-6zM34 35h6v7h-6zM44 35h6v7h-6zM54 35h6v7h-6zM14 46h6v7h-6zM24 46h6v7h-6zM34 46h6v7h-6zM44 46h6v7h-6zM54 46h6v7h-6zM14 57h6v7h-6zM24 57h6v7h-6zM34 57h6v7h-6zM44 57h6v7h-6zM54 57h6v7h-6zM14 68h6v7h-6zM24 68h6v7h-6zM34 68h6v7h-6zM44 68h6v7h-6zM54 68h6v7h-6z\" fill=\"currentColor\"/><path d=\"M100 24h6v7h-6zM110 24h6v7h-6zM120 24h6v7h-6zM130 24h6v7h-6zM140 24h6v7h-6zM100 35h6v7h-6zM110 35h6v7h-6zM120 35h6v7h-6zM130 35h6v7h-6zM140 35h6v7h-6zM100 46h6v7h-6zM110 46h6v7h-6zM120 46h6v7h-6zM130 46h6v7h-6zM140 46h6v7h-6zM100 57h6v7h-6zM110 57h6v7h-6zM120 57h6v7h-6zM130 57h6v7h-6zM140 57h6v7h-6zM100 68h6v7h-6zM110 68h6v7h-6zM120 68h6v7h-6zM130 68h6v7h-6zM140 68h6v7h-6z\" fill=\"none\" stroke-width=\"1.5\"/><path d=\"M68 48h8M72 44l6 4-6 4M92 48h-8M88 44l-6 4 6 4\" fill=\"none\"/><polygon points=\"80,36 84,46 80,60 76,46\" class=\"a\"/><line x1=\"8\" y1=\"86\" x2=\"152\" y2=\"86\" stroke-width=\"1.5\"/></svg>"
   ],
   [
    "reference",
    "Frostpunk",
-   "Survive the cold; hard choices for a city."
+   "Survive the cold; hard choices for a city.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><path d=\"M8 86q40-8 72-2t72 2\" fill=\"none\"/><path d=\"M68 84V30h24v54\" fill=\"none\"/><rect x=\"72\" y=\"12\" width=\"16\" height=\"18\" fill=\"none\"/><rect x=\"73\" y=\"48\" width=\"14\" height=\"18\" rx=\"7\" class=\"a\"/><path d=\"M22 84V72l8-6 8 6v12M122 84V72l8-6 8 6v12M44 84v-8l6-4 6 4v8M104 84v-8l6-4 6 4v8\" fill=\"none\" stroke-width=\"1.8\"/><circle cx=\"26\" cy=\"26\" r=\"1.8\" fill=\"currentColor\"/><circle cx=\"44\" cy=\"16\" r=\"1.8\" fill=\"currentColor\"/><circle cx=\"118\" cy=\"22\" r=\"1.8\" fill=\"currentColor\"/><circle cx=\"138\" cy=\"34\" r=\"1.8\" fill=\"currentColor\"/><circle cx=\"32\" cy=\"46\" r=\"1.8\" fill=\"currentColor\"/><circle cx=\"130\" cy=\"12\" r=\"1.8\" fill=\"currentColor\"/></svg>"
   ],
   [
    "reference",
    "Into the Breach",
-   "Small perfect puzzles with giant mechs."
+   "Small perfect puzzles with giant mechs.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><line x1=\"20\" y1=\"12\" x2=\"20\" y2=\"84\" stroke-width=\"1.5\"/><line x1=\"44\" y1=\"12\" x2=\"44\" y2=\"84\" stroke-width=\"1.5\"/><line x1=\"68\" y1=\"12\" x2=\"68\" y2=\"84\" stroke-width=\"1.5\"/><line x1=\"92\" y1=\"12\" x2=\"92\" y2=\"84\" stroke-width=\"1.5\"/><line x1=\"116\" y1=\"12\" x2=\"116\" y2=\"84\" stroke-width=\"1.5\"/><line x1=\"20\" y1=\"12\" x2=\"116\" y2=\"12\" stroke-width=\"1.5\"/><line x1=\"20\" y1=\"36\" x2=\"116\" y2=\"36\" stroke-width=\"1.5\"/><line x1=\"20\" y1=\"60\" x2=\"116\" y2=\"60\" stroke-width=\"1.5\"/><line x1=\"20\" y1=\"84\" x2=\"116\" y2=\"84\" stroke-width=\"1.5\"/><rect x=\"28\" y=\"40\" width=\"10\" height=\"10\" fill=\"currentColor\"/><path d=\"M26 50h14l-2 8M28 58l-2-8M38 58\" fill=\"none\"/><path d=\"M38 44h6\" fill=\"none\" stroke-width=\"3\"/><path d=\"M54 46h40\" fill=\"none\" class=\"a\" stroke-width=\"3\"/><polyline points=\"86,39 94,46 86,53\" fill=\"none\" class=\"a\" stroke-width=\"3\"/><circle cx=\"104\" cy=\"46\" r=\"6\" fill=\"none\"/><path d=\"M98 52l-4 6M110 52l4 6M100 40l-2-4M108 40l2-4\" fill=\"none\" stroke-width=\"1.8\"/><path d=\"M124 40l16 6-16 6\" fill=\"none\" stroke-width=\"1.8\" stroke-dasharray=\"3 3\"/></svg>"
   ],
   [
    "reference",
    "Desperados or Shadow Tactics",
-   "Stealth, small squad, planning."
+   "Stealth, small squad, planning.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><line x1=\"8\" y1=\"86\" x2=\"152\" y2=\"86\"/><circle cx=\"128\" cy=\"30\" r=\"6\" fill=\"none\"/><path d=\"M128 36v26l-6 24M128 62l6 24M128 44l-8 4\" fill=\"none\"/><polygon points=\"120,32 60,14 60,62\" class=\"af\" fill-opacity=\"0.3\"/><path d=\"M120 32L60 14M120 32L60 62\" fill=\"none\" class=\"a\"/><circle cx=\"36\" cy=\"64\" r=\"6\" fill=\"none\"/><path d=\"M42 68q8 6 4 18M30 70q-4 8 2 16h12M40 74l10-4\" fill=\"none\"/></svg>"
   ],
   [
    "reference",
    "Supreme Commander",
-   "Gigantic scale and strategic zoom."
+   "Gigantic scale and strategic zoom.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><line x1=\"8\" y1=\"88\" x2=\"152\" y2=\"88\"/><rect x=\"52\" y=\"26\" width=\"40\" height=\"32\" rx=\"4\" fill=\"none\"/><rect x=\"60\" y=\"12\" width=\"24\" height=\"14\" rx=\"3\" fill=\"none\"/><rect x=\"64\" y=\"17\" width=\"16\" height=\"4\" class=\"a\"/><path d=\"M60 58l-6 30M84 58l6 30M52 32L38 52M92 32l14 20\" fill=\"none\" stroke-width=\"4\"/><rect x=\"106\" y=\"50\" width=\"10\" height=\"4\" fill=\"none\"/><circle cx=\"118\" cy=\"84\" r=\"2.4\" fill=\"currentColor\"/><circle cx=\"126\" cy=\"84\" r=\"2.4\" fill=\"currentColor\"/><circle cx=\"134\" cy=\"84\" r=\"2.4\" fill=\"currentColor\"/><circle cx=\"20\" cy=\"84\" r=\"2.4\" fill=\"currentColor\"/><circle cx=\"28\" cy=\"84\" r=\"2.4\" fill=\"currentColor\"/><circle cx=\"142\" cy=\"84\" r=\"2.4\" fill=\"currentColor\"/></svg>"
   ],
   [
    "reference",
    "Mindustry or Factorio",
-   "Automation and production chains under attack."
+   "Automation and production chains under attack.",
+   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 100\"><rect x=\"10\" y=\"62\" width=\"100\" height=\"16\" rx=\"8\" fill=\"none\"/><circle cx=\"18\" cy=\"70\" r=\"3\" fill=\"none\"/><circle cx=\"102\" cy=\"70\" r=\"3\" fill=\"none\"/><path d=\"M34 66l6 4-6 4M54 66l6 4-6 4M74 66l6 4-6 4\" fill=\"none\" stroke-width=\"1.8\"/><rect x=\"88\" y=\"52\" width=\"10\" height=\"10\" class=\"a\"/><rect x=\"22\" y=\"52\" width=\"10\" height=\"10\" fill=\"currentColor\"/><path d=\"M142 36L141.6 39.9L135.9 41.7L134.5 44.3L136.1 50.1L133.1 52.6L127.7 49.9L124.9 50.7L122 56L118.1 55.6L116.3 49.9L113.7 48.5L107.9 50.1L105.4 47.1L108.1 41.7L107.3 38.9L102 36L102.4 32.1L108.1 30.3L109.5 27.7L107.9 21.9L110.9 19.4L116.3 22.1L119.1 21.3L122 16L125.9 16.4L127.7 22.1L130.3 23.5L136.1 21.9L138.6 24.9L135.9 30.3L136.7 33.1Z\" fill=\"none\"/><circle cx=\"122\" cy=\"36\" r=\"6\" fill=\"none\"/><path d=\"M89 30L88.6 33.4L84.4 34.9L82.9 36.9L82.5 41.3L79.4 42.6L76 39.8L73.5 39.4L69.5 41.3L66.8 39.2L67.6 34.9L66.6 32.5L63 30L63.4 26.6L67.6 25.1L69.1 23.1L69.5 18.7L72.6 17.4L76 20.3L78.5 20.6L82.5 18.7L85.2 20.8L84.4 25.1L85.4 27.5Z\" fill=\"none\"/><circle cx=\"76\" cy=\"30\" r=\"3.9\" fill=\"none\"/><path d=\"M122 56v14h-12\" fill=\"none\" stroke-width=\"1.8\"/></svg>"
   ]
  ],
  "pitch": [
