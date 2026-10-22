@@ -1,11 +1,13 @@
-# bodr.ing skills
+# The Bodring Skills
 
-Agent skills from [bodr.ing](https://bodr.ing). Each skill is a folder under `skills/` with a
+Agent skills from The Bodring Company ([bodr.ing](https://bodr.ing)), browsable at [skills.bodr.ing](https://skills.bodr.ing). Each skill is a folder under `skills/` with a
 `SKILL.md` that tells the agent when and how to use it.
 
 | Skill | What it does |
 |---|---|
 | [taste-swipe](skills/taste-swipe/SKILL.md) | Breaks a subject (a game, an app, a brand, a trip) into its smallest choices and turns them into a swipe feed. About 100 swipes later you have a clear picture of what the person actually wants. |
+| [hand-up](skills/hand-up/SKILL.md) | All your coding agents raise blockers, conflicts and findings into one swipe deck. You swipe, and they read your answer and carry on. Works inside Claude with nothing to host, or with the [hub](https://github.com/bodr-ing/hand-up) for any agent and phone push. |
+| [vibe-check](skills/vibe-check/SKILL.md) | Finds a brand's visual taste by swiping before any design work, and ends in a `taste.md` your agents design from. |
 
 ## Install
 
