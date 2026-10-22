@@ -1,0 +1,397 @@
+<title>{{TITLE}}</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one card in the middle of a phone-shaped column; a thin category rail above, four verdict buttons below. */
+:root {
+  --bg: #f3efe7;
+  --fg: #1c1a17;
+  --muted: #6d665b;
+  --card: #fffdf8;
+  --line: #ddd5c7;
+  --no: #d2483f;
+  --yes: #2f9a5b;
+  --love: #c9861a;
+  --skip: #7a7f8c;
+  --display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif;
+  --body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #15140f; --fg: #f1ebdf; --muted: #a39b8c; --card: #201e18; --line: #3a362d;
+  --no: #ef6a60; --yes: #52c47f; --love: #e8a63c; --skip: #9aa0ad; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #15140f; --fg: #f1ebdf; --muted: #a39b8c; --card: #201e18; --line: #3a362d;
+  --no: #ef6a60; --yes: #52c47f; --love: #e8a63c; --skip: #9aa0ad; color-scheme: dark; }
+[hidden] { display: none !important; }
+html, body { height: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 16px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  overflow-x: hidden;
+}
+.wrap { max-width: 460px; margin: 0 auto; min-height: 100%; display: flex; flex-direction: column; gap: 14px; padding-block: 18px 22px; box-sizing: border-box; }
+header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+h1 { font-family: var(--display); font-weight: 800; font-size: 22px; margin: 0; letter-spacing: -0.01em; }
+.count { font-family: var(--mono); font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.progress { height: 4px; background: var(--line); border-radius: 2px; overflow: hidden; }
+.progress i { display: block; height: 100%; width: 0; background: var(--fg); transition: width 0.25s ease; }
+.stage { position: relative; flex: 1; min-height: 420px; }
+.card {
+  position: absolute; inset: 0; background: var(--card); border: 1px solid var(--line); border-radius: 18px;
+  display: flex; flex-direction: column; overflow: hidden; touch-action: none; cursor: grab;
+  box-shadow: 0 12px 30px -18px rgba(40, 30, 10, 0.45); will-change: transform;
+}
+.card.under { transform: scale(0.96) translateY(10px); opacity: 0.7; pointer-events: none; }
+.card.fly { transition: transform 0.32s cubic-bezier(0.2, 0.7, 0.3, 1), opacity 0.32s ease; }
+.card.snap { transition: transform 0.22s cubic-bezier(0.3, 1.4, 0.5, 1); }
+.art { height: 46%; min-height: 170px; position: relative; }
+.art canvas { width: 100%; height: 100%; display: block; }
+.cat {
+  position: absolute; left: 14px; top: 14px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em;
+  text-transform: uppercase; background: rgba(255, 253, 248, 0.92); color: #1c1a17; padding: 4px 8px; border-radius: 999px;
+}
+.copy { padding: 20px 22px 24px; display: grid; gap: 10px; align-content: start; flex: 1; }
+.copy h2 { font-family: var(--display); font-weight: 700; font-size: 30px; line-height: 1.05; margin: 0; text-wrap: balance; letter-spacing: -0.015em; }
+.copy p { margin: 0; color: var(--muted); line-height: 1.5; font-size: 16px; }
+.stamp {
+  position: absolute; top: 22px; font-family: var(--display); font-weight: 800; font-size: 26px; padding: 4px 12px;
+  border: 3px solid currentColor; border-radius: 8px; opacity: 0; pointer-events: none; text-transform: uppercase; background: var(--card);
+}
+.stamp.no { right: 18px; color: var(--no); transform: rotate(10deg); }
+.stamp.yes { left: 18px; color: var(--yes); transform: rotate(-10deg); }
+.stamp.love { left: 50%; transform: translateX(-50%); color: var(--love); top: 40%; }
+.stamp.skip { left: 50%; transform: translateX(-50%); color: var(--skip); top: 40%; }
+.actions { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.btn {
+  appearance: none; border: 1.5px solid var(--line); background: var(--card); color: var(--fg); border-radius: 14px;
+  padding: 10px 6px 8px; font: 700 15px var(--body); cursor: pointer; display: grid; gap: 2px; justify-items: center;
+  transition: transform 0.12s ease, border-color 0.15s ease;
+}
+.btn:active { transform: scale(0.95); }
+.btn:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
+.btn small { font: 500 11px var(--mono); color: var(--muted); }
+.btn.no { color: var(--no); } .btn.yes { color: var(--yes); } .btn.love { color: var(--love); } .btn.skip { color: var(--skip); }
+.btn:hover { border-color: currentColor; }
+.foot { display: flex; justify-content: space-between; gap: 10px; font-size: 13px; color: var(--muted); flex-wrap: wrap; }
+.link { appearance: none; background: none; border: 0; color: var(--muted); font: inherit; text-decoration: underline; cursor: pointer; padding: 0; }
+.link:focus-visible { outline: 2px solid var(--fg); }
+/* Results */
+.results { display: grid; gap: 18px; }
+.results h2 { font-family: var(--display); font-size: 30px; margin: 0; line-height: 1.05; text-wrap: balance; }
+.pitch { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; line-height: 1.55; }
+.pitch b { font-weight: 700; }
+.group { display: grid; gap: 8px; }
+.group h3 { font: 500 12px var(--mono); text-transform: uppercase; letter-spacing: 0.08em; margin: 0; color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 14px; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); }
+.chip.love { border-color: var(--love); color: var(--love); font-weight: 700; }
+.chip.yes { border-color: var(--yes); color: var(--yes); }
+.chip.no { border-color: var(--no); color: var(--no); text-decoration: line-through; opacity: 0.8; }
+.saved { font-size: 13px; color: var(--muted); }
+.row { display: flex; gap: 10px; flex-wrap: wrap; }
+.primary { appearance: none; border: 0; background: var(--fg); color: var(--bg); border-radius: 12px; padding: 11px 16px; font: 700 15px var(--body); cursor: pointer; }
+.primary:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
+.ghost { appearance: none; border: 1.5px solid var(--line); background: transparent; color: var(--fg); border-radius: 12px; padding: 10px 16px; font: 700 15px var(--body); cursor: pointer; }
+@media (max-height: 700px) { .copy h2 { font-size: 25px; } .art { min-height: 130px; } .stage { min-height: 360px; } }
+@media (prefers-reduced-motion: reduce) { .card.fly, .card.snap, .progress i { transition: none; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>{{HEADING}}</h1>
+    <span class="count" id="count">0 / {{ROUNDS}}</span>
+  </header>
+  <div class="progress"><i id="bar"></i></div>
+
+  <section id="play" class="stage" aria-live="polite"></section>
+
+  <div class="actions" id="actions">
+    <button class="btn no" id="bNo" data-v="no">No<small>&larr;</small></button>
+    <button class="btn skip" id="bSkip" data-v="skip">Don't care<small>&darr;</small></button>
+    <button class="btn yes" id="bYes" data-v="yes">Yes<small>&rarr;</small></button>
+    <button class="btn love" id="bLove" data-v="love">Love it<small>&uarr;</small></button>
+  </div>
+  <div class="foot" id="foot">
+    <span>Swipe the card, use the buttons or the arrow keys.</span>
+    <span class="row"><button class="link" id="undo">Undo</button><button class="link" id="finish">Finish early</button></span>
+  </div>
+
+  <section id="results" class="results" hidden></section>
+</div>
+
+<script>
+(() => {
+'use strict';
+// The deck: a game pulled apart into its smallest choices. Each atom is one thing a game could be or have.
+// The deck is injected by scripts/build.mjs from a deck JSON file (see SKILL.md for its shape).
+const CONFIG = /*DECK*/null/*END*/;
+const CATS = CONFIG.categories;
+const DECK = CONFIG.atoms.map(([cat, title, line]) => ({ cat, title, line }));
+const ROUNDS = Math.min(CONFIG.rounds || 100, DECK.length);
+const RUN_KEY = 'tasteSwipe.' + CONFIG.id + '.v1';
+const VERDICTS = { no: -1, skip: 0, yes: 1, love: 2 };
+const LABEL = { no: 'No', skip: "Don't care", yes: 'Yes', love: 'Love it' };
+
+// ------------------------------------------------------------ order
+// Round-robin over shuffled categories so every part of a game gets asked about; later picks favour
+// categories where answers were split or loved, to learn more where it matters.
+function seededShuffle(list, seed) {
+  const a = list.slice(); let s = seed;
+  for (let i = a.length - 1; i > 0; i--) { s = (s * 16807) % 2147483647; const j = s % (i + 1); [a[i], a[j]] = [a[j], a[i]]; }
+  return a;
+}
+function nextAtom(state) {
+  const seen = new Set(state.answers.map(x => x.id));
+  const pool = DECK.map((a, id) => ({ ...a, id })).filter(a => !seen.has(a.id));
+  if (!pool.length) return null;
+  const byCat = {};
+  for (const a of pool) (byCat[a.cat] = byCat[a.cat] || []).push(a);
+  const asked = {}, score = {};
+  for (const x of state.answers) { asked[x.cat] = (asked[x.cat] || 0) + 1; score[x.cat] = (score[x.cat] || []).concat(VERDICTS[x.v]); }
+  const n = state.answers.length;
+  const cats = Object.keys(byCat);
+  let best = null, bestW = -1;
+  for (const c of cats) {
+    const k = asked[c] || 0;
+    let w = 10 / (1 + k);                          // coverage first
+    if (n > 40 && score[c]) {
+      const s = score[c], pos = s.filter(v => v > 0).length, neg = s.filter(v => v < 0).length, love = s.filter(v => v === 2).length;
+      w += (Math.min(pos, neg) * 0.8 + love * 0.9) / (1 + k * 0.3); // dig where there is signal
+      if (s.every(v => v === 0)) w *= 0.4;          // they do not care about this category
+    }
+    w *= 0.75 + ((state.seed * (cats.indexOf(c) + 3)) % 97) / 194;
+    if (w > bestW) { bestW = w; best = c; }
+  }
+  const options = seededShuffle(byCat[best], state.seed + n * 31);
+  return options[0];
+}
+
+// ------------------------------------------------------------ art
+function paint(canvas, atom) {
+  const ctx = canvas.getContext('2d');
+  const r = canvas.getBoundingClientRect(), pr = Math.min(window.devicePixelRatio || 1, 2);
+  canvas.width = Math.max(1, r.width * pr); canvas.height = Math.max(1, r.height * pr);
+  const w = canvas.width, h = canvas.height;
+  let s = 0; for (const ch of atom.title) s = (s * 31 + ch.charCodeAt(0)) >>> 0;
+  const rnd = () => { s = (s * 1664525 + 1013904223) >>> 0; return s / 4294967296; };
+  const hue = CATS[atom.cat].hue + (rnd() - 0.5) * 40;
+  const g = ctx.createLinearGradient(0, 0, w, h);
+  g.addColorStop(0, `hsl(${hue} 55% 22%)`); g.addColorStop(1, `hsl(${hue + 40} 60% 12%)`);
+  ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
+  const kind = Math.floor(rnd() * 4);
+  for (let i = 0; i < 26; i++) {
+    const x = rnd() * w, y = rnd() * h, rad = (0.04 + rnd() * 0.22) * Math.min(w, h);
+    ctx.globalAlpha = 0.08 + rnd() * 0.22;
+    ctx.fillStyle = `hsl(${hue + rnd() * 80 - 40} ${50 + rnd() * 40}% ${45 + rnd() * 30}%)`;
+    ctx.beginPath();
+    if (kind === 0) ctx.arc(x, y, rad, 0, Math.PI * 2);
+    else if (kind === 1) { ctx.rect(x - rad, y - rad * 0.3, rad * 2, rad * 0.6); }
+    else if (kind === 2) { ctx.moveTo(x, y - rad); ctx.lineTo(x + rad, y + rad); ctx.lineTo(x - rad, y + rad); ctx.closePath(); }
+    else { ctx.ellipse(x, y, rad * 1.6, rad * 0.5, rnd() * Math.PI, 0, Math.PI * 2); }
+    ctx.fill();
+  }
+  ctx.globalAlpha = 1;
+  // A big initial as the card's emblem.
+  ctx.fillStyle = 'rgba(255,253,248,0.9)';
+  ctx.font = `800 ${Math.round(h * 0.55)}px "Bricolage Grotesque", sans-serif`;
+  ctx.textAlign = 'right'; ctx.textBaseline = 'alphabetic';
+  ctx.globalAlpha = 0.18; ctx.fillText(atom.title[0], w - w * 0.05, h * 0.92); ctx.globalAlpha = 1;
+}
+
+// ------------------------------------------------------------ state & storage
+const store = {
+  load() { try { return JSON.parse(localStorage.getItem(RUN_KEY) || 'null'); } catch { return null; } },
+  save(s) { try { localStorage.setItem(RUN_KEY, JSON.stringify(s)); } catch {} },
+};
+let state = store.load();
+if (!state || state.done || !Array.isArray(state.answers)) state = freshState();
+function freshState() {
+  return { run: 'run-' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6), seed: (Date.now() % 100000) + 7, answers: [], started: new Date().toISOString(), done: false };
+}
+let db = null, saveTimer = null, saveStatus = 'local';
+(async () => {
+  for (let i = 0; i < 20 && !window.claude?.use; i++) await new Promise(r => setTimeout(r, 250));
+  try { db = window.claude?.use ? await window.claude.use('db') : null; } catch { db = null; }
+  if (db) { saveStatus = 'ready'; queueSave(); }
+  renderSaved();
+})();
+function queueSave(now) {
+  store.save(state);
+  if (!db) return;
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(pushSave, now ? 0 : 1500);
+}
+async function pushSave() {
+  if (!db || !state.answers.length) return;
+  try {
+    await db.collection('runs').doc(state.run).set({
+      domain: CONFIG.id, started: state.started, updated: new Date().toISOString(), done: state.done,
+      count: state.answers.length,
+      answers: state.answers.map(x => ({ cat: x.cat, title: x.title, v: x.v })),
+      profile: state.done ? profileText() : null,
+    });
+    saveStatus = 'saved';
+  } catch (e) { saveStatus = 'failed'; }
+  renderSaved();
+}
+function renderSaved() {
+  const el = document.getElementById('savedNote'); if (!el) return;
+  el.textContent = saveStatus === 'saved' ? 'Saved. Claude can read these answers.' :
+    saveStatus === 'failed' ? 'Could not save online. Copy the summary and paste it to Claude instead.' :
+    saveStatus === 'ready' ? 'Saving…' : 'Saved in this browser only. Copy the summary and paste it to Claude.';
+}
+
+// ------------------------------------------------------------ UI
+const play = document.getElementById('play');
+let current = null, cardEl = null, busy = false;
+function updateCount() {
+  const n = state.answers.length;
+  document.getElementById('count').textContent = `${n} / ${ROUNDS}`;
+  document.getElementById('bar').style.width = (n / ROUNDS * 100) + '%';
+}
+function makeCard(atom) {
+  const el = document.createElement('article');
+  el.className = 'card';
+  el.innerHTML = `<div class="art"><canvas></canvas><span class="cat"></span></div>
+    <div class="copy"><h2></h2><p></p></div>
+    <span class="stamp no">No</span><span class="stamp yes">Yes</span><span class="stamp love">Love</span><span class="stamp skip">Meh</span>`;
+  el.querySelector('.cat').textContent = CATS[atom.cat].name;
+  el.querySelector('h2').textContent = atom.title;
+  el.querySelector('p').textContent = atom.line;
+  return el;
+}
+function show() {
+  updateCount();
+  if (state.answers.length >= ROUNDS) { finish(); return; }
+  current = nextAtom(state);
+  if (!current) { finish(); return; }
+  play.innerHTML = '';
+  const peek = nextAtomPeek();
+  if (peek) { const u = makeCard(peek); u.classList.add('under'); play.appendChild(u); requestAnimationFrame(() => paint(u.querySelector('canvas'), peek)); }
+  cardEl = makeCard(current);
+  play.appendChild(cardEl);
+  requestAnimationFrame(() => paint(cardEl.querySelector('canvas'), current));
+  bindDrag(cardEl);
+}
+function nextAtomPeek() {
+  const fake = { ...state, answers: state.answers.concat([{ id: current.id, cat: current.cat, v: 'skip' }]) };
+  return nextAtom(fake);
+}
+function decide(v) {
+  if (busy || !current || !cardEl) return;
+  busy = true;
+  state.answers.push({ id: current.id, cat: current.cat, title: current.title, v, t: Date.now() });
+  queueSave();
+  const dx = v === 'no' ? -1 : v === 'yes' ? 1 : 0, dy = v === 'love' ? -1 : v === 'skip' ? 1 : 0;
+  cardEl.classList.add('fly');
+  cardEl.style.transform = `translate(${dx * 140}%, ${dy * 120}%) rotate(${dx * 18}deg)`;
+  cardEl.style.opacity = '0';
+  setTimeout(() => { busy = false; show(); }, 260);
+}
+function setStamps(el, dx, dy) {
+  const s = k => el.querySelector('.stamp.' + k);
+  const ax = Math.abs(dx), ay = Math.abs(dy);
+  s('no').style.opacity = dx < 0 && ax > ay ? Math.min(1, ax / 90) : 0;
+  s('yes').style.opacity = dx > 0 && ax > ay ? Math.min(1, ax / 90) : 0;
+  s('love').style.opacity = dy < 0 && ay > ax ? Math.min(1, ay / 90) : 0;
+  s('skip').style.opacity = dy > 0 && ay > ax ? Math.min(1, ay / 90) : 0;
+}
+function bindDrag(el) {
+  let start = null;
+  el.addEventListener('pointerdown', e => { if (busy) return; start = { x: e.clientX, y: e.clientY }; el.setPointerCapture(e.pointerId); el.classList.remove('snap'); el.style.cursor = 'grabbing'; });
+  el.addEventListener('pointermove', e => {
+    if (!start) return;
+    const dx = e.clientX - start.x, dy = e.clientY - start.y;
+    el.style.transform = `translate(${dx}px, ${dy}px) rotate(${dx * 0.06}deg)`;
+    setStamps(el, dx, dy);
+  });
+  const up = e => {
+    if (!start) return;
+    const dx = e.clientX - start.x, dy = e.clientY - start.y; start = null; el.style.cursor = '';
+    const ax = Math.abs(dx), ay = Math.abs(dy);
+    if (Math.max(ax, ay) > 90) { decide(ax > ay ? (dx > 0 ? 'yes' : 'no') : (dy < 0 ? 'love' : 'skip')); return; }
+    el.classList.add('snap'); el.style.transform = ''; setStamps(el, 0, 0);
+  };
+  el.addEventListener('pointerup', up); el.addEventListener('pointercancel', up);
+}
+document.querySelectorAll('.btn').forEach(b => b.addEventListener('click', () => decide(b.dataset.v)));
+window.addEventListener('keydown', e => {
+  if (!document.getElementById('results').hidden) return;
+  const map = { ArrowLeft: 'no', ArrowRight: 'yes', ArrowUp: 'love', ArrowDown: 'skip' };
+  if (map[e.key]) { e.preventDefault(); decide(map[e.key]); }
+  if ((e.key === 'z' || e.key === 'Z') && (e.ctrlKey || e.metaKey)) undo();
+});
+function undo() {
+  if (busy || !state.answers.length) return;
+  state.answers.pop(); queueSave(); show();
+}
+document.getElementById('undo').addEventListener('click', undo);
+document.getElementById('finish').addEventListener('click', () => { if (state.answers.length >= 10) finish(); });
+
+// ------------------------------------------------------------ results
+function grouped() {
+  const out = {};
+  for (const x of state.answers) { (out[x.cat] = out[x.cat] || { love: [], yes: [], no: [], skip: [] })[x.v].push(x.title); }
+  return out;
+}
+function catScore(g) { return g.love.length * 2 + g.yes.length - g.no.length; }
+function profileText() {
+  const g = grouped();
+  const lines = [];
+  for (const [cat, info] of Object.entries(CATS)) {
+    const x = g[cat]; if (!x) continue;
+    const parts = [];
+    if (x.love.length) parts.push('LOVE: ' + x.love.join('; '));
+    if (x.yes.length) parts.push('yes: ' + x.yes.join('; '));
+    if (x.no.length) parts.push('no: ' + x.no.join('; '));
+    if (x.skip.length) parts.push("don't care: " + x.skip.join('; '));
+    lines.push(`${info.name} — ${parts.join(' | ')}`);
+  }
+  return `${CONFIG.name}, ${state.answers.length} answers\n` + lines.join('\n');
+}
+function pitch() {
+  const g = grouped();
+  const pick = cat => { const x = g[cat]; if (!x) return null; return x.love[0] || x.yes[0] || null; };
+  const bits = CONFIG.pitch || [];
+  const phrases = bits.map(([c, lead]) => { const v = pick(c); return v ? `${lead} <b>${escapeHtml(v.toLowerCase())}</b>` : null; }).filter(Boolean);
+  return phrases.length ? `Your answers point to ${phrases.join(', ')}.` : `Not enough yes answers yet to sketch ${CONFIG.subject || 'a picture'}.`;
+}
+function escapeHtml(s) { return s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
+function finish() {
+  state.done = true; queueSave(true);
+  document.getElementById('play').hidden = true;
+  document.getElementById('actions').hidden = true;
+  document.getElementById('foot').hidden = true;
+  const res = document.getElementById('results');
+  res.hidden = false;
+  const g = grouped();
+  const loved = state.answers.filter(x => x.v === 'love').map(x => x.title);
+  const cats = Object.entries(g).sort((a, b) => catScore(b[1]) - catScore(a[1]));
+  res.innerHTML = `<h2>Here is what you went for</h2>
+    <div class="pitch">${pitch()}</div>
+    ${loved.length ? `<div class="group"><h3>Loved</h3><div class="chips">${loved.map(t => `<span class="chip love">${escapeHtml(t)}</span>`).join('')}</div></div>` : ''}
+    ${cats.map(([cat, x]) => `<div class="group"><h3>${CATS[cat].name}</h3><div class="chips">${
+      [...x.love.map(t => ['love', t]), ...x.yes.map(t => ['yes', t]), ...x.no.map(t => ['no', t])]
+        .map(([k, t]) => `<span class="chip ${k}">${escapeHtml(t)}</span>`).join('') || '<span class="chip">No strong feelings</span>'
+    }</div></div>`).join('')}
+    <p class="saved" id="savedNote"></p>
+    <div class="row"><button class="primary" id="copy">Copy summary</button><button class="ghost" id="again">Start a new round</button></div>`;
+  renderSaved();
+  document.getElementById('copy').addEventListener('click', async e => {
+    const text = profileText();
+    try { await navigator.clipboard.writeText(text); e.target.textContent = 'Copied'; }
+    catch { const ta = document.createElement('textarea'); ta.value = text; ta.style.width = '100%'; ta.rows = 8; res.appendChild(ta); ta.select(); e.target.textContent = 'Select and copy the text below'; }
+  });
+  document.getElementById('again').addEventListener('click', () => {
+    state = freshState(); store.save(state);
+    res.hidden = true; play.hidden = false;
+    document.getElementById('actions').hidden = false; document.getElementById('foot').hidden = false;
+    show();
+  });
+}
+window.addEventListener('resize', () => { if (cardEl && current) paint(cardEl.querySelector('canvas'), current); });
+show();
+})();
+</script>

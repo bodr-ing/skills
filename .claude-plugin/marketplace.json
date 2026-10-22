@@ -1,0 +1,11 @@
+{
+  "name": "bodring",
+  "owner": { "name": "bodr.ing" },
+  "plugins": [
+    {
+      "name": "bodring",
+      "source": "./",
+      "description": "Skills from bodr.ing: Taste Swipe and more."
+    }
+  ]
+}

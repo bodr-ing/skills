@@ -1,0 +1,1266 @@
+{
+ "id": "games",
+ "name": "Game taste swipe",
+ "title": "Taste Swipe: Games",
+ "heading": "What game do you want?",
+ "rounds": 100,
+ "subject": "a game",
+ "categories": {
+  "premise": {
+   "name": "Premise",
+   "hue": 28
+  },
+  "tone": {
+   "name": "Tone",
+   "hue": 340
+  },
+  "art": {
+   "name": "Art style",
+   "hue": 200
+  },
+  "camera": {
+   "name": "Camera",
+   "hue": 180
+  },
+  "scale": {
+   "name": "Scale",
+   "hue": 15
+  },
+  "role": {
+   "name": "Your role",
+   "hue": 260
+  },
+  "economy": {
+   "name": "Economy",
+   "hue": 45
+  },
+  "building": {
+   "name": "Building",
+   "hue": 90
+  },
+  "units": {
+   "name": "Units",
+   "hue": 0
+  },
+  "combat": {
+   "name": "Combat",
+   "hue": 355
+  },
+  "control": {
+   "name": "Control",
+   "hue": 220
+  },
+  "enemy": {
+   "name": "Opposition",
+   "hue": 300
+  },
+  "info": {
+   "name": "Information",
+   "hue": 240
+  },
+  "systems": {
+   "name": "World systems",
+   "hue": 160
+  },
+  "map": {
+   "name": "Maps",
+   "hue": 120
+  },
+  "meta": {
+   "name": "Progression",
+   "hue": 50
+  },
+  "story": {
+   "name": "Story",
+   "hue": 280
+  },
+  "pace": {
+   "name": "Pace",
+   "hue": 10
+  },
+  "social": {
+   "name": "Playing with others",
+   "hue": 190
+  },
+  "challenge": {
+   "name": "Challenge",
+   "hue": 5
+  },
+  "sound": {
+   "name": "Sound",
+   "hue": 310
+  },
+  "feel": {
+   "name": "Feel",
+   "hue": 35
+  },
+  "platform": {
+   "name": "Platform",
+   "hue": 210
+  },
+  "reference": {
+   "name": "Games like",
+   "hue": 0
+  }
+ },
+ "atoms": [
+  [
+   "premise",
+   "Last fire in a dark world",
+   "The sun is gone. Your light is the only safe ground."
+  ],
+  [
+   "premise",
+   "Gangs of a 1930s city",
+   "Rackets, speakeasies and turf wars, block by block."
+  ],
+  [
+   "premise",
+   "Occult war hidden in a modern city",
+   "Vampires, witches and a secret bureau fight where nobody may notice."
+  ],
+  [
+   "premise",
+   "Space fleets over planets",
+   "Carriers, fighters and orbital bombardment."
+  ],
+  [
+   "premise",
+   "Medieval kingdoms",
+   "Castles, knights, sieges and succession."
+  ],
+  [
+   "premise",
+   "Ant colony underground",
+   "Tunnels, queens, pheromone trails and beetle raids."
+  ],
+  [
+   "premise",
+   "Cold War proxy conflict",
+   "Spies, coups and tanks that never quite cross the border."
+  ],
+  [
+   "premise",
+   "Post-apocalyptic scavengers",
+   "Rusted vehicles, raiders and the last clean water."
+  ],
+  [
+   "premise",
+   "Mythic gods at war",
+   "Each faction worships a god who walks the battlefield."
+  ],
+  [
+   "premise",
+   "Tiny toy soldiers in a house",
+   "Plastic armies fight across a kitchen floor."
+  ],
+  [
+   "premise",
+   "Viking raids and new lands",
+   "Longships, frozen fjords and sagas."
+  ],
+  [
+   "premise",
+   "Alien invasion of Earth",
+   "Defend cities against something that does not negotiate."
+  ],
+  [
+   "premise",
+   "Corporate cyberpunk",
+   "Megacorps, drones, hackers and neon streets."
+  ],
+  [
+   "premise",
+   "Islands at sea",
+   "Archipelagos, ships, storms and trade winds."
+  ],
+  [
+   "premise",
+   "Dinosaurs and primal tribes",
+   "Tame beasts, hold the valley, survive extinction."
+  ],
+  [
+   "premise",
+   "Microbes inside a body",
+   "Immune cells against an infection, in real time."
+  ],
+  [
+   "tone",
+   "Grim and serious",
+   "War is costly, losses hurt, nothing is played for laughs."
+  ],
+  [
+   "tone",
+   "Cozy and warm",
+   "Low stakes, soft edges, a world you like visiting."
+  ],
+  [
+   "tone",
+   "Funny and absurd",
+   "Silly units, jokes in the barks, chaos on purpose."
+  ],
+  [
+   "tone",
+   "Eerie and dreadful",
+   "Something is wrong out in the dark and you feel it."
+  ],
+  [
+   "tone",
+   "Heroic and epic",
+   "Big music, big moments, you save the day."
+  ],
+  [
+   "tone",
+   "Noir and cynical",
+   "Everyone has a price and nobody is clean."
+  ],
+  [
+   "tone",
+   "Melancholic and beautiful",
+   "A sad, quiet world that is still lovely to look at."
+  ],
+  [
+   "tone",
+   "Over-the-top action",
+   "Explosions, swagger and a cheesy one-liner per unit."
+  ],
+  [
+   "tone",
+   "Mysterious and strange",
+   "Weird rules and a world you slowly figure out."
+  ],
+  [
+   "art",
+   "Low-poly diorama",
+   "Clean faceted shapes, like a model on a table."
+  ],
+  [
+   "art",
+   "Painterly and hand-drawn",
+   "Brush strokes, like a living illustration."
+  ],
+  [
+   "art",
+   "Pixel art",
+   "Crisp sprites and a deliberate retro palette."
+  ],
+  [
+   "art",
+   "Gritty realism",
+   "Mud, smoke, wear and realistic lighting."
+  ],
+  [
+   "art",
+   "High-contrast noir",
+   "Mostly black, a few hard lights, strong silhouettes."
+  ],
+  [
+   "art",
+   "Toy-like miniatures",
+   "Tilt-shift blur and units that look like painted figurines."
+  ],
+  [
+   "art",
+   "Bright cartoon",
+   "Saturated colours, chunky outlines, big readable shapes."
+  ],
+  [
+   "art",
+   "Ink and paper",
+   "Inked lines on a parchment-coloured world."
+  ],
+  [
+   "art",
+   "Neon on black",
+   "Glowing lines and colour against deep darkness."
+  ],
+  [
+   "art",
+   "Soft pastel",
+   "Gentle colours and soft light, almost dreamlike."
+  ],
+  [
+   "art",
+   "Voxel world",
+   "Everything built from little cubes that can break."
+  ],
+  [
+   "art",
+   "Lighting is the art",
+   "A dark world where light sources do all the work."
+  ],
+  [
+   "art",
+   "Detailed and dense",
+   "Lots of little props and life in every corner."
+  ],
+  [
+   "art",
+   "Minimal and abstract",
+   "Simple shapes and symbols, almost a board game."
+  ],
+  [
+   "camera",
+   "Classic top-down RTS camera",
+   "High and angled, the whole battle at a glance."
+  ],
+  [
+   "camera",
+   "Close to the ground",
+   "Low camera, you see faces and the horizon."
+  ],
+  [
+   "camera",
+   "Strategic map zoom",
+   "Zoom out until armies become icons on a map."
+  ],
+  [
+   "camera",
+   "Fixed isometric",
+   "One clean angle, everything readable."
+  ],
+  [
+   "camera",
+   "Side view",
+   "A battle line seen from the side, like a 2D war."
+  ],
+  [
+   "camera",
+   "Free rotating camera",
+   "Spin and tilt around the battle as you like."
+  ],
+  [
+   "camera",
+   "Cinematic replays",
+   "Watch your best moments from dramatic angles."
+  ],
+  [
+   "scale",
+   "A squad of three to five",
+   "Each unit is a character you keep alive."
+  ],
+  [
+   "scale",
+   "A company of thirty",
+   "Enough for tactics, few enough to care."
+  ],
+  [
+   "scale",
+   "Armies of hundreds",
+   "Blocks of soldiers clash across a field."
+  ],
+  [
+   "scale",
+   "Thousands on screen",
+   "Swarms and waves that fill the map."
+  ],
+  [
+   "scale",
+   "One hero plus an army",
+   "A powerful commander fights at the front."
+  ],
+  [
+   "scale",
+   "A whole city to run",
+   "Thousands of citizens, you steer the whole."
+  ],
+  [
+   "scale",
+   "A small map, a short fight",
+   "One clearing, one bridge, one decision."
+  ],
+  [
+   "scale",
+   "A continent-sized war",
+   "Many fronts at once across a huge map."
+  ],
+  [
+   "role",
+   "General giving orders",
+   "You command, the troops carry it out."
+  ],
+  [
+   "role",
+   "Commander on the battlefield",
+   "You are a unit too, and you can die."
+  ],
+  [
+   "role",
+   "God or spirit above it all",
+   "You nudge followers and the world indirectly."
+  ],
+  [
+   "role",
+   "Mayor or overseer",
+   "You plan and build more than you fight."
+  ],
+  [
+   "role",
+   "Crime boss",
+   "You run people, money and favours."
+  ],
+  [
+   "role",
+   "Guardian of one place",
+   "You defend a single home against everything."
+  ],
+  [
+   "role",
+   "Explorer leading a band",
+   "You venture into the unknown with a few followers."
+  ],
+  [
+   "role",
+   "Puppet master",
+   "You win through others: bribes, spies, alliances."
+  ],
+  [
+   "economy",
+   "Workers gather resources",
+   "Peasants chop, mine and haul back to base."
+  ],
+  [
+   "economy",
+   "Income from holding ground",
+   "Control points or districts pay you over time."
+  ],
+  [
+   "economy",
+   "No economy, fixed army",
+   "You get your forces up front and spend them well."
+  ],
+  [
+   "economy",
+   "Trade routes",
+   "Caravans and ships move goods, and raiders hunt them."
+  ],
+  [
+   "economy",
+   "Scavenging the battlefield",
+   "Loot wrecks and the fallen to fund the next push."
+  ],
+  [
+   "economy",
+   "One single currency",
+   "Everything costs one simple resource."
+  ],
+  [
+   "economy",
+   "Many resources and chains",
+   "Wood to planks to ships; deep production chains."
+  ],
+  [
+   "economy",
+   "Population that grows",
+   "People are the resource: feed them and they multiply."
+  ],
+  [
+   "economy",
+   "Resources that run out",
+   "Every deposit depletes, so you must expand."
+  ],
+  [
+   "economy",
+   "Upkeep and supply lines",
+   "Armies far from home cost more and starve if cut off."
+  ],
+  [
+   "building",
+   "A full base to build",
+   "Lay out barracks, walls and towers your way."
+  ],
+  [
+   "building",
+   "No base at all",
+   "Pure armies; you never place a building."
+  ],
+  [
+   "building",
+   "A mobile base",
+   "Your base walks, flies or rolls with you."
+  ],
+  [
+   "building",
+   "Walls and fortifications",
+   "Wall off chokepoints and watch waves break."
+  ],
+  [
+   "building",
+   "Grid-free organic building",
+   "Place things anywhere on natural terrain."
+  ],
+  [
+   "building",
+   "Capture instead of build",
+   "Take over existing buildings in the world."
+  ],
+  [
+   "building",
+   "A city that grows itself",
+   "You zone and guide; houses appear on their own."
+  ],
+  [
+   "building",
+   "Few big buildings",
+   "Three or four structures, each one matters."
+  ],
+  [
+   "building",
+   "Building as a puzzle",
+   "Placement and adjacency bonuses really matter."
+  ],
+  [
+   "units",
+   "Rock, paper, scissors roster",
+   "Clear counters: spears beat horses beat archers."
+  ],
+  [
+   "units",
+   "Named veterans",
+   "Units gain names, ranks and scars you remember."
+  ],
+  [
+   "units",
+   "Disposable swarms",
+   "Spend lives like ammo; quantity has a quality."
+  ],
+  [
+   "units",
+   "Customizable units",
+   "Design your own loadouts and gear."
+  ],
+  [
+   "units",
+   "Very different factions",
+   "Each side plays like a different game."
+  ],
+  [
+   "units",
+   "Mirror factions",
+   "Everyone has the same tools, so only skill differs."
+  ],
+  [
+   "units",
+   "Big monsters and machines",
+   "Giant units that change a fight on their own."
+  ],
+  [
+   "units",
+   "Heroes with abilities",
+   "Special units with spells and cooldowns."
+  ],
+  [
+   "units",
+   "Units with morale",
+   "Troops panic, rout and rally."
+  ],
+  [
+   "units",
+   "Tiny roster, deep units",
+   "Five unit types, each with many uses."
+  ],
+  [
+   "combat",
+   "Fast micro battles",
+   "Split, kite and focus fire with quick clicks."
+  ],
+  [
+   "combat",
+   "Positioning and formations",
+   "Flanks, high ground and lines decide fights."
+  ],
+  [
+   "combat",
+   "Big slow clashes",
+   "Armies grind into each other; you steer the tide."
+  ],
+  [
+   "combat",
+   "Physics destruction",
+   "Buildings crumble, debris flies, terrain scars."
+  ],
+  [
+   "combat",
+   "Cover and suppression",
+   "Units hide behind walls and pin each other down."
+  ],
+  [
+   "combat",
+   "Spells that reshape the field",
+   "Fire, ice, floods, walls of stone."
+  ],
+  [
+   "combat",
+   "Ranged artillery duels",
+   "Long-range guns and spotting decide everything."
+  ],
+  [
+   "combat",
+   "Ambushes and traps",
+   "Lure the enemy into a killing ground."
+  ],
+  [
+   "combat",
+   "Sieges",
+   "Break walls, starve garrisons, storm gates."
+  ],
+  [
+   "combat",
+   "Naval battles",
+   "Fleets maneuver with wind and broadsides."
+  ],
+  [
+   "combat",
+   "Air power",
+   "Planes, dragons or drones rule the skies."
+  ],
+  [
+   "combat",
+   "One-shot lethality",
+   "Units die fast, so every mistake is costly."
+  ],
+  [
+   "control",
+   "Classic mouse control",
+   "Box-select, right-click, hotkeys, as fast as you can."
+  ],
+  [
+   "control",
+   "Pause and plan",
+   "Stop time, give orders, watch them play out."
+  ],
+  [
+   "control",
+   "Turn-based moves",
+   "Take your time, one move each."
+  ],
+  [
+   "control",
+   "Simultaneous turns",
+   "Everyone plans, then all moves happen together."
+  ],
+  [
+   "control",
+   "Indirect orders",
+   "Set goals and priorities; units decide how."
+  ],
+  [
+   "control",
+   "Cards as commands",
+   "Play cards from a hand to deploy and act."
+  ],
+  [
+   "control",
+   "Drawn paths",
+   "Draw a route and units follow it."
+  ],
+  [
+   "control",
+   "Automation and scripts",
+   "Build rules and let your army run itself."
+  ],
+  [
+   "enemy",
+   "Rival factions like you",
+   "Opponents that build and expand just as you do."
+  ],
+  [
+   "enemy",
+   "Endless monster waves",
+   "Hold out against ever larger hordes."
+  ],
+  [
+   "enemy",
+   "Nature itself",
+   "Storms, fire, cold and floods are the enemy."
+  ],
+  [
+   "enemy",
+   "A cunning AI commander",
+   "An opponent that adapts to how you play."
+  ],
+  [
+   "enemy",
+   "Bosses",
+   "Huge enemies with patterns to learn."
+  ],
+  [
+   "enemy",
+   "Other players only",
+   "Every opponent is a real person."
+  ],
+  [
+   "enemy",
+   "Shifting alliances",
+   "Today’s ally is tomorrow’s target."
+  ],
+  [
+   "enemy",
+   "A spreading corruption",
+   "Something creeps across the map and you push it back."
+  ],
+  [
+   "enemy",
+   "Neutral creatures in the wild",
+   "Camps of beasts guard treasure and terrain."
+  ],
+  [
+   "info",
+   "Fog of war",
+   "You only see what your units see."
+  ],
+  [
+   "info",
+   "Perfect information",
+   "Everything is visible; it is pure strategy."
+  ],
+  [
+   "info",
+   "Scouting really matters",
+   "Knowing beats having; spies and scouts win wars."
+  ],
+  [
+   "info",
+   "Deception and decoys",
+   "Fake armies, feints and bluffs."
+  ],
+  [
+   "info",
+   "Stealth units",
+   "Invisible agents slip past defences."
+  ],
+  [
+   "info",
+   "Hidden objectives",
+   "Each side has a secret goal to uncover."
+  ],
+  [
+   "info",
+   "Readable at a glance",
+   "Every unit and state is clear without squinting."
+  ],
+  [
+   "systems",
+   "Day and night cycle",
+   "The battle changes when the sun goes down."
+  ],
+  [
+   "systems",
+   "Weather that matters",
+   "Rain, snow and fog change movement and sight."
+  ],
+  [
+   "systems",
+   "Seasons",
+   "Harvest in autumn, starve in winter."
+  ],
+  [
+   "systems",
+   "Fire that spreads",
+   "Forests and towns burn; wind carries it."
+  ],
+  [
+   "systems",
+   "Light and darkness as territory",
+   "You can only act where your light reaches."
+  ],
+  [
+   "systems",
+   "Deformable terrain",
+   "Dig trenches, blow craters, raise hills."
+  ],
+  [
+   "systems",
+   "Water and flooding",
+   "Break a dam and the valley changes."
+  ],
+  [
+   "systems",
+   "Living ecosystem",
+   "Animals breed, forests regrow, overhunting has a cost."
+  ],
+  [
+   "systems",
+   "Disease and plague",
+   "Sickness spreads through crowded armies and towns."
+  ],
+  [
+   "systems",
+   "Heat or noise exposure",
+   "Loud actions draw attention you cannot afford."
+  ],
+  [
+   "systems",
+   "Time manipulation",
+   "Rewind, slow or skip time as a weapon."
+  ],
+  [
+   "systems",
+   "Gravity and physics",
+   "Momentum, falls and collisions matter."
+  ],
+  [
+   "map",
+   "Hand-crafted maps",
+   "Each map designed with care and secrets."
+  ],
+  [
+   "map",
+   "Procedural maps",
+   "A new world every game."
+  ],
+  [
+   "map",
+   "Cities and streets",
+   "Fight through alleys, rooftops and plazas."
+  ],
+  [
+   "map",
+   "Wild nature",
+   "Forests, rivers, mountains and open fields."
+  ],
+  [
+   "map",
+   "Verticality",
+   "Cliffs, towers and high ground everywhere."
+  ],
+  [
+   "map",
+   "Underground layers",
+   "Fight above and below the surface."
+  ],
+  [
+   "map",
+   "Tiny arena",
+   "Small maps, immediate fights."
+  ],
+  [
+   "map",
+   "Huge open world",
+   "A sprawling map to explore and conquer."
+  ],
+  [
+   "meta",
+   "Roguelite runs",
+   "Short runs, random upgrades, start over stronger."
+  ],
+  [
+   "meta",
+   "Long story campaign",
+   "Mission after mission through a written war."
+  ],
+  [
+   "meta",
+   "Persistent empire",
+   "A map that remembers every battle you fought."
+  ],
+  [
+   "meta",
+   "No progression",
+   "Every match starts fresh and fair."
+  ],
+  [
+   "meta",
+   "Unlock new factions",
+   "Earn new sides and units over time."
+  ],
+  [
+   "meta",
+   "Tech tree",
+   "Research your way through a branching tree."
+  ],
+  [
+   "meta",
+   "Rule-breaking pacts",
+   "Take deals that bend the rules at a price."
+  ],
+  [
+   "meta",
+   "Deckbuilding between battles",
+   "Build a deck of units and powers."
+  ],
+  [
+   "meta",
+   "Veterans carry over",
+   "Survivors return in the next battle, stronger."
+  ],
+  [
+   "meta",
+   "Base that grows between missions",
+   "A home base you upgrade between fights."
+  ],
+  [
+   "story",
+   "Strong written story",
+   "Characters, cutscenes and a plot with turns."
+  ],
+  [
+   "story",
+   "Emergent stories",
+   "The best stories are what happened in your game."
+  ],
+  [
+   "story",
+   "Lore to dig up",
+   "The world tells its story through ruins and notes."
+  ],
+  [
+   "story",
+   "No story at all",
+   "Pure game, no words needed."
+  ],
+  [
+   "story",
+   "Choices that change the world",
+   "Your decisions branch the campaign."
+  ],
+  [
+   "story",
+   "Characters who talk back",
+   "Advisors and rivals react to what you do."
+  ],
+  [
+   "story",
+   "A mystery to solve",
+   "Figure out what really happened."
+  ],
+  [
+   "story",
+   "Myth and legend tone",
+   "Told like a saga, an epic poem."
+  ],
+  [
+   "pace",
+   "Five-minute matches",
+   "A full game in one coffee break."
+  ],
+  [
+   "pace",
+   "Twenty-minute matches",
+   "Room to build up and still finish in one sitting."
+  ],
+  [
+   "pace",
+   "Hour-long epics",
+   "Slow builds and huge late-game wars."
+  ],
+  [
+   "pace",
+   "Slow and thoughtful",
+   "Time to think; speed does not win."
+  ],
+  [
+   "pace",
+   "Frantic and fast",
+   "Everything at once; reflexes matter."
+  ],
+  [
+   "pace",
+   "Calm build, sudden storm",
+   "Quiet phases broken by intense attacks."
+  ],
+  [
+   "pace",
+   "Play in short bursts",
+   "Pick up and put down any time."
+  ],
+  [
+   "pace",
+   "Sessions across weeks",
+   "A long game you return to over days."
+  ],
+  [
+   "social",
+   "Solo against the AI",
+   "Just you and the game."
+  ],
+  [
+   "social",
+   "Co-op with a friend",
+   "Two players, one side, shared fate."
+  ],
+  [
+   "social",
+   "Competitive 1v1",
+   "Ranked duels; you against one rival."
+  ],
+  [
+   "social",
+   "Free-for-all with betrayal",
+   "Many players, alliances and backstabs."
+  ],
+  [
+   "social",
+   "Big team battles",
+   "Four against four or more."
+  ],
+  [
+   "social",
+   "Async play",
+   "Take your turn whenever, like correspondence chess."
+  ],
+  [
+   "social",
+   "Spectating and casting",
+   "Matches fun to watch and stream."
+  ],
+  [
+   "social",
+   "Couch play on one screen",
+   "Friends in the same room."
+  ],
+  [
+   "social",
+   "Community maps and mods",
+   "Players make new content for each other."
+  ],
+  [
+   "challenge",
+   "Hard and punishing",
+   "Losing is common and teaches you."
+  ],
+  [
+   "challenge",
+   "Relaxed, hard to lose",
+   "Enjoy the ride, few fail states."
+  ],
+  [
+   "challenge",
+   "Easy to learn, deep to master",
+   "Simple rules, endless depth."
+  ],
+  [
+   "challenge",
+   "Complex simulation",
+   "Many interlocking systems to learn."
+  ],
+  [
+   "challenge",
+   "Puzzle-like missions",
+   "Each scenario has a clever solution."
+  ],
+  [
+   "challenge",
+   "Adjustable everything",
+   "Tune speed, difficulty and rules yourself."
+  ],
+  [
+   "challenge",
+   "Comebacks always possible",
+   "No game is lost until it is lost."
+  ],
+  [
+   "sound",
+   "Orchestral score",
+   "Strings, brass and choirs swell with the battle."
+  ],
+  [
+   "sound",
+   "Synth and electronic",
+   "Pulsing synths and moody textures."
+  ],
+  [
+   "sound",
+   "Sparse ambience",
+   "Wind, distant sounds, long silences."
+  ],
+  [
+   "sound",
+   "Units talk back",
+   "Every click gets a voice line."
+  ],
+  [
+   "sound",
+   "Silent, wordless units",
+   "Units answer with sounds, never words."
+  ],
+  [
+   "sound",
+   "Music that reacts",
+   "The score follows the tension of the fight."
+  ],
+  [
+   "sound",
+   "Crunchy, heavy sound",
+   "Every impact thumps; guns and steel feel weighty."
+  ],
+  [
+   "feel",
+   "Juicy feedback",
+   "Screen shake, sparks and punchy hits."
+  ],
+  [
+   "feel",
+   "Calm and precise",
+   "Clean, quiet feedback, like a tool."
+  ],
+  [
+   "feel",
+   "Weighty units",
+   "Units have mass; turning and stopping take time."
+  ],
+  [
+   "feel",
+   "Snappy and responsive",
+   "Orders execute instantly, no lag."
+  ],
+  [
+   "feel",
+   "Beautiful idle moments",
+   "The game is lovely even when nothing happens."
+  ],
+  [
+   "feel",
+   "Satisfying chain reactions",
+   "One move sets off a cascade."
+  ],
+  [
+   "feel",
+   "Tactile miniature feel",
+   "Picking up and placing things feels physical."
+  ],
+  [
+   "feel",
+   "Big screen-filling moments",
+   "Rare huge events that stop the room."
+  ],
+  [
+   "platform",
+   "PC with mouse and keyboard",
+   "Precision clicks and hotkeys."
+  ],
+  [
+   "platform",
+   "Controller-friendly",
+   "Plays well from the couch."
+  ],
+  [
+   "platform",
+   "Phone or tablet",
+   "Touch controls, play anywhere."
+  ],
+  [
+   "platform",
+   "Runs in a browser",
+   "Click a link and play."
+  ],
+  [
+   "platform",
+   "Steam Deck friendly",
+   "Handheld PC play."
+  ],
+  [
+   "platform",
+   "VR tabletop",
+   "Lean over the battlefield like a table."
+  ],
+  [
+   "reference",
+   "Command & Conquer: Generals",
+   "Factions, superweapons, fast base-building war."
+  ],
+  [
+   "reference",
+   "StarCraft II",
+   "Precise, fast, competitive, three wildly different races."
+  ],
+  [
+   "reference",
+   "Age of Empires II",
+   "History, villagers, castles and long matches."
+  ],
+  [
+   "reference",
+   "Company of Heroes",
+   "Squads, cover and territory in a gritty war."
+  ],
+  [
+   "reference",
+   "They Are Billions",
+   "Walls against a zombie tide; one breach ends it."
+  ],
+  [
+   "reference",
+   "Northgard",
+   "Vikings, seasons and cozy expansion."
+  ],
+  [
+   "reference",
+   "Bad North",
+   "Tiny islands, minimalist art, short tactical raids."
+  ],
+  [
+   "reference",
+   "Warcraft III",
+   "Heroes, creeps and a story campaign."
+  ],
+  [
+   "reference",
+   "Total War",
+   "Huge field battles plus an empire map."
+  ],
+  [
+   "reference",
+   "Frostpunk",
+   "Survive the cold; hard choices for a city."
+  ],
+  [
+   "reference",
+   "Into the Breach",
+   "Small perfect puzzles with giant mechs."
+  ],
+  [
+   "reference",
+   "Desperados or Shadow Tactics",
+   "Stealth, small squad, planning."
+  ],
+  [
+   "reference",
+   "Supreme Commander",
+   "Gigantic scale and strategic zoom."
+  ],
+  [
+   "reference",
+   "Mindustry or Factorio",
+   "Automation and production chains under attack."
+  ]
+ ],
+ "pitch": [
+  [
+   "premise",
+   "a game about"
+  ],
+  [
+   "tone",
+   "that feels"
+  ],
+  [
+   "art",
+   "drawn as"
+  ],
+  [
+   "scale",
+   "at the scale of"
+  ],
+  [
+   "role",
+   "where you play the"
+  ],
+  [
+   "combat",
+   "with combat built on"
+  ],
+  [
+   "meta",
+   "held together by"
+  ],
+  [
+   "pace",
+   "paced as"
+  ],
+  [
+   "social",
+   "played as"
+  ]
+ ]
+}
