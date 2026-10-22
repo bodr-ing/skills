@@ -459,13 +459,22 @@ render();
   const user = await window.claude.use("user");
   const w = user ? await user.can("data.write") : null;
   if (w === false) canWrite = false;
-  db.collection("cards").orderBy("createdAt", "desc").limit(300).onSnapshot((snap) => {
-    const before = new Set(cards.map((c) => c.id));
-    cards = snap.docs.map(normalize);
+  // Live cards are never cut off by the history window: subscribe to them separately and merge.
+  let recent = [], live = [], seen = null;
+  const merge = () => {
+    const byId = new Map();
+    for (const d of [...recent, ...live]) byId.set(d.id, d);
+    const before = seen;
+    cards = [...byId.values()].map(normalize).sort((a, b) => b.createdAt - a.createdAt);
+    seen = new Set(cards.map((c) => c.id));
     derive();
-    const fresh = cards.filter((c) => !before.has(c.id) && c.status === "open");
-    if (before.size && fresh.length) toast(`${fresh[0].agent}: ${fresh[0].title}`);
+    const fresh = before ? cards.filter((c) => !before.has(c.id) && c.status === "open") : [];
+    if (fresh.length) toast(`${fresh[0].agent}: ${fresh[0].title}`);
     render();
-  }, () => { toast("Lost the connection to your cards. Reload to reconnect."); });
+  };
+  const lost = () => toast("Lost the connection to your cards. Reload to reconnect.");
+  const cardsRef = db.collection("cards");
+  cardsRef.orderBy("createdAt", "desc").limit(300).onSnapshot((snap) => { recent = snap.docs; merge(); }, lost);
+  cardsRef.where("status", "in", ["open", "snoozed"]).onSnapshot((snap) => { live = snap.docs; merge(); }, lost);
 })();
 </script>
