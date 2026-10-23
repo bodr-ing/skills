@@ -35,4 +35,4 @@ MIT
 
 ## Deploy
 
-The site at skills.bodr.ing is a Cloudflare Worker with static assets. From the repo root, run `npx wrangler deploy`. `.assetsignore` keeps repo-only files off the site.
+The site at skills.bodr.ing is a Cloudflare Worker with static assets. From the repo root, run `node scripts/build-demos.mjs` (it rebuilds the Hand Up and Taste Swipe demo pages) and then `npx wrangler deploy`. `.assetsignore` keeps repo-only files off the site.
