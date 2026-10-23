@@ -74,25 +74,15 @@ h1 { font-family: var(--display); font-weight: 800; font-size: 22px; margin: 0; 
 .stamp.yes { left: 18px; color: var(--yes); transform: rotate(-10deg); }
 .stamp.love { left: 50%; transform: translateX(-50%); color: var(--love); top: 40%; }
 .stamp.skip { left: 50%; transform: translateX(-50%); color: var(--skip); top: 40%; }
-.actions { display: flex; justify-content: center; align-items: flex-start; gap: clamp(12px, 5vw, 22px); }
+.actions { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
 .btn {
-  appearance: none; border: 0; background: none; padding: 0; color: var(--fg); cursor: pointer;
-  display: grid; grid-template-rows: 64px auto; gap: 6px; justify-items: center; align-items: center; font: 600 12px var(--body); -webkit-tap-highlight-color: transparent;
+  appearance: none; border: 0; border-radius: 999px; padding: 12px 4px; cursor: pointer; white-space: nowrap;
+  background: color-mix(in srgb, var(--c) 16%, var(--card)); color: var(--c); font: 700 15px/1 var(--display);
+  transition: background 0.12s ease, transform 0.12s ease; -webkit-tap-highlight-color: transparent;
 }
-.btn i {
-  width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; color: var(--c);
-  background: var(--card); border: 2px solid color-mix(in srgb, var(--c) 35%, var(--line));
-  box-shadow: 0 6px 16px -8px color-mix(in srgb, var(--c) 60%, transparent);
-  transition: transform 0.12s ease, background 0.15s ease, color 0.15s ease;
-}
-.btn.small i { width: 48px; height: 48px; }
-.btn svg { width: 30px; height: 30px; }
-.btn.small svg { width: 22px; height: 22px; }
-.btn span { color: var(--muted); }
-.btn:hover i, .btn:focus-visible i { background: var(--c); color: var(--card); }
-.btn:active i { transform: scale(0.9); }
-.btn:focus-visible { outline: none; }
-.btn:focus-visible i { outline: 2px solid var(--fg); outline-offset: 3px; }
+.btn:hover { background: color-mix(in srgb, var(--c) 26%, var(--card)); }
+.btn:active { transform: scale(0.95); }
+.btn:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
 .btn.no { --c: var(--no); } .btn.yes { --c: var(--yes); } .btn.love { --c: var(--love); } .btn.skip { --c: var(--skip); }
 .foot { display: flex; justify-content: space-between; gap: 10px; font-size: 13px; color: var(--muted); flex-wrap: wrap; }
 .link { appearance: none; background: none; border: 0; color: var(--muted); font: inherit; text-decoration: underline; cursor: pointer; padding: 0; }
@@ -128,10 +118,10 @@ h1 { font-family: var(--display); font-weight: 800; font-size: 22px; margin: 0; 
   <section id="play" class="stage" aria-live="polite"></section>
 
   <div class="actions" id="actions">
-    <button class="btn no" id="bNo" data-v="no" title="No (&larr;)"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></i><span>No</span></button>
-    <button class="btn skip small" id="bSkip" data-v="skip" title="Don't care (&darr;)"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 12h12"/></svg></i><span>Don't care</span></button>
-    <button class="btn love small" id="bLove" data-v="love" title="Love it (&uarr;)"><i><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3-4.6-4.4 6.3-.9z"/></svg></i><span>Love it</span></button>
-    <button class="btn yes" id="bYes" data-v="yes" title="Yes (&rarr;)"><i><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.2-9.3C1.7 8 3.9 4.5 7.4 4.5c2 0 3.6 1.1 4.6 2.7 1-1.6 2.6-2.7 4.6-2.7 3.5 0 5.7 3.5 4.6 6.7-1.7 4.7-9.2 9.3-9.2 9.3z"/></svg></i><span>Yes</span></button>
+    <button class="btn no" id="bNo" data-v="no" title="No (&larr;)">No</button>
+    <button class="btn skip" id="bSkip" data-v="skip" title="Don't care (&darr;)">Skip</button>
+    <button class="btn yes" id="bYes" data-v="yes" title="Yes (&rarr;)">Yes</button>
+    <button class="btn love" id="bLove" data-v="love" title="Love it (&uarr;)">Love it</button>
   </div>
   <div class="foot" id="foot">
     <span>Swipe the card, use the buttons or the arrow keys.</span>
