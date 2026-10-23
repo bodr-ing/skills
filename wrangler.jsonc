@@ -1,0 +1,7 @@
+// Deploys skills.bodr.ing as a Worker with static assets: npx wrangler deploy
+{
+  "name": "bodring-skills-site",
+  "compatibility_date": "2026-10-01",
+  "assets": { "directory": "." },
+  "routes": [{ "pattern": "skills.bodr.ing", "custom_domain": true }]
+}

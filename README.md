@@ -32,3 +32,7 @@ Or copy a skill folder into `~/.claude/skills/` (all projects) or `.claude/skill
 ## License
 
 MIT
+
+## Deploy
+
+The site at skills.bodr.ing is a Cloudflare Worker with static assets. From the repo root, run `npx wrangler deploy`. `.assetsignore` keeps repo-only files off the site.
