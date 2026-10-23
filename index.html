@@ -51,7 +51,10 @@
     .steps { display: grid; gap: 18px; counter-reset: s; margin-top: 20px; }
     .step { display: grid; grid-template-columns: 40px 1fr; gap: 4px 14px; }
     .step::before { counter-increment: s; content: counter(s); grid-row: span 2; width: 32px; height: 32px; border-radius: 50%; background: var(--ink); color: var(--bg); display: grid; place-items: center; font-weight: 700; }
-    .step > * { min-width: 0; }
+    .step > * { grid-column: 2; min-width: 0; }
+    .mode { margin-top: 36px; }
+    .mode h3 { font-size: 22px; }
+    .mode > p { margin: 6px 0 0; color: var(--muted); max-width: 64ch; }
     .step p { margin: 0; color: var(--muted); }
     pre { margin: 8px 0 0; background: var(--code-bg); color: var(--code-ink); border-radius: 12px; padding: 14px 16px; overflow-x: auto; font-size: 13px; line-height: 1.6; }
     .tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
@@ -80,11 +83,19 @@
           <span class="tag mono">skill · deck builder</span>
           <h2 style="margin-top:12px">Taste Swipe</h2>
           <p class="lede" style="font-size:18px">Find out what someone actually wants when they can't say it yet. The agent breaks the subject into its smallest choices, you swipe about 100 cards, and it reads your answers back as a profile and concrete directions.</p>
+          <p style="margin:16px 0 0;color:var(--muted)">Install for Claude Code, then ask it to "help me figure out what I want":</p>
+<pre>d=~/.claude/skills/taste-swipe; u=https://skills.bodr.ing/skills/taste-swipe
+mkdir -p $d/assets $d/scripts $d/decks
+for f in SKILL.md assets/template.html scripts/build.mjs decks/games.json; do
+  curl -fsSo $d/$f $u/$f
+done</pre>
         </div>
         <div class="card">
           <h3>Files</h3>
           <div class="files">
             <a href="skills/taste-swipe/SKILL.md">SKILL.md <span>atomize, build, read</span></a>
+            <a href="skills/taste-swipe/assets/template.html">template.html <span>the swipe page</span></a>
+            <a href="skills/taste-swipe/scripts/build.mjs">build.mjs <span>deck to page</span></a>
             <a href="skills/taste-swipe/decks/games.json">games.json <span>a complete 224-card deck</span></a>
           </div>
         </div>
@@ -94,21 +105,46 @@
     <section id="hand-up">
       <div class="skill">
         <div>
-          <span class="tag mono">skill · mcp server</span>
+          <span class="tag mono">skill · optional mcp server</span>
           <h2 style="margin-top:12px">Hand Up</h2>
-          <p class="lede" style="font-size:18px">All your agents raise a hand in one phone feed when they're blocked, about to collide, or found something you should know. Swipe right to go with their pick, left to dismiss, up for later. Only blockers buzz you.</p>
-          <div class="tools" style="margin-top:16px"><code>ask</code><code>raise</code><code>claim</code><code>release</code><code>inbox</code></div>
+          <p class="lede" style="font-size:18px">All your agents raise a hand in one swipe deck when they're blocked, about to collide, or found something you should know. Swipe right to go with their pick, left to dismiss, up for later, down to reply. The agent reads your answer and tells you it picked it up.</p>
         </div>
         <div class="card">
           <h3>Files</h3>
           <div class="files">
             <a href="skills/hand-up/SKILL.md">SKILL.md <span>for agents with skills</span></a>
+            <a href="skills/hand-up/assets/deck.html">deck.html <span>the swipe deck</span></a>
             <a href="skills/hand-up/AGENTS.md">AGENTS.md <span>paste-in for everyone else</span></a>
             <a href="skills/hand-up/notify-hook.mjs">notify-hook.mjs <span>Claude Code hook</span></a>
           </div>
         </div>
       </div>
 
+      <div class="mode">
+        <h3>Deck mode: Claude, nothing to host</h3>
+        <p>Cards live in a private Hand Up page in your Claude account, so you clear them in the Claude app on your phone.</p>
+        <div class="steps">
+          <div class="step">
+            <h3>Install the skill</h3>
+            <p>Into Claude Code. Any agent with the Artifact tools can use it.</p>
+<pre>d=~/.claude/skills/hand-up; u=https://skills.bodr.ing/skills/hand-up
+mkdir -p $d/assets
+for f in SKILL.md assets/deck.html notify-hook.mjs; do curl -fsSo $d/$f $u/$f; done</pre>
+          </div>
+          <div class="step">
+            <h3>Let the first agent make your deck</h3>
+            <p>The first time an agent needs you, it publishes the deck and gives you the link. Pin it in the Claude app. Every later agent finds the same deck. Writing cards needs auto mode, or your OK on the first write.</p>
+          </div>
+          <div class="step">
+            <h3>Swipe</h3>
+            <p>Agents keep working while they wait and check back after 3, 10 and 30 minutes. Each answered card shows when the agent picked it up and what it did.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mode">
+        <h3>Hub mode: any agent, phone push</h3>
+        <p>Run the small Hand Up server when you want Codex and other agents in the same feed, or want blockers to buzz your phone. Agents get the tools <code>ask</code>, <code>raise</code>, <code>claim</code>, <code>release</code> and <code>inbox</code>.</p>
       <div class="steps">
         <div class="step">
           <h3>Run the hub</h3>
@@ -132,9 +168,8 @@ npm install && npm start</pre>
 <pre>claude mcp add --transport http handup "$HANDUP_URL/mcp?agent=claude" \
   --header "Authorization: Bearer $HANDUP_TOKEN" --scope user
 
-mkdir -p ~/.claude/skills/hand-up
-curl -o ~/.claude/skills/hand-up/SKILL.md https://skills.bodr.ing/skills/hand-up/SKILL.md
-curl -o ~/.claude/skills/hand-up/notify-hook.mjs https://skills.bodr.ing/skills/hand-up/notify-hook.mjs</pre>
+</pre>
+<p style="margin-top:10px">Install the skill as in deck mode above, so Claude knows when to raise a hand.</p>
 <p style="margin-top:10px">Optional: buzz your phone when Claude Code waits for you in the terminal. Add to <code>~/.claude/settings.json</code>:</p>
 <pre>{ "hooks": { "Notification": [ { "hooks": [
   { "type": "command", "command": "node ~/.claude/skills/hand-up/notify-hook.mjs" }
@@ -153,6 +188,7 @@ env = { HANDUP_URL = "https://your-hub", HANDUP_TOKEN = "…", HANDUP_AGENT = "c
           </div>
         </div>
       </div>
+      </div>
     </section>
 
     <section id="vibe-check">
@@ -168,7 +204,7 @@ env = { HANDUP_URL = "https://your-hub", HANDUP_TOKEN = "…", HANDUP_AGENT = "c
           <div class="files">
             <a href="skills/vibe-check/SKILL.md">SKILL.md <span>the swipe loop</span></a>
             <a href="skills/vibe-check/taste.example.md">taste.example.md <span>what it produces</span></a>
-            <a href="skills/vibe-check/demo.html">demo.html <span>40-card deck</span></a>
+            <a href="skills/vibe-check/demo.html">demo.html <span>40 looks, 30 swipes</span></a>
           </div>
         </div>
       </div>

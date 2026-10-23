@@ -376,7 +376,7 @@ async function showResults() {
   const r = $("results");
   r.hidden = false;
   r.innerHTML = `
-    <h2>You lean ${t.mood[0].k}, ${t.type[0].k}, ${t.color[0].k}.</h2>
+    <h2>You lean ${t.mood[0].k}, with ${t.type[0].k} type and ${t.color[0].k} colour.</h2>
     <p>You liked ${liked.length} of ${TOTAL}, including ${remixes.length} remixes the deck made from your earlier likes.</p>
     ${AXES.map(a => `<div class="dim"><h3>${labels[a]}</h3>${t[a].map(x => `<div class="row"><span>${x.k}</span><span class="track"><i style="width:${x.pct}%"></i></span><span>${x.pct}%</span></div>`).join("")}</div>`).join("")}
     <div class="dim"><h3>Liked</h3><div class="liked">${liked.map(c => `<span class="${c.remix ? "remix" : ""}">${c.name}</span>`).join("") || "<span>None. Brutal.</span>"}</div></div>
