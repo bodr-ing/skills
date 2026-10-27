@@ -290,11 +290,7 @@ footer a { color: var(--green); }
         <p class="story"><b>Next:</b> once you know what it is, <a href="#oohnah">OohNah</a> finds how it should look.</p>
         <details class="install">
           <summary>Install just this one</summary>
-<pre>d=~/.claude/skills/yepnope; u=https://skills.bodr.ing/skills/yepnope
-mkdir -p $d/assets $d/scripts $d/decks
-for f in SKILL.md assets/template.html scripts/build.mjs decks/games.json; do
-  curl -fsSo $d/$f $u/$f
-done</pre>
+<pre>npx skills add bodr-ing/skills --skill yepnope</pre>
           <div class="files">
             <a href="skills/yepnope/SKILL.md">SKILL.md <span>atomize, build, read</span></a>
             <a href="skills/yepnope/assets/template.html">template.html <span>the swipe page</span></a>
@@ -325,9 +321,7 @@ done</pre>
         <p class="story"><b>Before:</b> not sure what it is yet? Start with <a href="#yepnope">YepNope</a>. <b>Next:</b> <a href="#logo-lab">Logo Lab</a> reads your <code>taste.md</code> and finds the mark.</p>
         <details class="install">
           <summary>Install just this one</summary>
-<pre>d=~/.claude/skills/oohnah; u=https://skills.bodr.ing/skills/oohnah
-mkdir -p $d
-for f in SKILL.md demo.html taste.example.md; do curl -fsSo $d/$f $u/$f; done</pre>
+<pre>npx skills add bodr-ing/skills --skill oohnah</pre>
           <div class="files">
             <a href="skills/oohnah/SKILL.md">SKILL.md <span>the swipe loop</span></a>
             <a href="skills/oohnah/demo.html">demo.html <span>40 looks, 30 swipes</span></a>
@@ -358,13 +352,7 @@ for f in SKILL.md demo.html taste.example.md; do curl -fsSo $d/$f $u/$f; done</p
         <p class="story"><b>Before:</b> no <code>taste.md</code> yet? Run <a href="#oohnah">OohNah</a> first, so the palette is settled before anyone draws a mark.</p>
         <details class="install">
           <summary>Install just this one</summary>
-<pre>d=~/.claude/skills/logo-lab; u=https://skills.bodr.ing/skills/logo-lab
-mkdir -p $d/kit
-curl -fsSo $d/SKILL.md $u/SKILL.md
-for f in marks.py page.py photos.py tpl.html verdict.html shot.js render.sh mockup.sh; do
-  curl -fsSo $d/kit/$f $u/kit/$f
-done
-chmod +x $d/kit/*.sh</pre>
+<pre>npx skills add bodr-ing/skills --skill logo-lab</pre>
           <div class="files">
             <a href="skills/logo-lab/SKILL.md">SKILL.md <span>concepts, SVG, mockups, pick</span></a>
             <a href="skills/logo-lab/kit/marks.py">marks.py <span>8 marks from shared helpers</span></a>
