@@ -124,7 +124,7 @@ const V = [
     bg:"#fffbea", fg:"#20304a", ac:"#ff7a59", font:"'Caveat Brush'", size:78, word:"bodring!", line:"half studio, half notebook, all cucumbers",
     deco:"radial-gradient(rgba(32,48,74,.18) 1px, transparent 1.5px) 0 0/16px 16px" },
   { id:"terminal", name:"Dev terminal", mood:"techy", color:"dark", type:"mono", density:"minimal",
-    bg:"#0f1412", fg:"#cfe8d6", ac:"#7cf29a", font:"'IBM Plex Mono'", weight:600, size:34, word:"$ bodr.ing", line:"> spawning ventures... nodos [ok] black_ledger [building]",
+    bg:"#0f1412", fg:"#cfe8d6", ac:"#7cf29a", font:"'IBM Plex Mono'", weight:600, size:34, word:"$ bodr.ing", line:"> spawning ventures... mentol [ok] black_ledger [building]",
     deco:"linear-gradient(rgba(124,242,154,.08), transparent 40%)" },
   { id:"y2k", name:"Y2K chrome", mood:"playful", color:"colorful", type:"geometric", density:"bold",
     bg:"#c9d7ff", fg:"#141a3a", ac:"#ff4fd8", font:"'Rubik Mono One'", size:40, word:"BODRING", line:"apps! games! the future is cucumber-shaped",
@@ -288,7 +288,7 @@ function cardEl(v) {
     <h2 class="word" style="font-family:${v.font}, system-ui, sans-serif; font-weight:${v.weight || 400}; font-style:${v.style || "normal"}; font-size:${v.size * 0.74}px">${v.word}</h2>
     <div style="display:grid; gap:12px">
       <div class="line" style="font-family:${mono ? v.font : "inherit"}; font-size:${v.type === "pixel" ? 9 : 14}px; line-height:1.5">${v.line}</div>
-      <div class="chips"><span style="background:${v.ac}; color:${v.bg}">nodos</span><span style="border:1px solid ${v.fg}">Black Ledger</span></div>
+      <div class="chips"><span style="background:${v.ac}; color:${v.bg}">mentol</span><span style="border:1px solid ${v.fg}">Black Ledger</span></div>
     </div>`;
   const meta = document.createElement("div");
   meta.className = "meta";
