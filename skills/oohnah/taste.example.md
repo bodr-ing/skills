@@ -1,4 +1,4 @@
-# Bodring taste profile (vibe check, 2026-10-22)
+# Bodring taste profile (OohNah, 2026-10-22)
 
 Zaff liked 22 of 40 cards.
 - Strong yes: cultural/Uzbek (80%), techy (67%), premium (67%), playful (63%); green; print/editorial; mono, chunky and serif type.

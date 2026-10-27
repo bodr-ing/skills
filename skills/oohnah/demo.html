@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Swipe through looks to find a brand's taste. A Bodring skill demo.">
 <link rel="icon" href="https://bodr.ing/favicon.svg" type="image/svg+xml">
-<title>Vibe Check · Bodring Skills</title>
+<title>OohNah · Bodring Skills</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Bangers&family=UnifrakturMaguntia&family=IM+Fell+English:ital@0;1&family=Permanent+Marker&family=Archivo+Black&family=Bagel+Fat+One&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,800&family=Caveat+Brush&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Fraunces:opsz,wght@9..144,800&family=IBM+Plex+Mono:wght@400;600&family=Instrument+Serif:ital@0;1&family=Major+Mono+Display&family=Space+Mono:wght@700&family=Press+Start+2P&family=Rubik+Mono+One&family=Syne:wght@800&family=Unbounded:wght@400;800&family=Inter+Tight:wght@400;600&family=DM+Mono:wght@400;500&family=Work+Sans:wght@400;600&display=swap">
 <style>
 /* Layout: Pickle press chrome (riso paper, green + pink) around one card stack. The cards carry all other looks. */
@@ -84,7 +84,7 @@ textarea { width: 100%; min-height: 120px; font: 12px var(--mono); padding: 10px
 </head>
 <body>
 <div class="app">
-  <header><h1>vibe check</h1><span class="count" id="count">1 / 30</span></header>
+  <header><h1>OohNah</h1><span class="count" id="count">1 / 30</span></header>
   <div class="bar"><i id="prog"></i></div>
   <div class="phase"><span id="phase">Round 1 · <b>map</b></span><span id="phase-note">12 wide-apart looks</span></div>
   <p class="hint" id="hint">Swipe right if this could be the brand, left if not. After 12 cards the deck starts remixing what you liked. Buttons and arrow keys work too.</p>
@@ -100,124 +100,124 @@ textarea { width: 100%; min-height: 120px; font: 12px var(--mono); padding: 10px
 <script>
 const V = [
   { id:"pickle-jar", name:"Pickle jar", mood:"playful", color:"green", type:"chunky", density:"bold",
-    bg:"#2f5d34", fg:"#f3edc8", ac:"#ffcf3f", font:"'Bagel Fat One'", size:74, word:"Bodring", line:"Small batches of apps and games, brined to perfection.",
+    bg:"#2f5d34", fg:"#f3edc8", ac:"#ffcf3f", font:"'Bagel Fat One'", size:74, word:"Halfmoon", line:"Small batches, roasted till they sing.",
     deco:"radial-gradient(circle at 85% 20%, #a9cf6a 0 34px, #6fae3e 35px 44px, transparent 45px), radial-gradient(circle at 72% 34%, #a9cf6a 0 20px, #6fae3e 21px 27px, transparent 28px)" },
   { id:"samarkand", name:"Samarkand tile", mood:"cultural", color:"colorful", type:"geometric", density:"bold",
-    bg:"#123a8c", fg:"#f6efe1", ac:"#2bb5b8", font:"'Unbounded'", weight:800, size:46, word:"BODRING", line:"Built in Tashkent. Made for everywhere.",
+    bg:"#123a8c", fg:"#f6efe1", ac:"#2bb5b8", font:"'Unbounded'", weight:800, size:46, word:"HALFMOON", line:"Roasted by the river. Poured everywhere.",
     deco:"repeating-conic-gradient(from 45deg at 50% 50%, rgba(43,181,184,.22) 0 25%, transparent 0 50%) 0 0/36px 36px" },
   { id:"ledger", name:"Ledger paper", mood:"premium", color:"light", type:"serif", density:"minimal",
-    bg:"#eef3e4", fg:"#1e2a1c", ac:"#b3261e", font:"'Instrument Serif'", size:64, word:"The Bodring Co.", line:"Est. 2026. Ventures, entered one line at a time.",
+    bg:"#eef3e4", fg:"#1e2a1c", ac:"#b3261e", font:"'Instrument Serif'", size:64, word:"Halfmoon & Co.", line:"Est. 2026. Every bag logged by hand.",
     deco:"linear-gradient(90deg, transparent 38px, rgba(179,38,30,.5) 38px 40px, transparent 40px), repeating-linear-gradient(transparent 0 27px, rgba(30,90,60,.18) 27px 28px)" },
   { id:"arcade", name:"Arcade cabinet", mood:"gritty", color:"dark", type:"pixel", density:"bold",
-    bg:"#0d0b1e", fg:"#f2f0ff", ac:"#ff3d8b", font:"'Press Start 2P'", size:28, word:"BODRING", line:"INSERT COIN TO CONTINUE",
+    bg:"#0d0b1e", fg:"#f2f0ff", ac:"#ff3d8b", font:"'Press Start 2P'", size:28, word:"HALFMOON", line:"INSERT COIN FOR ESPRESSO",
     deco:"repeating-linear-gradient(transparent 0 3px, rgba(255,255,255,.04) 3px 4px), radial-gradient(ellipse at 50% 120%, rgba(255,61,139,.45), transparent 60%)" },
   { id:"swiss", name:"Swiss grid", mood:"calm", color:"mono", type:"grotesk", density:"minimal",
-    bg:"#f4f4f2", fg:"#111111", ac:"#e3001b", font:"'Archivo Black'", size:56, word:"Bodring.", line:"A holding company for apps and games.",
+    bg:"#f4f4f2", fg:"#111111", ac:"#e3001b", font:"'Archivo Black'", size:56, word:"Halfmoon.", line:"A coffee roaster for the whole street.",
     deco:"linear-gradient(#e3001b,#e3001b) 100% 0/38% 14px no-repeat" },
   { id:"brutal", name:"Raw brutalist", mood:"gritty", color:"mono", type:"condensed", density:"bold",
-    bg:"#d9d6cf", fg:"#000000", ac:"#000000", font:"'Anton'", size:96, word:"BODRING", line:"WE SHIP. THEN WE SHIP AGAIN.",
+    bg:"#d9d6cf", fg:"#000000", ac:"#000000", font:"'Anton'", size:96, word:"HALFMOON", line:"WE ROAST. THEN WE ROAST AGAIN.",
     deco:"repeating-linear-gradient(-45deg, transparent 0 18px, rgba(0,0,0,.06) 18px 20px)" },
   { id:"lux-serif", name:"Quiet luxury", mood:"premium", color:"dark", type:"serif", density:"minimal",
-    bg:"#1b1a17", fg:"#e9e1d0", ac:"#b89b5e", font:"'Cormorant Garamond'", style:"italic", size:64, word:"Bodring", line:"A house of small, carefully made things.",
+    bg:"#1b1a17", fg:"#e9e1d0", ac:"#b89b5e", font:"'Cormorant Garamond'", style:"italic", size:64, word:"Halfmoon", line:"A house of small, carefully roasted things.",
     deco:"linear-gradient(#b89b5e,#b89b5e) 24px 62%/40px 1px no-repeat" },
   { id:"hand-zine", name:"Sketchbook zine", mood:"playful", color:"light", type:"hand", density:"bold",
-    bg:"#fffbea", fg:"#20304a", ac:"#ff7a59", font:"'Caveat Brush'", size:78, word:"bodring!", line:"half studio, half notebook, all cucumbers",
+    bg:"#fffbea", fg:"#20304a", ac:"#ff7a59", font:"'Caveat Brush'", size:78, word:"halfmoon!", line:"half café, half notebook, all beans",
     deco:"radial-gradient(rgba(32,48,74,.18) 1px, transparent 1.5px) 0 0/16px 16px" },
   { id:"terminal", name:"Dev terminal", mood:"techy", color:"dark", type:"mono", density:"minimal",
-    bg:"#0f1412", fg:"#cfe8d6", ac:"#7cf29a", font:"'IBM Plex Mono'", weight:600, size:34, word:"$ bodr.ing", line:"> spawning ventures... mentol [ok] black_ledger [building]",
+    bg:"#0f1412", fg:"#cfe8d6", ac:"#7cf29a", font:"'IBM Plex Mono'", weight:600, size:34, word:"$ halfmoon", line:"> brewing... cold_brew [ok] night_roast [roasting]",
     deco:"linear-gradient(rgba(124,242,154,.08), transparent 40%)" },
   { id:"y2k", name:"Y2K chrome", mood:"playful", color:"colorful", type:"geometric", density:"bold",
-    bg:"#c9d7ff", fg:"#141a3a", ac:"#ff4fd8", font:"'Rubik Mono One'", size:40, word:"BODRING", line:"apps! games! the future is cucumber-shaped",
+    bg:"#c9d7ff", fg:"#141a3a", ac:"#ff4fd8", font:"'Rubik Mono One'", size:40, word:"HALFMOON", line:"coffee! cake! the future is bean-shaped",
     deco:"radial-gradient(circle at 20% 80%, #ff9ff0 0, transparent 40%), radial-gradient(circle at 90% 10%, #8ff5ff 0, transparent 45%), linear-gradient(160deg, #e9eeff, #b7c4ff)" },
   { id:"editorial", name:"Magazine cover", mood:"premium", color:"light", type:"serif", density:"bold",
-    bg:"#f2e9dc", fg:"#2a1a14", ac:"#d2462b", font:"'Fraunces'", weight:800, size:70, word:"Bodring", line:"Issue No. 1: The company that grows things.",
+    bg:"#f2e9dc", fg:"#2a1a14", ac:"#d2462b", font:"'Fraunces'", weight:800, size:70, word:"Halfmoon", line:"Issue No. 1: The roaster that grew a neighbourhood.",
     deco:"linear-gradient(#d2462b,#d2462b) 24px 24px/56px 56px no-repeat" },
   { id:"nordic", name:"Nordic calm", mood:"calm", color:"light", type:"grotesk", density:"minimal",
-    bg:"#e8ece9", fg:"#26322d", ac:"#7d9b8a", font:"'Bricolage Grotesque'", weight:400, size:58, word:"bodring", line:"Fewer, better things.",
+    bg:"#e8ece9", fg:"#26322d", ac:"#7d9b8a", font:"'Bricolage Grotesque'", weight:400, size:58, word:"halfmoon", line:"Fewer, better cups.",
     deco:"radial-gradient(circle at 80% 30%, #c9d6cf 0 70px, transparent 71px)" },
   { id:"neon-noir", name:"Neon noir", mood:"gritty", color:"dark", type:"condensed", density:"bold",
-    bg:"#0b0d14", fg:"#e8f0ff", ac:"#00e1ff", font:"'Anton'", size:84, word:"BLACK LEDGER", line:"A Bodring Company production.",
+    bg:"#0b0d14", fg:"#e8f0ff", ac:"#00e1ff", font:"'Anton'", size:84, word:"NIGHT ROAST", line:"A Halfmoon production.",
     deco:"linear-gradient(180deg, transparent 55%, rgba(0,225,255,.18)), repeating-linear-gradient(90deg, transparent 0 60px, rgba(0,225,255,.06) 60px 61px)" },
   { id:"bauhaus", name:"Bauhaus shapes", mood:"playful", color:"colorful", type:"geometric", density:"bold",
-    bg:"#f1ead8", fg:"#1a1a1a", ac:"#e4402c", font:"'Syne'", weight:800, size:58, word:"Bodring", line:"Shapes first, everything else after.",
+    bg:"#f1ead8", fg:"#1a1a1a", ac:"#e4402c", font:"'Syne'", weight:800, size:58, word:"Halfmoon", line:"Shapes first, coffee after.",
     deco:"radial-gradient(circle at 78% 26%, #e4402c 0 48px, transparent 49px), linear-gradient(#1f4fbf,#1f4fbf) 64% 58%/70px 70px no-repeat, conic-gradient(from 90deg at 90% 72%, #f2b705 0 25%, transparent 0) " },
   { id:"mono-min", name:"Black & white", mood:"calm", color:"mono", type:"grotesk", density:"minimal",
-    bg:"#ffffff", fg:"#0a0a0a", ac:"#0a0a0a", font:"'Inter Tight'", weight:600, size:44, word:"The Bodring Company", line:"Apps. Games. Ventures.",
+    bg:"#ffffff", fg:"#0a0a0a", ac:"#0a0a0a", font:"'Inter Tight'", weight:600, size:44, word:"Halfmoon Coffee", line:"Beans. Brews. Mornings.",
     deco:"none" },
   { id:"ikat", name:"Ikat silk", mood:"cultural", color:"colorful", type:"serif", density:"bold",
-    bg:"#5b1a3a", fg:"#fbe9d2", ac:"#f2a33a", font:"'Fraunces'", weight:800, size:64, word:"Bodring", line:"Woven from many threads.",
+    bg:"#5b1a3a", fg:"#fbe9d2", ac:"#f2a33a", font:"'Fraunces'", weight:800, size:64, word:"Halfmoon", line:"Woven from many origins.",
     deco:"repeating-linear-gradient(90deg, rgba(242,163,58,.25) 0 14px, transparent 14px 22px, rgba(63,169,154,.3) 22px 30px, transparent 30px 52px)" },
   { id:"lab", name:"Lab notebook", mood:"techy", color:"light", type:"mono", density:"minimal",
-    bg:"#f6f7f3", fg:"#1d2b3a", ac:"#2a6ce0", font:"'Major Mono Display'", size:42, word:"bodr.ing", line:"experiment 001: can one company grow many products?",
+    bg:"#f6f7f3", fg:"#1d2b3a", ac:"#2a6ce0", font:"'Major Mono Display'", size:42, word:"halfmoon", line:"experiment 001: can one bean taste like three?",
     deco:"linear-gradient(rgba(42,108,224,.12) 1px, transparent 1px) 0 0/20px 20px, linear-gradient(90deg, rgba(42,108,224,.12) 1px, transparent 1px) 0 0/20px 20px" },
   { id:"sticker-pop", name:"Sticker bomb", mood:"playful", color:"colorful", type:"chunky", density:"bold",
-    bg:"#ffd23f", fg:"#141414", ac:"#3a86ff", font:"'Bagel Fat One'", size:70, word:"bodring", line:"stick us on your laptop",
+    bg:"#ffd23f", fg:"#141414", ac:"#3a86ff", font:"'Bagel Fat One'", size:70, word:"halfmoon", line:"stick us on your laptop",
     deco:"radial-gradient(circle at 82% 22%, #ff5d8f 0 30px, transparent 31px), radial-gradient(circle at 70% 78%, #3a86ff 0 36px, transparent 37px), radial-gradient(circle at 14% 64%, #06d6a0 0 22px, transparent 23px)" },
   { id:"dark-green-lux", name:"Bottle green", mood:"premium", color:"green", type:"serif", density:"minimal",
-    bg:"#173126", fg:"#f1ecdf", ac:"#d9c48a", font:"'Instrument Serif'", style:"italic", size:72, word:"Bodring", line:"An independent company, est. Tashkent.",
+    bg:"#173126", fg:"#f1ecdf", ac:"#d9c48a", font:"'Instrument Serif'", style:"italic", size:72, word:"Halfmoon", line:"An independent roaster, est. 2026.",
     deco:"linear-gradient(#d9c48a,#d9c48a) 24px 30%/1px 70px no-repeat" },
   { id:"game-hud", name:"Game HUD", mood:"techy", color:"dark", type:"geometric", density:"bold",
-    bg:"#11161c", fg:"#e6edf3", ac:"#ffb000", font:"'Unbounded'", weight:800, size:40, word:"BODRING", line:"HP ████████░░  XP 2026  QUEST: build a company",
+    bg:"#11161c", fg:"#e6edf3", ac:"#ffb000", font:"'Unbounded'", weight:800, size:40, word:"HALFMOON", line:"HP ████████░░  CAFFEINE 98%  QUEST: open at 7",
     deco:"linear-gradient(#ffb000,#ffb000) 24px 24px/10px 10px no-repeat, linear-gradient(90deg, rgba(255,176,0,.25) 1px, transparent 1px) 0 0/48px 100%" },
   { id:"riso", name:"Risograph print", mood:"cultural", color:"colorful", type:"condensed", density:"bold",
-    bg:"#f5efe6", fg:"#0f6e5d", ac:"#ff4c65", font:"'Anton'", size:88, word:"BODRING", line:"printed in two colours, slightly off register",
+    bg:"#f5efe6", fg:"#0f6e5d", ac:"#ff4c65", font:"'Anton'", size:88, word:"HALFMOON", line:"printed in two colours, slightly off register",
     deco:"radial-gradient(rgba(255,76,101,.35) 1.2px, transparent 1.6px) 0 0/7px 7px" },
   { id:"soft-pastel", name:"Soft pastel app", mood:"calm", color:"light", type:"grotesk", density:"minimal",
-    bg:"#f3eefc", fg:"#2e2550", ac:"#8a7cf0", font:"'Bricolage Grotesque'", weight:800, size:56, word:"bodring", line:"friendly software for busy brains",
+    bg:"#f3eefc", fg:"#2e2550", ac:"#8a7cf0", font:"'Bricolage Grotesque'", weight:800, size:56, word:"halfmoon", line:"friendly coffee for busy brains",
     deco:"radial-gradient(circle at 85% 15%, #ffd6e7 0 80px, transparent 81px), radial-gradient(circle at 10% 95%, #d6f5e9 0 90px, transparent 91px)" },
   { id:"cucumber-cool", name:"Cool as a cucumber", mood:"calm", color:"green", type:"geometric", density:"minimal",
-    bg:"#dff0e2", fg:"#14402a", ac:"#2fa35a", font:"'Unbounded'", weight:400, size:44, word:"bodring", line:"keep calm and ship",
+    bg:"#dff0e2", fg:"#14402a", ac:"#2fa35a", font:"'Unbounded'", weight:400, size:44, word:"halfmoon", line:"keep calm and pour",
     deco:"radial-gradient(circle at 80% 30%, #ffffff 0 46px, #bfe3c6 47px 62px, #2fa35a 63px 70px, transparent 71px)" },
   { id:"poster-red", name:"Propaganda poster", mood:"gritty", color:"colorful", type:"condensed", density:"bold",
-    bg:"#c9271e", fg:"#f6e7cf", ac:"#111111", font:"'Anton'", size:90, word:"BUILD MORE", line:"The Bodring Company wants you.",
+    bg:"#c9271e", fg:"#f6e7cf", ac:"#111111", font:"'Anton'", size:90, word:"DRINK MORE", line:"Halfmoon Coffee wants you.",
     deco:"repeating-conic-gradient(from 0deg at 110% 110%, rgba(0,0,0,.12) 0 6deg, transparent 6deg 12deg)" },
   { id:"saas", name:"Clean startup", mood:"calm", color:"light", type:"grotesk", density:"minimal",
-    bg:"#f7f9fc", fg:"#0f1b33", ac:"#3366ff", font:"'Inter Tight'", weight:600, size:52, word:"Bodring", line:"Ventures that scale. Products people love.",
+    bg:"#f7f9fc", fg:"#0f1b33", ac:"#3366ff", font:"'Inter Tight'", weight:600, size:52, word:"Halfmoon", line:"Coffee that scales. Mornings people love.",
     deco:"radial-gradient(ellipse at 100% 0%, rgba(51,102,255,.18), transparent 55%)" },
   { id:"comic", name:"Comic panel", mood:"playful", color:"colorful", type:"chunky", density:"bold",
-    bg:"#ffe14d", fg:"#111111", ac:"#e8282b", font:"'Bangers'", size:96, word:"BODRING!", line:"Meanwhile, in Tashkent... a company is born!",
+    bg:"#ffe14d", fg:"#111111", ac:"#e8282b", font:"'Bangers'", size:96, word:"HALFMOON!", line:"Meanwhile, on the corner... a café is born!",
     deco:"radial-gradient(rgba(232,40,43,.35) 2px, transparent 2.5px) 0 0/12px 12px" },
   { id:"blackletter", name:"Blackletter metal", mood:"gritty", color:"dark", type:"serif", density:"bold",
-    bg:"#0c0c0c", fg:"#e9e4da", ac:"#8a0f12", font:"'UnifrakturMaguntia'", size:76, word:"Bodring", line:"Est. MMXXVI. Games with teeth.",
+    bg:"#0c0c0c", fg:"#e9e4da", ac:"#8a0f12", font:"'UnifrakturMaguntia'", size:76, word:"Halfmoon", line:"Est. MMXXVI. Coffee with teeth.",
     deco:"radial-gradient(ellipse at 50% 40%, rgba(138,15,18,.35), transparent 60%)" },
   { id:"solarpunk", name:"Solarpunk", mood:"calm", color:"green", type:"serif", density:"minimal",
-    bg:"#f2f5df", fg:"#24402a", ac:"#e9a23b", font:"'Fraunces'", weight:800, size:62, word:"bodring", line:"Technology that grows like a garden.",
+    bg:"#f2f5df", fg:"#24402a", ac:"#e9a23b", font:"'Fraunces'", weight:800, size:62, word:"halfmoon", line:"Coffee that grows like a garden.",
     deco:"radial-gradient(circle at 85% 18%, #f5c96a 0 40px, transparent 41px), linear-gradient(180deg, transparent 70%, rgba(80,140,70,.25))" },
   { id:"vapor", name:"Vaporwave sunset", mood:"playful", color:"colorful", type:"geometric", density:"bold",
-    bg:"#2a0f4a", fg:"#fff1fb", ac:"#ff71ce", font:"'Syne'", weight:800, size:62, word:"BODRING", line:"ａｐｐｓ　＆　ｇａｍｅｓ",
+    bg:"#2a0f4a", fg:"#fff1fb", ac:"#ff71ce", font:"'Syne'", weight:800, size:62, word:"HALFMOON", line:"ｃｏｆｆｅｅ　＆　ｃａｋｅ",
     deco:"repeating-linear-gradient(transparent 0 10px, #2a0f4a 10px 14px) 50% 60%/160px 120px no-repeat, radial-gradient(circle at 50% 60%, #ffb86b 0 80px, #ff71ce 81px 81px, transparent 82px), linear-gradient(180deg, #2a0f4a 0 50%, #01cdfe 160%)" },
   { id:"parchment", name:"Old map", mood:"cultural", color:"light", type:"serif", density:"bold",
-    bg:"#ecdcb9", fg:"#3d2a17", ac:"#8c2f1b", font:"'IM Fell English'", style:"italic", size:70, word:"Bodring", line:"Here be ventures. Charted by hand, 2026.",
+    bg:"#ecdcb9", fg:"#3d2a17", ac:"#8c2f1b", font:"'IM Fell English'", style:"italic", size:70, word:"Halfmoon", line:"Here be beans. Charted by hand, 2026.",
     deco:"radial-gradient(ellipse at 50% 50%, transparent 50%, rgba(90,55,20,.35)), repeating-radial-gradient(circle at 80% 80%, transparent 0 18px, rgba(61,42,23,.08) 18px 19px)" },
   { id:"toy", name:"Toy box", mood:"playful", color:"colorful", type:"chunky", density:"bold",
-    bg:"#4cc9f0", fg:"#ffffff", ac:"#f72585", font:"'Rubik Mono One'", size:48, word:"BODRING", line:"Play is serious business.",
+    bg:"#4cc9f0", fg:"#ffffff", ac:"#f72585", font:"'Rubik Mono One'", size:48, word:"HALFMOON", line:"Play is serious business.",
     deco:"linear-gradient(#ffd60a,#ffd60a) 80% 20%/60px 60px no-repeat, radial-gradient(circle at 20% 75%, #f72585 0 34px, transparent 35px), linear-gradient(#7209b7,#7209b7) 70% 80%/40px 80px no-repeat" },
   { id:"glass", name:"Dark glass", mood:"techy", color:"dark", type:"grotesk", density:"minimal",
-    bg:"#0c1020", fg:"#eef1ff", ac:"#8b9dff", font:"'Bricolage Grotesque'", weight:400, size:58, word:"Bodring", line:"Quietly building the next things.",
+    bg:"#0c1020", fg:"#eef1ff", ac:"#8b9dff", font:"'Bricolage Grotesque'", weight:400, size:58, word:"Halfmoon", line:"Quietly roasting the next batch.",
     deco:"radial-gradient(circle at 20% 20%, rgba(139,157,255,.45), transparent 40%), radial-gradient(circle at 90% 80%, rgba(255,120,200,.3), transparent 45%)" },
   { id:"silk-road", name:"Silk Road bazaar", mood:"cultural", color:"colorful", type:"geometric", density:"bold",
-    bg:"#b5442a", fg:"#fff4e2", ac:"#1d6b8f", font:"'Unbounded'", weight:800, size:44, word:"BODRING", line:"A caravan of ventures, from Tashkent outward.",
+    bg:"#b5442a", fg:"#fff4e2", ac:"#1d6b8f", font:"'Unbounded'", weight:800, size:44, word:"HALFMOON", line:"A caravan of beans, from the hills outward.",
     deco:"repeating-linear-gradient(45deg, rgba(255,244,226,.12) 0 10px, transparent 10px 20px), linear-gradient(#1d6b8f,#1d6b8f) 0 100%/100% 18px no-repeat" },
   { id:"matrix", name:"Green code", mood:"techy", color:"green", type:"mono", density:"bold",
-    bg:"#03130a", fg:"#8dff9f", ac:"#29d35b", font:"'IBM Plex Mono'", weight:600, size:48, word:"bodring_", line:"while(true) { build(); ship(); learn(); }",
+    bg:"#03130a", fg:"#8dff9f", ac:"#29d35b", font:"'IBM Plex Mono'", weight:600, size:48, word:"halfmoon_", line:"while(true) { roast(); pour(); taste(); }",
     deco:"repeating-linear-gradient(90deg, rgba(41,211,91,.08) 0 1px, transparent 1px 18px)" },
   { id:"zen", name:"Zen minimal", mood:"calm", color:"light", type:"serif", density:"minimal",
-    bg:"#f6f2ea", fg:"#26231f", ac:"#c8342b", font:"'Instrument Serif'", size:68, word:"bodring", line:"one cucumber. one thing at a time.",
+    bg:"#f6f2ea", fg:"#26231f", ac:"#c8342b", font:"'Instrument Serif'", size:68, word:"halfmoon", line:"one cup. one thing at a time.",
     deco:"radial-gradient(circle at 78% 26%, #c8342b 0 38px, transparent 39px)" },
   { id:"graffiti", name:"Street skate", mood:"gritty", color:"colorful", type:"hand", density:"bold",
-    bg:"#1f1f1f", fg:"#f4f4f4", ac:"#b6ff3b", font:"'Permanent Marker'", size:72, word:"BODRING", line:"made loud, made fast, made here",
+    bg:"#1f1f1f", fg:"#f4f4f4", ac:"#b6ff3b", font:"'Permanent Marker'", size:72, word:"HALFMOON", line:"made loud, made fast, made here",
     deco:"radial-gradient(circle at 80% 25%, rgba(182,255,59,.5) 0 30px, transparent 60px), radial-gradient(circle at 15% 85%, rgba(255,80,160,.45) 0 20px, transparent 55px)" },
   { id:"newspaper", name:"Broadsheet", mood:"premium", color:"mono", type:"serif", density:"bold",
-    bg:"#f3f0e8", fg:"#141414", ac:"#141414", font:"'Fraunces'", weight:800, size:58, word:"The Bodring Times", line:"Local company launches apps, games; cucumbers unavailable for comment.",
+    bg:"#f3f0e8", fg:"#141414", ac:"#141414", font:"'Fraunces'", weight:800, size:58, word:"The Halfmoon Times", line:"Local roaster opens doors; pastries unavailable for comment.",
     deco:"linear-gradient(#141414,#141414) 24px 22%/calc(100% - 48px) 2px no-repeat, linear-gradient(#141414,#141414) 24px 23.5%/calc(100% - 48px) 1px no-repeat" },
   { id:"casino", name:"Black & gold", mood:"premium", color:"dark", type:"condensed", density:"bold",
-    bg:"#0e0d0b", fg:"#f2e3b3", ac:"#c9a227", font:"'Anton'", size:86, word:"BODRING", line:"The house always builds.",
+    bg:"#0e0d0b", fg:"#f2e3b3", ac:"#c9a227", font:"'Anton'", size:86, word:"HALFMOON", line:"The house always pours.",
     deco:"repeating-linear-gradient(135deg, rgba(201,162,39,.08) 0 2px, transparent 2px 14px)" },
   { id:"camp", name:"Forest camp", mood:"calm", color:"green", type:"hand", density:"minimal",
-    bg:"#e6ead8", fg:"#2b3b26", ac:"#c46a2b", font:"'Caveat Brush'", size:80, word:"bodring co.", line:"slow-grown, hand-made, built to last",
+    bg:"#e6ead8", fg:"#2b3b26", ac:"#c46a2b", font:"'Caveat Brush'", size:80, word:"halfmoon co.", line:"slow-roasted, hand-poured, built to last",
     deco:"conic-gradient(from 150deg at 80% 30%, transparent 0 60deg, rgba(43,59,38,.25) 60deg 120deg, transparent 120deg)" },
   { id:"blueprint", name:"Blueprint", mood:"techy", color:"colorful", type:"mono", density:"minimal",
-    bg:"#1d4e89", fg:"#e8f1ff", ac:"#ffd166", font:"'Space Mono', 'IBM Plex Mono'", weight:600, size:42, word:"BODRING/01", line:"SCALE 1:1 · SHEET 1 OF ∞ · DRAWN BY THE BODRING CO.",
+    bg:"#1d4e89", fg:"#e8f1ff", ac:"#ffd166", font:"'Space Mono', 'IBM Plex Mono'", weight:600, size:42, word:"HALFMOON/01", line:"SCALE 1:1 · SHEET 1 OF ∞ · DRAWN BY HALFMOON CO.",
     deco:"linear-gradient(rgba(232,241,255,.14) 1px, transparent 1px) 0 0/24px 24px, linear-gradient(90deg, rgba(232,241,255,.14) 1px, transparent 1px) 0 0/24px 24px" }
 ];
 
@@ -284,11 +284,11 @@ function cardEl(v) {
   spec.style.color = v.fg;
   const mono = v.type === "mono" || v.type === "pixel";
   spec.innerHTML = `
-    <div class="eyebrow" style="font-family:${v.font}, system-ui; font-size:${v.type === "pixel" ? 8 : 11}px">bodr.ing · apps & games</div>
+    <div class="eyebrow" style="font-family:${v.font}, system-ui; font-size:${v.type === "pixel" ? 8 : 11}px">halfmoon · coffee roasters</div>
     <h2 class="word" style="font-family:${v.font}, system-ui, sans-serif; font-weight:${v.weight || 400}; font-style:${v.style || "normal"}; font-size:${v.size * 0.74}px">${v.word}</h2>
     <div style="display:grid; gap:12px">
       <div class="line" style="font-family:${mono ? v.font : "inherit"}; font-size:${v.type === "pixel" ? 9 : 14}px; line-height:1.5">${v.line}</div>
-      <div class="chips"><span style="background:${v.ac}; color:${v.bg}">mentol</span><span style="border:1px solid ${v.fg}">Black Ledger</span></div>
+      <div class="chips"><span style="background:${v.ac}; color:${v.bg}">Cold brew</span><span style="border:1px solid ${v.fg}">Night roast</span></div>
     </div>`;
   const meta = document.createElement("div");
   meta.className = "meta";
@@ -392,7 +392,7 @@ async function showResults() {
   $("status").textContent = "Your taste profile. Copy it and paste it to your agent:";
   const ta = document.createElement("textarea");
   ta.id = "result-text"; ta.readOnly = true;
-  ta.value = "Vibe check (" + TOTAL + " cards)\nLiked: " + payload.liked.join(", ") + "\n" + AXES.map(a => a + ": " + summary[a].join(", ")).join("\n");
+  ta.value = "OohNah (" + TOTAL + " cards)\nLiked: " + payload.liked.join(", ") + "\n" + AXES.map(a => a + ": " + summary[a].join(", ")).join("\n");
   $("status").after(ta);
   const cp = document.createElement("button");
   cp.className = "btn"; cp.textContent = "Copy profile";
