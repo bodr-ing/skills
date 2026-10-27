@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Bodring Skills</title>
   <meta name="claude:viewport-fit-sides" content="cover">
-  <meta name="description" content="Skills for coding agents that turn I'll know it when I see it into something to build. YepNope finds out what you want, OohNah finds how it should look, Logo Lab finds its mark.">
+  <meta name="description" content="Skills for coding agents that turn I'll know it when I see it into something to build. YepNope finds out what you want and OohNah finds how it should look.">
   <meta property="og:title" content="Bodring Skills">
   <meta property="og:description" content="Swipe ideas to find what you want. Swipe looks to find how it should look. Test logos for real to find the mark.">
   <meta property="og:url" content="https://skills.bodr.ing/">
@@ -58,8 +58,8 @@ nav .links a:hover { color: var(--pink-ink); }
 /* Chooser: two tickets side by side, the whole difference at a glance */
 .choose { padding-block: 48px 72px; }
 .choose > .label { color: var(--muted); margin: 0 0 18px; }
-.tickets { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
-@media (max-width: 960px) { .tickets { grid-template-columns: repeat(2, minmax(0, 1fr)); } .ticket.mark { grid-column: 1 / -1; } }
+.tickets { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+@media (max-width: 960px) { .tickets { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .ticket { --c: var(--green); --c2: var(--pink); position: relative; display: grid; grid-template-rows: auto auto auto 1fr auto; gap: 16px; padding: 26px 24px 22px; border: 2px solid var(--c); background: var(--card); text-decoration: none; transition: transform .15s; }
 .ticket::before { content: ""; position: absolute; inset: 7px -7px -7px 7px; border: 2px solid var(--c2); z-index: -1; }
 .ticket.vibe { --c: var(--pink-ink); --c2: var(--green); }
@@ -215,7 +215,7 @@ footer { border-top: 0; background: radial-gradient(circle, var(--green) 1.5px, 
   <div class="wrap">
     <nav class="label">
       <a class="home" href="https://bodr.ing"><img src="skills/logo-lab/example/svg/06-stamp.svg" alt="" width="26" height="26"><span class="full">bodr.ing / skills</span></a>
-      <span class="links"><a href="#yepnope">YepNope</a><a href="#oohnah">OohNah</a><a href="#logo-lab">Logo Lab</a><a class="hide-sm" href="#story">Story</a><a class="hide-sm" href="#install">Install</a><a href="https://github.com/bodr-ing/skills">GitHub</a></span>
+      <span class="links"><a href="#yepnope">YepNope</a><a href="#oohnah">OohNah</a><a class="hide-sm" href="#story">Story</a><a class="hide-sm" href="#install">Install</a><a href="https://github.com/bodr-ing/skills">GitHub</a></span>
     </nav>
 
     <header class="hero">
@@ -257,26 +257,10 @@ footer { border-top: 0; background: radial-gradient(circle, var(--green) 1.5px, 
           </dl>
           <span class="go"><span>Swipe looks</span><span>↓</span></span>
         </a>
-        <a class="ticket mark" href="#logo-lab"><span class="wave" aria-hidden="true"></span>
-          <span class="q">What's its mark?</span>
-          <div class="specimen" aria-hidden="true">
-            <div class="mini"><img src="skills/logo-lab/example/svg/06-stamp.svg" alt=""></div>
-            <div class="mini"><img src="skills/logo-lab/example/svg/04-bite.svg" alt=""></div>
-            <div class="mini"><img src="skills/logo-lab/example/svg/03-angled.svg" alt=""></div>
-          </div>
-          <h2>Logo Lab</h2>
-          <dl>
-            <dt>For</dt><dd>A logo or app mark, new or replacing one nobody loves.</dd>
-            <dt>You see</dt><dd>8 marks on a site, a poster, a phone, a tote, a jar. Side by side, scored.</dd>
-            <dt>You get</dt><dd>Your pick as clean SVG, favicon and avatars, shipped.</dd>
-          </dl>
-          <span class="go"><span>Test logos</span><span>↓</span></span>
-        </a>
       </div>
       <div class="rule">
         <div><b class="g">Not sure what it is yet?</b> <span>YepNope.</span></div>
         <div><b class="p">Know what it is, not how it looks?</b> <span>OohNah.</span></div>
-        <div><b>Have the look, need the mark?</b> <span>Logo Lab.</span></div>
       </div>
     </section>
 
@@ -292,10 +276,9 @@ footer { border-top: 0; background: radial-gradient(circle, var(--green) 1.5px, 
           <p class="faces">Bagel Fat One · Work Sans · DM Mono, the page you're reading.</p>
         </li>
         <li>
-          <h3><small>Logo Lab</small>8 marks, 20 photos</h3>
+          <h3><small>Mockups</small>8 marks, 20 photos</h3>
           <p>Eight concepts from an image model, redrawn as SVG and tried in seven places, from a 16px tab to a one-colour stamp. The four finalists went onto a Tashkent poster, a phone, a tote, a pickle jar and a shop window.</p>
           <div class="shots"><img src="skills/logo-lab/example/photos/06-stamp-poster.jpg" alt="Stamp mark on a street poster" loading="lazy"><img src="skills/logo-lab/example/photos/04-bite-app-icon.jpg" alt="Bite mark as an app icon" loading="lazy"><img src="skills/logo-lab/example/photos/01-minimal-tote.jpg" alt="Minimal mark on a tote bag" loading="lazy"><img src="skills/logo-lab/example/photos/03-angled-window-decal.jpg" alt="Angled mark on a shop window" loading="lazy"></div>
-          <p><a href="skills/logo-lab/demo.html">See the whole run ↗</a></p>
         </li>
         <li>
           <h3><small>Shipped</small>The stamp</h3>
@@ -348,7 +331,7 @@ footer { border-top: 0; background: radial-gradient(circle, var(--green) 1.5px, 
           <li><span><b>It writes <code>taste.md</code>,</b> with a "never" list, then builds three real directions for you to pick from.</span></li>
         </ol>
         <p class="ask"><span class="label">Then ask your agent</span><q>Run OohNah before we design the landing page.</q><span class="label tweak">You can also ask for</span><span class="chips"><span>"15 swipes"</span><span>"only colours"</span><span>"5 variants"</span><span>"6 logo options"</span><span>"stop at taste.md"</span></span></p>
-        <p class="story"><b>Before:</b> not sure what it is yet? Start with <a href="#yepnope">YepNope</a>. <b>Next:</b> <a href="#logo-lab">Logo Lab</a> reads your <code>taste.md</code> and finds the mark.</p>
+        <p class="story"><b>Before:</b> not sure what it is yet? Start with <a href="#yepnope">YepNope</a>.</p>
         <details class="install">
           <summary>Install just this one</summary>
 <pre>npx skills add bodr-ing/skills --skill oohnah</pre>
@@ -367,45 +350,12 @@ footer { border-top: 0; background: radial-gradient(circle, var(--green) 1.5px, 
       </div>
     </section>
 
-    <section class="skill mark" id="logo-lab">
-      <div>
-        <p class="q label">Logos · tested where they live</p>
-        <h2>Logo Lab</h2>
-        <p class="say">A logo is judged in use, not on a white square. Logo Lab puts every candidate where it will actually live, scores them side by side, and ends in a one-tap pick.</p>
-        <ol class="flow">
-          <li><span><b>An image model draws 8 concepts,</b> each a different direction: minimal, sticker, angled, a bite, a mascot, a stamp, chunky, hand-drawn.</span></li>
-          <li><span><b>The agent redraws every one as clean SVG</b> and tries it on the site, a street poster, an app icon, an avatar, a browser tab, a sticker and in one colour.</span></li>
-          <li><span><b>It scores them and makes photo mockups</b> of the finalists on a poster, a phone, a tote, a jar and a shop window.</span></li>
-          <li><span><b>You tap one.</b> It ships as SVG, favicon and avatars, and goes into <code>taste.md</code>.</span></li>
-        </ol>
-        <p class="ask"><span class="label">Then ask your agent</span><q>Our logo isn't working. Run Logo Lab.</q><span class="label tweak">You can also ask for</span><span class="chips"><span>"just 4 ideas"</span><span>"add a T-shirt"</span><span>"only the top 2 in photos"</span><span>"stop at the compare page"</span></span></p>
-        <p class="story"><b>Before:</b> no <code>taste.md</code> yet? Run <a href="#oohnah">OohNah</a> first, so the palette is settled before anyone draws a mark.</p>
-        <details class="install">
-          <summary>Install just this one</summary>
-<pre>npx skills add bodr-ing/skills --skill logo-lab</pre>
-          <div class="files">
-            <a href="skills/logo-lab/SKILL.md">SKILL.md <span>concepts, SVG, mockups, pick</span></a>
-            <a href="skills/logo-lab/kit/marks.py">marks.py <span>8 marks from shared helpers</span></a>
-            <a href="skills/logo-lab/kit/page.py">page.py <span>the compare page</span></a>
-            <a href="skills/logo-lab/kit/mockup.sh">mockup.sh <span>photo mockups with Codex</span></a>
-            <a href="skills/logo-lab/demo.html">demo.html <span>the real bodr.ing run</span></a>
-          </div>
-        </details>
-      </div>
-      <div class="demo">
-        <div class="phone" data-src="skills/logo-lab/demo.html">
-          <button type="button" class="poster" aria-label="Play the Logo Lab demo"><img src="assets/logo-lab.jpg" alt="" width="390" height="780" loading="lazy"><span>▶ See the demo</span></button>
-        </div>
-        <p class="demo-note">The real run that picked the bodr.ing cucumber: 8 marks, 7 uses, 20 photos. <a href="skills/logo-lab/demo.html" target="_blank" rel="noopener">Full screen ↗</a></p>
-      </div>
-    </section>
-
     <div class="band" aria-hidden="true"><span>fresh batch, rolling</span><canvas></canvas></div>
 
     <section class="all" id="install">
       <div>
         <h2>Get them all</h2>
-        <p>They chain: <b>YepNope</b> finds what to build, <b>OohNah</b> finds how it looks and writes <code>taste.md</code>, <b>Logo Lab</b> reads that and finds the mark. For Claude Code, Codex, Cursor and other agents, install from <a href="https://skills.sh">skills.sh</a> with one command. In Claude Code you can also add the marketplace and install the plugin, or copy any skill folder into <code>~/.claude/skills/</code>.</p>
+        <p>They chain: <b>YepNope</b> finds what to build and <b>OohNah</b> finds how it looks and writes <code>taste.md</code>. For Claude Code, Codex, Cursor and other agents, install from <a href="https://skills.sh">skills.sh</a> with one command. In Claude Code you can also add the marketplace and install the plugin, or copy any skill folder into <code>~/.claude/skills/</code>.</p>
       </div>
 <pre>npx skills add bodr-ing/skills
 
