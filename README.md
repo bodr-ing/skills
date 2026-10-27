@@ -35,6 +35,10 @@ Or copy a skill folder into `~/.claude/skills/` (all projects) or `.claude/skill
 
 `skills/yepnope/decks/games.json` is a complete deck for video games (224 cards, 24 categories).
 
+## Contributing
+
+Issues and pull requests are welcome: new decks for YepNope, new look recipes for OohNah, fixes and ideas for new skills. Keep each skill self-contained in its folder under `skills/`, and never commit secrets or personal data.
+
 ## License
 
 MIT
