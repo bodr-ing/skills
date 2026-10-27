@@ -43,7 +43,14 @@ Read these from the request and use the default for anything not mentioned. Say 
 
 5. **Score and recommend.** A table with one row per candidate and one column per use, 1 to 3 dots each, plus a total. Lead the page with your pick and one short paragraph on why, the runner-up, and which ones fall apart small. Be honest: a mark that looks great big but dies at 16px loses.
 
-6. **Photo mockups of the finalists.** Render each finalist SVG to a 1024px PNG and give it to the image model as the reference image, with "keep the mark faithful, do not redesign it". Surfaces: a street poster with the brand line, a phone app icon, a tote bag, a product label, a shop window decal. Do the top 2 first and show them as soon as they exist. Check every image against its SVG (shape and colours) and regenerate any that drifted. Save them as `mockups/<logo>-<surface>.png`, about 768px wide.
+6. **Photo mockups of the finalists.** Render each finalist SVG to a 1024px PNG and give it to the image model as the reference image, with "keep the mark faithful, do not redesign it". Surfaces: a street poster with the brand line, a phone app icon, a tote bag, a product label, a shop window decal. Do the top 2 first and show them as soon as they exist. Check every image against its SVG (shape and colours) and regenerate any that drifted. Save them as `mockups/<logo>-<surface>.png`, about 768px wide. `kit/render.sh` makes the reference PNG and `kit/mockup.sh` makes one photo with Codex CLI; run the five surfaces in parallel:
+
+   ```sh
+   kit/render.sh svg/04-bite.svg ref/04-bite.png 1024
+   export CODEX_MODEL=<a model your login accepts> BRAND_LINE="bir bodring" COLOURS="#00915a, #ff4aa2, #f4f5ec"
+   printf '%s\n' poster app-icon tote jar-label window-decal \
+     | xargs -P 5 -I{} kit/mockup.sh ref/04-bite.png {} mockups/04-bite-{}.png
+   ```
 
 7. **One compare page with a pick.** Publish one visual page: the verdict and score table first, then "Out in the world" photo rows (one row per surface, finalists side by side), then the in-context sections, then pick buttons with an optional mix-or-tweak note. If the page can store data, save the pick and the note so you can read them back. Otherwise ask the person to reply with the number. Update the same page as new mockups arrive instead of making a new one.
 
@@ -57,10 +64,19 @@ Read these from the request and use the default for anything not mentioned. Say 
 - Image generation and deploys often need the person's own machine and logins. When a step is blocked there (a login, a permission prompt, a production-deploy guard), say exactly which one action unblocks it and keep working on everything else.
 - Do the strongest two first at every stage so the person can decide early.
 
+## Gotchas
+
+- Render SVGs with headless Chrome (`kit/render.sh`), not `sips` or Quick Look: they rasterise masks at low resolution and a bite's edge comes out blurry.
+- In `codex exec`, put the prompt before `-i`. `-i` takes several files and swallows a prompt that follows it.
+- Codex's default model can be rejected for some logins; pass one that works in `CODEX_MODEL`. Use `--sandbox workspace-write`, not `--full-auto`, which some permission guards block.
+- Image models drift on small details even when told to keep the mark. Put all photos of one logo on a contact sheet next to its SVG and check them together.
+
 ## Files
 
 - `kit/marks.py`: eight SVG marks and their one-colour versions, built from shared helpers. Replace the `M` entries with your marks.
 - `kit/page.py`, `kit/tpl.html`, `kit/verdict.html`: build the compare page (in-context sections, score table, pick buttons).
 - `kit/photos.py`: adds the "Out in the world" photo rows from `photos/<logo>-<surface>.jpg`.
+- `kit/render.sh`: SVG to a square PNG with headless Chrome: `kit/render.sh in.svg out.png 1024`.
+- `kit/mockup.sh`: one photo mockup with Codex CLI image generation: `kit/mockup.sh logo.png poster out.png`.
 - `kit/shot.js`: Playwright screenshot of any page: `node shot.js page.html out.png 1180 900`.
 - `demo.html` with `example/`: the real run that picked the bodr.ing logo, with 8 SVGs and 20 photo mockups.
