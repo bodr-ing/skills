@@ -7,6 +7,21 @@ description: Find how something should look by swiping visual samples (palettes,
 
 Turn "I'll know it when I see it" into a written taste profile, then design from it. The person swipes through visual direction cards (Tinder-style), and you read the swipes and write `taste.md`.
 
+## Options the person can ask for
+
+Read these from the request and use the default for anything not mentioned. Say back the settings you used in one line before you build the deck.
+
+| Option | Default | Example ask |
+|---|---|---|
+| Swipes per session | 30 (`TOTAL` in `demo.html`) | "only 15 swipes", "give me 50" |
+| Cards in the deck | 30 to 40 | "make 60 looks" |
+| Round 1 map size | 12 (`SEED`) | "start with 8 very different looks" |
+| What the cards test | whole looks (palette + type + layout) | "only colours", "just fonts", "logos only" |
+| Directions to build | 3 | "show me 5 variants", "just one" |
+| Logo marks | 3 to 4 | "6 logo options" |
+| Where to stop | built directions, then logo | "stop at taste.md", "skip the logo" |
+| Starting point | a fresh deck | "start from our taste.md", "lean premium" |
+
 ## When to run it
 
 Run it **between brainstorm and plan**: after you know what the thing is and who it's for, but before you pick fonts, colours or layout. Run it again whenever the person rejects designs and can't say why.

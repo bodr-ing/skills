@@ -12,6 +12,20 @@ picture.
 The skill has four steps: atomize the subject into a deck, build and publish the swipe page, read the
 answers, and turn them into directions.
 
+## Options the person can ask for
+
+Read these from the request and use the default for anything not mentioned. Say back the settings you used in one line before you write the deck.
+
+| Option | Default | Example ask |
+|---|---|---|
+| Swipes per session | 100 (`rounds` in the deck) | "just 30 quick ones", "go deep, 200" |
+| Deck size | 150 to 300 atoms | "a small deck is fine" |
+| Categories | 12 to 25, covering the whole subject | "only gameplay and art", "skip pricing" |
+| Directions in the result | 2 or 3 | "give me 5 directions", "one clear pick" |
+| Second, narrower round | offered after the first | "do two rounds straight away" |
+| Language | the person's language | "in Uzbek" |
+| Starting deck | written fresh | "use the games deck" |
+
 ## 1. Atomize the subject
 
 Write a deck: categories, and atoms inside them. An atom is the smallest choice the subject can be

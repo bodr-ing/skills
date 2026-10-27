@@ -106,6 +106,9 @@ nav .links a:hover { color: var(--pink-ink); }
 .ask { margin: 28px 0 0; padding: 14px 18px; background: var(--card); border-left: 4px solid var(--c); max-width: 58ch; }
 .ask .label { color: var(--muted); font-size: 12px; display: block; margin-bottom: 4px; }
 .ask q { font-weight: 600; quotes: "“" "”"; }
+.ask .tweak { margin-top: 12px; }
+.ask .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.ask .chips span { font-family: var(--mono); font-size: 12px; padding: 3px 9px; border: 1px solid var(--c); border-radius: 99px; }
 details.install { margin-top: 24px; max-width: 62ch; }
 details.install summary { cursor: pointer; list-style: none; display: inline-flex; gap: 10px; align-items: center; font-family: var(--mono); font-size: 14px; text-transform: uppercase; letter-spacing: .08em; color: var(--c); }
 details.install summary::-webkit-details-marker { display: none; }
@@ -212,7 +215,7 @@ footer a { color: var(--green); }
           <li><span><b>You swipe about 100.</b> Right is yes, left is no, up is love it, down is don't care.</span></li>
           <li><span><b>It reads your answers back</b> as a profile and concrete directions you can build.</span></li>
         </ol>
-        <p class="ask"><span class="label">Then ask your agent</span><q>Help me figure out what game I want to make.</q></p>
+        <p class="ask"><span class="label">Then ask your agent</span><q>Help me figure out what game I want to make.</q><span class="label tweak">You can also ask for</span><span class="chips"><span>"just 30 swipes"</span><span>"only art and story"</span><span>"5 directions"</span><span>"two rounds"</span><span>"in Uzbek"</span></span></p>
         <details class="install">
           <summary>Install just this one</summary>
 <pre>d=~/.claude/skills/yepnope; u=https://skills.bodr.ing/skills/yepnope
@@ -246,7 +249,7 @@ done</pre>
           <li><span><b>Round two remixes what you liked,</b> the palette of one with the type of another, and keeps probing blind spots.</span></li>
           <li><span><b>It writes <code>taste.md</code>,</b> with a "never" list, then builds three real directions for you to pick from.</span></li>
         </ol>
-        <p class="ask"><span class="label">Then ask your agent</span><q>Run OohNah before we design the landing page.</q></p>
+        <p class="ask"><span class="label">Then ask your agent</span><q>Run OohNah before we design the landing page.</q><span class="label tweak">You can also ask for</span><span class="chips"><span>"15 swipes"</span><span>"only colours"</span><span>"5 variants"</span><span>"6 logo options"</span><span>"stop at taste.md"</span></span></p>
         <details class="install">
           <summary>Install just this one</summary>
 <pre>d=~/.claude/skills/oohnah; u=https://skills.bodr.ing/skills/oohnah
