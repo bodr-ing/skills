@@ -273,9 +273,12 @@ for f in SKILL.md demo.html taste.example.md; do curl -fsSo $d/$f $u/$f; done</p
     <section class="all" id="install">
       <div>
         <h2>Get both</h2>
-        <p>In Claude Code, add the marketplace and install the plugin. Or copy any skill folder into <code>~/.claude/skills/</code>. Codex and other agents can use them too: point them at the <code>SKILL.md</code>.</p>
+        <p>For Claude Code, Codex, Cursor and other agents, install from <a href="https://skills.sh">skills.sh</a> with one command. In Claude Code you can also add the marketplace and install the plugin, or copy any skill folder into <code>~/.claude/skills/</code>.</p>
       </div>
-<pre>/plugin marketplace add bodr-ing/skills
+<pre>npx skills add bodr-ing/skills
+
+# or, in Claude Code
+/plugin marketplace add bodr-ing/skills
 /plugin install bodring@bodring</pre>
     </section>
 

@@ -11,6 +11,12 @@ Agent skills from The Bodring Company ([bodr.ing](https://bodr.ing)), browsable 
 
 ## Install
 
+With [skills.sh](https://skills.sh), for Claude Code, Codex, Cursor and other agents:
+
+```text
+npx skills add bodr-ing/skills
+```
+
 In Claude Code, add this repository as a plugin marketplace and install the plugin:
 
 ```text
