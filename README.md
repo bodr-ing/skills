@@ -8,6 +8,9 @@ Agent skills from The Bodring Company ([bodr.ing](https://bodr.ing)), browsable 
 | [yepnope](skills/yepnope/SKILL.md) | **Any subject, in words.** Breaks a subject (a game, an app, a trip, a house) into its smallest choices and turns them into a swipe feed. About 100 swipes later you have a clear picture of what the person actually wants. |
 | [hand-up](skills/hand-up/SKILL.md) (not on the site yet) | All your coding agents raise blockers, conflicts and findings into one swipe deck. You swipe, and they read your answer and carry on. Works inside Claude with nothing to host, or with the [hub](https://github.com/bodr-ing/hand-up) for any agent and phone push. |
 | [oohnah](skills/oohnah/SKILL.md) | **Visual style only.** Finds a brand's visual taste by swiping before any design work, and ends in a `taste.md` your agents design from. |
+| [logo-lab](skills/logo-lab/SKILL.md) | **Logos, tested where they live.** Image-model concepts redrawn as clean SVG, tried on a site, a poster, an app icon, an avatar, a tab, a sticker and in one colour, plus photo mockups of the finalists. Scored, then a one-tap pick. |
+
+They chain: YepNope finds what to build, OohNah finds how it looks and writes `taste.md`, Logo Lab reads that and finds the mark.
 
 ## Install
 
@@ -37,7 +40,7 @@ Or copy a skill folder into `~/.claude/skills/` (all projects) or `.claude/skill
 
 ## Contributing
 
-Issues and pull requests are welcome: new decks for YepNope, new look recipes for OohNah, fixes and ideas for new skills. Keep each skill self-contained in its folder under `skills/`, and never commit secrets or personal data.
+Issues and pull requests are welcome: new decks for YepNope, new look recipes for OohNah, new mockup surfaces for Logo Lab, fixes and ideas for new skills. Keep each skill self-contained in its folder under `skills/`, and never commit secrets or personal data.
 
 ## License
 
