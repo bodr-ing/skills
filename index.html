@@ -317,13 +317,15 @@ for f in SKILL.md demo.html taste.example.md; do curl -fsSo $d/$f $u/$f; done</p
 <pre>d=~/.claude/skills/logo-lab; u=https://skills.bodr.ing/skills/logo-lab
 mkdir -p $d/kit
 curl -fsSo $d/SKILL.md $u/SKILL.md
-for f in marks.py page.py photos.py tpl.html verdict.html shot.js; do
+for f in marks.py page.py photos.py tpl.html verdict.html shot.js render.sh mockup.sh; do
   curl -fsSo $d/kit/$f $u/kit/$f
-done</pre>
+done
+chmod +x $d/kit/*.sh</pre>
           <div class="files">
             <a href="skills/logo-lab/SKILL.md">SKILL.md <span>concepts, SVG, mockups, pick</span></a>
             <a href="skills/logo-lab/kit/marks.py">marks.py <span>8 marks from shared helpers</span></a>
             <a href="skills/logo-lab/kit/page.py">page.py <span>the compare page</span></a>
+            <a href="skills/logo-lab/kit/mockup.sh">mockup.sh <span>photo mockups with Codex</span></a>
             <a href="skills/logo-lab/demo.html">demo.html <span>the real bodr.ing run</span></a>
           </div>
         </details>
