@@ -1,9 +1,9 @@
 ---
-name: vibe-check
-description: Find how something should look by swiping visual samples (palettes, typefaces, layouts) before any design work, ending in a taste.md style guide. Visual style only. Use when someone says "I'll know it when I see it" about a design, rejects a design without saying why, or starts a new brand, logo, landing page, deck or product look. To find out what someone wants in general (features, a game idea, a trip), use taste-swipe instead.
+name: oohnah
+description: Find how something should look by swiping visual samples (palettes, typefaces, layouts) before any design work, ending in a taste.md style guide. Visual style only. Use when someone says "I'll know it when I see it" about a design, rejects a design without saying why, or starts a new brand, logo, landing page, deck or product look. To find out what someone wants in general (features, a game idea, a trip), use yepnope instead. Formerly called vibe-check.
 ---
 
-# Vibe check
+# OohNah
 
 Turn "I'll know it when I see it" into a written taste profile, then design from it. The person swipes through visual direction cards (Tinder-style), and you read the swipes and write `taste.md`.
 

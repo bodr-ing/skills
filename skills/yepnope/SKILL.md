@@ -1,11 +1,11 @@
 ---
-name: taste-swipe
-description: Find out what someone actually wants when they can't say it yet. Breaks a subject (a game, an app, a trip, a house, a film) into its smallest choices, turns them into a swipe feed of about 100 cards (no / yes / love / don't care), then reads the answers back and turns them into a profile and concrete directions. Use when the person says "I don't know what I want", "help me figure out my taste", or asks for a Tinder-style or swipe-based preference test. Works for any subject, with ideas written as words; to find a brand's visual look (colours, fonts, layouts), use vibe-check instead.
+name: yepnope
+description: Find out what someone actually wants when they can't say it yet. Breaks a subject (a game, an app, a trip, a house, a film) into its smallest choices, turns them into a swipe feed of about 100 cards (no / yes / love / don't care), then reads the answers back and turns them into a profile and concrete directions. Use when the person says "I don't know what I want", "help me figure out my taste", or asks for a Tinder-style or swipe-based preference test. Works for any subject, with ideas written as words; to find a brand's visual look (colours, fonts, layouts), use oohnah instead. Formerly called taste-swipe.
 ---
 
-# Taste Swipe
+# YepNope
 
-People can rarely describe what they want, but they react instantly to concrete options. Taste Swipe
+People can rarely describe what they want, but they react instantly to concrete options. YepNope
 asks about one small idea at a time, so each answer is cheap, and a hundred answers add up to a clear
 picture.
 
@@ -43,8 +43,8 @@ for anything game-related.
 ```jsonc
 {
   "id": "games",                       // lowercase, dashes; keys saved answers
-  "name": "Game taste swipe",          // heads the copied summary
-  "title": "Taste Swipe: Games",       // browser tab and gallery name
+  "name": "YepNope: games",          // heads the copied summary
+  "title": "YepNope: Games",       // browser tab and gallery name
   "heading": "What game do you want?", // shown above the card
   "subject": "a game",                 // used in "Not enough answers yet to sketch a game"
   "rounds": 100,                       // cards per session (at most the number of atoms)
@@ -102,7 +102,7 @@ Progress is kept in the browser, and each answer is saved to the database within
 ```json
 { "domain": "games", "count": 100, "done": true, "started": "...", "updated": "...",
   "answers": [ { "cat": "art", "title": "Lighting is the art", "v": "love" } ],
-  "profile": "Game taste swipe, 100 answers\nArt style — LOVE: ... | yes: ... | no: ..." }
+  "profile": "YepNope: games, 100 answers\nArt style — LOVE: ... | yes: ... | no: ..." }
 ```
 
 `v` is `no`, `skip` (don't care), `yes` or `love`. A run can be read before it is done; `count` says

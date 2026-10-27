@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Builds a Taste Swipe page from a deck: node build.mjs <deck.json> <out.html>
+// Builds a YepNope page from a deck: node build.mjs <deck.json> <out.html>
 // Checks the deck first and prints what is wrong instead of writing a broken page.
 import { readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
