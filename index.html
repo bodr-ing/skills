@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Bodring Skills</title>
   <meta name="claude:viewport-fit-sides" content="cover">
-  <meta name="description" content="Two swipe skills for coding agents. Taste Swipe finds out what you want. Vibe check finds out how it should look.">
+  <meta name="description" content="Two swipe skills for coding agents. YepNope finds out what you want. OohNah finds out how it should look.">
   <meta property="og:title" content="Bodring Skills">
   <meta property="og:description" content="Swipe ideas to find what you want. Swipe looks to find how it should look.">
   <meta property="og:url" content="https://skills.bodr.ing/">
@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=DM+Mono:wght@400;500&family=Work+Sans:wght@400;600&display=swap">
   <style>
-/* Layout: the bodr.ing riso poster, two plates. Taste Swipe prints in green (ideas, words), vibe check in pink (looks, colour). One chooser up top, then one spread per skill with its playable phone. Deliberately one look: it's print. */
+/* Layout: the bodr.ing riso poster, two plates. YepNope prints in green (ideas, words), OohNah in pink (looks, colour). One chooser up top, then one spread per skill with its playable phone. Deliberately one look: it's print. */
 :root {
   --paper: #eceee4;
   --card: #f6f7f0;
@@ -106,6 +106,9 @@ nav .links a:hover { color: var(--pink-ink); }
 .ask { margin: 28px 0 0; padding: 14px 18px; background: var(--card); border-left: 4px solid var(--c); max-width: 58ch; }
 .ask .label { color: var(--muted); font-size: 12px; display: block; margin-bottom: 4px; }
 .ask q { font-weight: 600; quotes: "“" "”"; }
+.ask .tweak { margin-top: 12px; }
+.ask .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.ask .chips span { font-family: var(--mono); font-size: 12px; padding: 3px 9px; border: 1px solid var(--c); border-radius: 99px; }
 details.install { margin-top: 24px; max-width: 62ch; }
 details.install summary { cursor: pointer; list-style: none; display: inline-flex; gap: 10px; align-items: center; font-family: var(--mono); font-size: 14px; text-transform: uppercase; letter-spacing: .08em; color: var(--c); }
 details.install summary::-webkit-details-marker { display: none; }
@@ -154,7 +157,7 @@ footer a { color: var(--green); }
   <div class="wrap">
     <nav class="label">
       <a class="home" href="https://bodr.ing"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="54" cy="54" r="40" fill="#ff4aa2"/><circle cx="50" cy="50" r="40" fill="#0b7a4b"/><circle cx="50" cy="50" r="35" fill="#5cbf5f"/><circle cx="50" cy="50" r="32.5" fill="#eaf4d3"/><g fill="#c3e29a"><ellipse cx="50" cy="37.5" rx="9.5" ry="13"/><ellipse cx="60.8" cy="56.2" rx="9.5" ry="13" transform="rotate(120 60.8 56.2)"/><ellipse cx="39.2" cy="56.2" rx="9.5" ry="13" transform="rotate(240 39.2 56.2)"/></g></svg><span class="full">bodr.ing / skills</span></a>
-      <span class="links"><a href="#taste-swipe">Taste Swipe</a><a href="#vibe-check">Vibe check</a><a class="hide-sm" href="#install">Install</a></span>
+      <span class="links"><a href="#yepnope">YepNope</a><a href="#oohnah">OohNah</a><a class="hide-sm" href="#install">Install</a></span>
     </nav>
 
     <header class="hero">
@@ -165,14 +168,14 @@ footer a { color: var(--green); }
     <section class="choose" aria-labelledby="choose-h">
       <p class="label" id="choose-h">Which one do you need?</p>
       <div class="tickets">
-        <a class="ticket taste" href="#taste-swipe">
+        <a class="ticket taste" href="#yepnope">
           <span class="q">What do you actually want?</span>
           <div class="specimen" aria-hidden="true">
             <div class="mini"><b>A city that grows itself</b><small>You zone and guide; houses appear on their own.</small><span class="pills"><i></i><i></i><i></i></span></div>
             <div class="mini"><b>Fire that spreads with the wind</b><small>One spark, a dry summer, a long night.</small><span class="pills"><i></i><i></i><i></i></span></div>
             <div class="mini"><b>Ten-minute sessions</b><small>Play on the bus, stop at your stop.</small><span class="pills"><i></i><i></i><i></i></span></div>
           </div>
-          <h2>Taste Swipe</h2>
+          <h2>YepNope</h2>
           <dl>
             <dt>For</dt><dd>Any subject: a game, an app, a trip, a house.</dd>
             <dt>You swipe</dt><dd>About 100 ideas, written in words. No, yes, love it, don't care.</dd>
@@ -180,14 +183,14 @@ footer a { color: var(--green); }
           </dl>
           <span class="go"><span>Swipe ideas</span><span>↓</span></span>
         </a>
-        <a class="ticket vibe" href="#vibe-check">
+        <a class="ticket vibe" href="#oohnah">
           <span class="q">How should it look?</span>
           <div class="specimen" aria-hidden="true">
             <div class="mini"><div class="look" style="background:#5c1a3a;color:#fbe6d4;font-family:Georgia,serif">Aa</div><div class="chip"><i style="background:#5c1a3a"></i><i style="background:#c0583a"></i><i style="background:#f2a93b"></i></div></div>
             <div class="mini"><div class="look" style="background:#03130a;color:#8dff9f;font-family:var(--mono)">a_</div><div class="chip"><i style="background:#03130a"></i><i style="background:#29d35b"></i><i style="background:#8dff9f"></i></div></div>
             <div class="mini"><div class="look" style="background:#123a8c;color:#f6efe1;font-family:var(--display)">Aa</div><div class="chip"><i style="background:#123a8c"></i><i style="background:#2bb5b8"></i><i style="background:#f6efe1"></i></div></div>
           </div>
-          <h2>Vibe check</h2>
+          <h2>OohNah</h2>
           <dl>
             <dt>For</dt><dd>Visual style only: a brand, a logo, a landing page.</dd>
             <dt>You swipe</dt><dd>About 30 looks: colours, fonts and layouts. Yes or no.</dd>
@@ -197,73 +200,73 @@ footer a { color: var(--green); }
         </a>
       </div>
       <div class="rule">
-        <div><b class="g">Not sure what it is yet?</b> <span>Taste Swipe.</span></div>
-        <div><b class="p">Know what it is, not how it looks?</b> <span>Vibe check.</span></div>
+        <div><b class="g">Not sure what it is yet?</b> <span>YepNope.</span></div>
+        <div><b class="p">Know what it is, not how it looks?</b> <span>OohNah.</span></div>
       </div>
     </section>
 
-    <section class="skill taste" id="taste-swipe">
+    <section class="skill taste" id="yepnope">
       <div>
         <p class="q label">Any subject · ideas in words</p>
-        <h2>Taste Swipe</h2>
+        <h2>YepNope</h2>
         <p class="say">Find out what someone actually wants when they can't say it yet. People can rarely describe it, but they react to a concrete idea in two seconds. A hundred small answers add up to a clear picture.</p>
         <ol class="flow">
           <li><span><b>The agent breaks the subject down</b> into its smallest choices: 12 to 25 categories, 150 to 300 one-idea cards.</span></li>
           <li><span><b>You swipe about 100.</b> Right is yes, left is no, up is love it, down is don't care.</span></li>
           <li><span><b>It reads your answers back</b> as a profile and concrete directions you can build.</span></li>
         </ol>
-        <p class="ask"><span class="label">Then ask your agent</span><q>Help me figure out what game I want to make.</q></p>
+        <p class="ask"><span class="label">Then ask your agent</span><q>Help me figure out what game I want to make.</q><span class="label tweak">You can also ask for</span><span class="chips"><span>"just 30 swipes"</span><span>"only art and story"</span><span>"5 directions"</span><span>"two rounds"</span><span>"in Uzbek"</span></span></p>
         <details class="install">
           <summary>Install just this one</summary>
-<pre>d=~/.claude/skills/taste-swipe; u=https://skills.bodr.ing/skills/taste-swipe
+<pre>d=~/.claude/skills/yepnope; u=https://skills.bodr.ing/skills/yepnope
 mkdir -p $d/assets $d/scripts $d/decks
 for f in SKILL.md assets/template.html scripts/build.mjs decks/games.json; do
   curl -fsSo $d/$f $u/$f
 done</pre>
           <div class="files">
-            <a href="skills/taste-swipe/SKILL.md">SKILL.md <span>atomize, build, read</span></a>
-            <a href="skills/taste-swipe/assets/template.html">template.html <span>the swipe page</span></a>
-            <a href="skills/taste-swipe/scripts/build.mjs">build.mjs <span>deck to page</span></a>
-            <a href="skills/taste-swipe/decks/games.json">games.json <span>a finished 224-card deck</span></a>
+            <a href="skills/yepnope/SKILL.md">SKILL.md <span>atomize, build, read</span></a>
+            <a href="skills/yepnope/assets/template.html">template.html <span>the swipe page</span></a>
+            <a href="skills/yepnope/scripts/build.mjs">build.mjs <span>deck to page</span></a>
+            <a href="skills/yepnope/decks/games.json">games.json <span>a finished 224-card deck</span></a>
           </div>
         </details>
       </div>
       <div class="demo">
-        <div class="phone" data-src="skills/taste-swipe/demo.html">
-          <button type="button" class="poster" aria-label="Play the Taste Swipe demo"><img src="assets/taste-swipe.jpg" alt="" width="390" height="780" loading="lazy"><span>▶ Play the demo</span></button>
+        <div class="phone" data-src="skills/yepnope/demo.html">
+          <button type="button" class="poster" aria-label="Play the YepNope demo"><img src="assets/yepnope.jpg" alt="" width="390" height="780" loading="lazy"><span>▶ Play the demo</span></button>
         </div>
-        <p class="demo-note">The games deck: 224 cards, swipe as many as you like. <a href="skills/taste-swipe/demo.html" target="_blank" rel="noopener">Full screen ↗</a></p>
+        <p class="demo-note">The games deck: 224 cards, swipe as many as you like. <a href="skills/yepnope/demo.html" target="_blank" rel="noopener">Full screen ↗</a></p>
       </div>
     </section>
 
-    <section class="skill vibe" id="vibe-check">
+    <section class="skill vibe" id="oohnah">
       <div>
         <p class="q label">Visual style only · looks in colour</p>
-        <h2>Vibe check</h2>
+        <h2>OohNah</h2>
         <p class="say">Find a brand's look by swiping before anyone designs a thing. Each card is a whole look: a palette, a typeface and a layout. You don't have to say why you like it.</p>
         <ol class="flow">
           <li><span><b>Round one maps the space</b> with 12 looks as far apart as possible: playful to premium, light to dark, serif to mono.</span></li>
           <li><span><b>Round two remixes what you liked,</b> the palette of one with the type of another, and keeps probing blind spots.</span></li>
           <li><span><b>It writes <code>taste.md</code>,</b> with a "never" list, then builds three real directions for you to pick from.</span></li>
         </ol>
-        <p class="ask"><span class="label">Then ask your agent</span><q>Run a vibe check before we design the landing page.</q></p>
+        <p class="ask"><span class="label">Then ask your agent</span><q>Run OohNah before we design the landing page.</q><span class="label tweak">You can also ask for</span><span class="chips"><span>"15 swipes"</span><span>"only colours"</span><span>"5 variants"</span><span>"6 logo options"</span><span>"stop at taste.md"</span></span></p>
         <details class="install">
           <summary>Install just this one</summary>
-<pre>d=~/.claude/skills/vibe-check; u=https://skills.bodr.ing/skills/vibe-check
+<pre>d=~/.claude/skills/oohnah; u=https://skills.bodr.ing/skills/oohnah
 mkdir -p $d
 for f in SKILL.md demo.html taste.example.md; do curl -fsSo $d/$f $u/$f; done</pre>
           <div class="files">
-            <a href="skills/vibe-check/SKILL.md">SKILL.md <span>the swipe loop</span></a>
-            <a href="skills/vibe-check/demo.html">demo.html <span>40 looks, 30 swipes</span></a>
-            <a href="skills/vibe-check/taste.example.md">taste.example.md <span>a real result</span></a>
+            <a href="skills/oohnah/SKILL.md">SKILL.md <span>the swipe loop</span></a>
+            <a href="skills/oohnah/demo.html">demo.html <span>40 looks, 30 swipes</span></a>
+            <a href="skills/oohnah/taste.example.md">taste.example.md <span>a real result</span></a>
           </div>
         </details>
       </div>
       <div class="demo">
-        <div class="phone" data-src="skills/vibe-check/demo.html">
-          <button type="button" class="poster" aria-label="Play the Vibe check demo"><img src="assets/vibe-check.jpg" alt="" width="360" height="720" loading="lazy"><span>▶ Play the demo</span></button>
+        <div class="phone" data-src="skills/oohnah/demo.html">
+          <button type="button" class="poster" aria-label="Play the OohNah demo"><img src="assets/oohnah.jpg" alt="" width="360" height="720" loading="lazy"><span>▶ Play the demo</span></button>
         </div>
-        <p class="demo-note">40 looks for Halfmoon, a made-up coffee roaster. Like a few and the deck remixes them. <a href="skills/vibe-check/demo.html" target="_blank" rel="noopener">Full screen ↗</a></p>
+        <p class="demo-note">40 looks for Halfmoon, a made-up coffee roaster. Like a few and the deck remixes them. <a href="skills/oohnah/demo.html" target="_blank" rel="noopener">Full screen ↗</a></p>
       </div>
     </section>
 

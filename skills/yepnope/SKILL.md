@@ -1,16 +1,30 @@
 ---
-name: taste-swipe
-description: Find out what someone actually wants when they can't say it yet. Breaks a subject (a game, an app, a trip, a house, a film) into its smallest choices, turns them into a swipe feed of about 100 cards (no / yes / love / don't care), then reads the answers back and turns them into a profile and concrete directions. Use when the person says "I don't know what I want", "help me figure out my taste", or asks for a Tinder-style or swipe-based preference test. Works for any subject, with ideas written as words; to find a brand's visual look (colours, fonts, layouts), use vibe-check instead.
+name: yepnope
+description: Find out what someone actually wants when they can't say it yet. Breaks a subject (a game, an app, a trip, a house, a film) into its smallest choices, turns them into a swipe feed of about 100 cards (no / yes / love / don't care), then reads the answers back and turns them into a profile and concrete directions. Use when the person says "I don't know what I want", "help me figure out my taste", or asks for a Tinder-style or swipe-based preference test. Works for any subject, with ideas written as words; to find a brand's visual look (colours, fonts, layouts), use oohnah instead. Formerly called taste-swipe.
 ---
 
-# Taste Swipe
+# YepNope
 
-People can rarely describe what they want, but they react instantly to concrete options. Taste Swipe
+People can rarely describe what they want, but they react instantly to concrete options. YepNope
 asks about one small idea at a time, so each answer is cheap, and a hundred answers add up to a clear
 picture.
 
 The skill has four steps: atomize the subject into a deck, build and publish the swipe page, read the
 answers, and turn them into directions.
+
+## Options the person can ask for
+
+Read these from the request and use the default for anything not mentioned. Say back the settings you used in one line before you write the deck.
+
+| Option | Default | Example ask |
+|---|---|---|
+| Swipes per session | 100 (`rounds` in the deck) | "just 30 quick ones", "go deep, 200" |
+| Deck size | 150 to 300 atoms | "a small deck is fine" |
+| Categories | 12 to 25, covering the whole subject | "only gameplay and art", "skip pricing" |
+| Directions in the result | 2 or 3 | "give me 5 directions", "one clear pick" |
+| Second, narrower round | offered after the first | "do two rounds straight away" |
+| Language | the person's language | "in Uzbek" |
+| Starting deck | written fresh | "use the games deck" |
 
 ## 1. Atomize the subject
 
@@ -43,8 +57,8 @@ for anything game-related.
 ```jsonc
 {
   "id": "games",                       // lowercase, dashes; keys saved answers
-  "name": "Game taste swipe",          // heads the copied summary
-  "title": "Taste Swipe: Games",       // browser tab and gallery name
+  "name": "YepNope: games",          // heads the copied summary
+  "title": "YepNope: Games",       // browser tab and gallery name
   "heading": "What game do you want?", // shown above the card
   "subject": "a game",                 // used in "Not enough answers yet to sketch a game"
   "rounds": 100,                       // cards per session (at most the number of atoms)
@@ -102,7 +116,7 @@ Progress is kept in the browser, and each answer is saved to the database within
 ```json
 { "domain": "games", "count": 100, "done": true, "started": "...", "updated": "...",
   "answers": [ { "cat": "art", "title": "Lighting is the art", "v": "love" } ],
-  "profile": "Game taste swipe, 100 answers\nArt style — LOVE: ... | yes: ... | no: ..." }
+  "profile": "YepNope: games, 100 answers\nArt style — LOVE: ... | yes: ... | no: ..." }
 ```
 
 `v` is `no`, `skip` (don't care), `yes` or `love`. A run can be read before it is done; `count` says

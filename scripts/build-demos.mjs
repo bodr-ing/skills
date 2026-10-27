@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Builds the playable demos the site embeds: node scripts/build-demos.mjs
 // Hand Up: the real deck page with an in-memory stand-in for the artifact database and a pretend agent.
-// Taste Swipe: the games deck built with the skill's own build script.
+// YepNope: the games deck built with the skill's own build script.
 import { readFileSync, writeFileSync } from "node:fs";
 import { execFileSync } from "node:child_process";
 
@@ -53,8 +53,8 @@ const s = deck.indexOf("</style>") + "</style>".length;
 const i = deck.indexOf("<script>");
 writeFileSync("skills/hand-up/demo.html", head + deck.slice(0, s).replace("<title>Hand Up</title>", "<title>Hand Up demo</title>") + "\n</head>\n<body>" + deck.slice(s, i) + standIn + deck.slice(i) + "\n</body>\n</html>\n");
 
-execFileSync("node", ["skills/taste-swipe/scripts/build.mjs", "skills/taste-swipe/decks/games.json", "skills/taste-swipe/demo.html"], { stdio: "inherit" });
+execFileSync("node", ["skills/yepnope/scripts/build.mjs", "skills/yepnope/decks/games.json", "skills/yepnope/demo.html"], { stdio: "inherit" });
 // The skill builds an artifact body; give the standalone page a doctype so it renders in standards mode.
-const taste = readFileSync("skills/taste-swipe/demo.html", "utf8");
-writeFileSync("skills/taste-swipe/demo.html", head.replace("<html lang=\"en\">\n<head>\n", "") + taste);
-console.log("Built skills/hand-up/demo.html and skills/taste-swipe/demo.html");
+const taste = readFileSync("skills/yepnope/demo.html", "utf8");
+writeFileSync("skills/yepnope/demo.html", head.replace("<html lang=\"en\">\n<head>\n", "") + taste);
+console.log("Built skills/hand-up/demo.html and skills/yepnope/demo.html");

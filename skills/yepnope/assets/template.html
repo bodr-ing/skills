@@ -167,7 +167,7 @@ function cleanSvg(markup) {
   return document.importNode(root, true);
 }
 const ROUNDS = Math.min(CONFIG.rounds || 100, DECK.length);
-const RUN_KEY = 'tasteSwipe.' + CONFIG.id + '.v1';
+const RUN_KEY = 'yepnope.' + CONFIG.id + '.v1';
 const VERDICTS = { no: -1, skip: 0, yes: 1, love: 2 };
 const LABEL = { no: 'No', skip: "Don't care", yes: 'Yes', love: 'Love it' };
 

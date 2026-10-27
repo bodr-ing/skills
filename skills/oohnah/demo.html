@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Swipe through looks to find a brand's taste. A Bodring skill demo.">
 <link rel="icon" href="https://bodr.ing/favicon.svg" type="image/svg+xml">
-<title>Vibe Check · Bodring Skills</title>
+<title>OohNah · Bodring Skills</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Bangers&family=UnifrakturMaguntia&family=IM+Fell+English:ital@0;1&family=Permanent+Marker&family=Archivo+Black&family=Bagel+Fat+One&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,800&family=Caveat+Brush&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Fraunces:opsz,wght@9..144,800&family=IBM+Plex+Mono:wght@400;600&family=Instrument+Serif:ital@0;1&family=Major+Mono+Display&family=Space+Mono:wght@700&family=Press+Start+2P&family=Rubik+Mono+One&family=Syne:wght@800&family=Unbounded:wght@400;800&family=Inter+Tight:wght@400;600&family=DM+Mono:wght@400;500&family=Work+Sans:wght@400;600&display=swap">
 <style>
 /* Layout: Pickle press chrome (riso paper, green + pink) around one card stack. The cards carry all other looks. */
@@ -84,7 +84,7 @@ textarea { width: 100%; min-height: 120px; font: 12px var(--mono); padding: 10px
 </head>
 <body>
 <div class="app">
-  <header><h1>vibe check</h1><span class="count" id="count">1 / 30</span></header>
+  <header><h1>OohNah</h1><span class="count" id="count">1 / 30</span></header>
   <div class="bar"><i id="prog"></i></div>
   <div class="phase"><span id="phase">Round 1 · <b>map</b></span><span id="phase-note">12 wide-apart looks</span></div>
   <p class="hint" id="hint">Swipe right if this could be the brand, left if not. After 12 cards the deck starts remixing what you liked. Buttons and arrow keys work too.</p>
@@ -392,7 +392,7 @@ async function showResults() {
   $("status").textContent = "Your taste profile. Copy it and paste it to your agent:";
   const ta = document.createElement("textarea");
   ta.id = "result-text"; ta.readOnly = true;
-  ta.value = "Vibe check (" + TOTAL + " cards)\nLiked: " + payload.liked.join(", ") + "\n" + AXES.map(a => a + ": " + summary[a].join(", ")).join("\n");
+  ta.value = "OohNah (" + TOTAL + " cards)\nLiked: " + payload.liked.join(", ") + "\n" + AXES.map(a => a + ": " + summary[a].join(", ")).join("\n");
   $("status").after(ta);
   const cp = document.createElement("button");
   cp.className = "btn"; cp.textContent = "Copy profile";
