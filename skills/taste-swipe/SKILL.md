@@ -1,6 +1,6 @@
 ---
 name: taste-swipe
-description: Find out what someone actually wants when they can't say it yet. Breaks a subject (a game, an app, a brand, a trip, a house, a film) into its smallest choices, turns them into a swipe feed of about 100 cards (no / yes / love / don't care), then reads the answers back and turns them into a profile and concrete directions. Use when the person says "I don't know what I want", "help me figure out my taste", or asks for a Tinder-style or swipe-based preference test.
+description: Find out what someone actually wants when they can't say it yet. Breaks a subject (a game, an app, a trip, a house, a film) into its smallest choices, turns them into a swipe feed of about 100 cards (no / yes / love / don't care), then reads the answers back and turns them into a profile and concrete directions. Use when the person says "I don't know what I want", "help me figure out my taste", or asks for a Tinder-style or swipe-based preference test. Works for any subject, with ideas written as words; to find a brand's visual look (colours, fonts, layouts), use vibe-check instead.
 ---
 
 # Taste Swipe

@@ -5,9 +5,9 @@ Agent skills from The Bodring Company ([bodr.ing](https://bodr.ing)), browsable 
 
 | Skill | What it does |
 |---|---|
-| [taste-swipe](skills/taste-swipe/SKILL.md) | Breaks a subject (a game, an app, a brand, a trip) into its smallest choices and turns them into a swipe feed. About 100 swipes later you have a clear picture of what the person actually wants. |
-| [hand-up](skills/hand-up/SKILL.md) | All your coding agents raise blockers, conflicts and findings into one swipe deck. You swipe, and they read your answer and carry on. Works inside Claude with nothing to host, or with the [hub](https://github.com/bodr-ing/hand-up) for any agent and phone push. |
-| [vibe-check](skills/vibe-check/SKILL.md) | Finds a brand's visual taste by swiping before any design work, and ends in a `taste.md` your agents design from. |
+| [taste-swipe](skills/taste-swipe/SKILL.md) | **Any subject, in words.** Breaks a subject (a game, an app, a trip, a house) into its smallest choices and turns them into a swipe feed. About 100 swipes later you have a clear picture of what the person actually wants. |
+| [hand-up](skills/hand-up/SKILL.md) (not on the site yet) | All your coding agents raise blockers, conflicts and findings into one swipe deck. You swipe, and they read your answer and carry on. Works inside Claude with nothing to host, or with the [hub](https://github.com/bodr-ing/hand-up) for any agent and phone push. |
+| [vibe-check](skills/vibe-check/SKILL.md) | **Visual style only.** Finds a brand's visual taste by swiping before any design work, and ends in a `taste.md` your agents design from. |
 
 ## Install
 
