@@ -12,6 +12,14 @@ Agent skills from The Bodring Company ([bodr.ing](https://bodr.ing)), browsable 
 
 They chain: YepNope finds what to build, OohNah finds how it looks and writes `taste.md`, Logo Lab reads that and finds the mark.
 
+## A real run: bodr.ing
+
+*Bir bodring* means "one cucumber" in Uzbek. The Bodring Company knew what it was, so it started at OohNah.
+
+1. **OohNah: 40 looks, 22 yeses.** The swipes leaned Uzbek and cultural, techy, premium and playful, with green and print. Of three directions, *Pickle press* won: two-colour riso in green `#00915a` and pink `#ff4aa2` on paper `#eceee4`, set in Bagel Fat One, Work Sans and DM Mono. [skills.bodr.ing](https://skills.bodr.ing) is built in it.
+2. **Logo Lab: 8 marks, 20 photos.** Eight image-model concepts were redrawn as SVG and tried in seven places, then the four finalists went onto a Tashkent poster, a phone, a tote, a pickle jar and a shop window ([`skills/logo-lab/example`](skills/logo-lab/example)).
+3. **Shipped: the slice.** A cucumber cross-section with an off-register pink plate became the favicon and the "o" in the wordmark. The pick and the reason went into `taste.md` for the next agent.
+
 ## Install
 
 With [skills.sh](https://skills.sh), for Claude Code, Codex, Cursor and other agents:
