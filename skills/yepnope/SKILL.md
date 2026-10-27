@@ -139,3 +139,7 @@ Report back in a few lines: the taste in one sentence, the 3 to 5 anchors, the b
 three concrete directions that fit. Then offer a second, narrower round: a new deck that splits the
 loved categories into finer atoms ("Lighting is the art" becomes candlelight, neon, moonlight,
 bioluminescence). Two rounds usually settle a direction.
+
+## What comes next
+
+Once the direction is settled and it needs a look, hand over to `oohnah` (if installed) to find the visual style and write `taste.md`, then to `logo-lab` for the mark. Pass along the anchors and boundaries so those decks start from them.

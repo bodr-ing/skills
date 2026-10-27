@@ -38,7 +38,7 @@ Run it **between brainstorm and plan**: after you know what the thing is and who
 4. **Write `taste.md`.** Include the top values per axis with percentages, the liked cards, and an explicit **never** list (everything at or under about 20%). Show it to the person and let them edit it.
 5. **Plan three directions.** Each one leans on a different liked cluster. Name each with a short phrase (for example "Samarkand terminal", "Pickle press", "Company ledger"). Give each a palette, a font pairing and one motif.
 6. **Build them as real pages,** not mockups. Present them on a single picker page: phone-sized previews, an "open live" link for each, a one-tap pick and an optional note.
-7. **Ship the pick.** Then do the same for the logo: 3 to 4 marks, each shown big, as an avatar, as a favicon and on the brand colour.
+7. **Ship the pick.** Then find the logo. If the `logo-lab` skill is installed, hand over to it with `taste.md`: it tests 8 marks in real places and ends in a pick. Otherwise show 3 to 4 marks, each big, as an avatar, as a favicon and on the brand colour.
 8. **Compound.** Append the winner, the logo and why the others lost to `taste.md`, and commit it to the repo. The next venture starts from that file.
 
 ## Rules
