@@ -438,6 +438,8 @@ function makeDraggable(el, card) {
   });
   el.addEventListener("pointermove", (e) => {
     if (!down) return;
+    // The button came up outside the page (or the frame), so no pointerup arrived: settle the card now.
+    if (e.pointerType === "mouse" && !e.buttons) return end(e);
     dx = e.clientX - sx; dy = e.clientY - sy;
     if (Math.abs(dx) + Math.abs(dy) > 6) moved = true;
     el.style.transform = `translate(${dx}px,${dy}px) rotate(${dx / 18}deg)`;
@@ -462,8 +464,7 @@ function makeDraggable(el, card) {
     }
     dx = dy = 0;
   };
-  el.addEventListener("pointerup", end);
-  el.addEventListener("pointercancel", end);
+  ["pointerup", "pointercancel", "lostpointercapture"].forEach((t) => el.addEventListener(t, end));
 }
 
 $(".actions").addEventListener("click", (e) => {

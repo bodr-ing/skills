@@ -346,22 +346,25 @@ function setStamps(el, dx, dy) {
   s('skip').style.opacity = dy > 0 && ay > ax ? Math.min(1, ay / 90) : 0;
 }
 function bindDrag(el) {
-  let start = null;
-  el.addEventListener('pointerdown', e => { if (busy) return; start = { x: e.clientX, y: e.clientY }; el.setPointerCapture(e.pointerId); el.classList.remove('snap'); el.style.cursor = 'grabbing'; });
+  let start = null, dx = 0, dy = 0;
+  el.addEventListener('pointerdown', e => { if (busy) return; start = { x: e.clientX, y: e.clientY }; dx = dy = 0; el.setPointerCapture(e.pointerId); el.classList.remove('snap'); el.style.cursor = 'grabbing'; });
   el.addEventListener('pointermove', e => {
     if (!start) return;
-    const dx = e.clientX - start.x, dy = e.clientY - start.y;
+    // The button came up outside the page (or the frame), so no pointerup arrived: settle the card now.
+    if (e.pointerType === 'mouse' && !e.buttons) return up();
+    dx = e.clientX - start.x; dy = e.clientY - start.y;
     el.style.transform = `translate(${dx}px, ${dy}px) rotate(${dx * 0.06}deg)`;
     setStamps(el, dx, dy);
   });
-  const up = e => {
+  // Settles on the last drawn position, so it works for events that carry no coordinates.
+  const up = () => {
     if (!start) return;
-    const dx = e.clientX - start.x, dy = e.clientY - start.y; start = null; el.style.cursor = '';
+    start = null; el.style.cursor = '';
     const ax = Math.abs(dx), ay = Math.abs(dy);
     if (Math.max(ax, ay) > 90) { decide(ax > ay ? (dx > 0 ? 'yes' : 'no') : (dy < 0 ? 'love' : 'skip')); return; }
     el.classList.add('snap'); el.style.transform = ''; setStamps(el, 0, 0);
   };
-  el.addEventListener('pointerup', up); el.addEventListener('pointercancel', up);
+  ['pointerup', 'pointercancel', 'lostpointercapture'].forEach(t => el.addEventListener(t, up));
 }
 document.querySelectorAll('.btn').forEach(b => b.addEventListener('click', () => decide(b.dataset.v)));
 window.addEventListener('keydown', e => {
