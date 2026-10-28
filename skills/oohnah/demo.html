@@ -334,6 +334,8 @@ function drag(card) {
   card.addEventListener("pointerdown", e => { x0 = e.clientX; card.classList.add("dragging"); card.setPointerCapture(e.pointerId); });
   card.addEventListener("pointermove", e => {
     if (x0 === null) return;
+    // The button came up outside the page (or the frame), so no pointerup arrived: settle the card now.
+    if (e.pointerType === "mouse" && !e.buttons) return end();
     dx = e.clientX - x0;
     card.style.transform = `translateX(${dx}px) rotate(${dx / 18}deg)`;
     yes.style.opacity = Math.max(0, Math.min(1, dx / 90));
@@ -346,8 +348,7 @@ function drag(card) {
     else { card.style.transform = ""; yes.style.opacity = 0; no.style.opacity = 0; }
     dx = 0;
   };
-  card.addEventListener("pointerup", end);
-  card.addEventListener("pointercancel", end);
+  ["pointerup", "pointercancel", "lostpointercapture"].forEach(t => card.addEventListener(t, end));
 }
 
 $("btn-yes").onclick = () => decide(true);
