@@ -5,6 +5,37 @@
  "heading": "What game do you want?",
  "rounds": 100,
  "subject": "a game",
+ "look": {
+  "brief": "Someone pinning down the game they want to make or play. Game ideas read best as quick design-notebook doodles: a dotted page tinted per category, one ink sketch, a plain title underneath, so the idea is judged and not the art.",
+  "fonts": "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@500&display=swap",
+  "vars": {
+   "bg": "#f3efe7",
+   "fg": "#1c1a17",
+   "muted": "#6d665b",
+   "card": "#fffdf8",
+   "line": "#ddd5c7",
+   "no": "#d2483f",
+   "yes": "#2f9a5b",
+   "love": "#c9861a",
+   "skip": "#7a7f8c",
+   "display": "\"Bricolage Grotesque\", \"Avenir Next\", \"Segoe UI\", sans-serif",
+   "body": "\"Atkinson Hyperlegible\", \"Segoe UI\", system-ui, sans-serif",
+   "mono": "\"JetBrains Mono\", ui-monospace, Consolas, monospace"
+  },
+  "dark": {
+   "bg": "#15140f",
+   "fg": "#f1ebdf",
+   "muted": "#a39b8c",
+   "card": "#201e18",
+   "line": "#3a362d",
+   "no": "#ef6a60",
+   "yes": "#52c47f",
+   "love": "#e8a63c",
+   "skip": "#9aa0ad"
+  },
+  "card": "<div class=\"page\"><div class=\"doodle\" data-slot=\"art\"></div><span class=\"tab\" data-slot=\"cat\"></span></div><div class=\"copy\"><h2 data-slot=\"title\"></h2><p data-slot=\"line\"></p></div>",
+  "css": "/* Design notebook: a dotted page tinted by the category's hue, an ink doodle, the idea written underneath. */\n.card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 12px 30px -18px rgba(40, 30, 10, 0.45); }\n.page { flex: 0 0 auto; aspect-ratio: 16 / 10; max-height: 62%; position: relative; display: grid; place-items: center; color: #2b2721;\n  background: var(--tint) radial-gradient(rgba(43, 39, 33, 0.13) 1px, transparent 1.2px) 0 0 / 14px 14px; }\n.doodle { width: 82%; height: 84%; }\n.tab { position: absolute; left: 14px; top: 14px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;\n  background: rgba(255, 253, 248, 0.92); color: #1c1a17; padding: 4px 8px; border-radius: 999px; }\n.copy { padding: 20px 22px 24px; display: grid; gap: 10px; align-content: start; flex: 1; }\n.copy h2 { font-family: var(--display); font-weight: 700; font-size: 30px; line-height: 1.05; margin: 0; text-wrap: balance; letter-spacing: -0.015em; }\n.copy p { margin: 0; color: var(--muted); line-height: 1.5; font-size: 16px; }\n@media (max-height: 700px) { .copy h2 { font-size: 25px; } .page { min-height: 130px; } }"
+ },
  "categories": {
   "premise": {
    "name": "Premise",

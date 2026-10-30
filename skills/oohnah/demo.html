@@ -1,243 +1,169 @@
 <!doctype html>
-<html lang="en">
-<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Swipe through looks to find a brand's taste. A Bodring skill demo.">
-<link rel="icon" href="https://bodr.ing/favicon.svg" type="image/svg+xml">
-<title>OohNah · Bodring Skills</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Bangers&family=UnifrakturMaguntia&family=IM+Fell+English:ital@0;1&family=Permanent+Marker&family=Archivo+Black&family=Bagel+Fat+One&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,800&family=Caveat+Brush&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Fraunces:opsz,wght@9..144,800&family=IBM+Plex+Mono:wght@400;600&family=Instrument+Serif:ital@0;1&family=Major+Mono+Display&family=Space+Mono:wght@700&family=Press+Start+2P&family=Rubik+Mono+One&family=Syne:wght@800&family=Unbounded:wght@400;800&family=Inter+Tight:wght@400;600&family=DM+Mono:wght@400;500&family=Work+Sans:wght@400;600&display=swap">
+<meta name="robots" content="noindex">
+<title>OohNah: Halfmoon</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Bangers&amp;family=UnifrakturMaguntia&amp;family=IM+Fell+English:ital@0;1&amp;family=Permanent+Marker&amp;family=Archivo+Black&amp;family=Bagel+Fat+One&amp;family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,800&amp;family=Caveat+Brush&amp;family=Cormorant+Garamond:ital,wght@0,500;1,500&amp;family=Fraunces:opsz,wght@9..144,800&amp;family=IBM+Plex+Mono:wght@400;600&amp;family=Instrument+Serif:ital@0;1&amp;family=Major+Mono+Display&amp;family=Space+Mono:wght@700&amp;family=Press+Start+2P&amp;family=Rubik+Mono+One&amp;family=Syne:wght@800&amp;family=Unbounded:wght@400;800&amp;family=Inter+Tight:wght@400;600&amp;family=Work+Sans:wght@400;600&amp;display=swap">
 <style>
-/* Layout: Pickle press chrome (riso paper, green + pink) around one card stack. The cards carry all other looks. */
+/* The shell: swipe mechanics, the two rounds, results and saving. It is plain grey on purpose, so the frame never
+   votes in a taste test. Everything inside a card (layouts, palettes, fonts, decoration) comes from the deck. */
 :root {
-  --paper: #eceee4;
-  --card: #f5f6ef;
-  --green: #00915a;
-  --pink: #ff4aa2;
-  --ink: #12352a;
-  --muted: #4c6a5e;
-  --line: #c8d0bf;
-  --display: "Bagel Fat One", "Arial Black", system-ui, sans-serif;
-  --body: "Work Sans", system-ui, sans-serif;
-  --mono: "DM Mono", ui-monospace, monospace;
-  color-scheme: light;
+  --paper: #f2f2f0; --panel: #ffffff; --ink: #1b1b1b; --muted: #6b6b6b; --line: #d8d8d4;
+  --yes: #1f8a4c; --no: #c8392b; --accent: #1b1b1b;
+  --ui: system-ui, -apple-system, "Segoe UI", sans-serif; --ui-mono: ui-monospace, "SF Mono", Consolas, monospace;
+  color-scheme: light dark;
 }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --paper: #161616; --panel: #222222; --ink: #ededed; --muted: #a0a0a0; --line: #3a3a3a; --yes: #4cc27f; --no: #f06a5c; --accent: #ededed; } }
+:root[data-theme="dark"] { --paper: #161616; --panel: #222222; --ink: #ededed; --muted: #a0a0a0; --line: #3a3a3a; --yes: #4cc27f; --no: #f06a5c; --accent: #ededed; }
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
 html, body { height: 100%; }
-body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.5; overflow-x: hidden; }
-.app { max-width: 470px; margin: 0 auto; min-height: 100%; display: flex; flex-direction: column; gap: 12px; padding-block: 14px 24px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
-header { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
-header h1 { font-family: var(--display); font-weight: 400; font-size: 26px; line-height: 1; margin: 0; color: var(--green); text-shadow: 2px 2px 0 var(--pink); }
-.count { font-family: var(--mono); font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
-.bar { height: 6px; background: var(--line); overflow: hidden; }
-.bar i { display: block; height: 100%; background: var(--green); width: 0; transition: width .25s; }
-.phase { display: flex; justify-content: space-between; gap: 10px; font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
-.phase b { color: var(--pink); font-weight: 500; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 15px/1.5 var(--ui); overflow-x: hidden;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.app { max-width: 420px; margin: 0 auto; padding-block: 16px 22px; display: flex; flex-direction: column; gap: 12px; }
+header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+header h1 { font: 700 20px/1.15 var(--ui); margin: 0; text-wrap: balance; }
+.count { font: 13px var(--ui-mono); color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.bar { height: 4px; background: var(--line); border-radius: 2px; overflow: hidden; }
+.bar i { display: block; height: 100%; background: var(--ink); width: 0; transition: width .25s; }
+.phase { display: flex; justify-content: space-between; gap: 10px; font: 12px var(--ui-mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.phase b { color: var(--ink); font-weight: 600; }
 .hint { color: var(--muted); font-size: 13px; margin: 0; text-wrap: balance; }
 
-.stack { position: relative; aspect-ratio: 4 / 5.3; width: 100%; max-width: 100%; }
-.card { position: absolute; inset: 0; border-radius: 18px; overflow: hidden; background: var(--card); border: 2px solid var(--ink); display: flex; flex-direction: column; touch-action: none; user-select: none; cursor: grab; transition: transform .3s ease, opacity .3s; box-shadow: 5px 5px 0 var(--pink); }
-.card.behind { transform: scale(.95) translateY(12px); pointer-events: none; box-shadow: none; }
+.stack { position: relative; aspect-ratio: 4 / 5.3; width: 100%; }
+.card { position: absolute; inset: 0; border-radius: 16px; overflow: hidden; background: var(--panel); display: flex; flex-direction: column;
+  touch-action: none; user-select: none; cursor: grab; transition: transform .3s ease, opacity .3s; box-shadow: 0 14px 30px -18px rgba(0,0,0,.5), 0 0 0 1px var(--line); }
 .card.dragging { transition: none; cursor: grabbing; }
-.spec { flex: 1; position: relative; padding: 22px; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; min-height: 0; }
-.spec .eyebrow { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; opacity: .75; }
-.spec .word { line-height: .9; margin: 0; overflow-wrap: anywhere; }
-.spec .line { font-size: 14px; max-width: 26ch; opacity: .85; }
-.spec .chips { display: flex; flex-wrap: wrap; gap: 6px; }
-.spec .chips span { font-size: 12px; padding: 5px 10px; border-radius: 999px; }
-.meta { padding: 10px 14px 12px; display: flex; justify-content: space-between; align-items: center; gap: 10px; background: var(--card); border-top: 2px solid var(--ink); }
-.meta b { font-size: 15px; }
-.meta small { font-family: var(--mono); color: var(--muted); font-size: 11px; text-align: right; }
-.badge { position: absolute; top: 12px; right: 12px; z-index: 2; font-family: var(--mono); font-size: 11px; padding: 3px 8px; background: var(--pink); color: var(--ink); text-transform: uppercase; letter-spacing: .08em; }
-.stamp { position: absolute; top: 22px; padding: 6px 12px; border: 3px solid; font-family: var(--display); font-size: 22px; opacity: 0; background: rgba(255,255,255,.88); z-index: 3; }
-.stamp.yes { left: 18px; color: var(--green); transform: rotate(-12deg); }
-.stamp.no { right: 18px; color: #d23a2a; transform: rotate(12deg); }
+/* The card's vars (--bg, --fg, --display, …) are set on .spec; the deck's layout HTML goes in .L-<layout> inside it. */
+.spec { flex: 1; position: relative; overflow: hidden; min-height: 0; display: flex; flex-direction: column; }
+.spec > .layout { flex: 1; min-height: 0; position: relative; }
+[data-empty] { display: none !important; }
+.meta { padding: 9px 14px 10px; display: flex; justify-content: space-between; align-items: center; gap: 10px; background: var(--panel); border-top: 1px solid var(--line); }
+.meta b { font-size: 14px; font-weight: 600; }
+.meta small { font: 11px var(--ui-mono); color: var(--muted); text-align: right; }
+.badge { position: absolute; top: 12px; right: 12px; z-index: 2; font: 600 11px var(--ui-mono); padding: 3px 8px; border-radius: 4px; background: var(--ink); color: var(--paper); text-transform: uppercase; letter-spacing: .06em; }
+.stamp { position: absolute; top: 22px; padding: 4px 12px; border: 3px solid; border-radius: 6px; font: 800 22px var(--ui); opacity: 0; background: rgba(255,255,255,.9); z-index: 3; text-transform: uppercase; }
+.stamp.yes { left: 18px; color: var(--yes); transform: rotate(-12deg); }
+.stamp.no { right: 18px; color: var(--no); transform: rotate(12deg); }
 
 .controls { display: flex; justify-content: center; gap: 18px; }
-.controls button { width: 62px; height: 62px; border-radius: 50%; border: 2px solid var(--ink); background: var(--card); color: var(--ink); font-size: 24px; cursor: pointer; display: grid; place-items: center; box-shadow: 3px 3px 0 var(--ink); }
-.controls button.no { color: #d23a2a; }
-.controls button.yes { color: var(--green); }
-.controls button.undo { width: 46px; height: 46px; font-size: 17px; align-self: center; color: var(--muted); box-shadow: none; }
-.controls button:focus-visible { outline: 3px solid var(--pink); outline-offset: 2px; }
-.controls button:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--ink); }
+.controls button { width: 60px; height: 60px; border-radius: 50%; border: 1px solid var(--line); background: var(--panel); color: var(--ink); font-size: 22px; cursor: pointer; display: grid; place-items: center; }
+.controls button.no { color: var(--no); }
+.controls button.yes { color: var(--yes); }
+.controls button.undo { width: 44px; height: 44px; font-size: 16px; align-self: center; color: var(--muted); }
+.controls button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.controls button:active { transform: scale(.94); }
 
 .results { display: flex; flex-direction: column; gap: 14px; }
-.results h2 { font-family: var(--display); font-weight: 400; font-size: 32px; line-height: 1.05; margin: 6px 0 0; color: var(--green); text-wrap: balance; }
+.results h2 { font: 700 26px/1.15 var(--ui); margin: 6px 0 0; text-wrap: balance; }
 .results p { margin: 0; color: var(--muted); }
-.dim { background: var(--card); border: 2px solid var(--ink); padding: 12px 14px; display: grid; gap: 7px; }
-.dim h3 { margin: 0; font-family: var(--mono); font-weight: 500; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--pink); }
-.row { display: grid; grid-template-columns: 86px minmax(0, 1fr) 38px; align-items: center; gap: 10px; font-size: 14px; }
-.row .track { height: 10px; background: var(--line); overflow: hidden; }
-.row .track i { display: block; height: 100%; background: var(--green); }
-.row span:last-child { text-align: right; font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.dim { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; display: grid; gap: 7px; }
+.dim h3 { margin: 0; font: 600 12px var(--ui-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.row { display: grid; grid-template-columns: 96px minmax(0, 1fr) 38px; align-items: center; gap: 10px; font-size: 14px; }
+.row .track { height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+.row .track i { display: block; height: 100%; background: var(--ink); }
+.row span:last-child { text-align: right; font: 12px var(--ui-mono); color: var(--muted); }
 .liked { display: flex; flex-wrap: wrap; gap: 6px; }
-.liked span { border: 1.5px solid var(--green); padding: 3px 10px; font-size: 13px; }
-.liked span.remix { border-color: var(--pink); }
+.liked span { border: 1px solid var(--line); border-radius: 999px; padding: 3px 10px; font-size: 13px; }
+.liked span.remix { border-style: dashed; }
 .status { font-weight: 600; }
-textarea { width: 100%; min-height: 120px; font: 12px var(--mono); padding: 10px; border: 2px solid var(--ink); background: var(--card); color: var(--ink); }
-.btn { border: 2px solid var(--ink); background: var(--ink); color: var(--paper); padding: 10px 18px; font: 600 14px var(--body); cursor: pointer; }
-.btn.ghost { background: transparent; color: var(--ink); }
+textarea { width: 100%; min-height: 120px; font: 12px var(--ui-mono); padding: 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); color: var(--ink); }
+.btn { border: 1px solid var(--ink); border-radius: 10px; background: var(--ink); color: var(--paper); padding: 10px 18px; font: 600 14px var(--ui); cursor: pointer; }
+.btn.ghost { background: transparent; color: var(--ink); border-color: var(--line); }
 .actions { display: flex; gap: 10px; flex-wrap: wrap; }
 @media (prefers-reduced-motion: reduce) { .card, .bar i { transition: none; } }
 </style>
-</head>
-<body>
+<style id="deck">
+/* Four places a coffee roaster's look actually lives: a shop poster, a bag label, the menu board, a social post.
+   Every card sets --bg --fg --ac (palette), --display --weight --style --size (type), --deco (pattern) and may set --body, --fine. */
+.spec { background: var(--deco), var(--bg); background-color: var(--bg); color: var(--fg); font-family: var(--body, "Work Sans"), system-ui, sans-serif; }
+.spec .w { font-family: var(--display), system-ui, sans-serif; font-weight: var(--weight); font-style: var(--style); line-height: .9; margin: 0; overflow-wrap: anywhere; }
+.spec .eb { font-size: var(--fine, 11px); letter-spacing: .14em; text-transform: uppercase; opacity: .75; font-family: var(--display), system-ui; }
+
+/* Shop poster: the brand word as big as it gets, a line and two product chips. */
+.L-poster { padding: 22px; display: flex; flex-direction: column; justify-content: space-between; }
+.L-poster .w { font-size: var(--size); }
+.L-poster .ln { font-size: 14px; max-width: 26ch; opacity: .85; line-height: 1.5; }
+.L-poster .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.L-poster .chips span { font-size: 12px; padding: 5px 10px; border-radius: 999px; border: 1px solid var(--fg); }
+.L-poster .chips span:first-child { background: var(--ac); color: var(--bg); border-color: var(--ac); }
+
+/* Bag label: a kraft-free pouch drawn in the card colour, its label carrying the word, roast and tasting notes. */
+.L-bag { display: grid; place-items: center; padding: 26px 30px 22px; }
+.L-bag .pouch { width: 100%; height: 100%; max-width: 250px; background: var(--fg); color: var(--bg); border-radius: 10px 10px 18px 18px; position: relative;
+  display: flex; flex-direction: column; justify-content: center; padding: 18px; box-shadow: 0 16px 30px -18px rgba(0,0,0,.6); }
+.L-bag .pouch::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 18px; border-radius: 10px 10px 0 0;
+  background: repeating-linear-gradient(90deg, rgba(0,0,0,.18) 0 3px, transparent 3px 7px); }
+.L-bag .label { background: var(--bg); color: var(--fg); border: 2px solid var(--ac); padding: 16px 14px; display: grid; gap: 8px; text-align: center; }
+.L-bag .w { font-size: calc(var(--size) * .62); }
+.L-bag .roast { font-size: 12px; font-weight: 600; color: var(--ac); text-transform: uppercase; letter-spacing: .1em; font-family: var(--display), system-ui; font-size: var(--fine, 12px); }
+.L-bag .ln { font-size: 12px; opacity: .8; line-height: 1.4; }
+
+/* Menu board: the brand small on top, three drinks with dotted leaders and prices, all set in the look's type. */
+.L-menu { padding: 22px 22px 18px; display: flex; flex-direction: column; gap: 14px; }
+.L-menu .w { font-size: calc(var(--size) * .5); }
+.L-menu ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; flex: 1; align-content: center; }
+.L-menu li { display: flex; align-items: baseline; gap: 8px; font-family: var(--display), system-ui; font-weight: var(--weight); font-style: var(--style); font-size: clamp(14px, calc(var(--size) * .3), 22px); line-height: 1.1; }
+.L-menu li i { flex: 1; border-bottom: 2px dotted currentColor; opacity: .4; transform: translateY(-4px); }
+.L-menu li b { color: var(--ac); font-weight: inherit; }
+.L-menu .ln { font-size: var(--fine, 13px); opacity: .8; border-top: 1px solid currentColor; padding-top: 10px; line-height: 1.45; }
+
+/* Social post: a header row, a square picture made of the look's pattern and word, a caption. */
+.L-post { display: flex; flex-direction: column; background: var(--bg); }
+.L-post .top { display: flex; align-items: center; gap: 8px; padding: 12px 14px; font-size: 13px; font-weight: 600; }
+.L-post .av { width: 28px; height: 28px; border-radius: 50%; background: var(--ac); }
+.L-post .pic { flex: 1; min-height: 0; display: grid; place-items: center; padding: 16px; background: var(--deco), var(--bg); background-color: var(--bg);
+  border-block: 1px solid color-mix(in srgb, var(--fg) 25%, transparent); text-align: center; }
+.L-post .w { font-size: calc(var(--size) * .8); }
+.L-post .cap { padding: 10px 14px 14px; font-size: 13px; line-height: 1.4; }
+.L-post .cap b { margin-right: 6px; }
+.L-post .ln { opacity: .85; font-size: var(--fine, 13px); }
+</style>
+
 <div class="app">
-  <header><h1>OohNah</h1><span class="count" id="count">1 / 30</span></header>
+  <header><h1>Which one is Halfmoon?</h1><span class="count" id="count">1 / 30</span></header>
   <div class="bar"><i id="prog"></i></div>
-  <div class="phase"><span id="phase">Round 1 · <b>map</b></span><span id="phase-note">12 wide-apart looks</span></div>
+  <div class="phase"><span id="phase">Round 1 · <b>map</b></span><span id="phase-note"></span></div>
   <p class="hint" id="hint">Swipe right if this could be the brand, left if not. After 12 cards the deck starts remixing what you liked. Buttons and arrow keys work too.</p>
   <div class="stack" id="stack"></div>
   <div class="controls" id="controls">
-    <button class="no" id="btn-no" aria-label="Not us">✕</button>
+    <button class="no" id="btn-no" aria-label="Not it">✕</button>
     <button class="undo" id="btn-undo" aria-label="Undo last">↺</button>
-    <button class="yes" id="btn-yes" aria-label="That's us">♥</button>
+    <button class="yes" id="btn-yes" aria-label="That's it">♥</button>
   </div>
   <section class="results" id="results" hidden></section>
 </div>
 
 <script>
-const V = [
-  { id:"pickle-jar", name:"Pickle jar", mood:"playful", color:"green", type:"chunky", density:"bold",
-    bg:"#2f5d34", fg:"#f3edc8", ac:"#ffcf3f", font:"'Bagel Fat One'", size:74, word:"Halfmoon", line:"Small batches, roasted till they sing.",
-    deco:"radial-gradient(circle at 85% 20%, #a9cf6a 0 34px, #6fae3e 35px 44px, transparent 45px), radial-gradient(circle at 72% 34%, #a9cf6a 0 20px, #6fae3e 21px 27px, transparent 28px)" },
-  { id:"samarkand", name:"Samarkand tile", mood:"cultural", color:"colorful", type:"geometric", density:"bold",
-    bg:"#123a8c", fg:"#f6efe1", ac:"#2bb5b8", font:"'Unbounded'", weight:800, size:46, word:"HALFMOON", line:"Roasted by the river. Poured everywhere.",
-    deco:"repeating-conic-gradient(from 45deg at 50% 50%, rgba(43,181,184,.22) 0 25%, transparent 0 50%) 0 0/36px 36px" },
-  { id:"ledger", name:"Ledger paper", mood:"premium", color:"light", type:"serif", density:"minimal",
-    bg:"#eef3e4", fg:"#1e2a1c", ac:"#b3261e", font:"'Instrument Serif'", size:64, word:"Halfmoon & Co.", line:"Est. 2026. Every bag logged by hand.",
-    deco:"linear-gradient(90deg, transparent 38px, rgba(179,38,30,.5) 38px 40px, transparent 40px), repeating-linear-gradient(transparent 0 27px, rgba(30,90,60,.18) 27px 28px)" },
-  { id:"arcade", name:"Arcade cabinet", mood:"gritty", color:"dark", type:"pixel", density:"bold",
-    bg:"#0d0b1e", fg:"#f2f0ff", ac:"#ff3d8b", font:"'Press Start 2P'", size:28, word:"HALFMOON", line:"INSERT COIN FOR ESPRESSO",
-    deco:"repeating-linear-gradient(transparent 0 3px, rgba(255,255,255,.04) 3px 4px), radial-gradient(ellipse at 50% 120%, rgba(255,61,139,.45), transparent 60%)" },
-  { id:"swiss", name:"Swiss grid", mood:"calm", color:"mono", type:"grotesk", density:"minimal",
-    bg:"#f4f4f2", fg:"#111111", ac:"#e3001b", font:"'Archivo Black'", size:56, word:"Halfmoon.", line:"A coffee roaster for the whole street.",
-    deco:"linear-gradient(#e3001b,#e3001b) 100% 0/38% 14px no-repeat" },
-  { id:"brutal", name:"Raw brutalist", mood:"gritty", color:"mono", type:"condensed", density:"bold",
-    bg:"#d9d6cf", fg:"#000000", ac:"#000000", font:"'Anton'", size:96, word:"HALFMOON", line:"WE ROAST. THEN WE ROAST AGAIN.",
-    deco:"repeating-linear-gradient(-45deg, transparent 0 18px, rgba(0,0,0,.06) 18px 20px)" },
-  { id:"lux-serif", name:"Quiet luxury", mood:"premium", color:"dark", type:"serif", density:"minimal",
-    bg:"#1b1a17", fg:"#e9e1d0", ac:"#b89b5e", font:"'Cormorant Garamond'", style:"italic", size:64, word:"Halfmoon", line:"A house of small, carefully roasted things.",
-    deco:"linear-gradient(#b89b5e,#b89b5e) 24px 62%/40px 1px no-repeat" },
-  { id:"hand-zine", name:"Sketchbook zine", mood:"playful", color:"light", type:"hand", density:"bold",
-    bg:"#fffbea", fg:"#20304a", ac:"#ff7a59", font:"'Caveat Brush'", size:78, word:"halfmoon!", line:"half café, half notebook, all beans",
-    deco:"radial-gradient(rgba(32,48,74,.18) 1px, transparent 1.5px) 0 0/16px 16px" },
-  { id:"terminal", name:"Dev terminal", mood:"techy", color:"dark", type:"mono", density:"minimal",
-    bg:"#0f1412", fg:"#cfe8d6", ac:"#7cf29a", font:"'IBM Plex Mono'", weight:600, size:34, word:"$ halfmoon", line:"> brewing... cold_brew [ok] night_roast [roasting]",
-    deco:"linear-gradient(rgba(124,242,154,.08), transparent 40%)" },
-  { id:"y2k", name:"Y2K chrome", mood:"playful", color:"colorful", type:"geometric", density:"bold",
-    bg:"#c9d7ff", fg:"#141a3a", ac:"#ff4fd8", font:"'Rubik Mono One'", size:40, word:"HALFMOON", line:"coffee! cake! the future is bean-shaped",
-    deco:"radial-gradient(circle at 20% 80%, #ff9ff0 0, transparent 40%), radial-gradient(circle at 90% 10%, #8ff5ff 0, transparent 45%), linear-gradient(160deg, #e9eeff, #b7c4ff)" },
-  { id:"editorial", name:"Magazine cover", mood:"premium", color:"light", type:"serif", density:"bold",
-    bg:"#f2e9dc", fg:"#2a1a14", ac:"#d2462b", font:"'Fraunces'", weight:800, size:70, word:"Halfmoon", line:"Issue No. 1: The roaster that grew a neighbourhood.",
-    deco:"linear-gradient(#d2462b,#d2462b) 24px 24px/56px 56px no-repeat" },
-  { id:"nordic", name:"Nordic calm", mood:"calm", color:"light", type:"grotesk", density:"minimal",
-    bg:"#e8ece9", fg:"#26322d", ac:"#7d9b8a", font:"'Bricolage Grotesque'", weight:400, size:58, word:"halfmoon", line:"Fewer, better cups.",
-    deco:"radial-gradient(circle at 80% 30%, #c9d6cf 0 70px, transparent 71px)" },
-  { id:"neon-noir", name:"Neon noir", mood:"gritty", color:"dark", type:"condensed", density:"bold",
-    bg:"#0b0d14", fg:"#e8f0ff", ac:"#00e1ff", font:"'Anton'", size:84, word:"NIGHT ROAST", line:"A Halfmoon production.",
-    deco:"linear-gradient(180deg, transparent 55%, rgba(0,225,255,.18)), repeating-linear-gradient(90deg, transparent 0 60px, rgba(0,225,255,.06) 60px 61px)" },
-  { id:"bauhaus", name:"Bauhaus shapes", mood:"playful", color:"colorful", type:"geometric", density:"bold",
-    bg:"#f1ead8", fg:"#1a1a1a", ac:"#e4402c", font:"'Syne'", weight:800, size:58, word:"Halfmoon", line:"Shapes first, coffee after.",
-    deco:"radial-gradient(circle at 78% 26%, #e4402c 0 48px, transparent 49px), linear-gradient(#1f4fbf,#1f4fbf) 64% 58%/70px 70px no-repeat, conic-gradient(from 90deg at 90% 72%, #f2b705 0 25%, transparent 0) " },
-  { id:"mono-min", name:"Black & white", mood:"calm", color:"mono", type:"grotesk", density:"minimal",
-    bg:"#ffffff", fg:"#0a0a0a", ac:"#0a0a0a", font:"'Inter Tight'", weight:600, size:44, word:"Halfmoon Coffee", line:"Beans. Brews. Mornings.",
-    deco:"none" },
-  { id:"ikat", name:"Ikat silk", mood:"cultural", color:"colorful", type:"serif", density:"bold",
-    bg:"#5b1a3a", fg:"#fbe9d2", ac:"#f2a33a", font:"'Fraunces'", weight:800, size:64, word:"Halfmoon", line:"Woven from many origins.",
-    deco:"repeating-linear-gradient(90deg, rgba(242,163,58,.25) 0 14px, transparent 14px 22px, rgba(63,169,154,.3) 22px 30px, transparent 30px 52px)" },
-  { id:"lab", name:"Lab notebook", mood:"techy", color:"light", type:"mono", density:"minimal",
-    bg:"#f6f7f3", fg:"#1d2b3a", ac:"#2a6ce0", font:"'Major Mono Display'", size:42, word:"halfmoon", line:"experiment 001: can one bean taste like three?",
-    deco:"linear-gradient(rgba(42,108,224,.12) 1px, transparent 1px) 0 0/20px 20px, linear-gradient(90deg, rgba(42,108,224,.12) 1px, transparent 1px) 0 0/20px 20px" },
-  { id:"sticker-pop", name:"Sticker bomb", mood:"playful", color:"colorful", type:"chunky", density:"bold",
-    bg:"#ffd23f", fg:"#141414", ac:"#3a86ff", font:"'Bagel Fat One'", size:70, word:"halfmoon", line:"stick us on your laptop",
-    deco:"radial-gradient(circle at 82% 22%, #ff5d8f 0 30px, transparent 31px), radial-gradient(circle at 70% 78%, #3a86ff 0 36px, transparent 37px), radial-gradient(circle at 14% 64%, #06d6a0 0 22px, transparent 23px)" },
-  { id:"dark-green-lux", name:"Bottle green", mood:"premium", color:"green", type:"serif", density:"minimal",
-    bg:"#173126", fg:"#f1ecdf", ac:"#d9c48a", font:"'Instrument Serif'", style:"italic", size:72, word:"Halfmoon", line:"An independent roaster, est. 2026.",
-    deco:"linear-gradient(#d9c48a,#d9c48a) 24px 30%/1px 70px no-repeat" },
-  { id:"game-hud", name:"Game HUD", mood:"techy", color:"dark", type:"geometric", density:"bold",
-    bg:"#11161c", fg:"#e6edf3", ac:"#ffb000", font:"'Unbounded'", weight:800, size:40, word:"HALFMOON", line:"HP ████████░░  CAFFEINE 98%  QUEST: open at 7",
-    deco:"linear-gradient(#ffb000,#ffb000) 24px 24px/10px 10px no-repeat, linear-gradient(90deg, rgba(255,176,0,.25) 1px, transparent 1px) 0 0/48px 100%" },
-  { id:"riso", name:"Risograph print", mood:"cultural", color:"colorful", type:"condensed", density:"bold",
-    bg:"#f5efe6", fg:"#0f6e5d", ac:"#ff4c65", font:"'Anton'", size:88, word:"HALFMOON", line:"printed in two colours, slightly off register",
-    deco:"radial-gradient(rgba(255,76,101,.35) 1.2px, transparent 1.6px) 0 0/7px 7px" },
-  { id:"soft-pastel", name:"Soft pastel app", mood:"calm", color:"light", type:"grotesk", density:"minimal",
-    bg:"#f3eefc", fg:"#2e2550", ac:"#8a7cf0", font:"'Bricolage Grotesque'", weight:800, size:56, word:"halfmoon", line:"friendly coffee for busy brains",
-    deco:"radial-gradient(circle at 85% 15%, #ffd6e7 0 80px, transparent 81px), radial-gradient(circle at 10% 95%, #d6f5e9 0 90px, transparent 91px)" },
-  { id:"cucumber-cool", name:"Cool as a cucumber", mood:"calm", color:"green", type:"geometric", density:"minimal",
-    bg:"#dff0e2", fg:"#14402a", ac:"#2fa35a", font:"'Unbounded'", weight:400, size:44, word:"halfmoon", line:"keep calm and pour",
-    deco:"radial-gradient(circle at 80% 30%, #ffffff 0 46px, #bfe3c6 47px 62px, #2fa35a 63px 70px, transparent 71px)" },
-  { id:"poster-red", name:"Propaganda poster", mood:"gritty", color:"colorful", type:"condensed", density:"bold",
-    bg:"#c9271e", fg:"#f6e7cf", ac:"#111111", font:"'Anton'", size:90, word:"DRINK MORE", line:"Halfmoon Coffee wants you.",
-    deco:"repeating-conic-gradient(from 0deg at 110% 110%, rgba(0,0,0,.12) 0 6deg, transparent 6deg 12deg)" },
-  { id:"saas", name:"Clean startup", mood:"calm", color:"light", type:"grotesk", density:"minimal",
-    bg:"#f7f9fc", fg:"#0f1b33", ac:"#3366ff", font:"'Inter Tight'", weight:600, size:52, word:"Halfmoon", line:"Coffee that scales. Mornings people love.",
-    deco:"radial-gradient(ellipse at 100% 0%, rgba(51,102,255,.18), transparent 55%)" },
-  { id:"comic", name:"Comic panel", mood:"playful", color:"colorful", type:"chunky", density:"bold",
-    bg:"#ffe14d", fg:"#111111", ac:"#e8282b", font:"'Bangers'", size:96, word:"HALFMOON!", line:"Meanwhile, on the corner... a café is born!",
-    deco:"radial-gradient(rgba(232,40,43,.35) 2px, transparent 2.5px) 0 0/12px 12px" },
-  { id:"blackletter", name:"Blackletter metal", mood:"gritty", color:"dark", type:"serif", density:"bold",
-    bg:"#0c0c0c", fg:"#e9e4da", ac:"#8a0f12", font:"'UnifrakturMaguntia'", size:76, word:"Halfmoon", line:"Est. MMXXVI. Coffee with teeth.",
-    deco:"radial-gradient(ellipse at 50% 40%, rgba(138,15,18,.35), transparent 60%)" },
-  { id:"solarpunk", name:"Solarpunk", mood:"calm", color:"green", type:"serif", density:"minimal",
-    bg:"#f2f5df", fg:"#24402a", ac:"#e9a23b", font:"'Fraunces'", weight:800, size:62, word:"halfmoon", line:"Coffee that grows like a garden.",
-    deco:"radial-gradient(circle at 85% 18%, #f5c96a 0 40px, transparent 41px), linear-gradient(180deg, transparent 70%, rgba(80,140,70,.25))" },
-  { id:"vapor", name:"Vaporwave sunset", mood:"playful", color:"colorful", type:"geometric", density:"bold",
-    bg:"#2a0f4a", fg:"#fff1fb", ac:"#ff71ce", font:"'Syne'", weight:800, size:62, word:"HALFMOON", line:"ｃｏｆｆｅｅ　＆　ｃａｋｅ",
-    deco:"repeating-linear-gradient(transparent 0 10px, #2a0f4a 10px 14px) 50% 60%/160px 120px no-repeat, radial-gradient(circle at 50% 60%, #ffb86b 0 80px, #ff71ce 81px 81px, transparent 82px), linear-gradient(180deg, #2a0f4a 0 50%, #01cdfe 160%)" },
-  { id:"parchment", name:"Old map", mood:"cultural", color:"light", type:"serif", density:"bold",
-    bg:"#ecdcb9", fg:"#3d2a17", ac:"#8c2f1b", font:"'IM Fell English'", style:"italic", size:70, word:"Halfmoon", line:"Here be beans. Charted by hand, 2026.",
-    deco:"radial-gradient(ellipse at 50% 50%, transparent 50%, rgba(90,55,20,.35)), repeating-radial-gradient(circle at 80% 80%, transparent 0 18px, rgba(61,42,23,.08) 18px 19px)" },
-  { id:"toy", name:"Toy box", mood:"playful", color:"colorful", type:"chunky", density:"bold",
-    bg:"#4cc9f0", fg:"#ffffff", ac:"#f72585", font:"'Rubik Mono One'", size:48, word:"HALFMOON", line:"Play is serious business.",
-    deco:"linear-gradient(#ffd60a,#ffd60a) 80% 20%/60px 60px no-repeat, radial-gradient(circle at 20% 75%, #f72585 0 34px, transparent 35px), linear-gradient(#7209b7,#7209b7) 70% 80%/40px 80px no-repeat" },
-  { id:"glass", name:"Dark glass", mood:"techy", color:"dark", type:"grotesk", density:"minimal",
-    bg:"#0c1020", fg:"#eef1ff", ac:"#8b9dff", font:"'Bricolage Grotesque'", weight:400, size:58, word:"Halfmoon", line:"Quietly roasting the next batch.",
-    deco:"radial-gradient(circle at 20% 20%, rgba(139,157,255,.45), transparent 40%), radial-gradient(circle at 90% 80%, rgba(255,120,200,.3), transparent 45%)" },
-  { id:"silk-road", name:"Silk Road bazaar", mood:"cultural", color:"colorful", type:"geometric", density:"bold",
-    bg:"#b5442a", fg:"#fff4e2", ac:"#1d6b8f", font:"'Unbounded'", weight:800, size:44, word:"HALFMOON", line:"A caravan of beans, from the hills outward.",
-    deco:"repeating-linear-gradient(45deg, rgba(255,244,226,.12) 0 10px, transparent 10px 20px), linear-gradient(#1d6b8f,#1d6b8f) 0 100%/100% 18px no-repeat" },
-  { id:"matrix", name:"Green code", mood:"techy", color:"green", type:"mono", density:"bold",
-    bg:"#03130a", fg:"#8dff9f", ac:"#29d35b", font:"'IBM Plex Mono'", weight:600, size:48, word:"halfmoon_", line:"while(true) { roast(); pour(); taste(); }",
-    deco:"repeating-linear-gradient(90deg, rgba(41,211,91,.08) 0 1px, transparent 1px 18px)" },
-  { id:"zen", name:"Zen minimal", mood:"calm", color:"light", type:"serif", density:"minimal",
-    bg:"#f6f2ea", fg:"#26231f", ac:"#c8342b", font:"'Instrument Serif'", size:68, word:"halfmoon", line:"one cup. one thing at a time.",
-    deco:"radial-gradient(circle at 78% 26%, #c8342b 0 38px, transparent 39px)" },
-  { id:"graffiti", name:"Street skate", mood:"gritty", color:"colorful", type:"hand", density:"bold",
-    bg:"#1f1f1f", fg:"#f4f4f4", ac:"#b6ff3b", font:"'Permanent Marker'", size:72, word:"HALFMOON", line:"made loud, made fast, made here",
-    deco:"radial-gradient(circle at 80% 25%, rgba(182,255,59,.5) 0 30px, transparent 60px), radial-gradient(circle at 15% 85%, rgba(255,80,160,.45) 0 20px, transparent 55px)" },
-  { id:"newspaper", name:"Broadsheet", mood:"premium", color:"mono", type:"serif", density:"bold",
-    bg:"#f3f0e8", fg:"#141414", ac:"#141414", font:"'Fraunces'", weight:800, size:58, word:"The Halfmoon Times", line:"Local roaster opens doors; pastries unavailable for comment.",
-    deco:"linear-gradient(#141414,#141414) 24px 22%/calc(100% - 48px) 2px no-repeat, linear-gradient(#141414,#141414) 24px 23.5%/calc(100% - 48px) 1px no-repeat" },
-  { id:"casino", name:"Black & gold", mood:"premium", color:"dark", type:"condensed", density:"bold",
-    bg:"#0e0d0b", fg:"#f2e3b3", ac:"#c9a227", font:"'Anton'", size:86, word:"HALFMOON", line:"The house always pours.",
-    deco:"repeating-linear-gradient(135deg, rgba(201,162,39,.08) 0 2px, transparent 2px 14px)" },
-  { id:"camp", name:"Forest camp", mood:"calm", color:"green", type:"hand", density:"minimal",
-    bg:"#e6ead8", fg:"#2b3b26", ac:"#c46a2b", font:"'Caveat Brush'", size:80, word:"halfmoon co.", line:"slow-roasted, hand-poured, built to last",
-    deco:"conic-gradient(from 150deg at 80% 30%, transparent 0 60deg, rgba(43,59,38,.25) 60deg 120deg, transparent 120deg)" },
-  { id:"blueprint", name:"Blueprint", mood:"techy", color:"colorful", type:"mono", density:"minimal",
-    bg:"#1d4e89", fg:"#e8f1ff", ac:"#ffd166", font:"'Space Mono', 'IBM Plex Mono'", weight:600, size:42, word:"HALFMOON/01", line:"SCALE 1:1 · SHEET 1 OF ∞ · DRAWN BY HALFMOON CO.",
-    deco:"linear-gradient(rgba(232,241,255,.14) 1px, transparent 1px) 0 0/24px 24px, linear-gradient(90deg, rgba(232,241,255,.14) 1px, transparent 1px) 0 0/24px 24px" }
-];
-
-const TOTAL = 30, SEED = 12, AXES = ["mood", "color", "type", "density"];
+(() => {
+'use strict';
+// The deck is injected by scripts/build.mjs from a deck JSON file (see SKILL.md for its shape): its own layouts,
+// CSS and cards, designed for one brand and use. This script only shows, remixes, counts and saves.
+const D = {"id":"halfmoon","title":"OohNah: Halfmoon","heading":"Which one is Halfmoon?","hint":"Swipe right if this could be the brand, left if not. After 12 cards the deck starts remixing what you liked. Buttons and arrow keys work too.","brief":"Halfmoon is a made-up neighbourhood coffee roaster. Its look will live on a shop poster, on the bags, on the menu board and in social posts, so every card shows one look on one of those four surfaces instead of on an abstract swatch.","fonts":"https://fonts.googleapis.com/css2?family=Anton&family=Bangers&family=UnifrakturMaguntia&family=IM+Fell+English:ital@0;1&family=Permanent+Marker&family=Archivo+Black&family=Bagel+Fat+One&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,800&family=Caveat+Brush&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Fraunces:opsz,wght@9..144,800&family=IBM+Plex+Mono:wght@400;600&family=Instrument+Serif:ital@0;1&family=Major+Mono+Display&family=Space+Mono:wght@700&family=Press+Start+2P&family=Rubik+Mono+One&family=Syne:wght@800&family=Unbounded:wght@400;800&family=Inter+Tight:wght@400;600&family=Work+Sans:wght@400;600&display=swap","total":30,"seed":12,"axes":{"mood":"Mood","color":"Colour","type":"Type","density":"Density"},"remix":{"vars":["display","weight","style","size","body","fine"],"axes":["type"]},"content":{"eyebrow":"halfmoon · coffee roasters","p1":"Cold brew","p2":"Night roast","p3":"Flat white","price1":"4.5","price2":"3.8","price3":"4.2","weight":"250 g · whole bean","handle":"halfmoon.coffee"},"layouts":{"poster":"\u003cdiv>\u003cdiv class=\"eb\" data-slot=\"eyebrow\">\u003c/div>\u003c/div>\u003ch2 class=\"w\" data-slot=\"word\">\u003c/h2>\u003cdiv>\u003cdiv class=\"ln\" data-slot=\"line\">\u003c/div>\u003cdiv class=\"chips\">\u003cspan data-slot=\"p1\">\u003c/span>\u003cspan data-slot=\"p2\">\u003c/span>\u003c/div>\u003c/div>","bag":"\u003cdiv class=\"pouch\">\u003cdiv class=\"label\">\u003cspan class=\"roast\" data-slot=\"p2\">\u003c/span>\u003ch2 class=\"w\" data-slot=\"word\">\u003c/h2>\u003cspan class=\"ln\" data-slot=\"line\">\u003c/span>\u003cspan class=\"eb\" data-slot=\"weight\">\u003c/span>\u003c/div>\u003c/div>","menu":"\u003ch2 class=\"w\" data-slot=\"word\">\u003c/h2>\u003cul>\u003cli>\u003cspan data-slot=\"p1\">\u003c/span>\u003ci>\u003c/i>\u003cb data-slot=\"price1\">\u003c/b>\u003c/li>\u003cli>\u003cspan data-slot=\"p2\">\u003c/span>\u003ci>\u003c/i>\u003cb data-slot=\"price2\">\u003c/b>\u003c/li>\u003cli>\u003cspan data-slot=\"p3\">\u003c/span>\u003ci>\u003c/i>\u003cb data-slot=\"price3\">\u003c/b>\u003c/li>\u003c/ul>\u003cdiv class=\"ln\" data-slot=\"line\">\u003c/div>","post":"\u003cdiv class=\"top\">\u003cspan class=\"av\">\u003c/span>\u003cspan data-slot=\"handle\">\u003c/span>\u003c/div>\u003cdiv class=\"pic\">\u003ch2 class=\"w\" data-slot=\"word\">\u003c/h2>\u003c/div>\u003cdiv class=\"cap\">\u003cb data-slot=\"handle\">\u003c/b>\u003cspan class=\"ln\" data-slot=\"line\">\u003c/span>\u003c/div>"},"css":"/* Four places a coffee roaster's look actually lives: a shop poster, a bag label, the menu board, a social post.\n   Every card sets --bg --fg --ac (palette), --display --weight --style --size (type), --deco (pattern) and may set --body, --fine. */\n.spec { background: var(--deco), var(--bg); background-color: var(--bg); color: var(--fg); font-family: var(--body, \"Work Sans\"), system-ui, sans-serif; }\n.spec .w { font-family: var(--display), system-ui, sans-serif; font-weight: var(--weight); font-style: var(--style); line-height: .9; margin: 0; overflow-wrap: anywhere; }\n.spec .eb { font-size: var(--fine, 11px); letter-spacing: .14em; text-transform: uppercase; opacity: .75; font-family: var(--display), system-ui; }\n\n/* Shop poster: the brand word as big as it gets, a line and two product chips. */\n.L-poster { padding: 22px; display: flex; flex-direction: column; justify-content: space-between; }\n.L-poster .w { font-size: var(--size); }\n.L-poster .ln { font-size: 14px; max-width: 26ch; opacity: .85; line-height: 1.5; }\n.L-poster .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }\n.L-poster .chips span { font-size: 12px; padding: 5px 10px; border-radius: 999px; border: 1px solid var(--fg); }\n.L-poster .chips span:first-child { background: var(--ac); color: var(--bg); border-color: var(--ac); }\n\n/* Bag label: a kraft-free pouch drawn in the card colour, its label carrying the word, roast and tasting notes. */\n.L-bag { display: grid; place-items: center; padding: 26px 30px 22px; }\n.L-bag .pouch { width: 100%; height: 100%; max-width: 250px; background: var(--fg); color: var(--bg); border-radius: 10px 10px 18px 18px; position: relative;\n  display: flex; flex-direction: column; justify-content: center; padding: 18px; box-shadow: 0 16px 30px -18px rgba(0,0,0,.6); }\n.L-bag .pouch::before { content: \"\"; position: absolute; left: 0; right: 0; top: 0; height: 18px; border-radius: 10px 10px 0 0;\n  background: repeating-linear-gradient(90deg, rgba(0,0,0,.18) 0 3px, transparent 3px 7px); }\n.L-bag .label { background: var(--bg); color: var(--fg); border: 2px solid var(--ac); padding: 16px 14px; display: grid; gap: 8px; text-align: center; }\n.L-bag .w { font-size: calc(var(--size) * .62); }\n.L-bag .roast { font-size: 12px; font-weight: 600; color: var(--ac); text-transform: uppercase; letter-spacing: .1em; font-family: var(--display), system-ui; font-size: var(--fine, 12px); }\n.L-bag .ln { font-size: 12px; opacity: .8; line-height: 1.4; }\n\n/* Menu board: the brand small on top, three drinks with dotted leaders and prices, all set in the look's type. */\n.L-menu { padding: 22px 22px 18px; display: flex; flex-direction: column; gap: 14px; }\n.L-menu .w { font-size: calc(var(--size) * .5); }\n.L-menu ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; flex: 1; align-content: center; }\n.L-menu li { display: flex; align-items: baseline; gap: 8px; font-family: var(--display), system-ui; font-weight: var(--weight); font-style: var(--style); font-size: clamp(14px, calc(var(--size) * .3), 22px); line-height: 1.1; }\n.L-menu li i { flex: 1; border-bottom: 2px dotted currentColor; opacity: .4; transform: translateY(-4px); }\n.L-menu li b { color: var(--ac); font-weight: inherit; }\n.L-menu .ln { font-size: var(--fine, 13px); opacity: .8; border-top: 1px solid currentColor; padding-top: 10px; line-height: 1.45; }\n\n/* Social post: a header row, a square picture made of the look's pattern and word, a caption. */\n.L-post { display: flex; flex-direction: column; background: var(--bg); }\n.L-post .top { display: flex; align-items: center; gap: 8px; padding: 12px 14px; font-size: 13px; font-weight: 600; }\n.L-post .av { width: 28px; height: 28px; border-radius: 50%; background: var(--ac); }\n.L-post .pic { flex: 1; min-height: 0; display: grid; place-items: center; padding: 16px; background: var(--deco), var(--bg); background-color: var(--bg);\n  border-block: 1px solid color-mix(in srgb, var(--fg) 25%, transparent); text-align: center; }\n.L-post .w { font-size: calc(var(--size) * .8); }\n.L-post .cap { padding: 10px 14px 14px; font-size: 13px; line-height: 1.4; }\n.L-post .cap b { margin-right: 6px; }\n.L-post .ln { opacity: .85; font-size: var(--fine, 13px); }","cards":[{"id":"pickle-jar","name":"Pickle jar","layout":"bag","tags":{"mood":"playful","color":"green","type":"chunky","density":"bold"},"vars":{"bg":"#2f5d34","fg":"#f3edc8","ac":"#ffcf3f","display":"'Bagel Fat One'","weight":"400","style":"normal","size":"55px","deco":"radial-gradient(circle at 85% 20%, #a9cf6a 0 34px, #6fae3e 35px 44px, transparent 45px), radial-gradient(circle at 72% 34%, #a9cf6a 0 20px, #6fae3e 21px 27px, transparent 28px)"},"content":{"word":"Halfmoon","line":"Small batches, roasted till they sing."}},{"id":"samarkand","name":"Samarkand tile","layout":"poster","tags":{"mood":"cultural","color":"colorful","type":"geometric","density":"bold"},"vars":{"bg":"#123a8c","fg":"#f6efe1","ac":"#2bb5b8","display":"'Unbounded'","weight":"800","style":"normal","size":"34px","deco":"repeating-conic-gradient(from 45deg at 50% 50%, rgba(43,181,184,.22) 0 25%, transparent 0 50%) 0 0/36px 36px"},"content":{"word":"HALFMOON","line":"Roasted by the river. Poured everywhere."}},{"id":"ledger","name":"Ledger paper","layout":"menu","tags":{"mood":"premium","color":"light","type":"serif","density":"minimal"},"vars":{"bg":"#eef3e4","fg":"#1e2a1c","ac":"#b3261e","display":"'Instrument Serif'","weight":"400","style":"normal","size":"47px","deco":"linear-gradient(90deg, transparent 38px, rgba(179,38,30,.5) 38px 40px, transparent 40px), repeating-linear-gradient(transparent 0 27px, rgba(30,90,60,.18) 27px 28px)"},"content":{"word":"Halfmoon & Co.","line":"Est. 2026. Every bag logged by hand."}},{"id":"arcade","name":"Arcade cabinet","layout":"post","tags":{"mood":"gritty","color":"dark","type":"pixel","density":"bold"},"vars":{"bg":"#0d0b1e","fg":"#f2f0ff","ac":"#ff3d8b","display":"'Press Start 2P'","weight":"400","style":"normal","size":"21px","deco":"repeating-linear-gradient(transparent 0 3px, rgba(255,255,255,.04) 3px 4px), radial-gradient(ellipse at 50% 120%, rgba(255,61,139,.45), transparent 60%)","body":"'Press Start 2P'","fine":"8px"},"content":{"word":"HALFMOON","line":"INSERT COIN FOR ESPRESSO"}},{"id":"swiss","name":"Swiss grid","layout":"poster","tags":{"mood":"calm","color":"mono","type":"grotesk","density":"minimal"},"vars":{"bg":"#f4f4f2","fg":"#111111","ac":"#e3001b","display":"'Archivo Black'","weight":"400","style":"normal","size":"41px","deco":"linear-gradient(#e3001b,#e3001b) 100% 0/38% 14px no-repeat"},"content":{"word":"Halfmoon.","line":"A coffee roaster for the whole street."}},{"id":"brutal","name":"Raw brutalist","layout":"poster","tags":{"mood":"gritty","color":"mono","type":"condensed","density":"bold"},"vars":{"bg":"#d9d6cf","fg":"#000000","ac":"#000000","display":"'Anton'","weight":"400","style":"normal","size":"71px","deco":"repeating-linear-gradient(-45deg, transparent 0 18px, rgba(0,0,0,.06) 18px 20px)"},"content":{"word":"HALFMOON","line":"WE ROAST. THEN WE ROAST AGAIN."}},{"id":"lux-serif","name":"Quiet luxury","layout":"bag","tags":{"mood":"premium","color":"dark","type":"serif","density":"minimal"},"vars":{"bg":"#1b1a17","fg":"#e9e1d0","ac":"#b89b5e","display":"'Cormorant Garamond'","weight":"400","style":"italic","size":"47px","deco":"linear-gradient(#b89b5e,#b89b5e) 24px 62%/40px 1px no-repeat"},"content":{"word":"Halfmoon","line":"A house of small, carefully roasted things."}},{"id":"hand-zine","name":"Sketchbook zine","layout":"post","tags":{"mood":"playful","color":"light","type":"hand","density":"bold"},"vars":{"bg":"#fffbea","fg":"#20304a","ac":"#ff7a59","display":"'Caveat Brush'","weight":"400","style":"normal","size":"58px","deco":"radial-gradient(rgba(32,48,74,.18) 1px, transparent 1.5px) 0 0/16px 16px"},"content":{"word":"halfmoon!","line":"half café, half notebook, all beans"}},{"id":"terminal","name":"Dev terminal","layout":"menu","tags":{"mood":"techy","color":"dark","type":"mono","density":"minimal"},"vars":{"bg":"#0f1412","fg":"#cfe8d6","ac":"#7cf29a","display":"'IBM Plex Mono'","weight":"600","style":"normal","size":"25px","deco":"linear-gradient(rgba(124,242,154,.08), transparent 40%)","body":"'IBM Plex Mono'"},"content":{"word":"$ halfmoon","line":"> brewing... cold_brew [ok] night_roast [roasting]"}},{"id":"y2k","name":"Y2K chrome","layout":"post","tags":{"mood":"playful","color":"colorful","type":"geometric","density":"bold"},"vars":{"bg":"#c9d7ff","fg":"#141a3a","ac":"#ff4fd8","display":"'Rubik Mono One'","weight":"400","style":"normal","size":"30px","deco":"radial-gradient(circle at 20% 80%, #ff9ff0 0, transparent 40%), radial-gradient(circle at 90% 10%, #8ff5ff 0, transparent 45%), linear-gradient(160deg, #e9eeff, #b7c4ff)"},"content":{"word":"HALFMOON","line":"coffee! cake! the future is bean-shaped"}},{"id":"editorial","name":"Magazine cover","layout":"poster","tags":{"mood":"premium","color":"light","type":"serif","density":"bold"},"vars":{"bg":"#f2e9dc","fg":"#2a1a14","ac":"#d2462b","display":"'Fraunces'","weight":"800","style":"normal","size":"52px","deco":"linear-gradient(#d2462b,#d2462b) 24px 24px/56px 56px no-repeat"},"content":{"word":"Halfmoon","line":"Issue No. 1: The roaster that grew a neighbourhood."}},{"id":"nordic","name":"Nordic calm","layout":"bag","tags":{"mood":"calm","color":"light","type":"grotesk","density":"minimal"},"vars":{"bg":"#e8ece9","fg":"#26322d","ac":"#7d9b8a","display":"'Bricolage Grotesque'","weight":"400","style":"normal","size":"43px","deco":"radial-gradient(circle at 80% 30%, #c9d6cf 0 70px, transparent 71px)"},"content":{"word":"halfmoon","line":"Fewer, better cups."}},{"id":"neon-noir","name":"Neon noir","layout":"poster","tags":{"mood":"gritty","color":"dark","type":"condensed","density":"bold"},"vars":{"bg":"#0b0d14","fg":"#e8f0ff","ac":"#00e1ff","display":"'Anton'","weight":"400","style":"normal","size":"62px","deco":"linear-gradient(180deg, transparent 55%, rgba(0,225,255,.18)), repeating-linear-gradient(90deg, transparent 0 60px, rgba(0,225,255,.06) 60px 61px)"},"content":{"word":"NIGHT ROAST","line":"A Halfmoon production."}},{"id":"bauhaus","name":"Bauhaus shapes","layout":"post","tags":{"mood":"playful","color":"colorful","type":"geometric","density":"bold"},"vars":{"bg":"#f1ead8","fg":"#1a1a1a","ac":"#e4402c","display":"'Syne'","weight":"800","style":"normal","size":"43px","deco":"radial-gradient(circle at 78% 26%, #e4402c 0 48px, transparent 49px), linear-gradient(#1f4fbf,#1f4fbf) 64% 58%/70px 70px no-repeat, conic-gradient(from 90deg at 90% 72%, #f2b705 0 25%, transparent 0) "},"content":{"word":"Halfmoon","line":"Shapes first, coffee after."}},{"id":"mono-min","name":"Black & white","layout":"menu","tags":{"mood":"calm","color":"mono","type":"grotesk","density":"minimal"},"vars":{"bg":"#ffffff","fg":"#0a0a0a","ac":"#0a0a0a","display":"'Inter Tight'","weight":"600","style":"normal","size":"33px","deco":"none"},"content":{"word":"Halfmoon Coffee","line":"Beans. Brews. Mornings."}},{"id":"ikat","name":"Ikat silk","layout":"bag","tags":{"mood":"cultural","color":"colorful","type":"serif","density":"bold"},"vars":{"bg":"#5b1a3a","fg":"#fbe9d2","ac":"#f2a33a","display":"'Fraunces'","weight":"800","style":"normal","size":"47px","deco":"repeating-linear-gradient(90deg, rgba(242,163,58,.25) 0 14px, transparent 14px 22px, rgba(63,169,154,.3) 22px 30px, transparent 30px 52px)"},"content":{"word":"Halfmoon","line":"Woven from many origins."}},{"id":"lab","name":"Lab notebook","layout":"menu","tags":{"mood":"techy","color":"light","type":"mono","density":"minimal"},"vars":{"bg":"#f6f7f3","fg":"#1d2b3a","ac":"#2a6ce0","display":"'Major Mono Display'","weight":"400","style":"normal","size":"31px","deco":"linear-gradient(rgba(42,108,224,.12) 1px, transparent 1px) 0 0/20px 20px, linear-gradient(90deg, rgba(42,108,224,.12) 1px, transparent 1px) 0 0/20px 20px","body":"'Major Mono Display'"},"content":{"word":"halfmoon","line":"experiment 001: can one bean taste like three?"}},{"id":"sticker-pop","name":"Sticker bomb","layout":"post","tags":{"mood":"playful","color":"colorful","type":"chunky","density":"bold"},"vars":{"bg":"#ffd23f","fg":"#141414","ac":"#3a86ff","display":"'Bagel Fat One'","weight":"400","style":"normal","size":"52px","deco":"radial-gradient(circle at 82% 22%, #ff5d8f 0 30px, transparent 31px), radial-gradient(circle at 70% 78%, #3a86ff 0 36px, transparent 37px), radial-gradient(circle at 14% 64%, #06d6a0 0 22px, transparent 23px)"},"content":{"word":"halfmoon","line":"stick us on your laptop"}},{"id":"dark-green-lux","name":"Bottle green","layout":"bag","tags":{"mood":"premium","color":"green","type":"serif","density":"minimal"},"vars":{"bg":"#173126","fg":"#f1ecdf","ac":"#d9c48a","display":"'Instrument Serif'","weight":"400","style":"italic","size":"53px","deco":"linear-gradient(#d9c48a,#d9c48a) 24px 30%/1px 70px no-repeat"},"content":{"word":"Halfmoon","line":"An independent roaster, est. 2026."}},{"id":"game-hud","name":"Game HUD","layout":"post","tags":{"mood":"techy","color":"dark","type":"geometric","density":"bold"},"vars":{"bg":"#11161c","fg":"#e6edf3","ac":"#ffb000","display":"'Unbounded'","weight":"800","style":"normal","size":"30px","deco":"linear-gradient(#ffb000,#ffb000) 24px 24px/10px 10px no-repeat, linear-gradient(90deg, rgba(255,176,0,.25) 1px, transparent 1px) 0 0/48px 100%"},"content":{"word":"HALFMOON","line":"HP ████████░░  CAFFEINE 98%  QUEST: open at 7"}},{"id":"riso","name":"Risograph print","layout":"poster","tags":{"mood":"cultural","color":"colorful","type":"condensed","density":"bold"},"vars":{"bg":"#f5efe6","fg":"#0f6e5d","ac":"#ff4c65","display":"'Anton'","weight":"400","style":"normal","size":"65px","deco":"radial-gradient(rgba(255,76,101,.35) 1.2px, transparent 1.6px) 0 0/7px 7px"},"content":{"word":"HALFMOON","line":"printed in two colours, slightly off register"}},{"id":"soft-pastel","name":"Soft pastel app","layout":"post","tags":{"mood":"calm","color":"light","type":"grotesk","density":"minimal"},"vars":{"bg":"#f3eefc","fg":"#2e2550","ac":"#8a7cf0","display":"'Bricolage Grotesque'","weight":"800","style":"normal","size":"41px","deco":"radial-gradient(circle at 85% 15%, #ffd6e7 0 80px, transparent 81px), radial-gradient(circle at 10% 95%, #d6f5e9 0 90px, transparent 91px)"},"content":{"word":"halfmoon","line":"friendly coffee for busy brains"}},{"id":"cucumber-cool","name":"Cool as a cucumber","layout":"bag","tags":{"mood":"calm","color":"green","type":"geometric","density":"minimal"},"vars":{"bg":"#dff0e2","fg":"#14402a","ac":"#2fa35a","display":"'Unbounded'","weight":"400","style":"normal","size":"33px","deco":"radial-gradient(circle at 80% 30%, #ffffff 0 46px, #bfe3c6 47px 62px, #2fa35a 63px 70px, transparent 71px)"},"content":{"word":"halfmoon","line":"keep calm and pour"}},{"id":"poster-red","name":"Propaganda poster","layout":"poster","tags":{"mood":"gritty","color":"colorful","type":"condensed","density":"bold"},"vars":{"bg":"#c9271e","fg":"#f6e7cf","ac":"#111111","display":"'Anton'","weight":"400","style":"normal","size":"67px","deco":"repeating-conic-gradient(from 0deg at 110% 110%, rgba(0,0,0,.12) 0 6deg, transparent 6deg 12deg)"},"content":{"word":"DRINK MORE","line":"Halfmoon Coffee wants you."}},{"id":"saas","name":"Clean startup","layout":"post","tags":{"mood":"calm","color":"light","type":"grotesk","density":"minimal"},"vars":{"bg":"#f7f9fc","fg":"#0f1b33","ac":"#3366ff","display":"'Inter Tight'","weight":"600","style":"normal","size":"38px","deco":"radial-gradient(ellipse at 100% 0%, rgba(51,102,255,.18), transparent 55%)"},"content":{"word":"Halfmoon","line":"Coffee that scales. Mornings people love."}},{"id":"comic","name":"Comic panel","layout":"post","tags":{"mood":"playful","color":"colorful","type":"chunky","density":"bold"},"vars":{"bg":"#ffe14d","fg":"#111111","ac":"#e8282b","display":"'Bangers'","weight":"400","style":"normal","size":"71px","deco":"radial-gradient(rgba(232,40,43,.35) 2px, transparent 2.5px) 0 0/12px 12px"},"content":{"word":"HALFMOON!","line":"Meanwhile, on the corner... a café is born!"}},{"id":"blackletter","name":"Blackletter metal","layout":"bag","tags":{"mood":"gritty","color":"dark","type":"serif","density":"bold"},"vars":{"bg":"#0c0c0c","fg":"#e9e4da","ac":"#8a0f12","display":"'UnifrakturMaguntia'","weight":"400","style":"normal","size":"56px","deco":"radial-gradient(ellipse at 50% 40%, rgba(138,15,18,.35), transparent 60%)"},"content":{"word":"Halfmoon","line":"Est. MMXXVI. Coffee with teeth."}},{"id":"solarpunk","name":"Solarpunk","layout":"bag","tags":{"mood":"calm","color":"green","type":"serif","density":"minimal"},"vars":{"bg":"#f2f5df","fg":"#24402a","ac":"#e9a23b","display":"'Fraunces'","weight":"800","style":"normal","size":"46px","deco":"radial-gradient(circle at 85% 18%, #f5c96a 0 40px, transparent 41px), linear-gradient(180deg, transparent 70%, rgba(80,140,70,.25))"},"content":{"word":"halfmoon","line":"Coffee that grows like a garden."}},{"id":"vapor","name":"Vaporwave sunset","layout":"post","tags":{"mood":"playful","color":"colorful","type":"geometric","density":"bold"},"vars":{"bg":"#2a0f4a","fg":"#fff1fb","ac":"#ff71ce","display":"'Syne'","weight":"800","style":"normal","size":"46px","deco":"repeating-linear-gradient(transparent 0 10px, #2a0f4a 10px 14px) 50% 60%/160px 120px no-repeat, radial-gradient(circle at 50% 60%, #ffb86b 0 80px, #ff71ce 81px 81px, transparent 82px), linear-gradient(180deg, #2a0f4a 0 50%, #01cdfe 160%)"},"content":{"word":"HALFMOON","line":"ｃｏｆｆｅｅ　＆　ｃａｋｅ"}},{"id":"parchment","name":"Old map","layout":"menu","tags":{"mood":"cultural","color":"light","type":"serif","density":"bold"},"vars":{"bg":"#ecdcb9","fg":"#3d2a17","ac":"#8c2f1b","display":"'IM Fell English'","weight":"400","style":"italic","size":"52px","deco":"radial-gradient(ellipse at 50% 50%, transparent 50%, rgba(90,55,20,.35)), repeating-radial-gradient(circle at 80% 80%, transparent 0 18px, rgba(61,42,23,.08) 18px 19px)"},"content":{"word":"Halfmoon","line":"Here be beans. Charted by hand, 2026."}},{"id":"toy","name":"Toy box","layout":"post","tags":{"mood":"playful","color":"colorful","type":"chunky","density":"bold"},"vars":{"bg":"#4cc9f0","fg":"#ffffff","ac":"#f72585","display":"'Rubik Mono One'","weight":"400","style":"normal","size":"36px","deco":"linear-gradient(#ffd60a,#ffd60a) 80% 20%/60px 60px no-repeat, radial-gradient(circle at 20% 75%, #f72585 0 34px, transparent 35px), linear-gradient(#7209b7,#7209b7) 70% 80%/40px 80px no-repeat"},"content":{"word":"HALFMOON","line":"Play is serious business."}},{"id":"glass","name":"Dark glass","layout":"menu","tags":{"mood":"techy","color":"dark","type":"grotesk","density":"minimal"},"vars":{"bg":"#0c1020","fg":"#eef1ff","ac":"#8b9dff","display":"'Bricolage Grotesque'","weight":"400","style":"normal","size":"43px","deco":"radial-gradient(circle at 20% 20%, rgba(139,157,255,.45), transparent 40%), radial-gradient(circle at 90% 80%, rgba(255,120,200,.3), transparent 45%)"},"content":{"word":"Halfmoon","line":"Quietly roasting the next batch."}},{"id":"silk-road","name":"Silk Road bazaar","layout":"poster","tags":{"mood":"cultural","color":"colorful","type":"geometric","density":"bold"},"vars":{"bg":"#b5442a","fg":"#fff4e2","ac":"#1d6b8f","display":"'Unbounded'","weight":"800","style":"normal","size":"33px","deco":"repeating-linear-gradient(45deg, rgba(255,244,226,.12) 0 10px, transparent 10px 20px), linear-gradient(#1d6b8f,#1d6b8f) 0 100%/100% 18px no-repeat"},"content":{"word":"HALFMOON","line":"A caravan of beans, from the hills outward."}},{"id":"matrix","name":"Green code","layout":"menu","tags":{"mood":"techy","color":"green","type":"mono","density":"bold"},"vars":{"bg":"#03130a","fg":"#8dff9f","ac":"#29d35b","display":"'IBM Plex Mono'","weight":"600","style":"normal","size":"36px","deco":"repeating-linear-gradient(90deg, rgba(41,211,91,.08) 0 1px, transparent 1px 18px)","body":"'IBM Plex Mono'"},"content":{"word":"halfmoon_","line":"while(true) { roast(); pour(); taste(); }"}},{"id":"zen","name":"Zen minimal","layout":"bag","tags":{"mood":"calm","color":"light","type":"serif","density":"minimal"},"vars":{"bg":"#f6f2ea","fg":"#26231f","ac":"#c8342b","display":"'Instrument Serif'","weight":"400","style":"normal","size":"50px","deco":"radial-gradient(circle at 78% 26%, #c8342b 0 38px, transparent 39px)"},"content":{"word":"halfmoon","line":"one cup. one thing at a time."}},{"id":"graffiti","name":"Street skate","layout":"poster","tags":{"mood":"gritty","color":"colorful","type":"hand","density":"bold"},"vars":{"bg":"#1f1f1f","fg":"#f4f4f4","ac":"#b6ff3b","display":"'Permanent Marker'","weight":"400","style":"normal","size":"53px","deco":"radial-gradient(circle at 80% 25%, rgba(182,255,59,.5) 0 30px, transparent 60px), radial-gradient(circle at 15% 85%, rgba(255,80,160,.45) 0 20px, transparent 55px)"},"content":{"word":"HALFMOON","line":"made loud, made fast, made here"}},{"id":"newspaper","name":"Broadsheet","layout":"menu","tags":{"mood":"premium","color":"mono","type":"serif","density":"bold"},"vars":{"bg":"#f3f0e8","fg":"#141414","ac":"#141414","display":"'Fraunces'","weight":"800","style":"normal","size":"43px","deco":"linear-gradient(#141414,#141414) 24px 22%/calc(100% - 48px) 2px no-repeat, linear-gradient(#141414,#141414) 24px 23.5%/calc(100% - 48px) 1px no-repeat"},"content":{"word":"The Halfmoon Times","line":"Local roaster opens doors; pastries unavailable for comment."}},{"id":"casino","name":"Black & gold","layout":"bag","tags":{"mood":"premium","color":"dark","type":"condensed","density":"bold"},"vars":{"bg":"#0e0d0b","fg":"#f2e3b3","ac":"#c9a227","display":"'Anton'","weight":"400","style":"normal","size":"64px","deco":"repeating-linear-gradient(135deg, rgba(201,162,39,.08) 0 2px, transparent 2px 14px)"},"content":{"word":"HALFMOON","line":"The house always pours."}},{"id":"camp","name":"Forest camp","layout":"menu","tags":{"mood":"calm","color":"green","type":"hand","density":"minimal"},"vars":{"bg":"#e6ead8","fg":"#2b3b26","ac":"#c46a2b","display":"'Caveat Brush'","weight":"400","style":"normal","size":"59px","deco":"conic-gradient(from 150deg at 80% 30%, transparent 0 60deg, rgba(43,59,38,.25) 60deg 120deg, transparent 120deg)"},"content":{"word":"halfmoon co.","line":"slow-roasted, hand-poured, built to last"}},{"id":"blueprint","name":"Blueprint","layout":"poster","tags":{"mood":"techy","color":"colorful","type":"mono","density":"minimal"},"vars":{"bg":"#1d4e89","fg":"#e8f1ff","ac":"#ffd166","display":"'Space Mono', 'IBM Plex Mono'","weight":"600","style":"normal","size":"31px","deco":"linear-gradient(rgba(232,241,255,.14) 1px, transparent 1px) 0 0/24px 24px, linear-gradient(90deg, rgba(232,241,255,.14) 1px, transparent 1px) 0 0/24px 24px","body":"'Space Mono', 'IBM Plex Mono'"},"content":{"word":"HALFMOON/01","line":"SCALE 1:1 · SHEET 1 OF ∞ · DRAWN BY HALFMOON CO."}}]};
+const V = D.cards;
+const AXES = Object.keys(D.axes);
+const TOTAL = D.total, SEED = D.seed;
+const REMIX = D.remix || null;
 const $ = id => document.getElementById(id);
 const shown = [];   // cards in the order shown
 const votes = [];   // {card, like}
 let busy = false;
 
-// Round 1: greedy pick so the first 12 cover as many tag values as possible.
+// Round 1: greedy pick so the first SEED cards cover as many tag values (and layouts) as possible.
 function seedDeck() {
   const pool = V.slice().sort(() => Math.random() - .5), seen = new Set(), out = [];
-  while (out.length < SEED) {
+  const keys = c => AXES.map(a => a + ':' + c.tags[a]).concat('layout:' + c.layout);
+  while (out.length < Math.min(SEED, V.length)) {
     let best = null, bestScore = -1;
     for (const c of pool) {
       if (out.includes(c)) continue;
-      const s = AXES.filter(a => !seen.has(a + ":" + c[a])).length;
+      const s = keys(c).filter(k => !seen.has(k)).length;
       if (s > bestScore) { best = c; bestScore = s; }
     }
-    out.push(best); AXES.forEach(a => seen.add(a + ":" + best[a]));
+    out.push(best); keys(best).forEach(k => seen.add(k));
   }
   return out;
 }
@@ -246,96 +172,102 @@ const seed = seedDeck();
 // Per tag value: likes and dislikes. Sampled score leans to likes but keeps exploring (Thompson-style).
 function stats() {
   const m = {};
-  votes.forEach(v => AXES.forEach(a => { const k = a + ":" + v.card[a]; m[k] = m[k] || { l: 0, d: 0 }; v.like ? m[k].l++ : m[k].d++; }));
+  votes.forEach(v => AXES.forEach(a => { const k = a + ':' + v.card.tags[a]; m[k] = m[k] || { l: 0, d: 0 }; v.like ? m[k].l++ : m[k].d++; }));
   return m;
 }
 function sample(m, k) {
   const s = m[k] || { l: 0, d: 0 }, n = s.l + s.d;
   return (s.l + 1) / (n + 2) + (Math.random() - .5) * 0.7 / Math.sqrt(n + 1);
 }
+// A remix keeps one liked card's layout, palette and content and borrows the vars and tags the deck names from another.
 function remix(a, b) {
-  return { ...a, id: "remix:" + a.id + "+" + b.id, name: a.name + " × " + b.name, remix: true,
-    type: b.type, font: b.font, weight: b.weight, style: b.style, size: b.size };
+  const vars = { ...a.vars }, tags = { ...a.tags };
+  for (const k of REMIX.vars) { if (b.vars && k in b.vars) vars[k] = b.vars[k]; else delete vars[k]; }
+  for (const k of REMIX.axes) tags[k] = b.tags[k];
+  return { ...a, id: 'remix:' + a.id + '+' + b.id, name: a.name + ' × ' + b.name, remix: true, vars, tags };
 }
+function differs(a, b) { return REMIX.axes.some(x => a.tags[x] !== b.tags[x]) || REMIX.vars.some(x => a.vars[x] !== b.vars[x]); }
 function nextCard() {
   const i = shown.length;
-  if (i < SEED) return seed[i];
+  if (i < seed.length) return seed[i];
   const m = stats(), used = new Set(shown.map(c => c.id));
   const liked = votes.filter(v => v.like).map(v => v.card).filter(c => !c.remix);
-  const cands = V.filter(c => !used.has(c.id)).map(c => ({ c, kind: "explore" }));
-  for (const a of liked) for (const b of liked) if (a !== b && a.type !== b.type) {
-    const r = remix(a, b); if (!used.has(r.id)) cands.push({ c: r, kind: "remix" });
+  const cands = V.filter(c => !used.has(c.id)).map(c => ({ c, kind: 'explore' }));
+  if (REMIX) for (const a of liked) for (const b of liked) if (a !== b && differs(a, b)) {
+    const r = remix(a, b); if (!used.has(r.id)) cands.push({ c: r, kind: 'remix' });
   }
+  if (!cands.length) return null;
   const explore = Math.random() < 0.25 || liked.length < 2;
-  const pool = cands.filter(x => explore ? x.kind === "explore" : x.kind === "remix");
+  const pool = cands.filter(x => explore ? x.kind === 'explore' : x.kind === 'remix');
   const list = pool.length ? pool : cands;
   let best = list[0], top = -1;
-  for (const x of list) { const s = AXES.reduce((t, a) => t + sample(m, a + ":" + x.c[a]), 0); if (s > top) { top = s; best = x; } }
+  for (const x of list) { const s = AXES.reduce((t, a) => t + sample(m, a + ':' + x.c.tags[a]), 0); if (s > top) { top = s; best = x; } }
   return best.c;
 }
 
 function cardEl(v) {
-  const c = document.createElement("div");
-  c.className = "card";
-  const spec = document.createElement("div");
-  spec.className = "spec";
-  spec.style.background = v.deco === "none" ? v.bg : v.deco + ", " + v.bg;
-  spec.style.backgroundColor = v.bg;
-  spec.style.color = v.fg;
-  const mono = v.type === "mono" || v.type === "pixel";
-  spec.innerHTML = `
-    <div class="eyebrow" style="font-family:${v.font}, system-ui; font-size:${v.type === "pixel" ? 8 : 11}px">halfmoon · coffee roasters</div>
-    <h2 class="word" style="font-family:${v.font}, system-ui, sans-serif; font-weight:${v.weight || 400}; font-style:${v.style || "normal"}; font-size:${v.size * 0.74}px">${v.word}</h2>
-    <div style="display:grid; gap:12px">
-      <div class="line" style="font-family:${mono ? v.font : "inherit"}; font-size:${v.type === "pixel" ? 9 : 14}px; line-height:1.5">${v.line}</div>
-      <div class="chips"><span style="background:${v.ac}; color:${v.bg}">Cold brew</span><span style="border:1px solid ${v.fg}">Night roast</span></div>
-    </div>`;
-  const meta = document.createElement("div");
-  meta.className = "meta";
-  meta.innerHTML = `<b>${v.name}</b><small>${v.mood} · ${v.type}</small>`;
-  const yes = document.createElement("div"); yes.className = "stamp yes"; yes.textContent = "US";
-  const no = document.createElement("div"); no.className = "stamp no"; no.textContent = "NOPE";
+  const c = document.createElement('div');
+  c.className = 'card';
+  const spec = document.createElement('div');
+  spec.className = 'spec';
+  for (const [k, x] of Object.entries(v.vars || {})) spec.style.setProperty('--' + k, x);
+  const layout = document.createElement('div');
+  layout.className = 'layout L-' + v.layout;
+  layout.innerHTML = D.layouts[v.layout];
+  spec.append(layout);
+  const content = { ...(D.content || {}), ...(v.content || {}) };
+  for (const slot of spec.querySelectorAll('[data-slot]')) {
+    const x = content[slot.dataset.slot];
+    if (x == null || x === '') slot.dataset.empty = ''; else slot.textContent = String(x);
+  }
+  const meta = document.createElement('div');
+  meta.className = 'meta';
+  meta.innerHTML = '<b></b><small></small>';
+  meta.querySelector('b').textContent = v.name;
+  meta.querySelector('small').textContent = AXES.slice(0, 2).map(a => v.tags[a]).join(' · ');
+  const yes = document.createElement('div'); yes.className = 'stamp yes'; yes.textContent = D.labels?.yes || 'Yes';
+  const no = document.createElement('div'); no.className = 'stamp no'; no.textContent = D.labels?.no || 'Nope';
   c.append(yes, no, spec, meta);
-  if (v.remix) { const b = document.createElement("div"); b.className = "badge"; b.textContent = "remix"; c.append(b); }
+  if (v.remix) { const b = document.createElement('div'); b.className = 'badge'; b.textContent = 'remix'; c.append(b); }
   return c;
 }
 
-let current = null, upcoming = null;
+let current = null;
 function render() {
-  const stack = $("stack");
-  stack.innerHTML = "";
+  const stack = $('stack');
+  stack.innerHTML = '';
   const i = votes.length;
-  $("count").textContent = Math.min(i + 1, TOTAL) + " / " + TOTAL;
-  $("prog").style.width = (i / TOTAL * 100) + "%";
+  $('count').textContent = Math.min(i + 1, TOTAL) + ' / ' + TOTAL;
+  $('prog').style.width = (i / TOTAL * 100) + '%';
   if (i >= TOTAL) return showResults();
-  if (shown.length === i) shown.push(nextCard());
+  if (shown.length === i) { const n = nextCard(); if (!n) return showResults(); shown.push(n); }
   current = shown[i];
-  const r1 = i < SEED;
-  $("phase").innerHTML = r1 ? "Round 1 · <b>map</b>" : "Round 2 · <b>" + (current.remix ? "remix" : "explore") + "</b>";
-  $("phase-note").textContent = r1 ? "12 wide-apart looks" : current.remix ? "your likes, recombined" : "checking a blind spot";
+  const r1 = i < seed.length;
+  $('phase').innerHTML = r1 ? 'Round 1 · <b>map</b>' : 'Round 2 · <b>' + (current.remix ? 'remix' : 'explore') + '</b>';
+  $('phase-note').textContent = r1 ? seed.length + ' wide-apart looks' : current.remix ? 'your likes, recombined' : 'checking a blind spot';
   const top = cardEl(current);
   stack.append(top);
   drag(top);
 }
 
 function decide(like, card) {
-  if (busy || votes.length >= TOTAL) return;
+  if (busy || votes.length >= TOTAL || !current) return;
   busy = true;
-  card = card || $("stack").lastElementChild;
+  card = card || $('stack').lastElementChild;
   card.style.transform = `translateX(${like ? 140 : -140}%) rotate(${like ? 18 : -18}deg)`;
-  card.style.opacity = "0";
+  card.style.opacity = '0';
   votes.push({ card: current, like });
   setTimeout(() => { busy = false; render(); }, 260);
 }
 
 function drag(card) {
   let x0 = null, dx = 0;
-  const yes = card.querySelector(".stamp.yes"), no = card.querySelector(".stamp.no");
-  card.addEventListener("pointerdown", e => { x0 = e.clientX; card.classList.add("dragging"); card.setPointerCapture(e.pointerId); });
-  card.addEventListener("pointermove", e => {
+  const yes = card.querySelector('.stamp.yes'), no = card.querySelector('.stamp.no');
+  card.addEventListener('pointerdown', e => { x0 = e.clientX; card.classList.add('dragging'); card.setPointerCapture(e.pointerId); });
+  card.addEventListener('pointermove', e => {
     if (x0 === null) return;
     // The button came up outside the page (or the frame), so no pointerup arrived: settle the card now.
-    if (e.pointerType === "mouse" && !e.buttons) return end();
+    if (e.pointerType === 'mouse' && !e.buttons) return end();
     dx = e.clientX - x0;
     card.style.transform = `translateX(${dx}px) rotate(${dx / 18}deg)`;
     yes.style.opacity = Math.max(0, Math.min(1, dx / 90));
@@ -343,65 +275,67 @@ function drag(card) {
   });
   const end = () => {
     if (x0 === null) return;
-    x0 = null; card.classList.remove("dragging");
+    x0 = null; card.classList.remove('dragging');
     if (Math.abs(dx) > 90) decide(dx > 0, card);
-    else { card.style.transform = ""; yes.style.opacity = 0; no.style.opacity = 0; }
+    else { card.style.transform = ''; yes.style.opacity = 0; no.style.opacity = 0; }
     dx = 0;
   };
-  ["pointerup", "pointercancel", "lostpointercapture"].forEach(t => card.addEventListener(t, end));
+  ['pointerup', 'pointercancel', 'lostpointercapture'].forEach(t => card.addEventListener(t, end));
 }
 
-$("btn-yes").onclick = () => decide(true);
-$("btn-no").onclick = () => decide(false);
-$("btn-undo").onclick = () => { if (!busy && votes.length && votes.length < TOTAL) { votes.pop(); shown.length = votes.length + 1; render(); } };
-document.addEventListener("keydown", e => { if (e.key === "ArrowRight") decide(true); else if (e.key === "ArrowLeft") decide(false); });
+$('btn-yes').onclick = () => decide(true);
+$('btn-no').onclick = () => decide(false);
+$('btn-undo').onclick = () => { if (!busy && votes.length && votes.length < TOTAL) { votes.pop(); shown.length = votes.length + 1; render(); } };
+document.addEventListener('keydown', e => { if (e.key === 'ArrowRight') decide(true); else if (e.key === 'ArrowLeft') decide(false); });
 
 function tally() {
   const out = {};
-  for (const a of AXES) {
+  for (const a of AXES.concat('layout')) {
     const m = {};
-    votes.forEach(v => { const k = v.card[a]; m[k] = m[k] || { yes: 0, n: 0 }; m[k].n++; if (v.like) m[k].yes++; });
+    votes.forEach(v => { const k = a === 'layout' ? v.card.layout : v.card.tags[a]; m[k] = m[k] || { yes: 0, n: 0 }; m[k].n++; if (v.like) m[k].yes++; });
     out[a] = Object.entries(m).map(([k, s]) => ({ k, pct: Math.round(s.yes / s.n * 100), yes: s.yes, n: s.n }))
       .sort((p, q) => q.pct - p.pct || q.yes - p.yes);
   }
   return out;
 }
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
 async function showResults() {
-  ["stack", "controls", "hint"].forEach(id => $(id).hidden = true);
-  $("phase").textContent = "done"; $("phase-note").textContent = "";
+  ['stack', 'controls', 'hint'].forEach(id => $(id).hidden = true);
+  $('phase').textContent = 'done'; $('phase-note').textContent = '';
   const t = tally();
+  const n = votes.length;
   const liked = votes.filter(v => v.like).map(v => v.card);
   const remixes = liked.filter(c => c.remix);
-  const labels = { mood: "Mood", color: "Colour", type: "Type", density: "Density" };
-  const r = $("results");
+  const labels = { ...D.axes, layout: 'Layout' };
+  const shownAxes = AXES.concat(Object.keys(D.layouts).length > 1 ? ['layout'] : []);
+  const r = $('results');
   r.hidden = false;
   r.innerHTML = `
-    <h2>You lean ${t.mood[0].k}, with ${t.type[0].k} type and ${t.color[0].k} colour.</h2>
-    <p>You liked ${liked.length} of ${TOTAL}, including ${remixes.length} remixes the deck made from your earlier likes.</p>
-    ${AXES.map(a => `<div class="dim"><h3>${labels[a]}</h3>${t[a].map(x => `<div class="row"><span>${x.k}</span><span class="track"><i style="width:${x.pct}%"></i></span><span>${x.pct}%</span></div>`).join("")}</div>`).join("")}
-    <div class="dim"><h3>Liked</h3><div class="liked">${liked.map(c => `<span class="${c.remix ? "remix" : ""}">${c.name}</span>`).join("") || "<span>None. Brutal.</span>"}</div></div>
+    <h2>You lean ${AXES.map(a => esc(t[a][0]?.k ?? '?')).join(', ')}.</h2>
+    <p>You liked ${liked.length} of ${n}${REMIX ? `, including ${remixes.length} remixes the deck made from your earlier likes` : ''}.</p>
+    ${shownAxes.map(a => `<div class="dim"><h3>${esc(labels[a])}</h3>${t[a].map(x => `<div class="row"><span>${esc(x.k)}</span><span class="track"><i style="width:${x.pct}%"></i></span><span>${x.pct}%</span></div>`).join('')}</div>`).join('')}
+    <div class="dim"><h3>Liked</h3><div class="liked">${liked.map(c => `<span class="${c.remix ? 'remix' : ''}">${esc(c.name)}</span>`).join('') || '<span>None. Brutal.</span>'}</div></div>
     <p class="status" id="status">Saving…</p>
     <div class="actions"><button class="btn ghost" id="again">Start over</button></div>`;
-  $("again").onclick = () => location.reload();
+  $('again').onclick = () => location.reload();
 
-  const summary = Object.fromEntries(AXES.map(a => [a, t[a].map(x => `${x.k} ${x.pct}%`)]));
-  const payload = { at: new Date().toISOString(), liked: liked.map(c => c.name), votes: votes.map(v => ({ id: v.card.id, like: v.like })), summary };
+  const summary = Object.fromEntries(shownAxes.map(a => [a, t[a].map(x => `${x.k} ${x.pct}%`)]));
+  const payload = { deck: D.id, at: new Date().toISOString(), liked: liked.map(c => c.name), votes: votes.map(v => ({ id: v.card.id, like: v.like })), summary };
   let saved = false;
-  try { const db = await claude.use("db"); if (db) { await db.doc("results/r" + Date.now()).set(payload); saved = true; } } catch (e) {}
-  if (saved) { $("status").textContent = "Sent to Claude. Say you're done and it will design from this."; return; }
-  $("status").textContent = "Your taste profile. Copy it and paste it to your agent:";
-  const ta = document.createElement("textarea");
-  ta.id = "result-text"; ta.readOnly = true;
-  ta.value = "OohNah (" + TOTAL + " cards)\nLiked: " + payload.liked.join(", ") + "\n" + AXES.map(a => a + ": " + summary[a].join(", ")).join("\n");
-  $("status").after(ta);
-  const cp = document.createElement("button");
-  cp.className = "btn"; cp.textContent = "Copy profile";
-  cp.onclick = () => navigator.clipboard.writeText(ta.value).then(() => cp.textContent = "Copied", () => ta.select());
-  r.querySelector(".actions").prepend(cp);
+  try { const db = window.claude?.use ? await window.claude.use('db') : null; if (db) { await db.collection('results').doc('r' + Date.now()).set(payload); saved = true; } } catch (e) {}
+  if (saved) { $('status').textContent = 'Sent to Claude. Say you are done and it will design from this.'; return; }
+  $('status').textContent = 'Your taste profile. Copy it and paste it to your agent:';
+  const ta = document.createElement('textarea');
+  ta.readOnly = true;
+  ta.value = 'OohNah: ' + D.id + ' (' + n + ' cards)\nLiked: ' + payload.liked.join(', ') + '\n' + shownAxes.map(a => a + ': ' + summary[a].join(', ')).join('\n');
+  $('status').after(ta);
+  const cp = document.createElement('button');
+  cp.className = 'btn'; cp.textContent = 'Copy profile';
+  cp.onclick = () => navigator.clipboard.writeText(ta.value).then(() => cp.textContent = 'Copied', () => ta.select());
+  ta.after(cp);
 }
 
 render();
+})();
 </script>
-</body>
-</html>

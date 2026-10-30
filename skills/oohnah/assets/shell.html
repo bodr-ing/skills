@@ -1,0 +1,293 @@
+<title>{{TITLE}}</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+{{FONTS}}
+<style>
+/* The shell: swipe mechanics, the two rounds, results and saving. It is plain grey on purpose, so the frame never
+   votes in a taste test. Everything inside a card (layouts, palettes, fonts, decoration) comes from the deck. */
+:root {
+  --paper: #f2f2f0; --panel: #ffffff; --ink: #1b1b1b; --muted: #6b6b6b; --line: #d8d8d4;
+  --yes: #1f8a4c; --no: #c8392b; --accent: #1b1b1b;
+  --ui: system-ui, -apple-system, "Segoe UI", sans-serif; --ui-mono: ui-monospace, "SF Mono", Consolas, monospace;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --paper: #161616; --panel: #222222; --ink: #ededed; --muted: #a0a0a0; --line: #3a3a3a; --yes: #4cc27f; --no: #f06a5c; --accent: #ededed; } }
+:root[data-theme="dark"] { --paper: #161616; --panel: #222222; --ink: #ededed; --muted: #a0a0a0; --line: #3a3a3a; --yes: #4cc27f; --no: #f06a5c; --accent: #ededed; }
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { height: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 15px/1.5 var(--ui); overflow-x: hidden;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.app { max-width: 420px; margin: 0 auto; padding-block: 16px 22px; display: flex; flex-direction: column; gap: 12px; }
+header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+header h1 { font: 700 20px/1.15 var(--ui); margin: 0; text-wrap: balance; }
+.count { font: 13px var(--ui-mono); color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.bar { height: 4px; background: var(--line); border-radius: 2px; overflow: hidden; }
+.bar i { display: block; height: 100%; background: var(--ink); width: 0; transition: width .25s; }
+.phase { display: flex; justify-content: space-between; gap: 10px; font: 12px var(--ui-mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.phase b { color: var(--ink); font-weight: 600; }
+.hint { color: var(--muted); font-size: 13px; margin: 0; text-wrap: balance; }
+
+.stack { position: relative; aspect-ratio: 4 / 5.3; width: 100%; }
+.card { position: absolute; inset: 0; border-radius: 16px; overflow: hidden; background: var(--panel); display: flex; flex-direction: column;
+  touch-action: none; user-select: none; cursor: grab; transition: transform .3s ease, opacity .3s; box-shadow: 0 14px 30px -18px rgba(0,0,0,.5), 0 0 0 1px var(--line); }
+.card.dragging { transition: none; cursor: grabbing; }
+/* The card's vars (--bg, --fg, --display, …) are set on .spec; the deck's layout HTML goes in .L-<layout> inside it. */
+.spec { flex: 1; position: relative; overflow: hidden; min-height: 0; display: flex; flex-direction: column; }
+.spec > .layout { flex: 1; min-height: 0; position: relative; }
+[data-empty] { display: none !important; }
+.meta { padding: 9px 14px 10px; display: flex; justify-content: space-between; align-items: center; gap: 10px; background: var(--panel); border-top: 1px solid var(--line); }
+.meta b { font-size: 14px; font-weight: 600; }
+.meta small { font: 11px var(--ui-mono); color: var(--muted); text-align: right; }
+.badge { position: absolute; top: 12px; right: 12px; z-index: 2; font: 600 11px var(--ui-mono); padding: 3px 8px; border-radius: 4px; background: var(--ink); color: var(--paper); text-transform: uppercase; letter-spacing: .06em; }
+.stamp { position: absolute; top: 22px; padding: 4px 12px; border: 3px solid; border-radius: 6px; font: 800 22px var(--ui); opacity: 0; background: rgba(255,255,255,.9); z-index: 3; text-transform: uppercase; }
+.stamp.yes { left: 18px; color: var(--yes); transform: rotate(-12deg); }
+.stamp.no { right: 18px; color: var(--no); transform: rotate(12deg); }
+
+.controls { display: flex; justify-content: center; gap: 18px; }
+.controls button { width: 60px; height: 60px; border-radius: 50%; border: 1px solid var(--line); background: var(--panel); color: var(--ink); font-size: 22px; cursor: pointer; display: grid; place-items: center; }
+.controls button.no { color: var(--no); }
+.controls button.yes { color: var(--yes); }
+.controls button.undo { width: 44px; height: 44px; font-size: 16px; align-self: center; color: var(--muted); }
+.controls button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.controls button:active { transform: scale(.94); }
+
+.results { display: flex; flex-direction: column; gap: 14px; }
+.results h2 { font: 700 26px/1.15 var(--ui); margin: 6px 0 0; text-wrap: balance; }
+.results p { margin: 0; color: var(--muted); }
+.dim { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; display: grid; gap: 7px; }
+.dim h3 { margin: 0; font: 600 12px var(--ui-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.row { display: grid; grid-template-columns: 96px minmax(0, 1fr) 38px; align-items: center; gap: 10px; font-size: 14px; }
+.row .track { height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+.row .track i { display: block; height: 100%; background: var(--ink); }
+.row span:last-child { text-align: right; font: 12px var(--ui-mono); color: var(--muted); }
+.liked { display: flex; flex-wrap: wrap; gap: 6px; }
+.liked span { border: 1px solid var(--line); border-radius: 999px; padding: 3px 10px; font-size: 13px; }
+.liked span.remix { border-style: dashed; }
+.status { font-weight: 600; }
+textarea { width: 100%; min-height: 120px; font: 12px var(--ui-mono); padding: 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); color: var(--ink); }
+.btn { border: 1px solid var(--ink); border-radius: 10px; background: var(--ink); color: var(--paper); padding: 10px 18px; font: 600 14px var(--ui); cursor: pointer; }
+.btn.ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+.actions { display: flex; gap: 10px; flex-wrap: wrap; }
+@media (prefers-reduced-motion: reduce) { .card, .bar i { transition: none; } }
+</style>
+<style id="deck">
+/*CSS*/
+</style>
+
+<div class="app">
+  <header><h1>{{HEADING}}</h1><span class="count" id="count">1 / {{TOTAL}}</span></header>
+  <div class="bar"><i id="prog"></i></div>
+  <div class="phase"><span id="phase">Round 1 · <b>map</b></span><span id="phase-note"></span></div>
+  <p class="hint" id="hint">{{HINT}}</p>
+  <div class="stack" id="stack"></div>
+  <div class="controls" id="controls">
+    <button class="no" id="btn-no" aria-label="Not it">✕</button>
+    <button class="undo" id="btn-undo" aria-label="Undo last">↺</button>
+    <button class="yes" id="btn-yes" aria-label="That's it">♥</button>
+  </div>
+  <section class="results" id="results" hidden></section>
+</div>
+
+<script>
+(() => {
+'use strict';
+// The deck is injected by scripts/build.mjs from a deck JSON file (see SKILL.md for its shape): its own layouts,
+// CSS and cards, designed for one brand and use. This script only shows, remixes, counts and saves.
+const D = /*DECK*/null/*END*/;
+const V = D.cards;
+const AXES = Object.keys(D.axes);
+const TOTAL = D.total, SEED = D.seed;
+const REMIX = D.remix || null;
+const $ = id => document.getElementById(id);
+const shown = [];   // cards in the order shown
+const votes = [];   // {card, like}
+let busy = false;
+
+// Round 1: greedy pick so the first SEED cards cover as many tag values (and layouts) as possible.
+function seedDeck() {
+  const pool = V.slice().sort(() => Math.random() - .5), seen = new Set(), out = [];
+  const keys = c => AXES.map(a => a + ':' + c.tags[a]).concat('layout:' + c.layout);
+  while (out.length < Math.min(SEED, V.length)) {
+    let best = null, bestScore = -1;
+    for (const c of pool) {
+      if (out.includes(c)) continue;
+      const s = keys(c).filter(k => !seen.has(k)).length;
+      if (s > bestScore) { best = c; bestScore = s; }
+    }
+    out.push(best); keys(best).forEach(k => seen.add(k));
+  }
+  return out;
+}
+const seed = seedDeck();
+
+// Per tag value: likes and dislikes. Sampled score leans to likes but keeps exploring (Thompson-style).
+function stats() {
+  const m = {};
+  votes.forEach(v => AXES.forEach(a => { const k = a + ':' + v.card.tags[a]; m[k] = m[k] || { l: 0, d: 0 }; v.like ? m[k].l++ : m[k].d++; }));
+  return m;
+}
+function sample(m, k) {
+  const s = m[k] || { l: 0, d: 0 }, n = s.l + s.d;
+  return (s.l + 1) / (n + 2) + (Math.random() - .5) * 0.7 / Math.sqrt(n + 1);
+}
+// A remix keeps one liked card's layout, palette and content and borrows the vars and tags the deck names from another.
+function remix(a, b) {
+  const vars = { ...a.vars }, tags = { ...a.tags };
+  for (const k of REMIX.vars) { if (b.vars && k in b.vars) vars[k] = b.vars[k]; else delete vars[k]; }
+  for (const k of REMIX.axes) tags[k] = b.tags[k];
+  return { ...a, id: 'remix:' + a.id + '+' + b.id, name: a.name + ' × ' + b.name, remix: true, vars, tags };
+}
+function differs(a, b) { return REMIX.axes.some(x => a.tags[x] !== b.tags[x]) || REMIX.vars.some(x => a.vars[x] !== b.vars[x]); }
+function nextCard() {
+  const i = shown.length;
+  if (i < seed.length) return seed[i];
+  const m = stats(), used = new Set(shown.map(c => c.id));
+  const liked = votes.filter(v => v.like).map(v => v.card).filter(c => !c.remix);
+  const cands = V.filter(c => !used.has(c.id)).map(c => ({ c, kind: 'explore' }));
+  if (REMIX) for (const a of liked) for (const b of liked) if (a !== b && differs(a, b)) {
+    const r = remix(a, b); if (!used.has(r.id)) cands.push({ c: r, kind: 'remix' });
+  }
+  if (!cands.length) return null;
+  const explore = Math.random() < 0.25 || liked.length < 2;
+  const pool = cands.filter(x => explore ? x.kind === 'explore' : x.kind === 'remix');
+  const list = pool.length ? pool : cands;
+  let best = list[0], top = -1;
+  for (const x of list) { const s = AXES.reduce((t, a) => t + sample(m, a + ':' + x.c.tags[a]), 0); if (s > top) { top = s; best = x; } }
+  return best.c;
+}
+
+function cardEl(v) {
+  const c = document.createElement('div');
+  c.className = 'card';
+  const spec = document.createElement('div');
+  spec.className = 'spec';
+  for (const [k, x] of Object.entries(v.vars || {})) spec.style.setProperty('--' + k, x);
+  const layout = document.createElement('div');
+  layout.className = 'layout L-' + v.layout;
+  layout.innerHTML = D.layouts[v.layout];
+  spec.append(layout);
+  const content = { ...(D.content || {}), ...(v.content || {}) };
+  for (const slot of spec.querySelectorAll('[data-slot]')) {
+    const x = content[slot.dataset.slot];
+    if (x == null || x === '') slot.dataset.empty = ''; else slot.textContent = String(x);
+  }
+  const meta = document.createElement('div');
+  meta.className = 'meta';
+  meta.innerHTML = '<b></b><small></small>';
+  meta.querySelector('b').textContent = v.name;
+  meta.querySelector('small').textContent = AXES.slice(0, 2).map(a => v.tags[a]).join(' · ');
+  const yes = document.createElement('div'); yes.className = 'stamp yes'; yes.textContent = D.labels?.yes || 'Yes';
+  const no = document.createElement('div'); no.className = 'stamp no'; no.textContent = D.labels?.no || 'Nope';
+  c.append(yes, no, spec, meta);
+  if (v.remix) { const b = document.createElement('div'); b.className = 'badge'; b.textContent = 'remix'; c.append(b); }
+  return c;
+}
+
+let current = null;
+function render() {
+  const stack = $('stack');
+  stack.innerHTML = '';
+  const i = votes.length;
+  $('count').textContent = Math.min(i + 1, TOTAL) + ' / ' + TOTAL;
+  $('prog').style.width = (i / TOTAL * 100) + '%';
+  if (i >= TOTAL) return showResults();
+  if (shown.length === i) { const n = nextCard(); if (!n) return showResults(); shown.push(n); }
+  current = shown[i];
+  const r1 = i < seed.length;
+  $('phase').innerHTML = r1 ? 'Round 1 · <b>map</b>' : 'Round 2 · <b>' + (current.remix ? 'remix' : 'explore') + '</b>';
+  $('phase-note').textContent = r1 ? seed.length + ' wide-apart looks' : current.remix ? 'your likes, recombined' : 'checking a blind spot';
+  const top = cardEl(current);
+  stack.append(top);
+  drag(top);
+}
+
+function decide(like, card) {
+  if (busy || votes.length >= TOTAL || !current) return;
+  busy = true;
+  card = card || $('stack').lastElementChild;
+  card.style.transform = `translateX(${like ? 140 : -140}%) rotate(${like ? 18 : -18}deg)`;
+  card.style.opacity = '0';
+  votes.push({ card: current, like });
+  setTimeout(() => { busy = false; render(); }, 260);
+}
+
+function drag(card) {
+  let x0 = null, dx = 0;
+  const yes = card.querySelector('.stamp.yes'), no = card.querySelector('.stamp.no');
+  card.addEventListener('pointerdown', e => { x0 = e.clientX; card.classList.add('dragging'); card.setPointerCapture(e.pointerId); });
+  card.addEventListener('pointermove', e => {
+    if (x0 === null) return;
+    // The button came up outside the page (or the frame), so no pointerup arrived: settle the card now.
+    if (e.pointerType === 'mouse' && !e.buttons) return end();
+    dx = e.clientX - x0;
+    card.style.transform = `translateX(${dx}px) rotate(${dx / 18}deg)`;
+    yes.style.opacity = Math.max(0, Math.min(1, dx / 90));
+    no.style.opacity = Math.max(0, Math.min(1, -dx / 90));
+  });
+  const end = () => {
+    if (x0 === null) return;
+    x0 = null; card.classList.remove('dragging');
+    if (Math.abs(dx) > 90) decide(dx > 0, card);
+    else { card.style.transform = ''; yes.style.opacity = 0; no.style.opacity = 0; }
+    dx = 0;
+  };
+  ['pointerup', 'pointercancel', 'lostpointercapture'].forEach(t => card.addEventListener(t, end));
+}
+
+$('btn-yes').onclick = () => decide(true);
+$('btn-no').onclick = () => decide(false);
+$('btn-undo').onclick = () => { if (!busy && votes.length && votes.length < TOTAL) { votes.pop(); shown.length = votes.length + 1; render(); } };
+document.addEventListener('keydown', e => { if (e.key === 'ArrowRight') decide(true); else if (e.key === 'ArrowLeft') decide(false); });
+
+function tally() {
+  const out = {};
+  for (const a of AXES.concat('layout')) {
+    const m = {};
+    votes.forEach(v => { const k = a === 'layout' ? v.card.layout : v.card.tags[a]; m[k] = m[k] || { yes: 0, n: 0 }; m[k].n++; if (v.like) m[k].yes++; });
+    out[a] = Object.entries(m).map(([k, s]) => ({ k, pct: Math.round(s.yes / s.n * 100), yes: s.yes, n: s.n }))
+      .sort((p, q) => q.pct - p.pct || q.yes - p.yes);
+  }
+  return out;
+}
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+async function showResults() {
+  ['stack', 'controls', 'hint'].forEach(id => $(id).hidden = true);
+  $('phase').textContent = 'done'; $('phase-note').textContent = '';
+  const t = tally();
+  const n = votes.length;
+  const liked = votes.filter(v => v.like).map(v => v.card);
+  const remixes = liked.filter(c => c.remix);
+  const labels = { ...D.axes, layout: 'Layout' };
+  const shownAxes = AXES.concat(Object.keys(D.layouts).length > 1 ? ['layout'] : []);
+  const r = $('results');
+  r.hidden = false;
+  r.innerHTML = `
+    <h2>You lean ${AXES.map(a => esc(t[a][0]?.k ?? '?')).join(', ')}.</h2>
+    <p>You liked ${liked.length} of ${n}${REMIX ? `, including ${remixes.length} remixes the deck made from your earlier likes` : ''}.</p>
+    ${shownAxes.map(a => `<div class="dim"><h3>${esc(labels[a])}</h3>${t[a].map(x => `<div class="row"><span>${esc(x.k)}</span><span class="track"><i style="width:${x.pct}%"></i></span><span>${x.pct}%</span></div>`).join('')}</div>`).join('')}
+    <div class="dim"><h3>Liked</h3><div class="liked">${liked.map(c => `<span class="${c.remix ? 'remix' : ''}">${esc(c.name)}</span>`).join('') || '<span>None. Brutal.</span>'}</div></div>
+    <p class="status" id="status">Saving…</p>
+    <div class="actions"><button class="btn ghost" id="again">Start over</button></div>`;
+  $('again').onclick = () => location.reload();
+
+  const summary = Object.fromEntries(shownAxes.map(a => [a, t[a].map(x => `${x.k} ${x.pct}%`)]));
+  const payload = { deck: D.id, at: new Date().toISOString(), liked: liked.map(c => c.name), votes: votes.map(v => ({ id: v.card.id, like: v.like })), summary };
+  let saved = false;
+  try { const db = window.claude?.use ? await window.claude.use('db') : null; if (db) { await db.collection('results').doc('r' + Date.now()).set(payload); saved = true; } } catch (e) {}
+  if (saved) { $('status').textContent = 'Sent to Claude. Say you are done and it will design from this.'; return; }
+  $('status').textContent = 'Your taste profile. Copy it and paste it to your agent:';
+  const ta = document.createElement('textarea');
+  ta.readOnly = true;
+  ta.value = 'OohNah: ' + D.id + ' (' + n + ' cards)\nLiked: ' + payload.liked.join(', ') + '\n' + shownAxes.map(a => a + ': ' + summary[a].join(', ')).join('\n');
+  $('status').after(ta);
+  const cp = document.createElement('button');
+  cp.className = 'btn'; cp.textContent = 'Copy profile';
+  cp.onclick = () => navigator.clipboard.writeText(ta.value).then(() => cp.textContent = 'Copied', () => ta.select());
+  ta.after(cp);
+}
+
+render();
+})();
+</script>

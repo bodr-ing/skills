@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Builds the playable demos the site embeds: node scripts/build-demos.mjs
 // Hand Up: the real deck page with an in-memory stand-in for the artifact database and a pretend agent.
-// YepNope: the games deck built with the skill's own build script.
+// YepNope: the games deck built with the skill's own build script. OohNah: the Halfmoon deck, likewise.
 import { readFileSync, writeFileSync } from "node:fs";
 import { execFileSync } from "node:child_process";
 
@@ -57,4 +57,8 @@ execFileSync("node", ["skills/yepnope/scripts/build.mjs", "skills/yepnope/decks/
 // The skill builds an artifact body; give the standalone page a doctype so it renders in standards mode.
 const taste = readFileSync("skills/yepnope/demo.html", "utf8");
 writeFileSync("skills/yepnope/demo.html", head.replace("<html lang=\"en\">\n<head>\n", "") + taste);
-console.log("Built skills/hand-up/demo.html and skills/yepnope/demo.html");
+
+execFileSync("node", ["skills/oohnah/scripts/build.mjs", "skills/oohnah/decks/halfmoon.json", "skills/oohnah/demo.html"], { stdio: "inherit" });
+const ooh = readFileSync("skills/oohnah/demo.html", "utf8");
+writeFileSync("skills/oohnah/demo.html", head.replace("<html lang=\"en\">\n<head>\n", "") + ooh);
+console.log("Built skills/hand-up/demo.html, skills/yepnope/demo.html and skills/oohnah/demo.html");
