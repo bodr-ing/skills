@@ -1,0 +1,101 @@
+# Quality gates on every pull request and push to main, and an automatic deploy when main passes them.
+# Gates: no secrets in the new commits (gitleaks), and the site checker (scripts/check-site.mjs: broken links,
+# images and anchors, missing alt/lang/title, page size, files that must not ship).
+# Also: the demo pages are rebuilt from their sources and must match what is committed.
+# Deploy: `wrangler deploy` of the Worker in wrangler.jsonc (skills.bodr.ing), only after both gates pass on main,
+# then a check that the live site serves this commit's index.html.
+#
+# Runners: vars.RUNNER (org variable, private repos only) puts jobs on Bodring's self-hosted runner `homelab`;
+# without it they run on GitHub-hosted runners, which are free for public repos. Never paid minutes.
+# Secrets: CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID (org secrets). Run it by hand to redeploy main.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}-${{ github.event_name }}
+  # A newer push replaces a running PR check; a run on main always finishes, so a deploy is never cut off.
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  secrets:
+    runs-on: ${{ vars.RUNNER || 'ubuntu-latest' }}
+    timeout-minutes: 10
+    steps:
+      # A self-hosted runner keeps its workspace between jobs, so every job starts from an empty one.
+      - name: Empty the workspace
+        if: runner.environment == 'self-hosted'
+        run: find . -mindepth 1 -delete
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install gitleaks
+        run: |
+          case "$(uname -m)" in x86_64) ARCH=x64 ;; aarch64|arm64) ARCH=arm64 ;; *) echo "Unsupported arch $(uname -m)"; exit 1 ;; esac
+          case "$(uname -s)" in Linux) OS=linux ;; Darwin) OS=darwin ;; *) echo "Unsupported OS $(uname -s)"; exit 1 ;; esac
+          curl -sSfL "https://github.com/gitleaks/gitleaks/releases/download/v8.21.2/gitleaks_8.21.2_${OS}_${ARCH}.tar.gz" | tar -xz gitleaks
+      # Scans only the commits this push or PR adds.
+      - name: Scan new commits
+        env:
+          BASE: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          if [ -n "$BASE" ] && [ "$BASE" != "0000000000000000000000000000000000000000" ] && git cat-file -e "$BASE^{commit}" 2>/dev/null; then
+            RANGE="$BASE..HEAD"
+          elif git rev-parse -q --verify "origin/$DEFAULT_BRANCH" >/dev/null && ! git merge-base --is-ancestor HEAD "origin/$DEFAULT_BRANCH"; then
+            RANGE="origin/$DEFAULT_BRANCH..HEAD"
+          else
+            RANGE="HEAD"
+          fi
+          echo "Scanning $RANGE"
+          ./gitleaks detect --source . --log-opts="--diff-merges=first-parent $RANGE" --redact --verbose
+
+  site:
+    runs-on: ${{ vars.RUNNER || 'ubuntu-latest' }}
+    timeout-minutes: 10
+    steps:
+      - name: Empty the workspace
+        if: runner.environment == 'self-hosted'
+        run: find . -mindepth 1 -delete
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Demo pages match their sources
+        run: node scripts/build-demos.mjs && git diff --exit-code
+      - run: node scripts/check-site.mjs
+
+  deploy:
+    needs: [secrets, site]
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ${{ vars.RUNNER || 'ubuntu-latest' }}
+    timeout-minutes: 10
+    concurrency:
+      group: deploy
+      cancel-in-progress: false
+    steps:
+      - name: Empty the workspace
+        if: runner.environment == 'self-hosted'
+        run: find . -mindepth 1 -delete
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npx --yes wrangler@4 deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      - name: Check the live site serves this commit
+        run: |
+          for i in $(seq 1 12); do
+            curl -fsS "https://skills.bodr.ing/?v=$GITHUB_SHA" -o live.html && cmp -s live.html index.html && { echo "live"; exit 0; }
+            sleep 10
+          done
+          echo "https://skills.bodr.ing does not serve this commit's index.html" >&2; exit 1
