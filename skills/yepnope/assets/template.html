@@ -1,29 +1,14 @@
 <title>{{TITLE}}</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@500&display=swap">
+{{FONTS}}
 <style>
-/* Layout: one card in the middle of a phone-shaped column; a thin category rail above, four verdict buttons below. */
+/* The shell: swipe mechanics, progress, verdict buttons and results. It owns no look of its own: colours and fonts
+   come from the deck's look.vars (and look.dark), and everything inside the card from look.card and look.css. */
 :root {
-  --bg: #f3efe7;
-  --fg: #1c1a17;
-  --muted: #6d665b;
-  --card: #fffdf8;
-  --line: #ddd5c7;
-  --no: #d2483f;
-  --yes: #2f9a5b;
-  --love: #c9861a;
-  --skip: #7a7f8c;
-  --display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif;
-  --body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
-  --mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+  --bg: Canvas; --fg: CanvasText; --muted: GrayText; --card: Canvas; --line: GrayText;
+  --no: #d2483f; --yes: #2f9a5b; --love: #c9861a; --skip: #7a7f8c;
+  --display: system-ui, sans-serif; --body: system-ui, sans-serif; --mono: ui-monospace, monospace;
 }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
-  --bg: #15140f; --fg: #f1ebdf; --muted: #a39b8c; --card: #201e18; --line: #3a362d;
-  --no: #ef6a60; --yes: #52c47f; --love: #e8a63c; --skip: #9aa0ad; color-scheme: dark; } }
-:root[data-theme="dark"] {
-  --bg: #15140f; --fg: #f1ebdf; --muted: #a39b8c; --card: #201e18; --line: #3a362d;
-  --no: #ef6a60; --yes: #52c47f; --love: #e8a63c; --skip: #9aa0ad; color-scheme: dark; }
 [hidden] { display: none !important; }
 html, body { height: 100%; }
 body {
@@ -40,36 +25,23 @@ h1 { font-family: var(--display); font-weight: 800; font-size: 22px; margin: 0; 
 /* The card keeps a phone-card size; spare page height goes around it, not inside it. */
 .stage { position: relative; flex: 0 0 auto; height: clamp(380px, 58vh, 480px); }
 .card {
-  position: absolute; inset: 0; background: var(--card); border: 1px solid var(--line); border-radius: 18px;
-  display: flex; flex-direction: column; overflow: hidden; touch-action: none; cursor: grab;
-  box-shadow: 0 12px 30px -18px rgba(40, 30, 10, 0.45); will-change: transform;
+  position: absolute; inset: 0; display: flex; flex-direction: column; overflow: hidden;
+  touch-action: none; cursor: grab; will-change: transform; user-select: none;
+  --accent: hsl(var(--hue, 210) 72% 48%); --tint: hsl(var(--hue, 210) 45% 91%);
 }
 .card.under { transform: scale(0.96) translateY(10px); opacity: 0.7; pointer-events: none; }
 .card.fly { transition: transform 0.32s cubic-bezier(0.2, 0.7, 0.3, 1), opacity 0.32s ease; }
 .card.snap { transition: transform 0.22s cubic-bezier(0.3, 1.4, 0.5, 1); }
-.art { flex: 0 0 auto; aspect-ratio: 16 / 10; max-height: 62%; position: relative; }
-.art canvas { width: 100%; height: 100%; display: block; }
-.sketch {
-  position: absolute; inset: 0; display: grid; place-items: center; color: #2b2721;
-  background-color: var(--paper);
-  background-image: radial-gradient(rgba(43, 39, 33, 0.13) 1px, transparent 1.2px);
-  background-size: 14px 14px;
-}
-.sketch svg { width: 82%; height: 84%; overflow: visible; }
-.sketch svg * { vector-effect: non-scaling-stroke; }
-.sketch svg [fill]:not([fill="none"]):not(.a) { fill: currentColor; }
-.sketch svg .a { fill: var(--accent); stroke: var(--accent); }
-.sketch svg .af { fill: var(--accent); }
-.cat {
-  position: absolute; left: 14px; top: 14px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em;
-  text-transform: uppercase; background: rgba(255, 253, 248, 0.92); color: #1c1a17; padding: 4px 8px; border-radius: 999px;
-}
-.copy { padding: 20px 22px 24px; display: grid; gap: 10px; align-content: start; flex: 1; }
-.copy h2 { font-family: var(--display); font-weight: 700; font-size: 30px; line-height: 1.05; margin: 0; text-wrap: balance; letter-spacing: -0.015em; }
-.copy p { margin: 0; color: var(--muted); line-height: 1.5; font-size: 16px; }
+/* Sketch contract (see SKILL.md): ink lines in currentColor, .a / .af paint the accent. The look decides the rest. */
+[data-slot="art"] svg { width: 100%; height: 100%; overflow: visible; display: block; }
+[data-slot="art"] svg * { vector-effect: non-scaling-stroke; }
+[data-slot="art"] svg [fill]:not([fill="none"]):not(.a) { fill: currentColor; }
+[data-slot="art"] svg .a { fill: var(--accent); stroke: var(--accent); }
+[data-slot="art"] svg .af { fill: var(--accent); }
+[data-empty] { display: none !important; }
 .stamp {
   position: absolute; top: 22px; font-family: var(--display); font-weight: 800; font-size: 26px; padding: 4px 12px;
-  border: 3px solid currentColor; border-radius: 8px; opacity: 0; pointer-events: none; text-transform: uppercase; background: var(--card);
+  border: 3px solid currentColor; border-radius: 8px; opacity: 0; pointer-events: none; text-transform: uppercase; background: var(--card); z-index: 3;
 }
 .stamp.no { right: 18px; color: var(--no); transform: rotate(10deg); }
 .stamp.yes { left: 18px; color: var(--yes); transform: rotate(-10deg); }
@@ -91,12 +63,12 @@ h1 { font-family: var(--display); font-weight: 800; font-size: 22px; margin: 0; 
 /* Results */
 .results { display: grid; gap: 18px; }
 .results h2 { font-family: var(--display); font-size: 30px; margin: 0; line-height: 1.05; text-wrap: balance; }
-.pitch { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; line-height: 1.55; }
+.pitch { background: var(--surface, var(--card)); color: var(--surface-fg, var(--fg)); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; line-height: 1.55; }
 .pitch b { font-weight: 700; }
 .group { display: grid; gap: 8px; }
 .group h3 { font: 500 12px var(--mono); text-transform: uppercase; letter-spacing: 0.08em; margin: 0; color: var(--muted); }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; }
-.chip { font-size: 14px; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); }
+.chip { font-size: 14px; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface, var(--card)); color: var(--surface-fg, var(--fg)); }
 .chip.love { border-color: var(--love); color: var(--love); font-weight: 700; }
 .chip.yes { border-color: var(--yes); color: var(--yes); }
 .chip.no { border-color: var(--no); color: var(--no); text-decoration: line-through; opacity: 0.8; }
@@ -105,8 +77,11 @@ h1 { font-family: var(--display); font-weight: 800; font-size: 22px; margin: 0; 
 .primary { appearance: none; border: 0; background: var(--fg); color: var(--bg); border-radius: 12px; padding: 11px 16px; font: 700 15px var(--body); cursor: pointer; }
 .primary:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
 .ghost { appearance: none; border: 1.5px solid var(--line); background: transparent; color: var(--fg); border-radius: 12px; padding: 10px 16px; font: 700 15px var(--body); cursor: pointer; }
-@media (max-height: 700px) { .copy h2 { font-size: 25px; } .art { min-height: 130px; } .stage { height: clamp(320px, 58vh, 420px); } }
+@media (max-height: 700px) { .stage { height: clamp(320px, 58vh, 420px); } }
 @media (prefers-reduced-motion: reduce) { .card.fly, .card.snap, .progress i { transition: none; } }
+</style>
+<style id="look">
+/*LOOK*/
 </style>
 
 <div class="wrap">
@@ -135,11 +110,11 @@ h1 { font-family: var(--display); font-weight: 800; font-size: 22px; margin: 0; 
 <script>
 (() => {
 'use strict';
-// The deck: a game pulled apart into its smallest choices. Each atom is one thing a game could be or have.
+// The deck: a subject pulled apart into its smallest choices, plus the look its cards were designed in.
 // The deck is injected by scripts/build.mjs from a deck JSON file (see SKILL.md for its shape).
 const CONFIG = /*DECK*/null/*END*/;
 const CATS = CONFIG.categories;
-const DECK = CONFIG.atoms.map(([cat, title, line, art]) => ({ cat, title, line, art }));
+const DECK = CONFIG.atoms.map(a => Array.isArray(a) ? { cat: a[0], title: a[1], line: a[2], art: a[3] } : a);
 
 // Card sketches come from the deck as small SVG line drawings. Keep only drawing elements and
 // geometry attributes, so a deck can never put script or links on the page.
@@ -206,39 +181,6 @@ function nextAtom(state) {
   return options[0];
 }
 
-// ------------------------------------------------------------ art
-function paintIf(card, atom) { const c = card.querySelector('canvas'); if (c) paint(c, atom); }
-function paint(canvas, atom) {
-  const ctx = canvas.getContext('2d');
-  const r = canvas.getBoundingClientRect(), pr = Math.min(window.devicePixelRatio || 1, 2);
-  canvas.width = Math.max(1, r.width * pr); canvas.height = Math.max(1, r.height * pr);
-  const w = canvas.width, h = canvas.height;
-  let s = 0; for (const ch of atom.title) s = (s * 31 + ch.charCodeAt(0)) >>> 0;
-  const rnd = () => { s = (s * 1664525 + 1013904223) >>> 0; return s / 4294967296; };
-  const hue = CATS[atom.cat].hue + (rnd() - 0.5) * 40;
-  const g = ctx.createLinearGradient(0, 0, w, h);
-  g.addColorStop(0, `hsl(${hue} 55% 22%)`); g.addColorStop(1, `hsl(${hue + 40} 60% 12%)`);
-  ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
-  const kind = Math.floor(rnd() * 4);
-  for (let i = 0; i < 26; i++) {
-    const x = rnd() * w, y = rnd() * h, rad = (0.04 + rnd() * 0.22) * Math.min(w, h);
-    ctx.globalAlpha = 0.08 + rnd() * 0.22;
-    ctx.fillStyle = `hsl(${hue + rnd() * 80 - 40} ${50 + rnd() * 40}% ${45 + rnd() * 30}%)`;
-    ctx.beginPath();
-    if (kind === 0) ctx.arc(x, y, rad, 0, Math.PI * 2);
-    else if (kind === 1) { ctx.rect(x - rad, y - rad * 0.3, rad * 2, rad * 0.6); }
-    else if (kind === 2) { ctx.moveTo(x, y - rad); ctx.lineTo(x + rad, y + rad); ctx.lineTo(x - rad, y + rad); ctx.closePath(); }
-    else { ctx.ellipse(x, y, rad * 1.6, rad * 0.5, rnd() * Math.PI, 0, Math.PI * 2); }
-    ctx.fill();
-  }
-  ctx.globalAlpha = 1;
-  // A big initial as the card's emblem.
-  ctx.fillStyle = 'rgba(255,253,248,0.9)';
-  ctx.font = `800 ${Math.round(h * 0.55)}px "Bricolage Grotesque", sans-serif`;
-  ctx.textAlign = 'right'; ctx.textBaseline = 'alphabetic';
-  ctx.globalAlpha = 0.18; ctx.fillText(atom.title[0], w - w * 0.05, h * 0.92); ctx.globalAlpha = 1;
-}
-
 // ------------------------------------------------------------ state & storage
 const store = {
   load() { try { return JSON.parse(localStorage.getItem(RUN_KEY) || 'null'); } catch { return null; } },
@@ -290,23 +232,21 @@ function updateCount() {
   document.getElementById('count').textContent = `${n} / ${ROUNDS}`;
   document.getElementById('bar').style.width = (n / ROUNDS * 100) + '%';
 }
+// The card's inside is the deck's own layout (look.card). Slots are filled as text, the art slot with the cleaned
+// sketch; a slot the atom has nothing for gets data-empty so the layout can close up around it.
 function makeCard(atom) {
   const el = document.createElement('article');
   el.className = 'card';
-  el.innerHTML = `<div class="art">${atom.art ? '<div class="sketch"></div>' : '<canvas></canvas>'}<span class="cat"></span></div>
-    <div class="copy"><h2></h2><p></p></div>
-    <span class="stamp no">No</span><span class="stamp yes">Yes</span><span class="stamp love">Love</span><span class="stamp skip">Meh</span>`;
-  el.querySelector('.cat').textContent = CATS[atom.cat].name;
-  const sketch = el.querySelector('.sketch');
-  if (sketch) {
-    const hue = CATS[atom.cat].hue;
-    sketch.style.setProperty('--paper', `hsl(${hue} 45% 91%)`);
-    sketch.style.setProperty('--accent', `hsl(${hue} 72% 48%)`);
-    const svg = cleanSvg(atom.art);
-    if (svg) sketch.appendChild(svg);
+  el.dataset.cat = atom.cat;
+  if (Number.isFinite(CATS[atom.cat].hue)) el.style.setProperty('--hue', CATS[atom.cat].hue);
+  el.innerHTML = CONFIG.look.card +
+    `<span class="stamp no">No</span><span class="stamp yes">Yes</span><span class="stamp love">Love</span><span class="stamp skip">Meh</span>`;
+  for (const slot of el.querySelectorAll('[data-slot]')) {
+    const k = slot.dataset.slot;
+    if (k === 'art') { const svg = cleanSvg(atom.art); if (svg) slot.appendChild(svg); else slot.dataset.empty = ''; continue; }
+    const v = k === 'cat' ? CATS[atom.cat].name : atom[k];
+    if (v == null || v === '') slot.dataset.empty = ''; else slot.textContent = String(v);
   }
-  el.querySelector('h2').textContent = atom.title;
-  el.querySelector('p').textContent = atom.line;
   return el;
 }
 function show() {
@@ -316,10 +256,9 @@ function show() {
   if (!current) { finish(); return; }
   play.innerHTML = '';
   const peek = nextAtomPeek();
-  if (peek) { const u = makeCard(peek); u.classList.add('under'); play.appendChild(u); requestAnimationFrame(() => paintIf(u, peek)); }
+  if (peek) { const u = makeCard(peek); u.classList.add('under'); play.appendChild(u); }
   cardEl = makeCard(current);
   play.appendChild(cardEl);
-  requestAnimationFrame(() => paintIf(cardEl, current));
   bindDrag(cardEl);
 }
 function nextAtomPeek() {
@@ -441,7 +380,6 @@ function finish() {
     show();
   });
 }
-window.addEventListener('resize', () => { if (cardEl && current) paintIf(cardEl, current); });
 show();
 })();
 </script>

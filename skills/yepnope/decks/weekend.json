@@ -1,0 +1,328 @@
+{
+ "id": "weekend",
+ "name": "YepNope: a weekend away",
+ "title": "YepNope: Weekend",
+ "heading": "Where should this weekend go?",
+ "rounds": 30,
+ "subject": "a weekend",
+ "look": {
+  "brief": "Two people planning a short trip, swiping on a phone in a spare minute. Each idea is a paper luggage tag with a three-letter code, so the deck feels like packing, not like a form; no sketches, the words and the code carry it.",
+  "fonts": "https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Instrument+Sans:wght@400;600&family=Martian+Mono:wght@400;600&display=swap",
+  "vars": {
+   "bg": "#0f3b3a",
+   "fg": "#f4ecd8",
+   "muted": "#b9c8bf",
+   "card": "#f4ecd8",
+   "line": "#2c5856",
+   "no": "#d9532f",
+   "yes": "#2f8f5b",
+   "love": "#c98a12",
+   "skip": "#6f7f79",
+   "display": "\"Big Shoulders Display\", \"Arial Narrow\", sans-serif",
+   "body": "\"Instrument Sans\", system-ui, sans-serif",
+   "mono": "\"Martian Mono\", ui-monospace, monospace",
+   "surface": "#f4ecd8",
+   "surface-fg": "#17302f"
+  },
+  "card": "<div class=\"stub\"><span class=\"hole\"></span><b class=\"code\" data-slot=\"code\"></b><span class=\"kind\" data-slot=\"cat\"></span></div><div class=\"body\"><span class=\"from\">TAG · WEEKEND AWAY</span><h2 data-slot=\"title\"></h2><p data-slot=\"line\"></p><span class=\"bars\"></span></div>",
+  "css": "/* Luggage tag: a cream paper tag on dark teal, a punched stub with the code, a perforation, the idea in big condensed type. */\n.card { background: var(--card); color: #17302f; border-radius: 10px 10px 26px 26px; box-shadow: 0 18px 30px -16px rgba(0,0,0,.6); }\n.stub { flex: 0 0 auto; padding: 22px 22px 18px; display: grid; grid-template-columns: auto 1fr; align-items: end; gap: 6px 14px;\n  border-bottom: 3px dashed rgba(23,48,47,.28); background: hsl(var(--hue) 70% 62%); position: relative; }\n.hole { position: absolute; top: 16px; right: 20px; width: 22px; height: 22px; border-radius: 50%; background: var(--bg); box-shadow: inset 0 0 0 4px rgba(0,0,0,.12); }\n.code { font: 900 84px/0.8 var(--display); letter-spacing: -0.01em; grid-row: span 2; }\n.kind { font: 600 11px var(--mono); letter-spacing: .12em; text-transform: uppercase; align-self: end; }\n.body { padding: 18px 22px 22px; display: flex; flex-direction: column; gap: 10px; flex: 1; }\n.from { font: 400 10px var(--mono); letter-spacing: .14em; opacity: .6; }\n.body h2 { font: 700 40px/0.95 var(--display); text-transform: uppercase; margin: 0; text-wrap: balance; }\n.body p { margin: 0; font: 400 16px/1.45 var(--body); color: #3d5654; }\n.bars { margin-top: auto; flex: 0 0 28px; background: repeating-linear-gradient(90deg, #17302f 0 2px, transparent 2px 5px, #17302f 5px 6px, transparent 6px 10px); opacity: .7; }\n.stamp { border-radius: 2px; font-family: var(--display); }\n@media (max-height: 700px) { .code { font-size: 64px; } .body h2 { font-size: 32px; } }"
+ },
+ "categories": {
+  "pace": {
+   "name": "Pace",
+   "hue": 14
+  },
+  "stay": {
+   "name": "Where you sleep",
+   "hue": 200
+  },
+  "food": {
+   "name": "Food",
+   "hue": 40
+  },
+  "days": {
+   "name": "Days",
+   "hue": 150
+  },
+  "nights": {
+   "name": "Nights",
+   "hue": 265
+  },
+  "company": {
+   "name": "Company",
+   "hue": 330
+  },
+  "getting": {
+   "name": "Getting there",
+   "hue": 95
+  },
+  "like": {
+   "name": "Trips like",
+   "hue": 180
+  }
+ },
+ "atoms": [
+  {
+   "cat": "pace",
+   "code": "SLW",
+   "title": "Nothing planned at all",
+   "line": "Wake up, then decide. The only booking is the bed."
+  },
+  {
+   "cat": "pace",
+   "code": "ONE",
+   "title": "One big thing a day",
+   "line": "A morning for the main event, the rest is wandering."
+  },
+  {
+   "cat": "pace",
+   "code": "MAX",
+   "title": "Packed from dawn to late",
+   "line": "A list, a route and a reason to be up at six."
+  },
+  {
+   "cat": "pace",
+   "code": "LIE",
+   "title": "Late breakfasts, early nights",
+   "line": "Sleep is part of the trip, not time off from it."
+  },
+  {
+   "cat": "pace",
+   "code": "SPN",
+   "title": "Decide at the station",
+   "line": "Pick the next train from the board, not from a plan."
+  },
+  {
+   "cat": "stay",
+   "code": "CBN",
+   "title": "A cabin with no signal",
+   "line": "Woodstove, one lamp, and nobody can reach you."
+  },
+  {
+   "cat": "stay",
+   "code": "HTL",
+   "title": "A proper old hotel",
+   "line": "Heavy keys, a doorman and a bar with a pianist."
+  },
+  {
+   "cat": "stay",
+   "code": "HSE",
+   "title": "Someone's spare room",
+   "line": "A host who tells you where they actually eat."
+  },
+  {
+   "cat": "stay",
+   "code": "TNT",
+   "title": "A tent by water",
+   "line": "Cold mornings, hot tea and the sound of a river."
+  },
+  {
+   "cat": "stay",
+   "code": "TWR",
+   "title": "High up, city lights below",
+   "line": "A small room on a high floor with a huge window."
+  },
+  {
+   "cat": "food",
+   "code": "MKT",
+   "title": "Eat only from the market",
+   "line": "Bread, cheese, fruit and a knife. Lunch on a wall."
+  },
+  {
+   "cat": "food",
+   "code": "TAS",
+   "title": "One meal worth the trip",
+   "line": "A booking made weeks ago, and a dress code."
+  },
+  {
+   "cat": "food",
+   "code": "STR",
+   "title": "Street food crawl",
+   "line": "Ten small things from ten stalls, standing up."
+  },
+  {
+   "cat": "food",
+   "code": "CKN",
+   "title": "Cook it ourselves",
+   "line": "Buy local things, figure out the stove, eat late."
+  },
+  {
+   "cat": "food",
+   "code": "BKR",
+   "title": "A bakery every morning",
+   "line": "The trip is planned around who opens first."
+  },
+  {
+   "cat": "days",
+   "code": "WLK",
+   "title": "A long walk with a view",
+   "line": "Six hours on a trail, lunch at the top."
+  },
+  {
+   "cat": "days",
+   "code": "MUS",
+   "title": "Museums and old streets",
+   "line": "Rainy-day culture, even if it is sunny."
+  },
+  {
+   "cat": "days",
+   "code": "SWM",
+   "title": "Swim somewhere cold",
+   "line": "A lake, the sea, a river. In, out, shouting."
+  },
+  {
+   "cat": "days",
+   "code": "SHP",
+   "title": "Little shops and flea markets",
+   "line": "Come home with one thing nobody else has."
+  },
+  {
+   "cat": "days",
+   "code": "SPA",
+   "title": "Steam, soak and sleep",
+   "line": "Baths, saunas and a robe for most of the day."
+  },
+  {
+   "cat": "nights",
+   "code": "BAR",
+   "title": "A tiny bar with no sign",
+   "line": "Twelve seats, a bartender who remembers you."
+  },
+  {
+   "cat": "nights",
+   "code": "GIG",
+   "title": "Live music somewhere sweaty",
+   "line": "A band nobody has heard of, too loud, perfect."
+  },
+  {
+   "cat": "nights",
+   "code": "SKY",
+   "title": "Stars and a fire",
+   "line": "Far from any town, a blanket and a long sky."
+  },
+  {
+   "cat": "nights",
+   "code": "BED",
+   "title": "In bed by ten with a book",
+   "line": "The night is the quiet part, on purpose."
+  },
+  {
+   "cat": "nights",
+   "code": "LTE",
+   "title": "Walking the city at night",
+   "line": "Lit windows, empty squares and a late snack."
+  },
+  {
+   "cat": "company",
+   "code": "TWO",
+   "title": "Just the two of us",
+   "line": "No group chat, no plans with anyone else."
+  },
+  {
+   "cat": "company",
+   "code": "GNG",
+   "title": "The whole gang",
+   "line": "A big table, a long dinner and too many photos."
+  },
+  {
+   "cat": "company",
+   "code": "SLO",
+   "title": "Completely alone",
+   "line": "Your pace, your choices, nobody to check with."
+  },
+  {
+   "cat": "company",
+   "code": "FAM",
+   "title": "With family",
+   "line": "Grandparents, kids, everyone, a house big enough."
+  },
+  {
+   "cat": "company",
+   "code": "LCL",
+   "title": "Meet locals",
+   "line": "A tour by someone who lives there, or a class."
+  },
+  {
+   "cat": "getting",
+   "code": "TRN",
+   "title": "A slow train",
+   "line": "Window seat, a book and five hours of fields."
+  },
+  {
+   "cat": "getting",
+   "code": "CAR",
+   "title": "A road trip",
+   "line": "Stops wherever looks good, music up."
+  },
+  {
+   "cat": "getting",
+   "code": "FLY",
+   "title": "A short flight away",
+   "line": "Somewhere that feels far, two hours from home."
+  },
+  {
+   "cat": "getting",
+   "code": "BKE",
+   "title": "By bike",
+   "line": "Panniers, maps, and legs that hurt on day two."
+  },
+  {
+   "cat": "getting",
+   "code": "NOW",
+   "title": "Under an hour from home",
+   "line": "Close enough to leave after work on Friday."
+  },
+  {
+   "cat": "like",
+   "code": "MTN",
+   "title": "An alpine village",
+   "line": "Wooden balconies, cowbells and a cable car."
+  },
+  {
+   "cat": "like",
+   "code": "SEA",
+   "title": "A fishing town off-season",
+   "line": "Grey sea, closed ice cream stands, great fish."
+  },
+  {
+   "cat": "like",
+   "code": "CTY",
+   "title": "A big city break",
+   "line": "Galleries, rooftops and a different district each day."
+  },
+  {
+   "cat": "like",
+   "code": "DST",
+   "title": "A desert under stars",
+   "line": "Dunes at sunset, cold nights and a silent morning."
+  },
+  {
+   "cat": "like",
+   "code": "ISL",
+   "title": "A small island",
+   "line": "One road, one shop, a ferry twice a day."
+  }
+ ],
+ "pitch": [
+  [
+   "pace",
+   "a pace of"
+  ],
+  [
+   "stay",
+   "nights in"
+  ],
+  [
+   "days",
+   "days for"
+  ],
+  [
+   "nights",
+   "evenings for"
+  ],
+  [
+   "company",
+   "going with"
+  ]
+ ]
+}

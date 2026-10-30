@@ -1,0 +1,335 @@
+{
+ "id": "relay",
+ "title": "OohNah: Relay",
+ "heading": "Which one is Relay?",
+ "hint": "Swipe right if this could be Relay, left if not. Each look is shown where it would live: the site, the dashboard or the app icon.",
+ "brief": "Relay is a made-up developer tool that watches webhooks. Engineers meet it on a landing page, live with it in a dashboard tile all day, and find it by its app icon, so the cards are those three surfaces. It also tests corner style, which matters more in product UI than in print.",
+ "fonts": "https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;700&family=JetBrains+Mono:wght@500;700&family=Newsreader:opsz,wght@6..72,500&family=Nunito:wght@600;800&family=Unbounded:wght@600&family=Barlow+Condensed:wght@600;700&display=swap",
+ "total": 14,
+ "seed": 8,
+ "axes": {
+  "mood": "Mood",
+  "color": "Colour",
+  "type": "Type",
+  "corners": "Corners"
+ },
+ "remix": {
+  "vars": [
+   "display",
+   "body"
+  ],
+  "axes": [
+   "type"
+  ]
+ },
+ "content": {
+  "brand": "Relay",
+  "headline": "See every webhook as it lands",
+  "line": "Replay, inspect and alert on webhooks from any provider.",
+  "cta": "Start free",
+  "metric": "Delivered · last hour",
+  "value": "12,408"
+ },
+ "layouts": {
+  "hero": "<nav><b data-slot=\"brand\"></b><span>Docs · Pricing</span></nav><h2 data-slot=\"headline\"></h2><p data-slot=\"line\"></p><div class=\"cta\"><span data-slot=\"cta\"></span><span>Read the docs</span></div>",
+  "tile": "<div class=\"panel\"><small data-slot=\"metric\"></small><h2 data-slot=\"value\"></h2><div class=\"spark\"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><ul><li>200 POST /orders 41 ms</li><li>200 POST /refunds 63 ms</li><li>retry POST /invoices</li></ul></div>",
+  "icon": "<div class=\"ic\"><svg viewBox=\"0 0 64 64\" aria-hidden=\"true\"><path d=\"M8 40h14l8-22 8 30 6-14h12\"/></svg></div><h2 data-slot=\"brand\"></h2><p data-slot=\"line\"></p>"
+ },
+ "css": "/* Relay is a developer tool for watching webhooks. Its look will live in three places: the landing hero, a dashboard\n   tile people stare at all day, and the app icon next to its name. Cards set --bg --fg --ac --soft (palette),\n   --display --body (type), --radius (corners) and --grid (background texture). */\n.spec { background: var(--grid), var(--bg); background-color: var(--bg); color: var(--fg); font-family: var(--body), system-ui, sans-serif; }\n.spec h2 { font-family: var(--display), system-ui, sans-serif; margin: 0; line-height: 1; }\n\n/* Landing hero: nav, headline, one line, a primary and a quiet button. */\n.L-hero { padding: 18px 20px 22px; display: flex; flex-direction: column; gap: 14px; }\n.L-hero nav { display: flex; justify-content: space-between; font-size: 12px; opacity: .8; }\n.L-hero nav b { font-family: var(--display), system-ui; font-size: 15px; opacity: 1; }\n.L-hero h2 { font-size: 40px; margin-top: auto; text-wrap: balance; }\n.L-hero p { margin: 0; font-size: 14px; line-height: 1.45; opacity: .8; max-width: 30ch; }\n.L-hero .cta { display: flex; gap: 8px; margin-bottom: 8px; }\n.L-hero .cta span { padding: 10px 14px; border-radius: var(--radius); font-size: 13px; font-weight: 600; border: 1px solid var(--fg); }\n.L-hero .cta span:first-child { background: var(--ac); color: var(--bg); border-color: var(--ac); }\n\n/* Dashboard tile: a metric, a sparkline of CSS bars, three event rows with status dots. */\n.L-tile { padding: 18px; display: grid; align-content: center; }\n.L-tile .panel { background: var(--soft); border-radius: var(--radius); padding: 16px; display: grid; gap: 10px; border: 1px solid color-mix(in srgb, var(--fg) 15%, transparent); }\n.L-tile small { font-size: 11px; text-transform: uppercase; letter-spacing: .1em; opacity: .7; }\n.L-tile h2 { font-size: 44px; }\n.L-tile .spark { height: 46px; display: flex; align-items: end; gap: 3px; }\n.L-tile .spark i { flex: 1; background: var(--ac); border-radius: calc(var(--radius) / 4) calc(var(--radius) / 4) 0 0; opacity: .85; }\n.L-tile .spark i:nth-child(1) { height: 30% } .L-tile .spark i:nth-child(2) { height: 55% } .L-tile .spark i:nth-child(3) { height: 40% }\n.L-tile .spark i:nth-child(4) { height: 80% } .L-tile .spark i:nth-child(5) { height: 60% } .L-tile .spark i:nth-child(6) { height: 95% }\n.L-tile .spark i:nth-child(7) { height: 70% } .L-tile .spark i:nth-child(8) { height: 50% }\n.L-tile ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: 12px; font-family: var(--mono, var(--body)), monospace; }\n.L-tile li::before { content: \"\"; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--ac); margin-right: 8px; }\n.L-tile li:last-child::before { background: transparent; border: 2px solid var(--fg); box-sizing: border-box; }\n\n/* App icon: the mark at icon size on its tile, with the name and a one-line pitch as on a store page. */\n.L-icon { display: grid; place-items: center; align-content: center; gap: 16px; padding: 24px; text-align: center; }\n.L-icon .ic { width: 112px; height: 112px; border-radius: calc(var(--radius) * 1.6); background: var(--ac); display: grid; place-items: center; box-shadow: 0 14px 28px -14px rgba(0,0,0,.5); }\n.L-icon .ic svg { width: 64px; height: 64px; stroke: var(--bg); fill: none; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; }\n.L-icon h2 { font-size: 34px; }\n.L-icon p { margin: 0; font-size: 14px; opacity: .75; max-width: 24ch; }",
+ "cards": [
+  {
+   "id": "ink",
+   "name": "Ink terminal",
+   "layout": "tile",
+   "tags": {
+    "mood": "serious",
+    "color": "dark",
+    "type": "mono",
+    "corners": "sharp"
+   },
+   "vars": {
+    "grid": "none",
+    "radius": "2px",
+    "soft": "#161a20",
+    "bg": "#0d0f12",
+    "fg": "#d7e0ea",
+    "ac": "#36d399",
+    "display": "'JetBrains Mono'",
+    "body": "'JetBrains Mono'"
+   }
+  },
+  {
+   "id": "paper",
+   "name": "Paper docs",
+   "layout": "hero",
+   "tags": {
+    "mood": "calm",
+    "color": "light",
+    "type": "serif",
+    "corners": "soft"
+   },
+   "vars": {
+    "grid": "none",
+    "radius": "8px",
+    "soft": "rgba(127,127,127,.12)",
+    "bg": "#f7f4ee",
+    "fg": "#1f1d1a",
+    "ac": "#c2410c",
+    "display": "'Newsreader'",
+    "body": "'Inter Tight'"
+   }
+  },
+  {
+   "id": "signal",
+   "name": "Signal orange",
+   "layout": "icon",
+   "tags": {
+    "mood": "bold",
+    "color": "warm",
+    "type": "grotesk",
+    "corners": "round"
+   },
+   "vars": {
+    "grid": "none",
+    "radius": "22px",
+    "soft": "rgba(127,127,127,.12)",
+    "bg": "#fff3e8",
+    "fg": "#2a1608",
+    "ac": "#ff5a1f",
+    "display": "'Inter Tight'",
+    "body": "'Inter Tight'"
+   }
+  },
+  {
+   "id": "grid",
+   "name": "Graph paper",
+   "layout": "hero",
+   "tags": {
+    "mood": "serious",
+    "color": "light",
+    "type": "mono",
+    "corners": "sharp"
+   },
+   "vars": {
+    "grid": "linear-gradient(rgba(37,99,235,.08) 1px, transparent 1px) 0 0/22px 22px, linear-gradient(90deg, rgba(37,99,235,.08) 1px, transparent 1px) 0 0/22px 22px",
+    "radius": "0px",
+    "soft": "rgba(127,127,127,.12)",
+    "bg": "#fbfcfd",
+    "fg": "#0f2238",
+    "ac": "#2563eb",
+    "display": "'JetBrains Mono'",
+    "body": "'Inter Tight'"
+   }
+  },
+  {
+   "id": "candy",
+   "name": "Friendly candy",
+   "layout": "tile",
+   "tags": {
+    "mood": "playful",
+    "color": "warm",
+    "type": "rounded",
+    "corners": "round"
+   },
+   "vars": {
+    "grid": "none",
+    "radius": "22px",
+    "soft": "#fff",
+    "bg": "#fde7f3",
+    "fg": "#3b0a2a",
+    "ac": "#e83e8c",
+    "display": "'Nunito'",
+    "body": "'Nunito'"
+   }
+  },
+  {
+   "id": "night",
+   "name": "Night ops",
+   "layout": "hero",
+   "tags": {
+    "mood": "bold",
+    "color": "dark",
+    "type": "wide",
+    "corners": "soft"
+   },
+   "vars": {
+    "grid": "radial-gradient(ellipse at 80% 0%, rgba(163,230,53,.18), transparent 55%)",
+    "radius": "10px",
+    "soft": "rgba(127,127,127,.12)",
+    "bg": "#0b0b1f",
+    "fg": "#eef0ff",
+    "ac": "#a3e635",
+    "display": "'Unbounded'",
+    "body": "'Inter Tight'"
+   }
+  },
+  {
+   "id": "mint",
+   "name": "Mint calm",
+   "layout": "icon",
+   "tags": {
+    "mood": "calm",
+    "color": "cool",
+    "type": "rounded",
+    "corners": "round"
+   },
+   "vars": {
+    "grid": "none",
+    "radius": "26px",
+    "soft": "rgba(127,127,127,.12)",
+    "bg": "#eaf7f2",
+    "fg": "#123b2f",
+    "ac": "#10b981",
+    "display": "'Nunito'",
+    "body": "'Nunito'"
+   }
+  },
+  {
+   "id": "swiss",
+   "name": "Swiss red",
+   "layout": "tile",
+   "tags": {
+    "mood": "serious",
+    "color": "light",
+    "type": "grotesk",
+    "corners": "sharp"
+   },
+   "vars": {
+    "grid": "none",
+    "radius": "0px",
+    "soft": "#f3f3f3",
+    "bg": "#ffffff",
+    "fg": "#111111",
+    "ac": "#e30613",
+    "display": "'Inter Tight'",
+    "body": "'Inter Tight'"
+   }
+  },
+  {
+   "id": "ops",
+   "name": "Ops condensed",
+   "layout": "hero",
+   "tags": {
+    "mood": "bold",
+    "color": "cool",
+    "type": "condensed",
+    "corners": "sharp"
+   },
+   "vars": {
+    "grid": "none",
+    "radius": "3px",
+    "soft": "rgba(127,127,127,.12)",
+    "bg": "#0e2a47",
+    "fg": "#e6f1ff",
+    "ac": "#ffd23f",
+    "display": "'Barlow Condensed'",
+    "body": "'Inter Tight'"
+   }
+  },
+  {
+   "id": "lilac",
+   "name": "Soft lilac",
+   "layout": "hero",
+   "tags": {
+    "mood": "calm",
+    "color": "cool",
+    "type": "grotesk",
+    "corners": "round"
+   },
+   "vars": {
+    "grid": "radial-gradient(circle at 90% 10%, #ffd9f2 0 90px, transparent 91px)",
+    "radius": "18px",
+    "soft": "rgba(127,127,127,.12)",
+    "bg": "#f3f0ff",
+    "fg": "#24164d",
+    "ac": "#7c5cff",
+    "display": "'Inter Tight'",
+    "body": "'Inter Tight'"
+   }
+  },
+  {
+   "id": "serif-dark",
+   "name": "Editorial dark",
+   "layout": "tile",
+   "tags": {
+    "mood": "calm",
+    "color": "dark",
+    "type": "serif",
+    "corners": "soft"
+   },
+   "vars": {
+    "grid": "none",
+    "radius": "8px",
+    "soft": "#221d17",
+    "bg": "#16130f",
+    "fg": "#efe6d6",
+    "ac": "#d6a35c",
+    "display": "'Newsreader'",
+    "body": "'Inter Tight'"
+   }
+  },
+  {
+   "id": "wide-icon",
+   "name": "Wide and loud",
+   "layout": "icon",
+   "tags": {
+    "mood": "playful",
+    "color": "dark",
+    "type": "wide",
+    "corners": "soft"
+   },
+   "vars": {
+    "grid": "none",
+    "radius": "14px",
+    "soft": "rgba(127,127,127,.12)",
+    "bg": "#111",
+    "fg": "#fafafa",
+    "ac": "#ffe600",
+    "display": "'Unbounded'",
+    "body": "'Inter Tight'"
+   }
+  },
+  {
+   "id": "blueprint",
+   "name": "Blueprint",
+   "layout": "icon",
+   "tags": {
+    "mood": "serious",
+    "color": "cool",
+    "type": "mono",
+    "corners": "sharp"
+   },
+   "vars": {
+    "grid": "linear-gradient(rgba(232,241,255,.12) 1px, transparent 1px) 0 0/20px 20px, linear-gradient(90deg, rgba(232,241,255,.12) 1px, transparent 1px) 0 0/20px 20px",
+    "radius": "4px",
+    "soft": "rgba(127,127,127,.12)",
+    "bg": "#1d4e89",
+    "fg": "#e8f1ff",
+    "ac": "#e8f1ff",
+    "display": "'JetBrains Mono'",
+    "body": "'JetBrains Mono'"
+   }
+  },
+  {
+   "id": "sunset",
+   "name": "Warm gradient",
+   "layout": "tile",
+   "tags": {
+    "mood": "playful",
+    "color": "warm",
+    "type": "wide",
+    "corners": "round"
+   },
+   "vars": {
+    "grid": "linear-gradient(160deg, #2b0f2e, #7a1f3d)",
+    "radius": "20px",
+    "soft": "rgba(255,255,255,.08)",
+    "bg": "#2b0f2e",
+    "fg": "#fff1e6",
+    "ac": "#ff9f43",
+    "display": "'Unbounded'",
+    "body": "'Inter Tight'"
+   }
+  }
+ ]
+}

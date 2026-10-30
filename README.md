@@ -40,11 +40,16 @@ Or copy a skill folder into `~/.claude/skills/` (all projects) or `.claude/skill
 ## YepNope in short
 
 1. The agent writes a deck: 12 to 25 categories, 150 to 300 one-idea cards.
-2. `node skills/yepnope/scripts/build.mjs <deck.json> <out.html>` checks the deck and builds the page.
-3. The person swipes: right yes, left no, up love it, down don't care.
-4. The agent reads the answers and turns them into a profile and concrete directions.
+2. It designs the cards for that subject: palette, fonts, card layout and CSS. Only the swipe mechanics and results are shared.
+3. `node skills/yepnope/scripts/build.mjs <deck.json> <out.html>` checks the deck (including that its look isn't copied from another deck) and builds the page.
+4. The person swipes: right yes, left no, up love it, down don't care.
+5. The agent reads the answers and turns them into a profile and concrete directions.
 
-`skills/yepnope/decks/games.json` is a complete deck for video games (224 cards, 24 categories).
+`skills/yepnope/decks/games.json` is a complete deck for video games (224 cards, 24 categories, drawn as notebook doodles), and `weekend.json` a small trip deck drawn as luggage tags.
+
+## OohNah in short
+
+OohNah works the same way: `skills/oohnah/assets/shell.html` holds only the swipe mechanics, and each deck brings its own surfaces (a poster, a bag, a dashboard tile, an app icon), layouts, CSS and looks, built with `node skills/oohnah/scripts/build.mjs <deck.json> <out.html>`. See `decks/halfmoon.json` (a coffee roaster) and `decks/relay.json` (a developer tool).
 
 ## Contributing
 
@@ -56,4 +61,4 @@ MIT
 
 ## Deploy
 
-The site at skills.bodr.ing is a Cloudflare Worker with static assets, and every merge to `main` deploys it. The CI workflow scans the new commits for secrets, rebuilds the Hand Up and YepNope demo pages with `node scripts/build-demos.mjs` and fails if they differ from what is committed, runs `node scripts/check-site.mjs` (broken links and images, missing alt text, page size), and only then runs `wrangler deploy` and checks that the live page matches the commit. `.assetsignore` keeps repo-only files off the site. After changing a skill's deck or demo source, run the build script and commit its output.
+The site at skills.bodr.ing is a Cloudflare Worker with static assets, and every merge to `main` deploys it. The CI workflow scans the new commits for secrets, rebuilds the Hand Up, YepNope and OohNah demo pages with `node scripts/build-demos.mjs` and fails if they differ from what is committed, runs `node scripts/check-site.mjs` (broken links and images, missing alt text, page size), and only then runs `wrangler deploy` and checks that the live page matches the commit. `.assetsignore` keeps repo-only files off the site. After changing a skill's deck or demo source, run the build script and commit its output.
