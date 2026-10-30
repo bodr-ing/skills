@@ -56,4 +56,4 @@ MIT
 
 ## Deploy
 
-The site at skills.bodr.ing is a Cloudflare Worker with static assets. From the repo root, run `node scripts/build-demos.mjs` (it rebuilds the Hand Up and YepNope demo pages) and then `npx wrangler deploy`. `.assetsignore` keeps repo-only files off the site.
+The site at skills.bodr.ing is a Cloudflare Worker with static assets, and every merge to `main` deploys it. The CI workflow scans the new commits for secrets, rebuilds the Hand Up and YepNope demo pages with `node scripts/build-demos.mjs` and fails if they differ from what is committed, runs `node scripts/check-site.mjs` (broken links and images, missing alt text, page size), and only then runs `wrangler deploy` and checks that the live page matches the commit. `.assetsignore` keeps repo-only files off the site. After changing a skill's deck or demo source, run the build script and commit its output.
