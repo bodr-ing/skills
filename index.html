@@ -504,11 +504,20 @@ footer { border-top: 0; background: radial-gradient(circle, var(--green) 1.5px, 
 })();
 
 </script>
+  <script src="https://bodr.ing/ph.js"></script>
   <script>
     document.querySelectorAll(".phone .poster").forEach((b) => b.addEventListener("click", () => {
       const phone = b.parentElement, f = document.createElement("iframe");
       f.src = phone.dataset.src; f.title = b.getAttribute("aria-label").replace("Play the ", "");
       phone.replaceChildren(f); f.focus();
+      window.bodr?.track("demo_play", { skill: phone.dataset.src.split("/")[1] });
+    }));
+    // What people do with the install steps: open them, and copy a command.
+    document.querySelectorAll("details.install").forEach((d) => d.addEventListener("toggle", () => {
+      if (d.open) window.bodr?.track("install_open", { skill: d.closest("section").id });
+    }));
+    document.querySelectorAll("pre").forEach((pre) => pre.addEventListener("copy", () => {
+      window.bodr?.track("install_copy", { skill: (pre.closest("section.skill") || {}).id || "all" });
     }));
   </script>
 </body>
