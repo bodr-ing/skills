@@ -14,11 +14,10 @@
 - **Colours taken by siblings:** <hex list from family.md>
 - **Objects taken by siblings:** <list>
 - **Shared rules it follows:** <from family.md>
-- **Starting palette for concepts:** <2 to 3 hex values, free in the family>
 
-## Directions to try
+## Already rejected
 
-<8 to 12 one-line directions: letter-as-mark, the object alone, stamp, sticker, geometric, hand-drawn, a family nod, a playful twist>
+<ideas, palettes and styles the person said no to, so the model doesn't repeat them>
 
 ## Avoid
 
