@@ -9,8 +9,9 @@ Agent skills from The Bodring Company ([bodr.ing](https://bodr.ing)), browsable 
 | [hand-up](skills/hand-up/SKILL.md) (not on the site yet) | All your coding agents raise blockers, conflicts and findings into one swipe deck. You swipe, and they read your answer and carry on. Works inside Claude with nothing to host, or with the [hub](https://github.com/bodr-ing/hand-up) for any agent and phone push. |
 | [oohnah](skills/oohnah/SKILL.md) | **Visual style only.** Finds a brand's visual taste by swiping before any design work, and ends in a `taste.md` your agents design from. |
 | [logo-lab](skills/logo-lab/SKILL.md) | **Logos, tested where they live.** Image-model concepts redrawn as clean SVG, tried on a site, a poster, an app icon, an avatar, a tab, a sticker and in one colour, plus photo mockups of the finalists. Scored, then a one-tap pick. |
+| [brand-kit](skills/brand-kit/SKILL.md) (not on the site yet) | **A whole brand, start to finish.** For a new brand or sub-brand: reads the brand family, writes a one-page brief, gets 12 image-model concepts, runs the pick, the colourways and Logo Lab, then exports the asset pack (favicons, avatars, app icon, social preview) and writes the brand sheet. Endorsed tools like an admin desk get a shorter path. |
 
-They chain: YepNope finds what to build, OohNah finds how it looks and writes `taste.md`, Logo Lab reads that and finds the mark.
+They chain: YepNope finds what to build, OohNah finds how it looks and writes `taste.md`, Logo Lab reads that and finds the mark. Brand Kit runs the chain for a new brand and ships the files.
 
 ## A real run: bodr.ing
 
