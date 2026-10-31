@@ -16,7 +16,7 @@ Read these from the request and use the default for anything not mentioned. Say 
 | Option | Default | Example ask |
 |---|---|---|
 | Kind | worked out from the brief (see "Three kinds") | "it's just an internal tool", "full public brand" |
-| Concepts per round | 12 | "just 6", "go wide, 24" |
+| Concepts per round | 8, chosen by the model | "just 6", "go wide, 24" |
 | Look swipe (OohNah) | public brands only | "skip the swipe", "swipe the site look too" |
 | Colourways | 8 of the picked shape | "keep the colours", "show 4" |
 | Asset pack | favicon, avatar, app icon, social preview, OG image | "add stickers", "Telegram bot avatar too" |
@@ -38,7 +38,7 @@ Decide this first; it sets how much of the loop runs.
 
 3. **Look (public brands only).** Run OohNah with cards in the brand's real surfaces. Its `taste.md` goes into the brand folder.
 
-4. **Concepts.** Write `prompts-v1.txt`: one shared brief (meaning, palette as hex, flat vector, the wordmark spelled exactly, what to avoid) and 12 numbered directions that differ in kind: letter-as-mark, the object alone, a stamp or seal, a sticker, geometric, hand-drawn, a family nod, a playful twist. Run them with `kit/concepts.sh` (Codex CLI image generation on the person's machine) and keep the prompts file next to the images.
+4. **Concepts: let the model design.** Give the image model the story, not a spec: the name and what it means, what the brand does, who sees it, the sister brands (for context, not to copy) and what was already rejected. Let it choose its own concepts, colours and type, and ask for 8 genuinely different ones plus a `notes.md` with one line per idea. Do not write the directions or lock the palette yourself: a fixed per-concept prompt caps the model at your own ideas, and the first matba round, written that way, got no likes at all. Run it on the person's machine with Codex CLI, one run per brand. `kit/concepts.sh` is only for when you need many variations of one idea that is already picked.
 
 5. **Pick.** Put all concepts on one visual page, numbered, with a swipe or one-tap pick. If none lands, find what the liked ones share, write it down as **the one idea** ("the bolt lives only in the ç") and run the next round inside it. Each round gets a new `prompts-vN.txt`; never overwrite an old round.
 
@@ -69,7 +69,8 @@ Product repos get only the shipped SVGs and pack, never the drafts, so they can 
 ## Rules
 
 - Show, don't ask. Every choice reaches the person as a visual page.
-- Shape first, colour second. Concepts in one starting palette; colourways only after a pick.
+- Let the model design the first concepts from the story. Narrow only after the person reacts.
+- Shape first, colour second: colourways come after a pick.
 - One idea per brand. Once a round finds it, every later round stays inside it.
 - Design every swipe deck and compare page for this brand. Never reuse a demo deck with new words.
 - Spell the name exactly, in every prompt and file. Keep a separate ASCII form for domains and code.
@@ -88,6 +89,6 @@ Product repos get only the shipped SVGs and pack, never the drafts, so they can 
 - `templates/brief.md`: the one-page brief.
 - `templates/brand.md`: the brand sheet (meaning, spelling, colours, type, files, do and don't).
 - `templates/family.md`: the family file with one row per brand.
-- `kit/concepts.sh`: N concepts in parallel with Codex CLI: `kit/concepts.sh prompts-v1.txt concepts-v1 4`.
+- `kit/concepts.sh`: variations of an idea that is already picked, run in parallel with Codex CLI: `kit/concepts.sh prompts-v2.txt concepts-v2 4`.
 - `kit/export.mjs`: the asset pack from the master SVGs: `node kit/export.mjs brand.json pack/`.
 - `example/`: the Bodring family as a filled-in `family.md`.
