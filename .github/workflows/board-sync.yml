@@ -1,0 +1,32 @@
+# Keeps this repo's issues on the org board "Bodring" (project #5): Status, Prio, Size and Product follow each issue.
+# Events only, no schedule: an issue or PR change syncs its own card. The sync code lives in bodr-ing/qozon.
+# Runs on Bodring's self-hosted runner (vars.RUNNER) and skips when it is unset, so it never uses paid minutes.
+# PROJECT_TOKEN (org secret) is a token with the `project` scope that can read this repo's issues and bodr-ing/qozon.
+name: Board sync
+
+on:
+  issues:
+    types: [opened, reopened, closed, labeled, unlabeled, transferred]
+  pull_request_target:
+    types: [opened, reopened, closed, ready_for_review, converted_to_draft, edited]
+  workflow_dispatch:
+    inputs:
+      issue: { description: 'One issue number', required: false }
+      range: { description: 'Issue numbers, A-B (for example 1-40)', required: false }
+
+permissions:
+  contents: read
+
+jobs:
+  board:
+    if: vars.RUNNER != ''
+    uses: bodr-ing/qozon/.github/workflows/board-sync.yml@main
+    with:
+      project: 5
+      owner: bodr-ing
+      issue: ${{ github.event.issue.number || inputs.issue || '' }}
+      pr: ${{ github.event.pull_request.number || '' }}
+      range: ${{ inputs.range || '' }}
+      runner: ${{ vars.RUNNER }}
+    secrets:
+      PROJECT_TOKEN: ${{ secrets.PROJECT_TOKEN }}
