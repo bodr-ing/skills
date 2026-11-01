@@ -147,7 +147,7 @@ pre { margin: 12px 0 0; background: var(--code); color: var(--code-ink); padding
 .all .out a { font-weight: 600; color: var(--ink); text-decoration: none; padding: 8px 14px; border: 2px solid var(--ink); border-radius: 99px; }
 .all .out a:hover, .all .out a:focus-visible { background: var(--green); color: var(--paper); border-color: var(--green); }
 .all .out span { color: var(--muted); font-size: 14px; }
-footer { padding-block: 28px 48px; border-top: 2px dotted var(--green); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; color: var(--muted); font-size: 14px; }
+footer { padding-block: 28px 48px; border-top: 2px dotted var(--green); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; color: var(--muted); font-size: 14px; }
 footer a { color: var(--green); }
 
 
@@ -379,9 +379,10 @@ footer { border-top: 0; background: radial-gradient(circle, var(--green) 1.5px, 
     </section>
 
     <footer>
-      <span>Bodring Skills, by The Bodring Company. MIT licensed.</span>
+      <bodring-sticker brand="skills"><span>Bodring Skills · part of <a href="https://bodr.ing">The Bodring Company</a> · MIT licensed</span></bodring-sticker>
       <span class="links"><a href="https://github.com/bodr-ing/skills">GitHub</a> · <a href="https://skills.sh/bodr-ing/skills">skills.sh</a> · <a href="https://bodr.ing">bodr.ing</a></span>
     </footer>
+    <script src="https://bodr.ing/sticker.js" defer></script>
   </div>
   <script>
 // The bodr.ing stamp as live halftone (same renderer as bodr.ing). It drives the hero and the rolling band.
