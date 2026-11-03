@@ -9,19 +9,7 @@
   <meta property="og:title" content="Bodring Skills">
   <meta property="og:description" content="Swipe ideas to find what you want. Swipe looks to find how it should look. Test logos for real to find the mark.">
   <meta property="og:url" content="https://skills.bodr.ing/">
-  <meta name="theme-color" content="#eceee4" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#12352a" media="(prefers-color-scheme: dark)">
-  <script>
-    try {
-      const theme = localStorage.getItem("theme");
-      if (theme === "light" || theme === "dark") {
-        document.documentElement.dataset.theme = theme;
-        document.querySelectorAll('meta[name="theme-color"]').forEach(meta => {
-          meta.content = theme === "dark" ? "#12352a" : "#eceee4";
-        });
-      }
-    } catch (_) {}
-  </script>
+  <meta name="theme-color" content="#00915a">
   <link rel="icon" href="https://bodr.ing/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,71 +21,21 @@
   --card: #f6f7f0;
   --green: #00915a;
   --pink: #ff4aa2;
-  --pink-print: #c4176f;
-  --pink-ink: var(--pink-print);
+  --pink-ink: #c4176f;
   --ink: #12352a;
   --muted: #3f6155;
-  --code: var(--ink);
+  --code: #12352a;
   --code-ink: #e4eedb;
-  --ground: var(--paper);
-  --text: var(--ink);
-  --green-text: var(--green);
-  --surface: #fff;
-  --white: #fff;
-  --black: #000;
-  --shadow: var(--ink);
-  --grain: color-mix(in srgb, var(--ink) 35%, transparent);
-  --pill-pink: #f6d4d4;
-  --pill-green: #c8e3cf;
-  --pill-sand: #f6e6c8;
-  --specimen-1: #5c1a3a;
-  --specimen-2: #fbe6d4;
-  --specimen-3: #c0583a;
-  --specimen-4: #f2a93b;
-  --specimen-5: #03130a;
-  --specimen-6: #8dff9f;
-  --specimen-7: #29d35b;
-  --specimen-8: #123a8c;
-  --specimen-9: #f6efe1;
-  --specimen-10: #2bb5b8;
   --display: "Bagel Fat One", "Arial Black", system-ui, sans-serif;
   --body: "Work Sans", system-ui, sans-serif;
   --mono: "DM Mono", ui-monospace, monospace;
   color-scheme: light;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --ground: var(--ink);
-    --text: var(--paper);
-    --muted: color-mix(in srgb, var(--paper) 68%, var(--ink));
-    --card: color-mix(in srgb, var(--ink) 82%, var(--paper));
-    --surface: color-mix(in srgb, var(--ink) 82%, var(--paper));
-    --green-text: color-mix(in srgb, var(--green) 60%, var(--paper));
-    --pink-ink: var(--pink);
-    --shadow: color-mix(in srgb, var(--ink) 55%, #000);
-    --code: color-mix(in srgb, var(--ink) 55%, #000);
-    --grain: color-mix(in srgb, var(--paper) 35%, transparent);
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-    --ground: var(--ink);
-    --text: var(--paper);
-    --muted: color-mix(in srgb, var(--paper) 68%, var(--ink));
-    --card: color-mix(in srgb, var(--ink) 82%, var(--paper));
-    --surface: color-mix(in srgb, var(--ink) 82%, var(--paper));
-    --green-text: color-mix(in srgb, var(--green) 60%, var(--paper));
-    --pink-ink: var(--pink);
-    --shadow: color-mix(in srgb, var(--ink) 55%, #000);
-    --code: color-mix(in srgb, var(--ink) 55%, #000);
-    --grain: color-mix(in srgb, var(--paper) 35%, transparent);
-    color-scheme: dark;
-}
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-body { margin: 0; background: var(--ground); color: var(--text); font-family: var(--body); font-size: 17px; line-height: 1.55; overflow-x: hidden; }
-body::after { content: ""; position: fixed; inset: 0; pointer-events: none; opacity: .16; mix-blend-mode: multiply; background-image: radial-gradient(var(--grain) .6px, transparent .9px); background-size: 3px 3px; z-index: 5; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.55; overflow-x: hidden; }
+body::after { content: ""; position: fixed; inset: 0; pointer-events: none; opacity: .16; mix-blend-mode: multiply; background-image: radial-gradient(rgba(18,53,42,.35) .6px, transparent .9px); background-size: 3px 3px; z-index: 5; }
 a { color: inherit; }
 a:focus-visible, button:focus-visible { outline: 3px solid var(--pink); outline-offset: 3px; }
 code { font-family: var(--mono); font-size: .9em; }
@@ -113,7 +51,7 @@ nav .links a:hover { color: var(--pink-ink); }
 
 /* Hero */
 .hero { padding-block: 28px 8px; }
-.hero h1 { font-family: var(--display); font-weight: 400; font-size: clamp(64px, 15vw, 188px); line-height: .82; margin: 0; color: var(--green-text); letter-spacing: -0.02em; text-shadow: .025em .02em 0 var(--pink); }
+.hero h1 { font-family: var(--display); font-weight: 400; font-size: clamp(64px, 15vw, 188px); line-height: .82; margin: 0; color: var(--green); letter-spacing: -0.02em; text-shadow: .025em .02em 0 var(--pink); }
 .hero .lede { max-width: 26ch; font-size: clamp(22px, 3.2vw, 32px); line-height: 1.25; font-weight: 600; margin: 24px 0 0; text-wrap: balance; }
 .hero .lede em { font-style: normal; background: linear-gradient(transparent 55%, color-mix(in srgb, var(--pink) 40%, transparent) 55%); }
 
@@ -122,10 +60,10 @@ nav .links a:hover { color: var(--pink-ink); }
 .choose > .label { color: var(--muted); margin: 0 0 18px; }
 .tickets { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
 @media (max-width: 960px) { .tickets { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-.ticket { --c: var(--green-text); --c2: var(--pink); position: relative; display: grid; grid-template-rows: auto auto auto 1fr auto; gap: 16px; padding: 26px 24px 22px; border: 2px solid var(--c); background: var(--card); text-decoration: none; transition: transform .15s; }
+.ticket { --c: var(--green); --c2: var(--pink); position: relative; display: grid; grid-template-rows: auto auto auto 1fr auto; gap: 16px; padding: 26px 24px 22px; border: 2px solid var(--c); background: var(--card); text-decoration: none; transition: transform .15s; }
 .ticket::before { content: ""; position: absolute; inset: 7px -7px -7px 7px; border: 2px solid var(--c2); z-index: -1; }
-.ticket.vibe { --c: var(--pink-ink); --c2: var(--green-text); }
-.ticket.mark { --c: var(--text); --c2: var(--pink); }
+.ticket.vibe { --c: var(--pink-ink); --c2: var(--green); }
+.ticket.mark { --c: var(--ink); --c2: var(--pink); }
 .ticket:hover { transform: translate(-2px, -2px) rotate(-.5deg); }
 @media (prefers-reduced-motion: reduce) { .ticket { transition: none; } .ticket:hover { transform: none; } }
 .ticket .q { font-family: var(--mono); font-size: 13px; text-transform: uppercase; letter-spacing: .1em; color: var(--c); }
@@ -137,33 +75,33 @@ nav .links a:hover { color: var(--pink-ink); }
 
 /* Mini specimens: what one card in each deck looks like */
 .specimen { height: 132px; display: flex; align-items: center; gap: 10px; padding-left: 4px; }
-.mini { width: 84px; height: 116px; border: 2px solid var(--text); border-radius: 10px; flex: none; overflow: hidden; display: flex; flex-direction: column; background: var(--surface); box-shadow: 3px 3px 0 var(--shadow); }
+.mini { width: 84px; height: 116px; border: 2px solid var(--ink); border-radius: 10px; flex: none; overflow: hidden; display: flex; flex-direction: column; background: #fff; box-shadow: 3px 3px 0 var(--ink); }
 .mini:nth-child(1) { transform: rotate(-6deg); }
 .mini:nth-child(3) { transform: rotate(5deg); }
 .vibe .mini .look { flex: 1; display: grid; place-items: center; font-size: 24px; line-height: 1; }
-.vibe .mini .chip { height: 22px; display: flex; gap: 3px; padding: 4px; background: var(--white); }
+.vibe .mini .chip { height: 22px; display: flex; gap: 3px; padding: 4px; background: #fff; }
 .vibe .mini .chip i { flex: 1; border-radius: 3px; }
 .taste .mini { padding: 8px 7px; gap: 5px; justify-content: space-between; }
-.taste .mini b { font-family: var(--display); font-weight: 400; font-size: 12.5px; line-height: 1.05; color: var(--text); }
+.taste .mini b { font-family: var(--display); font-weight: 400; font-size: 12.5px; line-height: 1.05; color: var(--ink); }
 .taste .mini small { font-size: 8.5px; line-height: 1.25; color: var(--muted); }
 .taste .mini .pills { display: flex; gap: 3px; }
 .taste .mini .pills i { flex: 1; height: 9px; border-radius: 9px; }
-.taste .mini .pills i:nth-child(1) { background: var(--pill-pink); }
-.taste .mini .pills i:nth-child(2) { background: var(--pill-green); }
-.taste .mini .pills i:nth-child(3) { background: var(--pill-sand); }
+.taste .mini .pills i:nth-child(1) { background: #f6d4d4; }
+.taste .mini .pills i:nth-child(2) { background: #c8e3cf; }
+.taste .mini .pills i:nth-child(3) { background: #f6e6c8; }
 
-.rule { margin: 40px 0 0; padding: 18px 22px; border: 2px dashed var(--green-text); display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px 32px; font-weight: 600; }
+.rule { margin: 40px 0 0; padding: 18px 22px; border: 2px dashed var(--green); display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px 32px; font-weight: 600; }
 .rule span { font-weight: 400; }
-.rule b.g { color: var(--green-text); } .rule b.p { color: var(--pink-ink); }
+.rule b.g { color: var(--green); } .rule b.p { color: var(--pink-ink); }
 
 /* Skill spreads */
-.skill { --c: var(--green-text); display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 40px 56px; padding-block: 56px; border-top: 3px solid var(--c); }
+.skill { --c: var(--green); display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 40px 56px; padding-block: 56px; border-top: 3px solid var(--c); }
 .skill.vibe { --c: var(--pink-ink); }
-.skill.mark { --c: var(--text); }
+.skill.mark { --c: var(--ink); }
 .mark .mini { background: var(--paper); display: grid; place-items: center; }
 .mark .mini img { width: 70px; height: 70px; }
 .story { margin: 28px 0 0; max-width: 58ch; font-size: 15px; color: var(--muted); }
-.story b { color: var(--text); }
+.story b { color: var(--ink); }
 .skill > * { min-width: 0; }
 .skill .q { color: var(--c); margin: 0; }
 .skill h2 { font-family: var(--display); font-weight: 400; font-size: clamp(48px, 8vw, 92px); line-height: .88; margin: 10px 0 18px; color: var(--c); letter-spacing: -0.01em; }
@@ -190,44 +128,44 @@ pre { margin: 12px 0 0; background: var(--code); color: var(--code-ink); padding
 .files a:hover { color: var(--c); }
 
 .demo { position: sticky; top: calc(20px + env(safe-area-inset-top, 0px)); display: grid; gap: 14px; justify-items: center; align-self: start; }
-.phone { width: 100%; max-width: 370px; aspect-ratio: 9 / 17.5; max-height: calc(100svh - 40px); border-radius: 34px; border: 9px solid var(--shadow); background: var(--ink); overflow: hidden; position: relative; box-shadow: 10px 10px 0 var(--c); }
-.phone iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: var(--surface); }
+.phone { width: 100%; max-width: 370px; aspect-ratio: 9 / 17.5; max-height: calc(100svh - 40px); border-radius: 34px; border: 9px solid var(--ink); background: var(--ink); overflow: hidden; position: relative; box-shadow: 10px 10px 0 var(--c); }
+.phone iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: #fff; }
 .phone .poster { position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; cursor: pointer; background: var(--ink); }
 .phone .poster img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
-.phone .poster span { position: absolute; left: 50%; bottom: 22px; transform: translateX(-50%); white-space: nowrap; background: var(--poster-fill, var(--green)); color: var(--white); font: 400 18px var(--display); padding: 12px 22px 10px; border-radius: 999px; box-shadow: 3px 3px 0 var(--shadow); transition: transform .15s; }
+.phone .poster span { position: absolute; left: 50%; bottom: 22px; transform: translateX(-50%); white-space: nowrap; background: var(--c); color: #fff; font: 400 18px var(--display); padding: 12px 22px 10px; border-radius: 999px; box-shadow: 3px 3px 0 var(--ink); transition: transform .15s; }
 .phone .poster:hover span, .phone .poster:focus-visible span { transform: translateX(-50%) scale(1.05); }
 .demo-note { font-size: 14px; color: var(--muted); text-align: center; margin: 0; max-width: 34ch; }
 .demo-note a { color: var(--c); }
 
 /* Install all */
-.all { padding-block: 56px; border-top: 3px solid var(--text); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 24px 56px; align-items: start; }
+.all { padding-block: 56px; border-top: 3px solid var(--ink); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 24px 56px; align-items: start; }
 .all > * { min-width: 0; }
 .all h2 { font-family: var(--display); font-weight: 400; font-size: clamp(36px, 5vw, 52px); line-height: .95; margin: 0; }
 .all p { margin: 12px 0 0; color: var(--muted); }
 .all pre { margin-top: 0; }
 .all .out { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
-.all .out a { font-weight: 600; color: var(--text); text-decoration: none; padding: 8px 14px; border: 2px solid var(--text); border-radius: 99px; }
+.all .out a { font-weight: 600; color: var(--ink); text-decoration: none; padding: 8px 14px; border: 2px solid var(--ink); border-radius: 99px; }
 .all .out a:hover, .all .out a:focus-visible { background: var(--green); color: var(--paper); border-color: var(--green); }
 .all .out span { color: var(--muted); font-size: 14px; }
-footer { padding-block: 28px 48px; border-top: 2px dotted var(--green-text); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; color: var(--muted); font-size: 14px; }
-footer a { color: var(--green-text); }
+footer { padding-block: 28px 48px; border-top: 2px dotted var(--green); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; color: var(--muted); font-size: 14px; }
+footer a { color: var(--green); }
 
 
 /* The real run: bodr.ing itself, step by step. Numbered because it is a sequence. */
 .made { padding-block: 8px 72px; }
 .made > .label { color: var(--muted); margin: 0 0 10px; }
-.made h2 { font-family: var(--display); font-weight: 400; font-size: clamp(36px, 6vw, 64px); line-height: .95; margin: 0; color: var(--green-text); text-wrap: balance; }
+.made h2 { font-family: var(--display); font-weight: 400; font-size: clamp(36px, 6vw, 64px); line-height: .95; margin: 0; color: var(--green); text-wrap: balance; }
 .made .intro { max-width: 60ch; margin: 16px 0 0; }
 .steps { list-style: none; padding: 0; margin: 32px 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; counter-reset: step; }
-.steps > li { counter-increment: step; background: var(--card); border: 2px solid var(--text); padding: 20px; min-width: 0; display: grid; align-content: start; gap: 12px; }
+.steps > li { counter-increment: step; background: var(--card); border: 2px solid var(--ink); padding: 20px; min-width: 0; display: grid; align-content: start; gap: 12px; }
 .steps > li::before { content: counter(step); font-family: var(--display); font-size: 40px; line-height: 1; color: var(--pink); }
 .steps h3 { margin: 0; font-size: 20px; } .steps h3 small { display: block; font-family: var(--mono); font-size: 12px; font-weight: 400; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); }
 .steps p { margin: 0; font-size: 15px; }
-.swatches { display: flex; gap: 6px; } .swatches i { flex: 1; height: 34px; border: 2px solid var(--text); }
+.swatches { display: flex; gap: 6px; } .swatches i { flex: 1; height: 34px; border: 2px solid var(--ink); }
 .faces { font-family: var(--mono); font-size: 13px; color: var(--muted); }
 .shots { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
-.shots img { width: 100%; max-width: 100%; aspect-ratio: 3 / 4; object-fit: cover; display: block; border: 2px solid var(--text); }
-.slice { display: flex; align-items: center; gap: 0; font-family: var(--display); font-size: 56px; color: var(--green-text); }
+.shots img { width: 100%; max-width: 100%; aspect-ratio: 3 / 4; object-fit: cover; display: block; border: 2px solid var(--ink); }
+.slice { display: flex; align-items: center; gap: 0; font-family: var(--display); font-size: 56px; color: var(--green); }
 .slice svg { width: .82em; height: .82em; flex: none; margin: 0 .02em; transform: translateY(.06em); }
 @media (max-width: 860px) { .steps { grid-template-columns: minmax(0, 1fr); } }
 @media (max-width: 860px) {
@@ -249,20 +187,20 @@ footer a { color: var(--green-text); }
 @media (max-width: 680px) { .hero { display: flex; flex-direction: column; } .hero canvas#cuke { position: relative; order: 3; right: auto; top: 0; align-self: center; width: 80%; height: auto; aspect-ratio: 1; margin-top: 16px; z-index: 0; } }
 .hero .lede em { background: radial-gradient(circle, var(--pink) 2.1px, transparent 2.5px) 0 100% / 6px 6px repeat-x; padding-bottom: 4px; }
 .ticket, .steps > li { border: 0; }
-.ticket::before { inset: 0; border: 0; z-index: 0; pointer-events: none; padding: 4px; background: radial-gradient(circle, var(--c) 1.7px, transparent 2.1px) 0 0 / 8px 8px round; -webkit-mask: linear-gradient(var(--black) 0 0) content-box exclude, linear-gradient(var(--black) 0 0); mask: linear-gradient(var(--black) 0 0) content-box exclude, linear-gradient(var(--black) 0 0); }
-.ticket::after, .steps > li::after { content: ""; position: absolute; inset: 0; translate: 6px 5px; z-index: -1; pointer-events: none; padding: 4px; background: radial-gradient(circle, var(--c2, var(--pink)) 1.7px, transparent 2.1px) 0 0 / 8px 8px round; -webkit-mask: linear-gradient(var(--black) 0 0) content-box exclude, linear-gradient(var(--black) 0 0); mask: linear-gradient(var(--black) 0 0) content-box exclude, linear-gradient(var(--black) 0 0); }
+.ticket::before { inset: 0; border: 0; z-index: 0; pointer-events: none; padding: 4px; background: radial-gradient(circle, var(--c) 1.7px, transparent 2.1px) 0 0 / 8px 8px round; -webkit-mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0); mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0); }
+.ticket::after, .steps > li::after { content: ""; position: absolute; inset: 0; translate: 6px 5px; z-index: -1; pointer-events: none; padding: 4px; background: radial-gradient(circle, var(--c2, var(--pink)) 1.7px, transparent 2.1px) 0 0 / 8px 8px round; -webkit-mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0); mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0); }
 .steps > li { position: relative; --c2: var(--pink); }
-.steps > li { border: 3px dotted var(--text); }
+.steps > li { border: 3px dotted var(--ink); }
 .steps > li > * { position: relative; z-index: 1; }
 .ticket > * { position: relative; z-index: 1; }
 .ticket:hover { transform: none; }
 .ticket .go { border-top: 0; background: radial-gradient(circle, var(--c) 1.3px, transparent 1.7px) 0 0 / 7px 4px repeat-x; }
-.wave { position: absolute; inset: 4px; z-index: 0 !important; pointer-events: none; opacity: 0; transition: opacity .3s; background: radial-gradient(circle, color-mix(in srgb, var(--c2, var(--pink)) 55%, transparent) 2px, transparent 2.4px) 0 0 / 9px 9px; -webkit-mask: repeating-radial-gradient(circle at var(--mx, 50%) var(--my, 50%), transparent 0 calc(var(--ph) + 0px), var(--black) calc(var(--ph) + 3px) calc(var(--ph) + 11px), transparent calc(var(--ph) + 14px) calc(var(--ph) + 30px)); mask: repeating-radial-gradient(circle at var(--mx, 50%) var(--my, 50%), transparent 0 calc(var(--ph) + 0px), var(--black) calc(var(--ph) + 3px) calc(var(--ph) + 11px), transparent calc(var(--ph) + 14px) calc(var(--ph) + 30px)); animation: rip 1.4s linear infinite; }
+.wave { position: absolute; inset: 4px; z-index: 0 !important; pointer-events: none; opacity: 0; transition: opacity .3s; background: radial-gradient(circle, color-mix(in srgb, var(--c2, var(--pink)) 55%, transparent) 2px, transparent 2.4px) 0 0 / 9px 9px; -webkit-mask: repeating-radial-gradient(circle at var(--mx, 50%) var(--my, 50%), transparent 0 calc(var(--ph) + 0px), #000 calc(var(--ph) + 3px) calc(var(--ph) + 11px), transparent calc(var(--ph) + 14px) calc(var(--ph) + 30px)); mask: repeating-radial-gradient(circle at var(--mx, 50%) var(--my, 50%), transparent 0 calc(var(--ph) + 0px), #000 calc(var(--ph) + 3px) calc(var(--ph) + 11px), transparent calc(var(--ph) + 14px) calc(var(--ph) + 30px)); animation: rip 1.4s linear infinite; }
 @property --ph { syntax: "<length>"; inherits: false; initial-value: 0px; }
 @keyframes rip { to { --ph: 30px; } }
 .ticket:hover .wave, .ticket:focus-visible .wave { opacity: 1; }
 @media (prefers-reduced-motion: reduce) { .wave { animation: none; } }
-.skill, .all { border-top: 0; background: radial-gradient(circle, var(--c, var(--text)) 2.2px, transparent 2.7px) 0 0 / 10px 10px repeat-x; }
+.skill, .all { border-top: 0; background: radial-gradient(circle, var(--c, var(--ink)) 2.2px, transparent 2.7px) 0 0 / 10px 10px repeat-x; }
 .flow li::before { font-size: 34px; color: transparent; background: radial-gradient(circle, var(--c) 1.4px, transparent 1.8px) 0 0 / 4px 4px; -webkit-background-clip: text; background-clip: text; }
 .band { position: relative; height: 200px; margin: 0 0 24px; }
 .band canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
@@ -271,37 +209,16 @@ footer a { color: var(--green-text); }
 @media (min-width: 681px) { .ripple-strip { margin-top: max(32px, calc(min(40vw, 440px) - 330px)); } }
 .band span { position: absolute; left: 0; top: 10px; font-family: var(--mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
 @property --dot { syntax: "<length>"; inherits: false; initial-value: 9px; }
-.printing { --dot: 9px; -webkit-mask: radial-gradient(circle, var(--black) var(--dot), transparent calc(var(--dot) + .6px)) -6px -6px / 12px 12px; mask: radial-gradient(circle, var(--black) var(--dot), transparent calc(var(--dot) + .6px)) -6px -6px / 12px 12px; transition: --dot .9s cubic-bezier(.3,.7,.2,1); }
+.printing { --dot: 9px; -webkit-mask: radial-gradient(circle, #000 var(--dot), transparent calc(var(--dot) + .6px)) -6px -6px / 12px 12px; mask: radial-gradient(circle, #000 var(--dot), transparent calc(var(--dot) + .6px)) -6px -6px / 12px 12px; transition: --dot .9s cubic-bezier(.3,.7,.2,1); }
 .printing.pending { --dot: 0px; }
-footer { border-top: 0; background: radial-gradient(circle, var(--green-text) 1.5px, transparent 1.9px) 0 0 / 8px 8px repeat-x; }
-
-/* Fixed pigments keep transparent marks and the embedded demos readable. */
-nav .home img, .mark .mini img { background: var(--paper); border-radius: 50%; }
-.skill.vibe { --poster-fill: var(--pink-print); }
-nav .links { align-items: center; }
-.theme-toggle { width: 34px; height: 34px; flex: none; display: grid; place-items: center; padding: 7px; border: 1px solid var(--text); border-radius: 50%; background: var(--card); color: var(--text); cursor: pointer; }
-.theme-toggle svg { width: 18px; height: 18px; }
-.theme-toggle .sun { display: none; }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .theme-toggle .sun { display: block; }
-  :root:not([data-theme="light"]) .theme-toggle .moon { display: none; }
-}
-:root[data-theme="dark"] .theme-toggle .sun { display: block; }
-:root[data-theme="dark"] .theme-toggle .moon { display: none; }
-@media (prefers-reduced-motion: reduce) {
-  .printing, .wave, .phone .poster span { transition: none; animation: none; }
-  .phone .poster:hover span, .phone .poster:focus-visible span { transform: translateX(-50%); }
-}
+footer { border-top: 0; background: radial-gradient(circle, var(--green) 1.5px, transparent 1.9px) 0 0 / 8px 8px repeat-x; }
   </style>
 </head>
 <body>
   <div class="wrap">
     <nav class="label">
       <a class="home" href="https://bodr.ing"><img src="skills/logo-lab/example/svg/06-stamp.svg" alt="" width="26" height="26"><span class="full">bodr.ing / skills</span></a>
-      <span class="links"><a href="#yepnope">YepNope</a><a href="#oohnah">OohNah</a><a class="hide-sm" href="#story">Story</a><a class="hide-sm" href="#install">Install</a><a href="https://github.com/bodr-ing/skills">GitHub</a><button class="theme-toggle" type="button" aria-label="Switch to dark theme">
-        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.5 14A9 9 0 0 1 10 3.5 9 9 0 1 0 20.5 14Z"/></svg>
-        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
-      </button></span>
+      <span class="links"><a href="#yepnope">YepNope</a><a href="#oohnah">OohNah</a><a class="hide-sm" href="#story">Story</a><a class="hide-sm" href="#install">Install</a><a href="https://github.com/bodr-ing/skills">GitHub</a></span>
     </nav>
 
     <header class="hero">
@@ -333,9 +250,9 @@ nav .links { align-items: center; }
         <a class="ticket vibe" href="#oohnah"><span class="wave" aria-hidden="true"></span>
           <span class="q">How should it look?</span>
           <div class="specimen" aria-hidden="true">
-            <div class="mini"><div class="look" style="background:var(--specimen-1);color:var(--specimen-2);font-family:Georgia,serif">Aa</div><div class="chip"><i style="background:var(--specimen-1)"></i><i style="background:var(--specimen-3)"></i><i style="background:var(--specimen-4)"></i></div></div>
-            <div class="mini"><div class="look" style="background:var(--specimen-5);color:var(--specimen-6);font-family:var(--mono)">a_</div><div class="chip"><i style="background:var(--specimen-5)"></i><i style="background:var(--specimen-7)"></i><i style="background:var(--specimen-6)"></i></div></div>
-            <div class="mini"><div class="look" style="background:var(--specimen-8);color:var(--specimen-9);font-family:var(--display)">Aa</div><div class="chip"><i style="background:var(--specimen-8)"></i><i style="background:var(--specimen-10)"></i><i style="background:var(--specimen-9)"></i></div></div>
+            <div class="mini"><div class="look" style="background:#5c1a3a;color:#fbe6d4;font-family:Georgia,serif">Aa</div><div class="chip"><i style="background:#5c1a3a"></i><i style="background:#c0583a"></i><i style="background:#f2a93b"></i></div></div>
+            <div class="mini"><div class="look" style="background:#03130a;color:#8dff9f;font-family:var(--mono)">a_</div><div class="chip"><i style="background:#03130a"></i><i style="background:#29d35b"></i><i style="background:#8dff9f"></i></div></div>
+            <div class="mini"><div class="look" style="background:#123a8c;color:#f6efe1;font-family:var(--display)">Aa</div><div class="chip"><i style="background:#123a8c"></i><i style="background:#2bb5b8"></i><i style="background:#f6efe1"></i></div></div>
           </div>
           <h2>OohNah</h2>
           <dl>
@@ -360,7 +277,7 @@ nav .links { align-items: center; }
         <li>
           <h3><small>OohNah</small>40 looks, 22 yeses</h3>
           <p>The swipes leaned Uzbek and cultural, techy, premium and playful, with green and print. The clear noes were gritty, pastel and Y2K, and generic SaaS. Three directions came back, and <b>Pickle press</b> won: two-colour riso, off-register, a halftone cucumber.</p>
-          <div class="swatches" aria-label="Pickle press palette: paper, riso green, fluoro pink, ink"><i style="background:var(--paper)"></i><i style="background:var(--green)"></i><i style="background:var(--pink)"></i><i style="background:var(--ink)"></i></div>
+          <div class="swatches" aria-label="Pickle press palette: paper, riso green, fluoro pink, ink"><i style="background:#eceee4"></i><i style="background:#00915a"></i><i style="background:#ff4aa2"></i><i style="background:#12352a"></i></div>
           <p class="faces">Bagel Fat One · Work Sans · DM Mono, the page you're reading.</p>
         </li>
         <li>
@@ -469,30 +386,6 @@ nav .links { align-items: center; }
     <script src="https://bodr.ing/sticker.js" defer></script>
   </div>
   <script>
-    (() => {
-      const root = document.documentElement;
-      const system = matchMedia("(prefers-color-scheme: dark)");
-      const button = document.querySelector(".theme-toggle");
-      const isDark = () => root.dataset.theme ? root.dataset.theme === "dark" : system.matches;
-      const update = () => {
-        const dark = isDark();
-        button.setAttribute("aria-label", dark ? "Switch to light theme" : "Switch to dark theme");
-        const palette = getComputedStyle(root);
-        document.querySelectorAll('meta[name="theme-color"]').forEach(meta => {
-          meta.content = palette.getPropertyValue(dark ? "--ink" : "--paper").trim();
-        });
-        dispatchEvent(new Event("themechange"));
-      };
-      button.addEventListener("click", () => {
-        root.dataset.theme = isDark() ? "light" : "dark";
-        try { localStorage.setItem("theme", root.dataset.theme); } catch (_) {}
-        update();
-      });
-      system.addEventListener("change", update);
-      update();
-    })();
-  </script>
-  <script>
 // The bodr.ing stamp as live halftone (same renderer as bodr.ing). It drives the hero and the rolling band.
 (function () {
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -508,7 +401,7 @@ nav .links { align-items: center; }
   function drawStamp(ctx, cx, cy, R, o) {
     const step = o.step;
     ctx.globalCompositeOperation = "multiply";
-    for (const [color, ox, oy, pink] of [[getComputedStyle(document.documentElement).getPropertyValue("--green-text").trim(), 0, 0, false], ["#ff4aa2", o.px, o.py, true]]) {
+    for (const [color, ox, oy, pink] of [["#00915a", 0, 0, false], ["#ff4aa2", o.px, o.py, true]]) {
       ctx.fillStyle = color; ctx.beginPath();
       for (let y = -R; y <= R + .01; y += step) for (let x = -R; x <= R + .01; x += step) {
         const nx = x / R, ny = y / R, d = Math.hypot(nx, ny); if (d > 1) continue;
@@ -565,7 +458,7 @@ nav .links { align-items: center; }
     const hb = hero.getBoundingClientRect(), R = Math.min(hb.width, hb.height) / 2 - 8, hx = hb.left + hb.width / 2, hy = hb.top + hb.height / 2;
     const t = (now - state.t0) / 1000, s = 9;
     ctx.globalCompositeOperation = "multiply";
-    for (const [color, ox, oy, k] of [[getComputedStyle(document.documentElement).getPropertyValue("--green-text").trim(), 0, 0, 1], ["#ff4aa2", 4, 3, .7]]) {
+    for (const [color, ox, oy, k] of [["#00915a", 0, 0, 1], ["#ff4aa2", 4, 3, .7]]) {
       ctx.fillStyle = color; ctx.beginPath();
       for (let y = s / 2; y < h; y += s) for (let x = s / 2; x < w; x += s) {
         const d = Math.hypot(sb.left + x - hx, sb.top + y - hy) / R;
@@ -586,7 +479,7 @@ nav .links { align-items: center; }
     const R = Math.min(70, h * .36), gap = R * 2.9, top = band.getBoundingClientRect().top;
     const travel = state.scroll ? (innerHeight - top) * 1.1 : 0;
     // ground line of dots that swell under each slice
-    ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue("--green-text").trim();
+    ctx.fillStyle = "#00915a";
     for (let x = 6; x < w; x += 10) { let near = 0;
       for (let cx = ((travel % gap) + gap) % gap - gap; cx < w + gap; cx += gap) near = Math.max(near, 1 - Math.abs(x - cx) / (R * 1.4));
       const r = 1.2 + Math.max(0, near) * 2.6; ctx.beginPath(); ctx.arc(x, h - 18, r, 0, Math.PI * 2); ctx.fill(); }
@@ -612,7 +505,6 @@ nav .links { align-items: center; }
   let raf = 0;
   function frame(now) { raf = 0; const more = drawHero(now); drawStrip(now); drawBand(); if (more && !reduce) kick(); }
   function kick() { if (!raf) raf = requestAnimationFrame(frame); }
-  addEventListener("themechange", kick);
   addEventListener("scroll", kick, { passive: true }); addEventListener("resize", kick);
   kick();
 })();
